@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B63081E3250BAD33757C38B /* Pods_ChefXDoor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18C255FDC7F15848B68E9E8 /* Pods_ChefXDoor.framework */; };
+		9CC2B4F923592F8119DD4FC4 /* Pods_ChefXDoorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133FFFC0AA8EE90B5A6773DF /* Pods_ChefXDoorTests.framework */; };
+		D3E030BC7DF5A1783D82DC78 /* Pods_ChefXDoorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E899C2495E837AFC507C52 /* Pods_ChefXDoorUITests.framework */; };
 		FEF502BB20CC06C900F2B8EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF502BA20CC06C900F2B8EF /* AppDelegate.swift */; };
 		FEF502BD20CC06C900F2B8EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF502BC20CC06C900F2B8EF /* ViewController.swift */; };
 		FEF502C020CC06C900F2B8EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF502BE20CC06C900F2B8EF /* Main.storyboard */; };
@@ -34,6 +37,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		067A5D2005CE5F3F154A186A /* Pods-ChefXDoor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChefXDoor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChefXDoor/Pods-ChefXDoor.debug.xcconfig"; sourceTree = "<group>"; };
+		133FFFC0AA8EE90B5A6773DF /* Pods_ChefXDoorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChefXDoorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31CEE471A915AB1E6015743A /* Pods-ChefXDoor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChefXDoor.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChefXDoor/Pods-ChefXDoor.release.xcconfig"; sourceTree = "<group>"; };
+		48EBC9EC98B19606DF90C43D /* Pods-ChefXDoorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChefXDoorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChefXDoorUITests/Pods-ChefXDoorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		80E899C2495E837AFC507C52 /* Pods_ChefXDoorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChefXDoorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D414A920732E04665B06738 /* Pods-ChefXDoorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChefXDoorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChefXDoorUITests/Pods-ChefXDoorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B18C255FDC7F15848B68E9E8 /* Pods_ChefXDoor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChefXDoor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEB1DF9155D1EB9DFE28942D /* Pods-ChefXDoorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChefXDoorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChefXDoorTests/Pods-ChefXDoorTests.release.xcconfig"; sourceTree = "<group>"; };
+		EF92DF086284B1A64022B88E /* Pods-ChefXDoorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChefXDoorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChefXDoorTests/Pods-ChefXDoorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FEF502B720CC06C900F2B8EF /* ChefXDoor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChefXDoor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEF502BA20CC06C900F2B8EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEF502BC20CC06C900F2B8EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B63081E3250BAD33757C38B /* Pods_ChefXDoor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CC2B4F923592F8119DD4FC4 /* Pods_ChefXDoorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3E030BC7DF5A1783D82DC78 /* Pods_ChefXDoorUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A7E611EF43E61D0DE1BDC09C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				067A5D2005CE5F3F154A186A /* Pods-ChefXDoor.debug.xcconfig */,
+				31CEE471A915AB1E6015743A /* Pods-ChefXDoor.release.xcconfig */,
+				EF92DF086284B1A64022B88E /* Pods-ChefXDoorTests.debug.xcconfig */,
+				EEB1DF9155D1EB9DFE28942D /* Pods-ChefXDoorTests.release.xcconfig */,
+				8D414A920732E04665B06738 /* Pods-ChefXDoorUITests.debug.xcconfig */,
+				48EBC9EC98B19606DF90C43D /* Pods-ChefXDoorUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E19DB7BBF0866EDEFFE4B8C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B18C255FDC7F15848B68E9E8 /* Pods_ChefXDoor.framework */,
+				133FFFC0AA8EE90B5A6773DF /* Pods_ChefXDoorTests.framework */,
+				80E899C2495E837AFC507C52 /* Pods_ChefXDoorUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FEF502AE20CC06C800F2B8EF = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +119,8 @@
 				FEF502CE20CC06C900F2B8EF /* ChefXDoorTests */,
 				FEF502D920CC06C900F2B8EF /* ChefXDoorUITests */,
 				FEF502B820CC06C900F2B8EF /* Products */,
+				A7E611EF43E61D0DE1BDC09C /* Pods */,
+				E19DB7BBF0866EDEFFE4B8C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FEF502DF20CC06C900F2B8EF /* Build configuration list for PBXNativeTarget "ChefXDoor" */;
 			buildPhases = (
+				41919753EBCCA17FDBEE4A85 /* [CP] Check Pods Manifest.lock */,
 				FEF502B320CC06C900F2B8EF /* Sources */,
 				FEF502B420CC06C900F2B8EF /* Frameworks */,
 				FEF502B520CC06C900F2B8EF /* Resources */,
+				F22C069634E3213885FB5265 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +191,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FEF502E220CC06C900F2B8EF /* Build configuration list for PBXNativeTarget "ChefXDoorTests" */;
 			buildPhases = (
+				F2AA68494519C6CB70503C33 /* [CP] Check Pods Manifest.lock */,
 				FEF502C720CC06C900F2B8EF /* Sources */,
 				FEF502C820CC06C900F2B8EF /* Frameworks */,
 				FEF502C920CC06C900F2B8EF /* Resources */,
@@ -167,6 +210,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FEF502E520CC06C900F2B8EF /* Build configuration list for PBXNativeTarget "ChefXDoorUITests" */;
 			buildPhases = (
+				19AD7C9CF89AC6717C98E92A /* [CP] Check Pods Manifest.lock */,
 				FEF502D220CC06C900F2B8EF /* Sources */,
 				FEF502D320CC06C900F2B8EF /* Frameworks */,
 				FEF502D420CC06C900F2B8EF /* Resources */,
@@ -253,6 +297,83 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19AD7C9CF89AC6717C98E92A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChefXDoorUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41919753EBCCA17FDBEE4A85 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChefXDoor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F22C069634E3213885FB5265 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChefXDoor/Pods-ChefXDoor-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSCognito/AWSCognito.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognito.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChefXDoor/Pods-ChefXDoor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2AA68494519C6CB70503C33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChefXDoorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FEF502B320CC06C900F2B8EF /* Sources */ = {
@@ -424,6 +545,7 @@
 		};
 		FEF502E020CC06C900F2B8EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 067A5D2005CE5F3F154A186A /* Pods-ChefXDoor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -439,6 +561,7 @@
 		};
 		FEF502E120CC06C900F2B8EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31CEE471A915AB1E6015743A /* Pods-ChefXDoor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +577,7 @@
 		};
 		FEF502E320CC06C900F2B8EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF92DF086284B1A64022B88E /* Pods-ChefXDoorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -470,6 +594,7 @@
 		};
 		FEF502E420CC06C900F2B8EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEB1DF9155D1EB9DFE28942D /* Pods-ChefXDoorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -486,6 +611,7 @@
 		};
 		FEF502E620CC06C900F2B8EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D414A920732E04665B06738 /* Pods-ChefXDoorUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -501,6 +627,7 @@
 		};
 		FEF502E720CC06C900F2B8EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48EBC9EC98B19606DF90C43D /* Pods-ChefXDoorUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
