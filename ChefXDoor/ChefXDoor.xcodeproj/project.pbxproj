@@ -1,0 +1,559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FEF502BB20CC06C900F2B8EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF502BA20CC06C900F2B8EF /* AppDelegate.swift */; };
+		FEF502BD20CC06C900F2B8EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF502BC20CC06C900F2B8EF /* ViewController.swift */; };
+		FEF502C020CC06C900F2B8EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF502BE20CC06C900F2B8EF /* Main.storyboard */; };
+		FEF502C220CC06C900F2B8EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEF502C120CC06C900F2B8EF /* Assets.xcassets */; };
+		FEF502C520CC06C900F2B8EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF502C320CC06C900F2B8EF /* LaunchScreen.storyboard */; };
+		FEF502D020CC06C900F2B8EF /* ChefXDoorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF502CF20CC06C900F2B8EF /* ChefXDoorTests.swift */; };
+		FEF502DB20CC06C900F2B8EF /* ChefXDoorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF502DA20CC06C900F2B8EF /* ChefXDoorUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FEF502CC20CC06C900F2B8EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FEF502AF20CC06C800F2B8EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FEF502B620CC06C900F2B8EF;
+			remoteInfo = ChefXDoor;
+		};
+		FEF502D720CC06C900F2B8EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FEF502AF20CC06C800F2B8EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FEF502B620CC06C900F2B8EF;
+			remoteInfo = ChefXDoor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FEF502B720CC06C900F2B8EF /* ChefXDoor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChefXDoor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEF502BA20CC06C900F2B8EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FEF502BC20CC06C900F2B8EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FEF502BF20CC06C900F2B8EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FEF502C120CC06C900F2B8EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FEF502C420CC06C900F2B8EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FEF502C620CC06C900F2B8EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEF502CB20CC06C900F2B8EF /* ChefXDoorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChefXDoorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEF502CF20CC06C900F2B8EF /* ChefXDoorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefXDoorTests.swift; sourceTree = "<group>"; };
+		FEF502D120CC06C900F2B8EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEF502D620CC06C900F2B8EF /* ChefXDoorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChefXDoorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEF502DA20CC06C900F2B8EF /* ChefXDoorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefXDoorUITests.swift; sourceTree = "<group>"; };
+		FEF502DC20CC06C900F2B8EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FEF502B420CC06C900F2B8EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEF502C820CC06C900F2B8EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEF502D320CC06C900F2B8EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FEF502AE20CC06C800F2B8EF = {
+			isa = PBXGroup;
+			children = (
+				FEF502B920CC06C900F2B8EF /* ChefXDoor */,
+				FEF502CE20CC06C900F2B8EF /* ChefXDoorTests */,
+				FEF502D920CC06C900F2B8EF /* ChefXDoorUITests */,
+				FEF502B820CC06C900F2B8EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FEF502B820CC06C900F2B8EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FEF502B720CC06C900F2B8EF /* ChefXDoor.app */,
+				FEF502CB20CC06C900F2B8EF /* ChefXDoorTests.xctest */,
+				FEF502D620CC06C900F2B8EF /* ChefXDoorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FEF502B920CC06C900F2B8EF /* ChefXDoor */ = {
+			isa = PBXGroup;
+			children = (
+				FEF502BA20CC06C900F2B8EF /* AppDelegate.swift */,
+				FEF502BC20CC06C900F2B8EF /* ViewController.swift */,
+				FEF502BE20CC06C900F2B8EF /* Main.storyboard */,
+				FEF502C120CC06C900F2B8EF /* Assets.xcassets */,
+				FEF502C320CC06C900F2B8EF /* LaunchScreen.storyboard */,
+				FEF502C620CC06C900F2B8EF /* Info.plist */,
+			);
+			path = ChefXDoor;
+			sourceTree = "<group>";
+		};
+		FEF502CE20CC06C900F2B8EF /* ChefXDoorTests */ = {
+			isa = PBXGroup;
+			children = (
+				FEF502CF20CC06C900F2B8EF /* ChefXDoorTests.swift */,
+				FEF502D120CC06C900F2B8EF /* Info.plist */,
+			);
+			path = ChefXDoorTests;
+			sourceTree = "<group>";
+		};
+		FEF502D920CC06C900F2B8EF /* ChefXDoorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FEF502DA20CC06C900F2B8EF /* ChefXDoorUITests.swift */,
+				FEF502DC20CC06C900F2B8EF /* Info.plist */,
+			);
+			path = ChefXDoorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FEF502B620CC06C900F2B8EF /* ChefXDoor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEF502DF20CC06C900F2B8EF /* Build configuration list for PBXNativeTarget "ChefXDoor" */;
+			buildPhases = (
+				FEF502B320CC06C900F2B8EF /* Sources */,
+				FEF502B420CC06C900F2B8EF /* Frameworks */,
+				FEF502B520CC06C900F2B8EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChefXDoor;
+			productName = ChefXDoor;
+			productReference = FEF502B720CC06C900F2B8EF /* ChefXDoor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FEF502CA20CC06C900F2B8EF /* ChefXDoorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEF502E220CC06C900F2B8EF /* Build configuration list for PBXNativeTarget "ChefXDoorTests" */;
+			buildPhases = (
+				FEF502C720CC06C900F2B8EF /* Sources */,
+				FEF502C820CC06C900F2B8EF /* Frameworks */,
+				FEF502C920CC06C900F2B8EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FEF502CD20CC06C900F2B8EF /* PBXTargetDependency */,
+			);
+			name = ChefXDoorTests;
+			productName = ChefXDoorTests;
+			productReference = FEF502CB20CC06C900F2B8EF /* ChefXDoorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FEF502D520CC06C900F2B8EF /* ChefXDoorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEF502E520CC06C900F2B8EF /* Build configuration list for PBXNativeTarget "ChefXDoorUITests" */;
+			buildPhases = (
+				FEF502D220CC06C900F2B8EF /* Sources */,
+				FEF502D320CC06C900F2B8EF /* Frameworks */,
+				FEF502D420CC06C900F2B8EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FEF502D820CC06C900F2B8EF /* PBXTargetDependency */,
+			);
+			name = ChefXDoorUITests;
+			productName = ChefXDoorUITests;
+			productReference = FEF502D620CC06C900F2B8EF /* ChefXDoorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FEF502AF20CC06C800F2B8EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = ChefXDoor;
+				TargetAttributes = {
+					FEF502B620CC06C900F2B8EF = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					FEF502CA20CC06C900F2B8EF = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FEF502B620CC06C900F2B8EF;
+					};
+					FEF502D520CC06C900F2B8EF = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FEF502B620CC06C900F2B8EF;
+					};
+				};
+			};
+			buildConfigurationList = FEF502B220CC06C800F2B8EF /* Build configuration list for PBXProject "ChefXDoor" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FEF502AE20CC06C800F2B8EF;
+			productRefGroup = FEF502B820CC06C900F2B8EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FEF502B620CC06C900F2B8EF /* ChefXDoor */,
+				FEF502CA20CC06C900F2B8EF /* ChefXDoorTests */,
+				FEF502D520CC06C900F2B8EF /* ChefXDoorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FEF502B520CC06C900F2B8EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEF502C520CC06C900F2B8EF /* LaunchScreen.storyboard in Resources */,
+				FEF502C220CC06C900F2B8EF /* Assets.xcassets in Resources */,
+				FEF502C020CC06C900F2B8EF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEF502C920CC06C900F2B8EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEF502D420CC06C900F2B8EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FEF502B320CC06C900F2B8EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEF502BD20CC06C900F2B8EF /* ViewController.swift in Sources */,
+				FEF502BB20CC06C900F2B8EF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEF502C720CC06C900F2B8EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEF502D020CC06C900F2B8EF /* ChefXDoorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEF502D220CC06C900F2B8EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEF502DB20CC06C900F2B8EF /* ChefXDoorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FEF502CD20CC06C900F2B8EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FEF502B620CC06C900F2B8EF /* ChefXDoor */;
+			targetProxy = FEF502CC20CC06C900F2B8EF /* PBXContainerItemProxy */;
+		};
+		FEF502D820CC06C900F2B8EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FEF502B620CC06C900F2B8EF /* ChefXDoor */;
+			targetProxy = FEF502D720CC06C900F2B8EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FEF502BE20CC06C900F2B8EF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FEF502BF20CC06C900F2B8EF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FEF502C320CC06C900F2B8EF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FEF502C420CC06C900F2B8EF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FEF502DD20CC06C900F2B8EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FEF502DE20CC06C900F2B8EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FEF502E020CC06C900F2B8EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AJJ69MRBGW;
+				INFOPLIST_FILE = ChefXDoor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chefxdoor.ChefXDoor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FEF502E120CC06C900F2B8EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AJJ69MRBGW;
+				INFOPLIST_FILE = ChefXDoor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chefxdoor.ChefXDoor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FEF502E320CC06C900F2B8EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ChefXDoorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chefxdoor.ChefXDoorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChefXDoor.app/ChefXDoor";
+			};
+			name = Debug;
+		};
+		FEF502E420CC06C900F2B8EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ChefXDoorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chefxdoor.ChefXDoorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChefXDoor.app/ChefXDoor";
+			};
+			name = Release;
+		};
+		FEF502E620CC06C900F2B8EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ChefXDoorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chefxdoor.ChefXDoorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChefXDoor;
+			};
+			name = Debug;
+		};
+		FEF502E720CC06C900F2B8EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ChefXDoorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chefxdoor.ChefXDoorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChefXDoor;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FEF502B220CC06C800F2B8EF /* Build configuration list for PBXProject "ChefXDoor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEF502DD20CC06C900F2B8EF /* Debug */,
+				FEF502DE20CC06C900F2B8EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEF502DF20CC06C900F2B8EF /* Build configuration list for PBXNativeTarget "ChefXDoor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEF502E020CC06C900F2B8EF /* Debug */,
+				FEF502E120CC06C900F2B8EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEF502E220CC06C900F2B8EF /* Build configuration list for PBXNativeTarget "ChefXDoorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEF502E320CC06C900F2B8EF /* Debug */,
+				FEF502E420CC06C900F2B8EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEF502E520CC06C900F2B8EF /* Build configuration list for PBXNativeTarget "ChefXDoorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEF502E620CC06C900F2B8EF /* Debug */,
+				FEF502E720CC06C900F2B8EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FEF502AF20CC06C800F2B8EF /* Project object */;
+}
