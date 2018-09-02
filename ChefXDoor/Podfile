@@ -8,6 +8,12 @@ target 'ChefXDoor' do
   # Pods for ChefXDoor
   pod 'AWSCore'
   pod 'AWSCognito'
+  pod 'AWSCognitoIdentityProvider'
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit'
+  pod 'FBSDKCoreKit'
+  pod "FAPanels"
+  pod 'AWSAPIGateway'
   
   target 'ChefXDoorTests' do
     inherit! :search_paths

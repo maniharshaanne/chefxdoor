@@ -10,13 +10,101 @@
 		2B63081E3250BAD33757C38B /* Pods_ChefXDoor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18C255FDC7F15848B68E9E8 /* Pods_ChefXDoor.framework */; };
 		9CC2B4F923592F8119DD4FC4 /* Pods_ChefXDoorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133FFFC0AA8EE90B5A6773DF /* Pods_ChefXDoorTests.framework */; };
 		D3E030BC7DF5A1783D82DC78 /* Pods_ChefXDoorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E899C2495E837AFC507C52 /* Pods_ChefXDoorUITests.framework */; };
+		FE67D71221307DEA00C84C07 /* CXDApiServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE67D71121307DEA00C84C07 /* CXDApiServiceController.swift */; };
+		FE67D71321307DEA00C84C07 /* CXDApiServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE67D71121307DEA00C84C07 /* CXDApiServiceController.swift */; };
+		FE67D71421307DEA00C84C07 /* CXDApiServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE67D71121307DEA00C84C07 /* CXDApiServiceController.swift */; };
+		FE7A09F32135923800AE45AD /* SignInViewController+FacebookLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A09F22135923800AE45AD /* SignInViewController+FacebookLogin.swift */; };
+		FE7A09F42135923800AE45AD /* SignInViewController+FacebookLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A09F22135923800AE45AD /* SignInViewController+FacebookLogin.swift */; };
+		FE7A09F52135923800AE45AD /* SignInViewController+FacebookLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A09F22135923800AE45AD /* SignInViewController+FacebookLogin.swift */; };
+		FE7E429E210D27AE004773F6 /* SampleMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7E429D210D27AE004773F6 /* SampleMenuViewController.swift */; };
+		FE7E429F210D27AE004773F6 /* SampleMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7E429D210D27AE004773F6 /* SampleMenuViewController.swift */; };
+		FE7E42A0210D27AE004773F6 /* SampleMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7E429D210D27AE004773F6 /* SampleMenuViewController.swift */; };
+		FE7E42A3210D2DDC004773F6 /* SampleTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7E42A2210D2DDC004773F6 /* SampleTableCell.swift */; };
+		FE7E42A4210D2DDC004773F6 /* SampleTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7E42A2210D2DDC004773F6 /* SampleTableCell.swift */; };
+		FE7E42A5210D2DDC004773F6 /* SampleTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7E42A2210D2DDC004773F6 /* SampleTableCell.swift */; };
+		FEB8B34220D346DD00DDDD2D /* MFAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B34120D346DD00DDDD2D /* MFAViewController.swift */; };
+		FEB8B34320D346DD00DDDD2D /* MFAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B34120D346DD00DDDD2D /* MFAViewController.swift */; };
+		FEB8B34420D346DD00DDDD2D /* MFAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B34120D346DD00DDDD2D /* MFAViewController.swift */; };
+		FEB8B34620D3471000DDDD2D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B34520D3471000DDDD2D /* SignInViewController.swift */; };
+		FEB8B34720D3471000DDDD2D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B34520D3471000DDDD2D /* SignInViewController.swift */; };
+		FEB8B34820D3471000DDDD2D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B34520D3471000DDDD2D /* SignInViewController.swift */; };
+		FEB8B34A20D3477000DDDD2D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B34920D3477000DDDD2D /* Constants.swift */; };
+		FEB8B34B20D3477000DDDD2D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B34920D3477000DDDD2D /* Constants.swift */; };
+		FEB8B34C20D3477000DDDD2D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B34920D3477000DDDD2D /* Constants.swift */; };
+		FEB8B34E20D3479700DDDD2D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B34D20D3479700DDDD2D /* SignUpViewController.swift */; };
+		FEB8B34F20D3479700DDDD2D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B34D20D3479700DDDD2D /* SignUpViewController.swift */; };
+		FEB8B35020D3479700DDDD2D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B34D20D3479700DDDD2D /* SignUpViewController.swift */; };
+		FEB8B35220D347BF00DDDD2D /* ConfirmSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B35120D347BF00DDDD2D /* ConfirmSignUpViewController.swift */; };
+		FEB8B35320D347BF00DDDD2D /* ConfirmSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B35120D347BF00DDDD2D /* ConfirmSignUpViewController.swift */; };
+		FEB8B35420D347BF00DDDD2D /* ConfirmSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B35120D347BF00DDDD2D /* ConfirmSignUpViewController.swift */; };
+		FEB8B35620D347F200DDDD2D /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B35520D347F200DDDD2D /* ForgotPasswordViewController.swift */; };
+		FEB8B35720D347F200DDDD2D /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B35520D347F200DDDD2D /* ForgotPasswordViewController.swift */; };
+		FEB8B35820D347F200DDDD2D /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B35520D347F200DDDD2D /* ForgotPasswordViewController.swift */; };
+		FEB8B35A20D3481900DDDD2D /* ConfirmForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B35920D3481900DDDD2D /* ConfirmForgotPasswordViewController.swift */; };
+		FEB8B35B20D3481900DDDD2D /* ConfirmForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B35920D3481900DDDD2D /* ConfirmForgotPasswordViewController.swift */; };
+		FEB8B35C20D3481900DDDD2D /* ConfirmForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B35920D3481900DDDD2D /* ConfirmForgotPasswordViewController.swift */; };
+		FEB8B35E20D3483F00DDDD2D /* UserDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B35D20D3483F00DDDD2D /* UserDetailTableViewController.swift */; };
+		FEB8B35F20D3483F00DDDD2D /* UserDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B35D20D3483F00DDDD2D /* UserDetailTableViewController.swift */; };
+		FEB8B36020D3483F00DDDD2D /* UserDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B35D20D3483F00DDDD2D /* UserDetailTableViewController.swift */; };
+		FEB8B36220D3485F00DDDD2D /* DevicesDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B36120D3485F00DDDD2D /* DevicesDetailTableViewController.swift */; };
+		FEB8B36320D3485F00DDDD2D /* DevicesDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B36120D3485F00DDDD2D /* DevicesDetailTableViewController.swift */; };
+		FEB8B36420D3485F00DDDD2D /* DevicesDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B36120D3485F00DDDD2D /* DevicesDetailTableViewController.swift */; };
+		FEC4A44521372A4F00864655 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF502BA20CC06C900F2B8EF /* AppDelegate.swift */; };
+		FEC4A44621372A5000864655 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF502BA20CC06C900F2B8EF /* AppDelegate.swift */; };
+		FEC76806213B624200F51089 /* CXDError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767F7213B623D00F51089 /* CXDError.swift */; };
+		FEC76807213B624200F51089 /* CXDError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767F7213B623D00F51089 /* CXDError.swift */; };
+		FEC76808213B624200F51089 /* CXDError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767F7213B623D00F51089 /* CXDError.swift */; };
+		FEC76809213B624200F51089 /* CXDArrayOfBilling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767F8213B623E00F51089 /* CXDArrayOfBilling.swift */; };
+		FEC7680A213B624200F51089 /* CXDArrayOfBilling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767F8213B623E00F51089 /* CXDArrayOfBilling.swift */; };
+		FEC7680B213B624200F51089 /* CXDArrayOfBilling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767F8213B623E00F51089 /* CXDArrayOfBilling.swift */; };
+		FEC7680C213B624200F51089 /* CXDDEVAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767F9213B623E00F51089 /* CXDDEVAPIClient.swift */; };
+		FEC7680D213B624200F51089 /* CXDDEVAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767F9213B623E00F51089 /* CXDDEVAPIClient.swift */; };
+		FEC7680E213B624200F51089 /* CXDDEVAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767F9213B623E00F51089 /* CXDDEVAPIClient.swift */; };
+		FEC7680F213B624200F51089 /* CXDMealPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767FA213B623E00F51089 /* CXDMealPhoto.swift */; };
+		FEC76810213B624200F51089 /* CXDMealPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767FA213B623E00F51089 /* CXDMealPhoto.swift */; };
+		FEC76811213B624200F51089 /* CXDMealPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767FA213B623E00F51089 /* CXDMealPhoto.swift */; };
+		FEC76812213B624200F51089 /* CXDMealReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767FB213B623F00F51089 /* CXDMealReview.swift */; };
+		FEC76813213B624200F51089 /* CXDMealReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767FB213B623F00F51089 /* CXDMealReview.swift */; };
+		FEC76814213B624200F51089 /* CXDMealReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767FB213B623F00F51089 /* CXDMealReview.swift */; };
+		FEC76815213B624200F51089 /* CXDUserReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767FC213B623F00F51089 /* CXDUserReview.swift */; };
+		FEC76816213B624200F51089 /* CXDUserReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767FC213B623F00F51089 /* CXDUserReview.swift */; };
+		FEC76817213B624200F51089 /* CXDUserReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767FC213B623F00F51089 /* CXDUserReview.swift */; };
+		FEC76818213B624200F51089 /* CXDOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767FD213B623F00F51089 /* CXDOrders.swift */; };
+		FEC76819213B624200F51089 /* CXDOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767FD213B623F00F51089 /* CXDOrders.swift */; };
+		FEC7681A213B624200F51089 /* CXDOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767FD213B623F00F51089 /* CXDOrders.swift */; };
+		FEC7681B213B624200F51089 /* CXDMealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767FE213B624000F51089 /* CXDMealCategory.swift */; };
+		FEC7681C213B624200F51089 /* CXDMealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767FE213B624000F51089 /* CXDMealCategory.swift */; };
+		FEC7681D213B624200F51089 /* CXDMealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767FE213B624000F51089 /* CXDMealCategory.swift */; };
+		FEC7681E213B624200F51089 /* CXDBilling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767FF213B624000F51089 /* CXDBilling.swift */; };
+		FEC7681F213B624200F51089 /* CXDBilling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767FF213B624000F51089 /* CXDBilling.swift */; };
+		FEC76820213B624200F51089 /* CXDBilling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767FF213B624000F51089 /* CXDBilling.swift */; };
+		FEC76821213B624200F51089 /* CXDArrayOfMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC76800213B624000F51089 /* CXDArrayOfMeal.swift */; };
+		FEC76822213B624200F51089 /* CXDArrayOfMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC76800213B624000F51089 /* CXDArrayOfMeal.swift */; };
+		FEC76823213B624200F51089 /* CXDArrayOfMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC76800213B624000F51089 /* CXDArrayOfMeal.swift */; };
+		FEC76824213B624200F51089 /* CXDArrayOfUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC76801213B624100F51089 /* CXDArrayOfUser.swift */; };
+		FEC76825213B624200F51089 /* CXDArrayOfUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC76801213B624100F51089 /* CXDArrayOfUser.swift */; };
+		FEC76826213B624200F51089 /* CXDArrayOfUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC76801213B624100F51089 /* CXDArrayOfUser.swift */; };
+		FEC76827213B624200F51089 /* CXDUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC76802213B624100F51089 /* CXDUser.swift */; };
+		FEC76828213B624200F51089 /* CXDUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC76802213B624100F51089 /* CXDUser.swift */; };
+		FEC76829213B624200F51089 /* CXDUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC76802213B624100F51089 /* CXDUser.swift */; };
+		FEC7682A213B624200F51089 /* CXDPostResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC76803213B624100F51089 /* CXDPostResponseObject.swift */; };
+		FEC7682B213B624200F51089 /* CXDPostResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC76803213B624100F51089 /* CXDPostResponseObject.swift */; };
+		FEC7682C213B624200F51089 /* CXDPostResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC76803213B624100F51089 /* CXDPostResponseObject.swift */; };
+		FEC7682D213B624200F51089 /* CXDArrayOfMealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC76804213B624200F51089 /* CXDArrayOfMealCategory.swift */; };
+		FEC7682E213B624200F51089 /* CXDArrayOfMealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC76804213B624200F51089 /* CXDArrayOfMealCategory.swift */; };
+		FEC7682F213B624200F51089 /* CXDArrayOfMealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC76804213B624200F51089 /* CXDArrayOfMealCategory.swift */; };
+		FEC76830213B624200F51089 /* CXDMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC76805213B624200F51089 /* CXDMeal.swift */; };
+		FEC76831213B624200F51089 /* CXDMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC76805213B624200F51089 /* CXDMeal.swift */; };
+		FEC76832213B624200F51089 /* CXDMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC76805213B624200F51089 /* CXDMeal.swift */; };
 		FEF502BB20CC06C900F2B8EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF502BA20CC06C900F2B8EF /* AppDelegate.swift */; };
-		FEF502BD20CC06C900F2B8EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF502BC20CC06C900F2B8EF /* ViewController.swift */; };
-		FEF502C020CC06C900F2B8EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF502BE20CC06C900F2B8EF /* Main.storyboard */; };
+		FEF502C020CC06C900F2B8EF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF502BE20CC06C900F2B8EF /* Login.storyboard */; };
 		FEF502C220CC06C900F2B8EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEF502C120CC06C900F2B8EF /* Assets.xcassets */; };
 		FEF502C520CC06C900F2B8EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF502C320CC06C900F2B8EF /* LaunchScreen.storyboard */; };
 		FEF502D020CC06C900F2B8EF /* ChefXDoorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF502CF20CC06C900F2B8EF /* ChefXDoorTests.swift */; };
 		FEF502DB20CC06C900F2B8EF /* ChefXDoorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF502DA20CC06C900F2B8EF /* ChefXDoorUITests.swift */; };
+		FEF8B8CD21079BC000BDD272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF8B8CC21079BC000BDD272 /* Main.storyboard */; };
+		FEF8B8CE21079BC000BDD272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF8B8CC21079BC000BDD272 /* Main.storyboard */; };
+		FEF8B8CF21079BC000BDD272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF8B8CC21079BC000BDD272 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,10 +134,39 @@
 		B18C255FDC7F15848B68E9E8 /* Pods_ChefXDoor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChefXDoor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB1DF9155D1EB9DFE28942D /* Pods-ChefXDoorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChefXDoorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChefXDoorTests/Pods-ChefXDoorTests.release.xcconfig"; sourceTree = "<group>"; };
 		EF92DF086284B1A64022B88E /* Pods-ChefXDoorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChefXDoorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChefXDoorTests/Pods-ChefXDoorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FE67D6F0212F4AEB00C84C07 /* Bridging_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridging_Header.h; sourceTree = "<group>"; };
+		FE67D6F2212F4AEC00C84C07 /* AWSApiGatewayBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSApiGatewayBridge.h; sourceTree = "<group>"; };
+		FE67D71121307DEA00C84C07 /* CXDApiServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDApiServiceController.swift; sourceTree = "<group>"; };
+		FE7A09F22135923800AE45AD /* SignInViewController+FacebookLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInViewController+FacebookLogin.swift"; sourceTree = "<group>"; };
+		FE7E429D210D27AE004773F6 /* SampleMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleMenuViewController.swift; sourceTree = "<group>"; };
+		FE7E42A2210D2DDC004773F6 /* SampleTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTableCell.swift; sourceTree = "<group>"; };
+		FEB8B34120D346DD00DDDD2D /* MFAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFAViewController.swift; sourceTree = "<group>"; };
+		FEB8B34520D3471000DDDD2D /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		FEB8B34920D3477000DDDD2D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FEB8B34D20D3479700DDDD2D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		FEB8B35120D347BF00DDDD2D /* ConfirmSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmSignUpViewController.swift; sourceTree = "<group>"; };
+		FEB8B35520D347F200DDDD2D /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		FEB8B35920D3481900DDDD2D /* ConfirmForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		FEB8B35D20D3483F00DDDD2D /* UserDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewController.swift; sourceTree = "<group>"; };
+		FEB8B36120D3485F00DDDD2D /* DevicesDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesDetailTableViewController.swift; sourceTree = "<group>"; };
+		FEC767F7213B623D00F51089 /* CXDError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDError.swift; sourceTree = "<group>"; };
+		FEC767F8213B623E00F51089 /* CXDArrayOfBilling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfBilling.swift; sourceTree = "<group>"; };
+		FEC767F9213B623E00F51089 /* CXDDEVAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDDEVAPIClient.swift; sourceTree = "<group>"; };
+		FEC767FA213B623E00F51089 /* CXDMealPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDMealPhoto.swift; sourceTree = "<group>"; };
+		FEC767FB213B623F00F51089 /* CXDMealReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDMealReview.swift; sourceTree = "<group>"; };
+		FEC767FC213B623F00F51089 /* CXDUserReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDUserReview.swift; sourceTree = "<group>"; };
+		FEC767FD213B623F00F51089 /* CXDOrders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDOrders.swift; sourceTree = "<group>"; };
+		FEC767FE213B624000F51089 /* CXDMealCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDMealCategory.swift; sourceTree = "<group>"; };
+		FEC767FF213B624000F51089 /* CXDBilling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDBilling.swift; sourceTree = "<group>"; };
+		FEC76800213B624000F51089 /* CXDArrayOfMeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfMeal.swift; sourceTree = "<group>"; };
+		FEC76801213B624100F51089 /* CXDArrayOfUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfUser.swift; sourceTree = "<group>"; };
+		FEC76802213B624100F51089 /* CXDUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDUser.swift; sourceTree = "<group>"; };
+		FEC76803213B624100F51089 /* CXDPostResponseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDPostResponseObject.swift; sourceTree = "<group>"; };
+		FEC76804213B624200F51089 /* CXDArrayOfMealCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfMealCategory.swift; sourceTree = "<group>"; };
+		FEC76805213B624200F51089 /* CXDMeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDMeal.swift; sourceTree = "<group>"; };
 		FEF502B720CC06C900F2B8EF /* ChefXDoor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChefXDoor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEF502BA20CC06C900F2B8EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FEF502BC20CC06C900F2B8EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FEF502BF20CC06C900F2B8EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FEF502BF20CC06C900F2B8EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		FEF502C120CC06C900F2B8EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEF502C420CC06C900F2B8EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEF502C620CC06C900F2B8EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +176,7 @@
 		FEF502D620CC06C900F2B8EF /* ChefXDoorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChefXDoorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEF502DA20CC06C900F2B8EF /* ChefXDoorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefXDoorUITests.swift; sourceTree = "<group>"; };
 		FEF502DC20CC06C900F2B8EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEF8B8CC21079BC000BDD272 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +230,78 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FE67D6E9212F4AD400C84C07 /* AWS-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				FEC767F8213B623E00F51089 /* CXDArrayOfBilling.swift */,
+				FEC76800213B624000F51089 /* CXDArrayOfMeal.swift */,
+				FEC76804213B624200F51089 /* CXDArrayOfMealCategory.swift */,
+				FEC76801213B624100F51089 /* CXDArrayOfUser.swift */,
+				FEC767FF213B624000F51089 /* CXDBilling.swift */,
+				FEC767F9213B623E00F51089 /* CXDDEVAPIClient.swift */,
+				FEC767F7213B623D00F51089 /* CXDError.swift */,
+				FEC76805213B624200F51089 /* CXDMeal.swift */,
+				FEC767FE213B624000F51089 /* CXDMealCategory.swift */,
+				FEC767FA213B623E00F51089 /* CXDMealPhoto.swift */,
+				FEC767FB213B623F00F51089 /* CXDMealReview.swift */,
+				FEC767FD213B623F00F51089 /* CXDOrders.swift */,
+				FEC76803213B624100F51089 /* CXDPostResponseObject.swift */,
+				FEC76802213B624100F51089 /* CXDUser.swift */,
+				FEC767FC213B623F00F51089 /* CXDUserReview.swift */,
+				FE67D6F2212F4AEC00C84C07 /* AWSApiGatewayBridge.h */,
+				FE67D6F0212F4AEB00C84C07 /* Bridging_Header.h */,
+			);
+			path = "AWS-SDK";
+			sourceTree = "<group>";
+		};
+		FE67D71021307DB900C84C07 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FE67D71121307DEA00C84C07 /* CXDApiServiceController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FE7547EA20F114A400AC2D88 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		FE7A09F6213593D100AE45AD /* SignIn + SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				FE7A09F22135923800AE45AD /* SignInViewController+FacebookLogin.swift */,
+				FEB8B35520D347F200DDDD2D /* ForgotPasswordViewController.swift */,
+				FEB8B35120D347BF00DDDD2D /* ConfirmSignUpViewController.swift */,
+				FEB8B34120D346DD00DDDD2D /* MFAViewController.swift */,
+				FEB8B35920D3481900DDDD2D /* ConfirmForgotPasswordViewController.swift */,
+				FEB8B34D20D3479700DDDD2D /* SignUpViewController.swift */,
+				FEB8B34520D3471000DDDD2D /* SignInViewController.swift */,
+			);
+			path = "SignIn + SignUp";
+			sourceTree = "<group>";
+		};
+		FE7E42A1210D2DA2004773F6 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				FE7E42A2210D2DDC004773F6 /* SampleTableCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		FEB8B34020D346BC00DDDD2D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FE7A09F6213593D100AE45AD /* SignIn + SignUp */,
+				FEB8B35D20D3483F00DDDD2D /* UserDetailTableViewController.swift */,
+				FEB8B36120D3485F00DDDD2D /* DevicesDetailTableViewController.swift */,
+				FE7E429D210D27AE004773F6 /* SampleMenuViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		FEF502AE20CC06C800F2B8EF = {
 			isa = PBXGroup;
 			children = (
@@ -137,12 +327,18 @@
 		FEF502B920CC06C900F2B8EF /* ChefXDoor */ = {
 			isa = PBXGroup;
 			children = (
+				FE67D6E9212F4AD400C84C07 /* AWS-SDK */,
+				FE7547EA20F114A400AC2D88 /* Utility */,
+				FE7E42A1210D2DA2004773F6 /* TableViewCells */,
+				FE67D71021307DB900C84C07 /* Controllers */,
+				FEB8B34020D346BC00DDDD2D /* ViewControllers */,
 				FEF502BA20CC06C900F2B8EF /* AppDelegate.swift */,
-				FEF502BC20CC06C900F2B8EF /* ViewController.swift */,
-				FEF502BE20CC06C900F2B8EF /* Main.storyboard */,
+				FEF502BE20CC06C900F2B8EF /* Login.storyboard */,
+				FEF8B8CC21079BC000BDD272 /* Main.storyboard */,
 				FEF502C120CC06C900F2B8EF /* Assets.xcassets */,
 				FEF502C320CC06C900F2B8EF /* LaunchScreen.storyboard */,
 				FEF502C620CC06C900F2B8EF /* Info.plist */,
+				FEB8B34920D3477000DDDD2D /* Constants.swift */,
 			);
 			path = ChefXDoor;
 			sourceTree = "<group>";
@@ -278,7 +474,8 @@
 			files = (
 				FEF502C520CC06C900F2B8EF /* LaunchScreen.storyboard in Resources */,
 				FEF502C220CC06C900F2B8EF /* Assets.xcassets in Resources */,
-				FEF502C020CC06C900F2B8EF /* Main.storyboard in Resources */,
+				FEF502C020CC06C900F2B8EF /* Login.storyboard in Resources */,
+				FEF8B8CD21079BC000BDD272 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +483,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEF8B8CE21079BC000BDD272 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +491,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEF8B8CF21079BC000BDD272 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,13 +541,29 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ChefXDoor/Pods-ChefXDoor-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSAPIGateway/AWSAPIGateway.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognito/AWSCognito.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FAPanels/FAPanels.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAPIGateway.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognito.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProviderASF.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FAPanels.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -380,8 +595,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEF502BD20CC06C900F2B8EF /* ViewController.swift in Sources */,
 				FEF502BB20CC06C900F2B8EF /* AppDelegate.swift in Sources */,
+				FEC76821213B624200F51089 /* CXDArrayOfMeal.swift in Sources */,
+				FEC7682A213B624200F51089 /* CXDPostResponseObject.swift in Sources */,
+				FE7E429E210D27AE004773F6 /* SampleMenuViewController.swift in Sources */,
+				FEC7681E213B624200F51089 /* CXDBilling.swift in Sources */,
+				FEC76830213B624200F51089 /* CXDMeal.swift in Sources */,
+				FE7E42A3210D2DDC004773F6 /* SampleTableCell.swift in Sources */,
+				FEB8B35620D347F200DDDD2D /* ForgotPasswordViewController.swift in Sources */,
+				FEC7682D213B624200F51089 /* CXDArrayOfMealCategory.swift in Sources */,
+				FEC7681B213B624200F51089 /* CXDMealCategory.swift in Sources */,
+				FEB8B35220D347BF00DDDD2D /* ConfirmSignUpViewController.swift in Sources */,
+				FEB8B34220D346DD00DDDD2D /* MFAViewController.swift in Sources */,
+				FEC76809213B624200F51089 /* CXDArrayOfBilling.swift in Sources */,
+				FEC76806213B624200F51089 /* CXDError.swift in Sources */,
+				FEB8B34620D3471000DDDD2D /* SignInViewController.swift in Sources */,
+				FEB8B35A20D3481900DDDD2D /* ConfirmForgotPasswordViewController.swift in Sources */,
+				FEB8B36220D3485F00DDDD2D /* DevicesDetailTableViewController.swift in Sources */,
+				FEC76827213B624200F51089 /* CXDUser.swift in Sources */,
+				FEC76812213B624200F51089 /* CXDMealReview.swift in Sources */,
+				FE7A09F32135923800AE45AD /* SignInViewController+FacebookLogin.swift in Sources */,
+				FE67D71221307DEA00C84C07 /* CXDApiServiceController.swift in Sources */,
+				FEC76815213B624200F51089 /* CXDUserReview.swift in Sources */,
+				FEC76818213B624200F51089 /* CXDOrders.swift in Sources */,
+				FEC7680F213B624200F51089 /* CXDMealPhoto.swift in Sources */,
+				FEB8B35E20D3483F00DDDD2D /* UserDetailTableViewController.swift in Sources */,
+				FEC7680C213B624200F51089 /* CXDDEVAPIClient.swift in Sources */,
+				FEB8B34A20D3477000DDDD2D /* Constants.swift in Sources */,
+				FEC76824213B624200F51089 /* CXDArrayOfUser.swift in Sources */,
+				FEB8B34E20D3479700DDDD2D /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +632,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEF502D020CC06C900F2B8EF /* ChefXDoorTests.swift in Sources */,
+				FE7E429F210D27AE004773F6 /* SampleMenuViewController.swift in Sources */,
+				FEC76807213B624200F51089 /* CXDError.swift in Sources */,
+				FEC76825213B624200F51089 /* CXDArrayOfUser.swift in Sources */,
+				FEC7680D213B624200F51089 /* CXDDEVAPIClient.swift in Sources */,
+				FEC7682B213B624200F51089 /* CXDPostResponseObject.swift in Sources */,
+				FE7E42A4210D2DDC004773F6 /* SampleTableCell.swift in Sources */,
+				FEB8B35720D347F200DDDD2D /* ForgotPasswordViewController.swift in Sources */,
+				FEC7681C213B624200F51089 /* CXDMealCategory.swift in Sources */,
+				FEB8B35320D347BF00DDDD2D /* ConfirmSignUpViewController.swift in Sources */,
+				FEB8B34320D346DD00DDDD2D /* MFAViewController.swift in Sources */,
+				FEB8B34720D3471000DDDD2D /* SignInViewController.swift in Sources */,
+				FEC76816213B624200F51089 /* CXDUserReview.swift in Sources */,
+				FEC4A44521372A4F00864655 /* AppDelegate.swift in Sources */,
+				FEB8B35B20D3481900DDDD2D /* ConfirmForgotPasswordViewController.swift in Sources */,
+				FEB8B36320D3485F00DDDD2D /* DevicesDetailTableViewController.swift in Sources */,
+				FEC76828213B624200F51089 /* CXDUser.swift in Sources */,
+				FE7A09F42135923800AE45AD /* SignInViewController+FacebookLogin.swift in Sources */,
+				FEC7682E213B624200F51089 /* CXDArrayOfMealCategory.swift in Sources */,
+				FE67D71321307DEA00C84C07 /* CXDApiServiceController.swift in Sources */,
+				FEB8B35F20D3483F00DDDD2D /* UserDetailTableViewController.swift in Sources */,
+				FEC76810213B624200F51089 /* CXDMealPhoto.swift in Sources */,
+				FEB8B34B20D3477000DDDD2D /* Constants.swift in Sources */,
+				FEC7681F213B624200F51089 /* CXDBilling.swift in Sources */,
+				FEC76822213B624200F51089 /* CXDArrayOfMeal.swift in Sources */,
+				FEC76819213B624200F51089 /* CXDOrders.swift in Sources */,
+				FEC7680A213B624200F51089 /* CXDArrayOfBilling.swift in Sources */,
+				FEC76813213B624200F51089 /* CXDMealReview.swift in Sources */,
+				FEC76831213B624200F51089 /* CXDMeal.swift in Sources */,
+				FEB8B34F20D3479700DDDD2D /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +669,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEF502DB20CC06C900F2B8EF /* ChefXDoorUITests.swift in Sources */,
+				FE7E42A0210D27AE004773F6 /* SampleMenuViewController.swift in Sources */,
+				FEC76808213B624200F51089 /* CXDError.swift in Sources */,
+				FEC76826213B624200F51089 /* CXDArrayOfUser.swift in Sources */,
+				FEC7680E213B624200F51089 /* CXDDEVAPIClient.swift in Sources */,
+				FEC7682C213B624200F51089 /* CXDPostResponseObject.swift in Sources */,
+				FE7E42A5210D2DDC004773F6 /* SampleTableCell.swift in Sources */,
+				FEB8B35820D347F200DDDD2D /* ForgotPasswordViewController.swift in Sources */,
+				FEC7681D213B624200F51089 /* CXDMealCategory.swift in Sources */,
+				FEB8B35420D347BF00DDDD2D /* ConfirmSignUpViewController.swift in Sources */,
+				FEB8B34420D346DD00DDDD2D /* MFAViewController.swift in Sources */,
+				FEB8B34820D3471000DDDD2D /* SignInViewController.swift in Sources */,
+				FEC76817213B624200F51089 /* CXDUserReview.swift in Sources */,
+				FEC4A44621372A5000864655 /* AppDelegate.swift in Sources */,
+				FEB8B35C20D3481900DDDD2D /* ConfirmForgotPasswordViewController.swift in Sources */,
+				FEB8B36420D3485F00DDDD2D /* DevicesDetailTableViewController.swift in Sources */,
+				FEC76829213B624200F51089 /* CXDUser.swift in Sources */,
+				FE7A09F52135923800AE45AD /* SignInViewController+FacebookLogin.swift in Sources */,
+				FEC7682F213B624200F51089 /* CXDArrayOfMealCategory.swift in Sources */,
+				FE67D71421307DEA00C84C07 /* CXDApiServiceController.swift in Sources */,
+				FEB8B36020D3483F00DDDD2D /* UserDetailTableViewController.swift in Sources */,
+				FEC76811213B624200F51089 /* CXDMealPhoto.swift in Sources */,
+				FEB8B34C20D3477000DDDD2D /* Constants.swift in Sources */,
+				FEC76820213B624200F51089 /* CXDBilling.swift in Sources */,
+				FEC76823213B624200F51089 /* CXDArrayOfMeal.swift in Sources */,
+				FEC7681A213B624200F51089 /* CXDOrders.swift in Sources */,
+				FEC7680B213B624200F51089 /* CXDArrayOfBilling.swift in Sources */,
+				FEC76814213B624200F51089 /* CXDMealReview.swift in Sources */,
+				FEC76832213B624200F51089 /* CXDMeal.swift in Sources */,
+				FEB8B35020D3479700DDDD2D /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,12 +717,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FEF502BE20CC06C900F2B8EF /* Main.storyboard */ = {
+		FEF502BE20CC06C900F2B8EF /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FEF502BF20CC06C900F2B8EF /* Base */,
 			);
-			name = Main.storyboard;
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 		FEF502C320CC06C900F2B8EF /* LaunchScreen.storyboard */ = {
@@ -484,7 +784,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -535,7 +835,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -554,6 +854,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chefxdoor.ChefXDoor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "chefXDoor/AWS-SDK/Bridging_Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -570,6 +871,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chefxdoor.ChefXDoor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "chefXDoor/AWS-SDK/Bridging_Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

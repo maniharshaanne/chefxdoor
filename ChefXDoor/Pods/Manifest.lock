@@ -1,21 +1,62 @@
 PODS:
-  - AWSCognito (2.6.21):
-    - AWSCore (= 2.6.21)
-  - AWSCore (2.6.21)
+  - AWSAPIGateway (2.6.22):
+    - AWSCore (= 2.6.22)
+  - AWSCognito (2.6.22):
+    - AWSCore (= 2.6.22)
+  - AWSCognitoIdentityProvider (2.6.22):
+    - AWSCognitoIdentityProviderASF (= 1.0.1)
+    - AWSCore (= 2.6.22)
+  - AWSCognitoIdentityProviderASF (1.0.1)
+  - AWSCore (2.6.22)
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
+  - FAPanels (0.5.0)
+  - FBSDKCoreKit (4.34.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.34.0):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.34.0):
+    - FBSDKCoreKit (~> 4.34.0)
 
 DEPENDENCIES:
+  - AWSAPIGateway
   - AWSCognito
+  - AWSCognitoIdentityProvider
   - AWSCore
+  - FAPanels
+  - FBSDKCoreKit
+  - FBSDKLoginKit
+  - FBSDKShareKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AWSAPIGateway
     - AWSCognito
+    - AWSCognitoIdentityProvider
+    - AWSCognitoIdentityProviderASF
     - AWSCore
+    - Bolts
+    - FAPanels
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - FBSDKShareKit
 
 SPEC CHECKSUMS:
-  AWSCognito: ddd3d4cb90dc0adb47acd199ca9bbe48ea1d18a7
-  AWSCore: a1ff1d32ea7af235fe64be301c204b34cb1f9f83
+  AWSAPIGateway: 7dad85e97b4431a78639bc8d47c8aba2bc4f3dd0
+  AWSCognito: e8d697e797166cb1b813d12c08765ff26daf19ac
+  AWSCognitoIdentityProvider: f7d15744ca3d70270de05a212e501f29a4a06307
+  AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
+  AWSCore: faae134779f0f6e46a8d426c0ccc02e34466b785
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  FAPanels: def3b6e1e407ea1d1198d1acddc9d855d9e418ec
+  FBSDKCoreKit: 0ff57f093b85c8c9d5aba697d3edf68a8960ce78
+  FBSDKLoginKit: 8c78f57a145afb756e4755e69195ebe08a42466e
+  FBSDKShareKit: 511d1dfc71204c0a8d69e6c5e3c964dcf0d4f3d9
 
-PODFILE CHECKSUM: 556da4e7b15f1da545a1bed0f416985caa326e76
+PODFILE CHECKSUM: d43c5724c7ce5099076040ce6722d32b9e2dc9e9
 
 COCOAPODS: 1.5.3

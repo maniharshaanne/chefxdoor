@@ -7,40 +7,215 @@
 //
 
 import UIKit
+import AWSCognito
+import AWSCognitoIdentityProvider
+import FBSDKCoreKit
+import FAPanels
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate,AWSIdentityProviderManager  {
+    
     var window: UIWindow?
-
-
+    var signInViewController: SignInViewController?
+    var mfaViewController: MFAViewController?
+    var navigationController: UINavigationController?
+    var storyboard: UIStoryboard?
+    var rememberDeviceCompletionSource: AWSTaskCompletionSource<NSNumber>?
+    public var cxdIdentityUserPool: AWSCognitoIdentityUserPool?
+    public var currentUser: AWSCognitoIdentityUser?
+    public var idToken:AWSCognitoIdentityUserSessionToken?
+    public var accessToken:AWSCognitoIdentityUserSessionToken?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions:
+                launchOptions)
+        
+        setupRootViewController()
+        setupAWSConfiguration()
+        
         return true
     }
-
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    
+    func setupRootViewController() {
+        //Setup up rootViewController
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let leftMenuVC: SampleMenuViewController = mainStoryboard.instantiateViewController(withIdentifier: "MenuViewController") as! SampleMenuViewController
+        let userDetailVC: UserDetailTableViewController = mainStoryboard.instantiateViewController(withIdentifier: "attributesView") as! UserDetailTableViewController
+        let userDetailNavVC = UINavigationController(rootViewController: userDetailVC)
+        
+        let rootController: FAPanelController = self.window?.rootViewController as! FAPanelController
+        
+        rootController.configs.rightPanelWidth = 80
+        rootController.configs.bounceOnRightPanelOpen = false
+        
+        _ = rootController.center(userDetailNavVC).left(leftMenuVC)
+        
+        self.storyboard = UIStoryboard(name: "Login", bundle: nil)
     }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    func setupAWSConfiguration()
+    {
+        // Warn user if configuration not updated
+        if (CognitoIdentityUserPoolId == "us-east-1_8RENSlJ3A") {
+            let alertController = UIAlertController(title: "Invalid Configuration",
+                                                    message: "Please configure user pool constants in Constants.swift file.",
+                                                    preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            
+            self.window?.rootViewController!.present(alertController, animated: true, completion:  nil)
+        }
+        
+        // setup logging
+        AWSDDLog.sharedInstance.logLevel = .verbose
+        
+        // setup service configuration
+        let serviceConfiguration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:nil)
+        
+        // create pool configuration
+        let poolConfiguration = AWSCognitoIdentityUserPoolConfiguration(clientId: CognitoIdentityUserPoolAppClientId,
+                                                                        clientSecret: CognitoIdentityUserPoolAppClientSecret,
+                                                                        poolId: CognitoIdentityUserPoolId)
+        
+        // initialize user pool client
+        AWSCognitoIdentityUserPool.register(with: serviceConfiguration, userPoolConfiguration: poolConfiguration, forKey: AWSCognitoUserPoolsSignInProviderKey)
+        
+        // fetch the user pool client we initialized in above step
+        cxdIdentityUserPool = AWSCognitoIdentityUserPool(forKey: AWSCognitoUserPoolsSignInProviderKey)
+        currentUser = cxdIdentityUserPool?.currentUser()
+        cxdIdentityUserPool?.delegate = self
     }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool{
+        return FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
     }
+    
+    func logins() -> AWSTask<NSDictionary>
+    {
+        if let token = FBSDKAccessToken.current()?.tokenString {
+            return AWSTask(result: [AWSIdentityProviderFacebook:token])
+        }
+        
+        if let token = self.idToken?.tokenString
+        {
+            return AWSTask(result: ["cognito-idp.us-east-1.amazonaws.com/us-east-1_8RENSlJ3A" : token])
+        }
+        
+//        if (self.currentUser == nil) {
+//            self.currentUser = self.cxdIdentityUserPool?.currentUser()
+//        }
+//
+//        self.currentUser?.getSession().continueOnSuccessWith(block: { (getSessionTask) -> Any? in
+//
+//            let getSessionResult = getSessionTask.result
+//            self.idToken = getSessionResult?.idToken
+//            self.accessToken = getSessionResult?.accessToken
+//
+//            if let token = self.accessToken?.tokenString
+//            {
+//                return AWSTask(result: [AWSIdentityProviderAmazonCognitoIdentity : token])
+//            }
+//        })
 
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        return AWSTask(error:NSError(domain: "Login", code: -1 , userInfo: ["NoToken" : "No current Facebook access token"]))
     }
+}
 
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+// MARK:- AWSCognitoIdentityInteractiveAuthenticationDelegate protocol delegate
+
+extension AppDelegate: AWSCognitoIdentityInteractiveAuthenticationDelegate {
+    
+    func startPasswordAuthentication() -> AWSCognitoIdentityPasswordAuthentication {
+        if (self.navigationController == nil) {
+            self.navigationController = self.storyboard?.instantiateViewController(withIdentifier: "signinController") as? UINavigationController
+        }
+        
+        if (self.signInViewController == nil) {
+            self.signInViewController = self.navigationController?.viewControllers[0] as? SignInViewController
+        }
+        
+        DispatchQueue.main.async {
+            self.navigationController!.popToRootViewController(animated: true)
+            if (!self.navigationController!.isViewLoaded
+                || self.navigationController!.view.window == nil) {
+                self.window?.rootViewController?.present(self.navigationController!,
+                                                         animated: true,
+                                                         completion: nil)
+            }
+            
+        }
+        return self.signInViewController!
     }
+    
+    func startMultiFactorAuthentication() -> AWSCognitoIdentityMultiFactorAuthentication {
+        if (self.mfaViewController == nil) {
+            self.mfaViewController = MFAViewController()
+            self.mfaViewController?.modalPresentationStyle = .popover
+        }
+        DispatchQueue.main.async {
+            if (!self.mfaViewController!.isViewLoaded
+                || self.mfaViewController!.view.window == nil) {
+                //display mfa as popover on current view controller
+                let viewController = self.window?.rootViewController!
+                viewController?.present(self.mfaViewController!,
+                                        animated: true,
+                                        completion: nil)
+                
+                // configure popover vc
+                let presentationController = self.mfaViewController!.popoverPresentationController
+                presentationController?.permittedArrowDirections = UIPopoverArrowDirection.left
+                presentationController?.sourceView = viewController!.view
+                presentationController?.sourceRect = viewController!.view.bounds
+            }
+        }
+        return self.mfaViewController!
+    }
+    
+    func startRememberDevice() -> AWSCognitoIdentityRememberDevice {
+        return self
+    }
+}
 
+// MARK:- AWSCognitoIdentityRememberDevice protocol delegate
 
+extension AppDelegate: AWSCognitoIdentityRememberDevice {
+    
+    func getRememberDevice(_ rememberDeviceCompletionSource: AWSTaskCompletionSource<NSNumber>) {
+        self.rememberDeviceCompletionSource = rememberDeviceCompletionSource
+        DispatchQueue.main.async {
+            // dismiss the view controller being present before asking to remember device
+            self.window?.rootViewController!.presentedViewController?.dismiss(animated: true, completion: nil)
+            let alertController = UIAlertController(title: "Remember Device",
+                                                    message: "Do you want to remember this device?.",
+                                                    preferredStyle: .actionSheet)
+            
+            let yesAction = UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+                self.rememberDeviceCompletionSource?.set(result: true)
+            })
+            let noAction = UIAlertAction(title: "No", style: .default, handler: { (action) in
+                self.rememberDeviceCompletionSource?.set(result: false)
+            })
+            alertController.addAction(yesAction)
+            alertController.addAction(noAction)
+            
+            self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    func didCompleteStepWithError(_ error: Error?) {
+        DispatchQueue.main.async {
+            if let error = error as NSError? {
+                let alertController = UIAlertController(title: error.userInfo["__type"] as? String,
+                                                        message: error.userInfo["message"] as? String,
+                                                        preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "ok", style: .default, handler: nil)
+                alertController.addAction(okAction)
+                DispatchQueue.main.async {
+                    self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
+                }
+            }
+        }
+    }
 }
 
