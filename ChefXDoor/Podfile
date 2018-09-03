@@ -14,6 +14,7 @@ target 'ChefXDoor' do
   pod 'FBSDKCoreKit'
   pod "FAPanels"
   pod 'AWSAPIGateway'
+  pod 'PKHUD', '~> 5.0'
   
   target 'ChefXDoorTests' do
     inherit! :search_paths

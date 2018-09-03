@@ -1,5 +1,5 @@
 //
-//  SampleMenuViewController.swift
+//  LeftMenuViewController.swift
 //  ChefXDoor
 //
 //  Created by Anne, Mani on 7/28/18.
@@ -11,7 +11,7 @@ import UIKit
 /**
  Menu controller is responsible for creating its content and showing/hiding menu using 'menuContainerViewController' property.
  */
-class SampleMenuViewController: UIViewController {
+class LeftMenuViewController: UIViewController {
     
     @IBOutlet fileprivate weak var tableView: UITableView!
     @IBOutlet fileprivate weak var avatarImageView: UIImageView!
@@ -60,7 +60,7 @@ class SampleMenuViewController: UIViewController {
     }
 }
 
-extension SampleMenuViewController: UITableViewDelegate, UITableViewDataSource {
+extension LeftMenuViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

@@ -21,6 +21,7 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.34.0):
     - FBSDKCoreKit (~> 4.34.0)
+  - PKHUD (5.1.0)
 
 DEPENDENCIES:
   - AWSAPIGateway
@@ -31,6 +32,7 @@ DEPENDENCIES:
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
+  - PKHUD (~> 5.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -44,6 +46,7 @@ SPEC REPOS:
     - FBSDKCoreKit
     - FBSDKLoginKit
     - FBSDKShareKit
+    - PKHUD
 
 SPEC CHECKSUMS:
   AWSAPIGateway: 7dad85e97b4431a78639bc8d47c8aba2bc4f3dd0
@@ -56,7 +59,8 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: 0ff57f093b85c8c9d5aba697d3edf68a8960ce78
   FBSDKLoginKit: 8c78f57a145afb756e4755e69195ebe08a42466e
   FBSDKShareKit: 511d1dfc71204c0a8d69e6c5e3c964dcf0d4f3d9
+  PKHUD: 62ea46a1e88c4def1da784878d199bb54c841e3c
 
-PODFILE CHECKSUM: d43c5724c7ce5099076040ce6722d32b9e2dc9e9
+PODFILE CHECKSUM: b402eddaaa2559928568f8fae10f917bf7c0f8df
 
 COCOAPODS: 1.5.3

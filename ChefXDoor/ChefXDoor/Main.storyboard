@@ -70,50 +70,6 @@
             </objects>
             <point key="canvasLocation" x="-1661" y="939"/>
         </scene>
-        <!--Devices Detail Table View Controller-->
-        <scene sceneID="AdL-lH-6XI">
-            <objects>
-                <tableViewController id="F1j-wM-ban" customClass="DevicesDetailTableViewController" customModule="ChefXDoor" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1H7-4V-76I">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="attribute" textLabel="vOa-c2-eds" detailTextLabel="6Vz-uJ-FUb" style="IBUITableViewCellStyleValue2" id="ZvS-w8-3Xv">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZvS-w8-3Xv" id="WvK-RP-u6o">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vOa-c2-eds">
-                                            <rect key="frame" x="16" y="15" width="91" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Vz-uJ-FUb">
-                                            <rect key="frame" x="113" y="15" width="33" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="F1j-wM-ban" id="Lol-KR-4DJ"/>
-                            <outlet property="delegate" destination="F1j-wM-ban" id="9Mv-sb-VNb"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bwj-U1-oFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-593" y="939"/>
-        </scene>
         <!--Panel Controller-->
         <scene sceneID="A1u-EU-3Al">
             <objects>
@@ -147,10 +103,10 @@
             </objects>
             <point key="canvasLocation" x="-2535" y="939"/>
         </scene>
-        <!--Sample Menu View Controller-->
+        <!--Left Menu View Controller-->
         <scene sceneID="Zyo-4B-UwX">
             <objects>
-                <viewController storyboardIdentifier="MenuViewController" id="oHL-79-aGg" customClass="SampleMenuViewController" customModule="ChefXDoor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuViewController" id="oHL-79-aGg" customClass="LeftMenuViewController" customModule="ChefXDoor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ab9-kQ-Jj2"/>
                         <viewControllerLayoutGuide type="bottom" id="YZ8-tQ-0lC"/>

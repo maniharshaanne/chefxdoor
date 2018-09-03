@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChefXDoor/AppDelegate.swift"
-            timestampString = "557540027.174847"
+            timestampString = "557692038.499813"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "103"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChefXDoor/AppDelegate.swift"
-            timestampString = "557540027.175317"
+            timestampString = "557692038.505136"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "101"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChefXDoor/AppDelegate.swift"
-            timestampString = "557540027.175747"
+            timestampString = "557692038.505356"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "102"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChefXDoor/AppDelegate.swift"
-            timestampString = "557540027.175826"
+            timestampString = "557692038.505452"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "96"
@@ -132,7 +132,7 @@
                   moduleName = "ChefXDoor"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/manne/chefxdoor/ChefXDoor/ChefXDoor/ViewControllers/SignIn%20+%20SignUp/SignInViewController.swift"
-                  timestampString = "557540027.289812"
+                  timestampString = "557623789.747402"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "72"
@@ -147,7 +147,7 @@
                   moduleName = "ChefXDoor"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/manne/chefxdoor/ChefXDoor/ChefXDoor/ViewControllers/SignIn%20+%20SignUp/SignInViewController.swift"
-                  timestampString = "557540027.293118"
+                  timestampString = "557623789.750897"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "74"
@@ -155,134 +155,6 @@
                   offsetFromSymbolStart = "25">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ChefXDoor/ViewControllers/UserDetailTableViewController.swift"
-            timestampString = "557540027.176055"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "getMeals(token:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ChefXDoor/ViewControllers/UserDetailTableViewController.swift"
-            timestampString = "557540027.1763771"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "getMeals(token:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ChefXDoor.UserDetailTableViewController.getMeals(token: Swift.String) -&gt; ()"
-                  moduleName = "ChefXDoor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/manne/chefxdoor/ChefXDoor/ChefXDoor/ViewControllers/UserDetailTableViewController.swift"
-                  timestampString = "557540027.3065"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "277">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__ObjC.AWSTask&lt;ChefXDoor.CXDArrayOfMeal&gt;) -&gt; Swift.Optional&lt;Any&gt; in ChefXDoor.UserDetailTableViewController.getMeals(token: Swift.String) -&gt; ()"
-                  moduleName = "ChefXDoor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/manne/chefxdoor/ChefXDoor/ChefXDoor/ViewControllers/UserDetailTableViewController.swift"
-                  timestampString = "557540027.309914"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "18">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ChefXDoor/ViewControllers/UserDetailTableViewController.swift"
-            timestampString = "557540027.176458"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
-            landmarkName = "showResult(task:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ChefXDoor/ViewControllers/UserDetailTableViewController.swift"
-            timestampString = "557540027.176535"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "showResult(task:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ChefXDoor/ViewControllers/UserDetailTableViewController.swift"
-            timestampString = "557540027.176608"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "showResult(task:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ChefXDoor/ViewControllers/UserDetailTableViewController.swift"
-            timestampString = "557540027.176682"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "showResult(task:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

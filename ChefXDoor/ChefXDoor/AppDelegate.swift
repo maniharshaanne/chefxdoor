@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,AWSIdentityProviderManager
     func setupRootViewController() {
         //Setup up rootViewController
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let leftMenuVC: SampleMenuViewController = mainStoryboard.instantiateViewController(withIdentifier: "MenuViewController") as! SampleMenuViewController
+        let leftMenuVC: LeftMenuViewController = mainStoryboard.instantiateViewController(withIdentifier: "MenuViewController") as! LeftMenuViewController
         let userDetailVC: UserDetailTableViewController = mainStoryboard.instantiateViewController(withIdentifier: "attributesView") as! UserDetailTableViewController
         let userDetailNavVC = UINavigationController(rootViewController: userDetailVC)
         

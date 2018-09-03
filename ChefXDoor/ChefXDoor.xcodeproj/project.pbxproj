@@ -16,9 +16,9 @@
 		FE7A09F32135923800AE45AD /* SignInViewController+FacebookLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A09F22135923800AE45AD /* SignInViewController+FacebookLogin.swift */; };
 		FE7A09F42135923800AE45AD /* SignInViewController+FacebookLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A09F22135923800AE45AD /* SignInViewController+FacebookLogin.swift */; };
 		FE7A09F52135923800AE45AD /* SignInViewController+FacebookLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A09F22135923800AE45AD /* SignInViewController+FacebookLogin.swift */; };
-		FE7E429E210D27AE004773F6 /* SampleMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7E429D210D27AE004773F6 /* SampleMenuViewController.swift */; };
-		FE7E429F210D27AE004773F6 /* SampleMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7E429D210D27AE004773F6 /* SampleMenuViewController.swift */; };
-		FE7E42A0210D27AE004773F6 /* SampleMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7E429D210D27AE004773F6 /* SampleMenuViewController.swift */; };
+		FE7E429E210D27AE004773F6 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7E429D210D27AE004773F6 /* LeftMenuViewController.swift */; };
+		FE7E429F210D27AE004773F6 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7E429D210D27AE004773F6 /* LeftMenuViewController.swift */; };
+		FE7E42A0210D27AE004773F6 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7E429D210D27AE004773F6 /* LeftMenuViewController.swift */; };
 		FE7E42A3210D2DDC004773F6 /* SampleTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7E42A2210D2DDC004773F6 /* SampleTableCell.swift */; };
 		FE7E42A4210D2DDC004773F6 /* SampleTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7E42A2210D2DDC004773F6 /* SampleTableCell.swift */; };
 		FE7E42A5210D2DDC004773F6 /* SampleTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7E42A2210D2DDC004773F6 /* SampleTableCell.swift */; };
@@ -46,9 +46,6 @@
 		FEB8B35E20D3483F00DDDD2D /* UserDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B35D20D3483F00DDDD2D /* UserDetailTableViewController.swift */; };
 		FEB8B35F20D3483F00DDDD2D /* UserDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B35D20D3483F00DDDD2D /* UserDetailTableViewController.swift */; };
 		FEB8B36020D3483F00DDDD2D /* UserDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B35D20D3483F00DDDD2D /* UserDetailTableViewController.swift */; };
-		FEB8B36220D3485F00DDDD2D /* DevicesDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B36120D3485F00DDDD2D /* DevicesDetailTableViewController.swift */; };
-		FEB8B36320D3485F00DDDD2D /* DevicesDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B36120D3485F00DDDD2D /* DevicesDetailTableViewController.swift */; };
-		FEB8B36420D3485F00DDDD2D /* DevicesDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B36120D3485F00DDDD2D /* DevicesDetailTableViewController.swift */; };
 		FEC4A44521372A4F00864655 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF502BA20CC06C900F2B8EF /* AppDelegate.swift */; };
 		FEC4A44621372A5000864655 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF502BA20CC06C900F2B8EF /* AppDelegate.swift */; };
 		FEC76806213B624200F51089 /* CXDError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC767F7213B623D00F51089 /* CXDError.swift */; };
@@ -138,7 +135,7 @@
 		FE67D6F2212F4AEC00C84C07 /* AWSApiGatewayBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSApiGatewayBridge.h; sourceTree = "<group>"; };
 		FE67D71121307DEA00C84C07 /* CXDApiServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDApiServiceController.swift; sourceTree = "<group>"; };
 		FE7A09F22135923800AE45AD /* SignInViewController+FacebookLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInViewController+FacebookLogin.swift"; sourceTree = "<group>"; };
-		FE7E429D210D27AE004773F6 /* SampleMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleMenuViewController.swift; sourceTree = "<group>"; };
+		FE7E429D210D27AE004773F6 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
 		FE7E42A2210D2DDC004773F6 /* SampleTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTableCell.swift; sourceTree = "<group>"; };
 		FEB8B34120D346DD00DDDD2D /* MFAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFAViewController.swift; sourceTree = "<group>"; };
 		FEB8B34520D3471000DDDD2D /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -148,7 +145,6 @@
 		FEB8B35520D347F200DDDD2D /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		FEB8B35920D3481900DDDD2D /* ConfirmForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		FEB8B35D20D3483F00DDDD2D /* UserDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewController.swift; sourceTree = "<group>"; };
-		FEB8B36120D3485F00DDDD2D /* DevicesDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesDetailTableViewController.swift; sourceTree = "<group>"; };
 		FEC767F7213B623D00F51089 /* CXDError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDError.swift; sourceTree = "<group>"; };
 		FEC767F8213B623E00F51089 /* CXDArrayOfBilling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfBilling.swift; sourceTree = "<group>"; };
 		FEC767F9213B623E00F51089 /* CXDDEVAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDDEVAPIClient.swift; sourceTree = "<group>"; };
@@ -296,8 +292,7 @@
 			children = (
 				FE7A09F6213593D100AE45AD /* SignIn + SignUp */,
 				FEB8B35D20D3483F00DDDD2D /* UserDetailTableViewController.swift */,
-				FEB8B36120D3485F00DDDD2D /* DevicesDetailTableViewController.swift */,
-				FE7E429D210D27AE004773F6 /* SampleMenuViewController.swift */,
+				FE7E429D210D27AE004773F6 /* LeftMenuViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -551,6 +546,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -564,6 +560,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -598,7 +595,7 @@
 				FEF502BB20CC06C900F2B8EF /* AppDelegate.swift in Sources */,
 				FEC76821213B624200F51089 /* CXDArrayOfMeal.swift in Sources */,
 				FEC7682A213B624200F51089 /* CXDPostResponseObject.swift in Sources */,
-				FE7E429E210D27AE004773F6 /* SampleMenuViewController.swift in Sources */,
+				FE7E429E210D27AE004773F6 /* LeftMenuViewController.swift in Sources */,
 				FEC7681E213B624200F51089 /* CXDBilling.swift in Sources */,
 				FEC76830213B624200F51089 /* CXDMeal.swift in Sources */,
 				FE7E42A3210D2DDC004773F6 /* SampleTableCell.swift in Sources */,
@@ -611,7 +608,6 @@
 				FEC76806213B624200F51089 /* CXDError.swift in Sources */,
 				FEB8B34620D3471000DDDD2D /* SignInViewController.swift in Sources */,
 				FEB8B35A20D3481900DDDD2D /* ConfirmForgotPasswordViewController.swift in Sources */,
-				FEB8B36220D3485F00DDDD2D /* DevicesDetailTableViewController.swift in Sources */,
 				FEC76827213B624200F51089 /* CXDUser.swift in Sources */,
 				FEC76812213B624200F51089 /* CXDMealReview.swift in Sources */,
 				FE7A09F32135923800AE45AD /* SignInViewController+FacebookLogin.swift in Sources */,
@@ -632,7 +628,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEF502D020CC06C900F2B8EF /* ChefXDoorTests.swift in Sources */,
-				FE7E429F210D27AE004773F6 /* SampleMenuViewController.swift in Sources */,
+				FE7E429F210D27AE004773F6 /* LeftMenuViewController.swift in Sources */,
 				FEC76807213B624200F51089 /* CXDError.swift in Sources */,
 				FEC76825213B624200F51089 /* CXDArrayOfUser.swift in Sources */,
 				FEC7680D213B624200F51089 /* CXDDEVAPIClient.swift in Sources */,
@@ -646,7 +642,6 @@
 				FEC76816213B624200F51089 /* CXDUserReview.swift in Sources */,
 				FEC4A44521372A4F00864655 /* AppDelegate.swift in Sources */,
 				FEB8B35B20D3481900DDDD2D /* ConfirmForgotPasswordViewController.swift in Sources */,
-				FEB8B36320D3485F00DDDD2D /* DevicesDetailTableViewController.swift in Sources */,
 				FEC76828213B624200F51089 /* CXDUser.swift in Sources */,
 				FE7A09F42135923800AE45AD /* SignInViewController+FacebookLogin.swift in Sources */,
 				FEC7682E213B624200F51089 /* CXDArrayOfMealCategory.swift in Sources */,
@@ -669,7 +664,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEF502DB20CC06C900F2B8EF /* ChefXDoorUITests.swift in Sources */,
-				FE7E42A0210D27AE004773F6 /* SampleMenuViewController.swift in Sources */,
+				FE7E42A0210D27AE004773F6 /* LeftMenuViewController.swift in Sources */,
 				FEC76808213B624200F51089 /* CXDError.swift in Sources */,
 				FEC76826213B624200F51089 /* CXDArrayOfUser.swift in Sources */,
 				FEC7680E213B624200F51089 /* CXDDEVAPIClient.swift in Sources */,
@@ -683,7 +678,6 @@
 				FEC76817213B624200F51089 /* CXDUserReview.swift in Sources */,
 				FEC4A44621372A5000864655 /* AppDelegate.swift in Sources */,
 				FEB8B35C20D3481900DDDD2D /* ConfirmForgotPasswordViewController.swift in Sources */,
-				FEB8B36420D3485F00DDDD2D /* DevicesDetailTableViewController.swift in Sources */,
 				FEC76829213B624200F51089 /* CXDUser.swift in Sources */,
 				FE7A09F52135923800AE45AD /* SignInViewController+FacebookLogin.swift in Sources */,
 				FEC7682F213B624200F51089 /* CXDArrayOfMealCategory.swift in Sources */,
