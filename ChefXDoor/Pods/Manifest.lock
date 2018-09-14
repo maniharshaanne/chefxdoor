@@ -21,6 +21,7 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.34.0):
     - FBSDKCoreKit (~> 4.34.0)
+  - Kingfisher (4.9.0)
   - PKHUD (5.1.0)
 
 DEPENDENCIES:
@@ -32,6 +33,7 @@ DEPENDENCIES:
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
+  - Kingfisher
   - PKHUD (~> 5.0)
 
 SPEC REPOS:
@@ -46,6 +48,7 @@ SPEC REPOS:
     - FBSDKCoreKit
     - FBSDKLoginKit
     - FBSDKShareKit
+    - Kingfisher
     - PKHUD
 
 SPEC CHECKSUMS:
@@ -59,8 +62,9 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: 0ff57f093b85c8c9d5aba697d3edf68a8960ce78
   FBSDKLoginKit: 8c78f57a145afb756e4755e69195ebe08a42466e
   FBSDKShareKit: 511d1dfc71204c0a8d69e6c5e3c964dcf0d4f3d9
+  Kingfisher: 64539b51826b778206daa6ed815d12653caa69dd
   PKHUD: 62ea46a1e88c4def1da784878d199bb54c841e3c
 
-PODFILE CHECKSUM: b402eddaaa2559928568f8fae10f917bf7c0f8df
+PODFILE CHECKSUM: e849e13cd7c5f4594c80d2eed15789b0f7c8d58a
 
 COCOAPODS: 1.5.3
