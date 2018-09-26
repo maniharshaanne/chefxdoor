@@ -17,7 +17,7 @@
 import Foundation
 import AWSCore
 
- 
+@objcMembers
 public class CXDMealCategory : AWSModel {
     
     /** description */
@@ -26,6 +26,10 @@ public class CXDMealCategory : AWSModel {
     var name: String?
     /** description */
     var imageUrl: String?
+    /** description */
+    var count: NSNumber?
+    /** description */
+    var distance: NSNumber?
     /** description */
     var timeCreated: String?
     /** description */
@@ -36,6 +40,8 @@ public class CXDMealCategory : AWSModel {
 		params["id"] = "id"
 		params["name"] = "name"
 		params["imageUrl"] = "image_url"
+		params["count"] = "count"
+		params["distance"] = "distance"
 		params["timeCreated"] = "time_created"
 		params["timeModified"] = "time_modified"
 		

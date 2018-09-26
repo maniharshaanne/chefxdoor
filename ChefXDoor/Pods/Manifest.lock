@@ -1,13 +1,13 @@
 PODS:
-  - AWSAPIGateway (2.6.22):
-    - AWSCore (= 2.6.22)
-  - AWSCognito (2.6.22):
-    - AWSCore (= 2.6.22)
-  - AWSCognitoIdentityProvider (2.6.22):
+  - AWSAPIGateway (2.6.30):
+    - AWSCore (= 2.6.30)
+  - AWSCognito (2.6.30):
+    - AWSCore (= 2.6.30)
+  - AWSCognitoIdentityProvider (2.6.30):
     - AWSCognitoIdentityProviderASF (= 1.0.1)
-    - AWSCore (= 2.6.22)
+    - AWSCore (= 2.6.30)
   - AWSCognitoIdentityProviderASF (1.0.1)
-  - AWSCore (2.6.22)
+  - AWSCore (2.6.30)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -15,13 +15,15 @@ PODS:
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
   - FAPanels (0.5.0)
-  - FBSDKCoreKit (4.34.0):
+  - FaveButton (3.0.0)
+  - FBSDKCoreKit (4.36.0):
     - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.34.0):
+  - FBSDKLoginKit (4.36.0):
     - FBSDKCoreKit
-  - FBSDKShareKit (4.34.0):
-    - FBSDKCoreKit (~> 4.34.0)
+  - FBSDKShareKit (4.36.0):
+    - FBSDKCoreKit (~> 4.36.0)
   - Kingfisher (4.9.0)
+  - MIBlurPopup (0.1.3)
   - PKHUD (5.1.0)
 
 DEPENDENCIES:
@@ -30,10 +32,12 @@ DEPENDENCIES:
   - AWSCognitoIdentityProvider
   - AWSCore
   - FAPanels
+  - FaveButton
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
-  - Kingfisher
+  - Kingfisher (~> 4.9.0)
+  - MIBlurPopup
   - PKHUD (~> 5.0)
 
 SPEC REPOS:
@@ -45,26 +49,30 @@ SPEC REPOS:
     - AWSCore
     - Bolts
     - FAPanels
+    - FaveButton
     - FBSDKCoreKit
     - FBSDKLoginKit
     - FBSDKShareKit
     - Kingfisher
+    - MIBlurPopup
     - PKHUD
 
 SPEC CHECKSUMS:
-  AWSAPIGateway: 7dad85e97b4431a78639bc8d47c8aba2bc4f3dd0
-  AWSCognito: e8d697e797166cb1b813d12c08765ff26daf19ac
-  AWSCognitoIdentityProvider: f7d15744ca3d70270de05a212e501f29a4a06307
+  AWSAPIGateway: c2b42cb5425b7d21831cdf7ca1a725518c6f0312
+  AWSCognito: 1f42162d003180ef67f13752f270d09e7ea57c91
+  AWSCognitoIdentityProvider: c887b1cfec7235c85cc90070defbb78354ec7065
   AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
-  AWSCore: faae134779f0f6e46a8d426c0ccc02e34466b785
+  AWSCore: 11e8bb89d8d2e3bb6e31caa8b944ca7dae4c87cd
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   FAPanels: def3b6e1e407ea1d1198d1acddc9d855d9e418ec
-  FBSDKCoreKit: 0ff57f093b85c8c9d5aba697d3edf68a8960ce78
-  FBSDKLoginKit: 8c78f57a145afb756e4755e69195ebe08a42466e
-  FBSDKShareKit: 511d1dfc71204c0a8d69e6c5e3c964dcf0d4f3d9
+  FaveButton: 1fa9cd7b037d7164e229765401931271adbe3a23
+  FBSDKCoreKit: 3b8e6570eedb443f9fc4af196a7bf39f18e3a3d8
+  FBSDKLoginKit: 8bccb6064708ab2f4251a7fc4e3b6d8d00ad91ba
+  FBSDKShareKit: 7090fdd55c39b03941efddb64c83a64ff6b3949f
   Kingfisher: 64539b51826b778206daa6ed815d12653caa69dd
+  MIBlurPopup: e0834e469074cabf65a0ca6e6d900c84d48f8a4f
   PKHUD: 62ea46a1e88c4def1da784878d199bb54c841e3c
 
-PODFILE CHECKSUM: e849e13cd7c5f4594c80d2eed15789b0f7c8d58a
+PODFILE CHECKSUM: 804da3b556ccbd8a49d37b8013b7dbae9830b691
 
 COCOAPODS: 1.5.3

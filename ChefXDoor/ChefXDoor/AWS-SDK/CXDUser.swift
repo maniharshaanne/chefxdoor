@@ -47,6 +47,8 @@ public class CXDUser : AWSModel {
     /** description */
     var zipcode: NSNumber?
     /** description */
+    var phone: String?
+    /** description */
     var gender: String?
     /** description */
     var ethnicity: String?
@@ -57,6 +59,8 @@ public class CXDUser : AWSModel {
     /** description */
     var rating: NSNumber?
     /** description */
+    var ratingCount: NSNumber?
+    /** description */
     var status: String?
     /** description */
     var birthday: String?
@@ -66,6 +70,8 @@ public class CXDUser : AWSModel {
     var timeCreated: String?
     /** description */
     var timeModified: String?
+    /** description */
+    var distance: NSNumber?
     
    	public override static func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]!{
 		var params:[AnyHashable : Any] = [:]
@@ -82,16 +88,19 @@ public class CXDUser : AWSModel {
 		params["city"] = "city"
 		params["state"] = "state"
 		params["zipcode"] = "zipcode"
+		params["phone"] = "phone"
 		params["gender"] = "gender"
 		params["ethnicity"] = "ethnicity"
 		params["currentLatitude"] = "current_latitude"
 		params["currentLongitude"] = "current_longitude"
 		params["rating"] = "rating"
+		params["ratingCount"] = "rating_count"
 		params["status"] = "status"
 		params["birthday"] = "birthday"
 		params["imageUrl"] = "image_url"
 		params["timeCreated"] = "time_created"
 		params["timeModified"] = "time_modified"
+		params["distance"] = "distance"
 		
         return params
 	}

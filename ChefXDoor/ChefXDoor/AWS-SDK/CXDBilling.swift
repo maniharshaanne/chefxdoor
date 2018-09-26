@@ -25,8 +25,6 @@ public class CXDBilling : AWSModel {
     /** description */
     var userId: NSNumber?
     /** description */
-    var orderId: NSNumber?
-    /** description */
     var firstName: String?
     /** description */
     var lastName: String?
@@ -57,7 +55,6 @@ public class CXDBilling : AWSModel {
 		var params:[AnyHashable : Any] = [:]
 		params["id"] = "id"
 		params["userId"] = "user_id"
-		params["orderId"] = "order_id"
 		params["firstName"] = "first_name"
 		params["lastName"] = "last_name"
 		params["street"] = "street"

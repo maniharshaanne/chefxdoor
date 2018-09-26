@@ -17,19 +17,22 @@
 import Foundation
 import AWSCore
 
- 
 public class CXDError : AWSModel {
     
-    var code: NSNumber?
-    var message: String?
-    var fields: String?
+    var error: [String:AnyObject]?
     
    	public override static func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]!{
 		var params:[AnyHashable : Any] = [:]
-		params["code"] = "code"
-		params["message"] = "message"
-		params["fields"] = "fields"
+		params["error"] = "Error"
 		
         return params
+	}
+    
+	class func errorJSONTransformer() -> ValueTransformer{
+		return AWSMTLValueTransformer.reversibleTransformer(forwardBlock: {(JSONDictionary: Any!) -> Any! in
+            return AWSModelUtility.mapMTLDictionary(fromJSONDictionary: JSONDictionary as! [AnyHashable : Any], withModelClass: AnyObject.self)
+		}, reverse: {(mapMTLDictionary: Any!) -> Any! in
+            return AWSModelUtility.jsonDictionary(fromMapMTLDictionary: mapMTLDictionary as! [AnyHashable : Any])
+		})
 	}
 }

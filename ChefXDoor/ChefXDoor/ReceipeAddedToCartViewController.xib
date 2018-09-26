@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReceipeAddedToCartViewController" customModule="ChefXDoor" customModuleProvider="target">
+            <connections>
+                <outlet property="checkoutButton" destination="LiW-A5-jO6" id="mOc-Cf-IFX"/>
+                <outlet property="findMoreButton" destination="Eg1-oS-ZtI" id="Q9Z-nG-cDV"/>
+                <outlet property="imageView" destination="n0W-p8-Bku" id="TsI-qT-1rh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="rPh-aw-EDQ">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n0W-p8-Bku">
+                    <rect key="frame" x="101" y="131" width="173" height="152"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="152" id="ZPQ-1z-79E"/>
+                        <constraint firstAttribute="width" constant="173" id="oEd-M3-dEK"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yum" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rk-Ua-l03">
+                    <rect key="frame" x="166" y="323" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="CcJ-Tg-HkV"/>
+                        <constraint firstAttribute="width" constant="42" id="uzd-ia-dXr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.56862745100000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe added to cart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQg-4N-p3a">
+                    <rect key="frame" x="102" y="359" width="171" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="HcB-do-qdL"/>
+                        <constraint firstAttribute="width" constant="171" id="WWk-pF-Uqk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="42b-c0-9c1">
+                    <rect key="frame" x="78" y="420" width="219" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Eg1-oS-ZtI">
+                            <rect key="frame" x="0.0" y="0.0" width="127" height="40"/>
+                            <color key="backgroundColor" red="1" green="0.43367139910000002" blue="0.27252660579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="127" id="JVI-8a-46T"/>
+                                <constraint firstAttribute="height" constant="40" id="NDv-2e-Kx8"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal">
+                                <string key="title">FIND MORE 
+    FOOD</string>
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LiW-A5-jO6">
+                            <rect key="frame" x="147" y="0.0" width="72" height="40"/>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="FsY-V6-X4R"/>
+                                <constraint firstAttribute="width" constant="72" id="gzS-LQ-yWj"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="CHECKOUT">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="PiL-kk-NEU"/>
+                        <constraint firstAttribute="width" constant="219" id="vek-77-WK9"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="42b-c0-9c1" firstAttribute="centerX" secondItem="rPh-aw-EDQ" secondAttribute="centerX" id="9QA-ZA-iuI"/>
+                <constraint firstItem="eQg-4N-p3a" firstAttribute="centerX" secondItem="rPh-aw-EDQ" secondAttribute="centerX" id="ABV-BO-BWs"/>
+                <constraint firstItem="42b-c0-9c1" firstAttribute="top" secondItem="eQg-4N-p3a" secondAttribute="bottom" constant="40" id="D5Q-m4-VhL"/>
+                <constraint firstItem="1rk-Ua-l03" firstAttribute="centerX" secondItem="rPh-aw-EDQ" secondAttribute="centerX" id="GoM-cQ-5Wo"/>
+                <constraint firstItem="1rk-Ua-l03" firstAttribute="top" secondItem="n0W-p8-Bku" secondAttribute="bottom" constant="40" id="JEE-j5-WQT"/>
+                <constraint firstItem="eQg-4N-p3a" firstAttribute="top" secondItem="1rk-Ua-l03" secondAttribute="bottom" constant="15" id="TAj-Kc-bMF"/>
+                <constraint firstItem="1rk-Ua-l03" firstAttribute="centerY" secondItem="rPh-aw-EDQ" secondAttribute="centerY" id="fre-Gp-RyN"/>
+                <constraint firstItem="n0W-p8-Bku" firstAttribute="centerX" secondItem="rPh-aw-EDQ" secondAttribute="centerX" id="ujy-iH-aSv"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="8hV-Ic-Dht"/>
+        </view>
+    </objects>
+</document>

@@ -17,15 +17,13 @@
 import Foundation
 import AWSCore
 
- 
+@objcMembers
 public class CXDMeal : AWSModel {
     
     /** description */
     var id: NSNumber?
     /** description */
     var chefId: NSNumber?
-    /** description */
-    var categoryId: NSNumber?
     /** description */
     var name: String?
     /** description */
@@ -52,12 +50,20 @@ public class CXDMeal : AWSModel {
     var rating: NSNumber?
     /** description */
     var liked: NSNumber?
+    /** description */
+    var reviewCount: NSNumber?
+    /** boolean */
+    var isActive: NSNumber?
+    /** description */
+    var distance: NSNumber?
+    var photos: [CXDMealPhoto]?
+    var categories: [CXDMealCategory]?
+    var restrictions: [CXDFoodClassification]?
     
    	public override static func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]!{
 		var params:[AnyHashable : Any] = [:]
 		params["id"] = "id"
 		params["chefId"] = "chef_id"
-		params["categoryId"] = "category_id"
 		params["name"] = "name"
 		params["price"] = "price"
 		params["deliveryFee"] = "delivery_fee"
@@ -71,7 +77,22 @@ public class CXDMeal : AWSModel {
 		params["chefImageUrl"] = "chef_image_url"
 		params["rating"] = "rating"
 		params["liked"] = "liked"
+		params["reviewCount"] = "review_count"
+		params["isActive"] = "is_active"
+		params["distance"] = "distance"
+		params["photos"] = "photos"
+		params["categories"] = "categories"
+		params["restrictions"] = "restrictions"
 		
         return params
+	}
+	class func photosJSONTransformer() -> ValueTransformer{
+		return  ValueTransformer.awsmtl_JSONArrayTransformer(withModelClass: CXDMealPhoto.self);
+	}
+	class func categoriesJSONTransformer() -> ValueTransformer{
+		return  ValueTransformer.awsmtl_JSONArrayTransformer(withModelClass: CXDMealCategory.self);
+	}
+	class func restrictionsJSONTransformer() -> ValueTransformer{
+		return  ValueTransformer.awsmtl_JSONArrayTransformer(withModelClass: CXDFoodClassification.self);
 	}
 }

@@ -61,7 +61,6 @@ class SignInViewController: UIViewController, AWSCognitoIdentityPasswordAuthenti
                 self.present(alertController, animated: true, completion:  nil)
             } else {
                 
-            
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
                 
                 let user = appDelegate.currentUser
@@ -82,7 +81,7 @@ class SignInViewController: UIViewController, AWSCognitoIdentityPasswordAuthenti
                                     
                                     AWSServiceManager.default().defaultServiceConfiguration = serviceConfiguration
                                     
-                                    CXDDEVAPIClient.registerClient(withConfiguration: serviceConfiguration!, forKey: "USEast1CXDDEVAPIClient")
+                                    CXDAWSApiClient.registerClient(withConfiguration: serviceConfiguration!, forKey: "USEast1CXDDEVAPIClient")
                                     
                                     // create pool configuration
                                     let poolConfiguration = AWSCognitoIdentityUserPoolConfiguration(clientId: CognitoIdentityUserPoolAppClientId,

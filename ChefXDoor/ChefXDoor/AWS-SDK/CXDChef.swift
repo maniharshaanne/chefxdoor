@@ -18,35 +18,44 @@ import Foundation
 import AWSCore
 
  
-public class CXDOrders : AWSModel {
+public class CXDChef : AWSModel {
     
     /** description */
     var id: NSNumber?
     /** description */
-    var userId: NSNumber?
+    var username: String?
     /** description */
-    var billingId: NSNumber?
-    var tip: NSNumber?
-    var taxes: NSNumber?
-    var promotion: NSNumber?
+    var imageUrl: String?
     /** description */
-    var orderNumber: String?
+    var deliveryFee: NSNumber?
     /** description */
-    var timeCreated: String?
+    var slogan: String?
+    /** descriptionn */
+    var categories: String?
+    /** description */
+    var reviewCount: NSNumber?
+    /** description */
+    var rating: NSNumber?
+    /** description */
+    var distance: NSNumber?
     /** description */
     var timeModified: String?
+    /** description */
+    var timeCreated: String?
     
    	public override static func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]!{
 		var params:[AnyHashable : Any] = [:]
 		params["id"] = "id"
-		params["userId"] = "user_id"
-		params["billingId"] = "billing_id"
-		params["tip"] = "tip"
-		params["taxes"] = "taxes"
-		params["promotion"] = "promotion"
-		params["orderNumber"] = "order_number"
-		params["timeCreated"] = "time_created"
+		params["username"] = "username"
+		params["imageUrl"] = "image_url"
+		params["deliveryFee"] = "delivery_fee"
+		params["slogan"] = "slogan"
+		params["categories"] = "categories"
+		params["reviewCount"] = "review_count"
+		params["rating"] = "rating"
+		params["distance"] = "distance"
 		params["timeModified"] = "time_modified"
+		params["timeCreated"] = "time_created"
 		
         return params
 	}

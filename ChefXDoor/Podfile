@@ -14,8 +14,10 @@ target 'ChefXDoor' do
   pod 'FBSDKCoreKit'
   pod "FAPanels"
   pod 'AWSAPIGateway'
-  pod 'Kingfisher'
+  pod 'Kingfisher', '~> 4.9.0'
   pod 'PKHUD', '~> 5.0'
+  pod 'MIBlurPopup'
+  pod 'FaveButton'
   
   target 'ChefXDoorTests' do
     inherit! :search_paths

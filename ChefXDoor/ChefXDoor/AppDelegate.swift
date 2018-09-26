@@ -13,7 +13,7 @@ import FBSDKCoreKit
 import FAPanels
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,AWSIdentityProviderManager  {
+class AppDelegate: UIResponder,UIApplicationDelegate,AWSIdentityProviderManager  {
     
     var window: UIWindow?
     var signInViewController: SignInViewController?
@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,AWSIdentityProviderManager
         //Setup up rootViewController
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let leftMenuVC: LeftMenuViewController = mainStoryboard.instantiateViewController(withIdentifier: "MenuViewController") as! LeftMenuViewController
-        let userDetailVC: UserDetailTableViewController = mainStoryboard.instantiateViewController(withIdentifier: "attributesView") as! UserDetailTableViewController
+        let userDetailVC: StartScreenViewController = mainStoryboard.instantiateViewController(withIdentifier: "StartScreenViewController") as! StartScreenViewController
         let userDetailNavVC = UINavigationController(rootViewController: userDetailVC)
         
         let rootController: FAPanelController = self.window?.rootViewController as! FAPanelController

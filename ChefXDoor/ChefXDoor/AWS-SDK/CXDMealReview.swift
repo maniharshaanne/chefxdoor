@@ -17,7 +17,7 @@
 import Foundation
 import AWSCore
 
- 
+@objcMembers
 public class CXDMealReview : AWSModel {
     
     /** description */
@@ -25,9 +25,15 @@ public class CXDMealReview : AWSModel {
     /** description */
     var mealId: NSNumber?
     /** description */
+    var orderId: NSNumber?
+    /** description */
     var userId: NSNumber?
     /** description */
-    var title: String?
+    var username: String?
+    /** description */
+    var userPhotoUrl: String?
+    /** description */
+    var rating: NSNumber?
     /** description */
     var message: String?
     /** description */
@@ -39,8 +45,11 @@ public class CXDMealReview : AWSModel {
 		var params:[AnyHashable : Any] = [:]
 		params["id"] = "id"
 		params["mealId"] = "meal_id"
+		params["orderId"] = "order_id"
 		params["userId"] = "user_id"
-		params["title"] = "title"
+		params["username"] = "username"
+		params["userPhotoUrl"] = "user_photo_url"
+		params["rating"] = "rating"
 		params["message"] = "message"
 		params["timeCreated"] = "time_created"
 		params["timeModified"] = "time_modified"

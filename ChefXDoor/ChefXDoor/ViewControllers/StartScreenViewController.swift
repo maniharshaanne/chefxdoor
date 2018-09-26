@@ -1,5 +1,5 @@
 //
-//  UserDetailTableViewController.swift
+//  StartScreenViewController.swift
 //  ChefXDoor
 //
 //  Created by Anne, Mani on 6/14/18.
@@ -9,8 +9,9 @@
 import Foundation
 import AWSCognito
 import AWSCognitoIdentityProvider
+import PKHUD
 
-class UserDetailTableViewController : UITableViewController {
+class StartScreenViewController: UIViewController {
     
     var response: AWSCognitoIdentityUserGetDetailsResponse?
     var user: AWSCognitoIdentityUser?
@@ -22,7 +23,7 @@ class UserDetailTableViewController : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.delegate = self
+        //self.navigationController?.navigationBar.isHidden = true
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         self.pool = appDelegate.cxdIdentityUserPool
         self.pool?.delegate = appDelegate
@@ -42,68 +43,48 @@ class UserDetailTableViewController : UITableViewController {
         super.viewWillAppear(animated)
         self.navigationController?.setToolbarHidden(false, animated: true)
     }
-    
-    // MARK: - Table view data source
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let response = self.response  {
-            return response.userAttributes!.count
-        }
-        return 0
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "attribute", for: indexPath)
-        let userAttribute = self.response?.userAttributes![indexPath.row]
-        cell.textLabel!.text = userAttribute?.name
-        cell.detailTextLabel!.text = userAttribute?.value
-        return cell
-    }
   
-    // MARK: - IBActions
-
     @IBAction func testApi(_ sender: Any) {
         self.getMeals(token: "")
  
     }
     
     @IBAction func signOut(_ sender: AnyObject) {
-                
         self.user?.signOut()
         self.title = nil
         self.response = nil
-        self.tableView.reloadData()
         self.refresh()
     }
     
     func getMeals(token:String)
     {
-        let client =  CXDDEVAPIClient.client(forKey: "USEast1CXDDEVAPIClient")
-        client.apiKey = "zbT9ToJQNC9GdoHvJjPPM4eAB6axiHBB7iAdXfle"
-        client.mealsGet().continueWith { (task) -> Any? in
-            self.showResult(task: task as! AWSTask<AnyObject>)
+        CXDApiServiceController.awsGetFromEndPoint(urlString: "/meals/recommended", queryParametersDict: ["lat" : 38.994373, "long" : -77.029778, "distance" : 10, "page" : 0, "sort":"price"], pathParametersDict: nil, classType: CXDMeal.self).continueWith { (task) -> Any? in
+            
+            DispatchQueue.main.async {
+                self.showResult(task: task )
+            }
         }
     }
-    
+
     func showResult(task: AWSTask<AnyObject>) {
         if let error = task.error {
             print("Error: \(error)")
         } else if let result = task.result{
-            let res = result as! Array<Any>
-            print("NSDictionary: \(res)")
+            let res = result as! Array<CXDMeal>
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let recommendationsViewController = storyboard.instantiateViewController(withIdentifier: "RecommendationsViewController") as! RecommendationsViewController
+            recommendationsViewController.recommendedMeals = res
+            self.navigationController?.pushViewController(recommendationsViewController, animated: true)
         }
     }
     
     func refresh() {
+        HUD.flash(.progress, onView: navigationController?.view)
         self.user?.getDetails().continueOnSuccessWith { (task) -> AnyObject? in
             DispatchQueue.main.async(execute: {
+                HUD.hide()
                 self.response = task.result
                 self.title = self.user?.username
-                self.tableView.reloadData()
             })
             return nil
         }

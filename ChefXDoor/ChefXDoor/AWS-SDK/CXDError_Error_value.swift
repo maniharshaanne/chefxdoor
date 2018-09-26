@@ -18,35 +18,15 @@ import Foundation
 import AWSCore
 
  
-public class CXDPostResponseObject : AWSModel {
+public class CXDError_Error_value : AWSModel {
     
-    /** fieldCount */
-    var fieldCount: NSNumber?
-    /** affectedRows */
-    var affectedRows: NSNumber?
-    /** The id. */
-    var insertId: NSNumber?
-    /** serverStatus */
-    var serverStatus: String?
-    /** warningCount */
-    var warningCount: NSNumber?
-    /** message */
+    var code: NSNumber?
     var message: String?
-    /** protocol41 */
-    var protocol41: String?
-    /** changedRows */
-    var changedRows: NSNumber?
     
    	public override static func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]!{
 		var params:[AnyHashable : Any] = [:]
-		params["fieldCount"] = "fieldCount"
-		params["affectedRows"] = "affectedRows"
-		params["insertId"] = "insertId"
-		params["serverStatus"] = "serverStatus"
-		params["warningCount"] = "warningCount"
+		params["code"] = "code"
 		params["message"] = "message"
-		params["protocol41"] = "protocol41"
-		params["changedRows"] = "changedRows"
 		
         return params
 	}

@@ -13,8 +13,6 @@
  permissions and limitations under the License.
  */
 
-
-
 #import <AWSAPIGateway/AWSAPIGateway.h>
 
 @interface AWSAPIGatewayClient ()
