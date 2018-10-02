@@ -17,7 +17,7 @@ class MealCategoriesViewController: UIViewController, UICollectionViewDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //categoryCollectionView.collectionViewLayout.
+        self.navigationItem.rightBarButtonItems = customRightBarButtonItems()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

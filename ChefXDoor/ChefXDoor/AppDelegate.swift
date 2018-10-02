@@ -31,6 +31,11 @@ class AppDelegate: UIResponder,UIApplicationDelegate,AWSIdentityProviderManager 
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions:
                 launchOptions)
         
+        var navigationBarAppearace = UINavigationBar.appearance()
+
+        navigationBarAppearace.tintColor = UIColor.gray
+        navigationBarAppearace.barTintColor = UIColor.white
+        
         setupRootViewController()
         setupAWSConfiguration()
         
@@ -48,7 +53,11 @@ class AppDelegate: UIResponder,UIApplicationDelegate,AWSIdentityProviderManager 
         
         rootController.configs.rightPanelWidth = 80
         rootController.configs.bounceOnRightPanelOpen = false
-        
+        if #available(iOS 11.0, *) {
+            rootController.prefersHomeIndicatorAutoHidden()
+        } else {
+            // Fallback on earlier versions
+        }
         _ = rootController.center(userDetailNavVC).left(leftMenuVC)
         
         self.storyboard = UIStoryboard(name: "Login", bundle: nil)

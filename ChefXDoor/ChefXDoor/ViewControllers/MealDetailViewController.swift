@@ -12,6 +12,7 @@ import Kingfisher
 import PKHUD
 import MIBlurPopup
 import FaveButton
+import AWSCognito
 
 class MealDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FSPagerViewDelegate, FSPagerViewDataSource,FaveButtonDelegate {
 
@@ -25,6 +26,17 @@ class MealDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var favButtonView: UIView!
+    @IBOutlet weak var tableViewHeightConstraint:NSLayoutConstraint!
+    @IBOutlet weak var chefDescriptionImage: UIImageView!
+    @IBOutlet weak var chefDescriptionTitleLabel: UILabel!
+    @IBOutlet weak var chefDescriptionLabel: UILabel!
+    @IBOutlet weak var ingredientsImage: UIImageView!
+    @IBOutlet weak var ingredientsTitleLabel: UILabel!
+    @IBOutlet weak var ingredientsLabel: UILabel!
+    @IBOutlet weak var totalReviewsImageView: UIImageView!
+    @IBOutlet weak var totalReviewsLabel: UILabel!
+    @IBOutlet weak var preparationTimeView: UIView!
+    @IBOutlet weak var totalCostView: UIView!
     
     @IBOutlet weak var imagePagerView: FSPagerView!{
         didSet {
@@ -54,12 +66,35 @@ class MealDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         
         reviewsTableView.register(UINib.init(nibName: "CXDMealDetailTableViewCell", bundle: Bundle.init(for: CXDMealDetailTableViewCell.self)), forCellReuseIdentifier: "CXDMealDetailTableViewCell")
         
+        reviewsTableView.register(UINib.init(nibName: "CXDMealDetailHeaderTableViewCell", bundle: Bundle.init(for: CXDMealDetailHeaderTableViewCell.self)), forCellReuseIdentifier: "CXDMealDetailHeaderTableViewCell")
+        
         let faveButton = FaveButton(
             frame: CGRect(x:0, y:0, width: 44, height: 44),
-            faveIconNormal: UIImage(named: "Heart")
-        )
+            faveIconNormal: UIImage(named: "Heart"))
         faveButton.delegate = self
         favButtonView.addSubview(faveButton)
+        
+        let resource = ImageResource(downloadURL: URL.init(string: (meal?.chefImageUrl)!)!)
+        chefDescriptionImage.layer.cornerRadius = chefDescriptionImage.frame.size.width/2
+        chefDescriptionImage.clipsToBounds = true
+        chefDescriptionImage.kf.setImage(with: resource)
+
+        chefDescriptionTitleLabel.text = (meal?.chefUsername)! + "'s Description"
+        chefDescriptionLabel.text = meal?._description
+        ingredientsLabel.text = meal?.ingredients
+        ingredientsImage.layer.cornerRadius = ingredientsImage.frame.size.width/2
+        ingredientsImage.clipsToBounds = true
+        ingredientsImage.image = UIImage(named:"Ingredients")
+        
+        totalReviewsImageView.image = CXDUtility.sharedUtility.imageFor(rating: (meal?.rating?.intValue)!)
+        totalReviewsLabel.text = (meal?.reviewCount?.stringValue)! + " reviews"
+        
+        preparationTimeView.layer.borderWidth = 2
+        preparationTimeView.layer.borderColor = UIColor(red: 246/256, green: 102/256, blue: 71/256, alpha: 1).cgColor
+        
+        totalCostView.layer.borderWidth = 2
+        totalCostView.layer.borderColor = UIColor(red: 246/256, green: 102/256, blue: 71/256, alpha: 1).cgColor
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -70,6 +105,8 @@ class MealDetailViewController: UIViewController, UITableViewDelegate, UITableVi
                 HUD.hide()
                 self.userReviews = task.result as! Array<CXDMealReview>
                 self.reviewsTableView.reloadData()
+                self.reviewsTableView.layoutIfNeeded()
+                self.tableViewHeightConstraint.constant = self.reviewsTableView.contentSize.height
             }
         }
     }
@@ -83,6 +120,7 @@ class MealDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.updateCell(mealReview: userReviews![indexPath.row])
         return cell
     }
+    
     
     //PagerView Delegate
     func numberOfItems(in pagerView: FSPagerView) -> Int {
@@ -104,16 +142,56 @@ class MealDetailViewController: UIViewController, UITableViewDelegate, UITableVi
 
     @IBAction func addToCartButtonPressed(_ sender: Any) {
         
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.init(for: ReceipeAddedToCartViewController.self))
-        let receipeAddedToCartViewController = storyboard.instantiateViewController(withIdentifier: "ReceipeAddedToCartViewController") as! ReceipeAddedToCartViewController
-        let PopupVC = setPopupVC(storyboradID:"Main",viewControllerID:"ReceipeAddedToCartViewController")
-        PopupVC.popupCustomAlign = CGPoint(x: 50, y: 25)
-        PopupVC.popupAnimation = .normal
-        PopupVC.popupSize = CGSize(width: 350, height: 450)
-
-        self.presentPopup(controller: PopupVC, completion: nil)
+//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.init(for: ReceipeAddedToCartViewController.self))
+//        let receipeAddedToCartViewController = storyboard.instantiateViewController(withIdentifier: "ReceipeAddedToCartViewController") as! ReceipeAddedToCartViewController
+//        receipeAddedToCartViewController.checkOutCompletionHandler = {
+//            self.dismissPopup(completion: nil)
+//            CXDApiServiceController.awsGetFromEndPoint(urlString: "/users/41/cart", queryParametersDict:nil, pathParametersDict: nil, classType: CXDCart.self).continueWith { (task) -> Any? in
+//
+//                DispatchQueue.main.async {
+//                    self.showResult(task: task )
+//                }
+//            }
+//        }
         
+        
+        let PopupVC = setPopupVC(storyboradID:"Main",viewControllerID:"ReceipeAddedToCartViewController") as? ReceipeAddedToCartViewController
+        PopupVC?.popupCustomAlign = CGPoint(x: 50, y: 25)
+        PopupVC?.popupAnimation = .normal
+        PopupVC?.popupSize = CGSize(width: 350, height: 450)
+//        let receipeAddedToCartViewController = PopupVC.childViewControllers.first as! ReceipeAddedToCartViewController
+        PopupVC?.checkOutCompletionHandler = {
+            self.dismissPopup(completion: nil)
+            CXDApiServiceController.awsGetFromEndPoint(urlString: "/users/41/cart", queryParametersDict:nil, pathParametersDict: nil, classType: CXDCart.self).continueWith { (task) -> Any? in
+                
+                DispatchQueue.main.async {
+                    self.showResult(task: task )
+                }
+            }
+        }
+
+        self.presentPopup(controller: PopupVC!, completion: nil)
     }
+    
+    @objc func checkOutButtonTapped()
+    {
+       
+    }
+    
+    func showResult(task: AWSTask<AnyObject>) {
+        if let error = task.error {
+            print("Error: \(error)")
+        } else if let result = task.result{
+            
+            let res = result as! CXDCart
+            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.init(for: CartViewController.self))
+            let cartViewController = storyboard.instantiateViewController(withIdentifier: "CartViewController") as! CartViewController
+            cartViewController.cart = res
+            
+            self.navigationController!.pushViewController(cartViewController, animated: true)
+        }
+    }
+
     
     func faveButton(_ faveButton: FaveButton, didSelected selected: Bool) {
         

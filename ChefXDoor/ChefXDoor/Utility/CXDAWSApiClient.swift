@@ -44,7 +44,7 @@ public class CXDAWSApiClient: AWSAPIGatewayClient{
         super.init()
         
         self.configuration = configuration.copy() as! AWSServiceConfiguration
-        var URLString: String = "https://b6gptpccx3.execute-api.us-east-1.amazonaws.com/dev"
+        var URLString: String =  "https://b6gptpccx3.execute-api.us-east-1.amazonaws.com/dev"
         if URLString.hasSuffix("/") {
             URLString = URLString.substring(to: URLString.index(before: URLString.endIndex))
         }

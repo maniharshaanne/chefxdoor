@@ -168,6 +168,10 @@ open class FAPanelController: UIViewController {
         _ = updateCenterPanelSlidingFrame()
     }
 
+    override open func prefersHomeIndicatorAutoHidden() -> Bool
+    {
+        return true
+    }
     
     override open func viewWillLayoutSubviews() {
 

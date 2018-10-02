@@ -26,7 +26,6 @@ class CXDApiServiceController{
         let headerParameters = [
             "Content-Type": "application/json",
             "Accept": "application/json",
-            
             ]
         
         var queryParameters:[String:Any] = [:]

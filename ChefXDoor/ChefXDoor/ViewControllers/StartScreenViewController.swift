@@ -10,6 +10,13 @@ import Foundation
 import AWSCognito
 import AWSCognitoIdentityProvider
 import PKHUD
+import FAPanels
+
+extension UIViewController {
+    func sayHello() {
+        print("Hello bro...")
+    }
+}
 
 class StartScreenViewController: UIViewController {
     
@@ -23,20 +30,30 @@ class StartScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.navigationController?.navigationBar.isHidden = true
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         self.pool = appDelegate.cxdIdentityUserPool
         self.pool?.delegate = appDelegate
         if (self.user == nil) {
             self.user = self.pool?.currentUser()
         }
+
+        self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
+        self.navigationItem.leftBarButtonItem = self.menuLeftBarButton()
+        
+        self.navigationItem.rightBarButtonItems = self.customRightBarButtonItems()
+        
+       self.navigationController?.hidesBottomBarWhenPushed = true
         self.refresh()
+    }
+    
+    override func prefersHomeIndicatorAutoHidden() -> Bool
+    {
+        return true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         self.refresh()
         super.viewWillDisappear(animated)
-        self.navigationController?.setToolbarHidden(true, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -84,10 +101,10 @@ class StartScreenViewController: UIViewController {
             DispatchQueue.main.async(execute: {
                 HUD.hide()
                 self.response = task.result
-                self.title = self.user?.username
             })
             return nil
         }
     }
+
 }
 

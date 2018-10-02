@@ -17,11 +17,8 @@ class RecommendationsViewController : UIViewController,UITableViewDelegate,UITab
     @IBOutlet weak var categoriesView: UIView!
     @IBOutlet public var recommendedMealsTableView:UITableView!
     public var recommendedMeals:Array<CXDMeal>?
+    let searchController = UISearchController(searchResultsController: nil)
 
-//    convenience init() {
-//        self.init()
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.navigationController?.navigationBar.isHidden = true
@@ -31,8 +28,19 @@ class RecommendationsViewController : UIViewController,UITableViewDelegate,UITab
         recommendedMealsTableView.reloadData()
         recommendedMealsTableView.layoutIfNeeded()
         tableViewHeightConstraint.constant = recommendedMealsTableView.contentSize.height
-        
+        self.navigationItem.rightBarButtonItems = customRightBarButtonItems()
         categoriesView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(RecommendationsViewController.categoriesViewTapped)))
+        
+        self.navigationItem.leftBarButtonItem = self.menuLeftBarButton()
+        //searchController.searchResultsUpdater = self as! UISearchResultsUpdating
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Candies"
+        if #available(iOS 11.0, *) {
+            navigationItem.searchController = searchController
+        } else {
+            // Fallback on earlier versions
+        }
+        definesPresentationContext = true
     }
     
     override func viewWillAppear(_ animated: Bool) {

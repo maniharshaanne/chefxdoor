@@ -14,10 +14,20 @@ public class ReceipeAddedToCartViewController: UIViewController {
     @IBOutlet weak var findMoreButton:UIButton!
     @IBOutlet weak var checkoutButton: UIButton!
     @IBOutlet weak var imageView:UIImageView!
+    public var checkOutCompletionHandler: (() -> Void)?
+
     
     public override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func checkOutButtonTapped(_ sender: Any) {
+        
+        if let callback = self.checkOutCompletionHandler {
+            callback ()
+        }
+    }
+    
 }
 
 extension ReceipeAddedToCartViewController: MIBlurPopupDelegate {
@@ -37,5 +47,9 @@ extension ReceipeAddedToCartViewController: MIBlurPopupDelegate {
     public var animationDuration: TimeInterval {
         return 1.0
     }
+    
+    
+    
+
     
 }

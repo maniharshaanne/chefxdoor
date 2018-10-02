@@ -37,6 +37,8 @@ class CXDMealDetailTableViewCell: UITableViewCell {
             dateFormatter.dateFormat = "MM/dd/yy"
             var modifiedDateString = dateFormatter.string(from: modifiedSplitDate!)
             titleLabel.text = mealReview.username! + " . " + modifiedDateString
+            
+            ratingImageView.image = CXDUtility.sharedUtility.imageFor(rating: (mealReview.rating?.intValue)!)
         }
 
         detailLabel.text = mealReview.message

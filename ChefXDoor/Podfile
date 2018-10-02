@@ -18,6 +18,7 @@ target 'ChefXDoor' do
   pod 'PKHUD', '~> 5.0'
   pod 'MIBlurPopup'
   pod 'FaveButton'
+  pod 'FormTextField'
   
   target 'ChefXDoorTests' do
     inherit! :search_paths
