@@ -67,11 +67,15 @@ public class CXDUser : AWSModel {
     /** description */
     var imageUrl: String?
     /** description */
+    var imageId: String?
+    /** description */
     var timeCreated: String?
     /** description */
     var timeModified: String?
     /** description */
     var distance: NSNumber?
+    var photos: [CXDUserPhoto]?
+    var foodRestrictions: [CXDFoodRestriction]?
     
    	public override static func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]!{
 		var params:[AnyHashable : Any] = [:]
@@ -98,10 +102,19 @@ public class CXDUser : AWSModel {
 		params["status"] = "status"
 		params["birthday"] = "birthday"
 		params["imageUrl"] = "image_url"
+		params["imageId"] = "image_id"
 		params["timeCreated"] = "time_created"
 		params["timeModified"] = "time_modified"
 		params["distance"] = "distance"
+		params["photos"] = "photos"
+		params["foodRestrictions"] = "food_restrictions"
 		
         return params
+	}
+	class func photosJSONTransformer() -> ValueTransformer{
+		return  ValueTransformer.awsmtl_JSONArrayTransformer(withModelClass: CXDUserPhoto.self);
+	}
+	class func foodRestrictionsJSONTransformer() -> ValueTransformer{
+		return  ValueTransformer.awsmtl_JSONArrayTransformer(withModelClass: CXDFoodRestriction.self);
 	}
 }

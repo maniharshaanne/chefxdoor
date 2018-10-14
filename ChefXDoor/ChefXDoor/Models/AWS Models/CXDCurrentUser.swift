@@ -67,6 +67,8 @@ public class CXDCurrentUser : AWSModel {
     /** description */
     var imageUrl: String?
     /** description */
+    var imageId: String?
+    /** description */
     var timeCreated: String?
     /** description */
     var timeModified: String?
@@ -74,6 +76,8 @@ public class CXDCurrentUser : AWSModel {
     var distance: NSNumber?
     var mainDeliveryAddress: CXDDeliveryAddress?
     var mainPaymentMethod: CXDBilling?
+    var photos: [CXDUserPhoto]?
+    var foodRestrictions: [CXDFoodRestriction]?
     
    	public override static func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]!{
 		var params:[AnyHashable : Any] = [:]
@@ -100,11 +104,14 @@ public class CXDCurrentUser : AWSModel {
 		params["status"] = "status"
 		params["birthday"] = "birthday"
 		params["imageUrl"] = "image_url"
+		params["imageId"] = "image_id"
 		params["timeCreated"] = "time_created"
 		params["timeModified"] = "time_modified"
 		params["distance"] = "distance"
 		params["mainDeliveryAddress"] = "main_delivery_address"
 		params["mainPaymentMethod"] = "main_payment_method"
+		params["photos"] = "photos"
+		params["foodRestrictions"] = "food_restrictions"
 		
         return params
 	}
@@ -113,5 +120,11 @@ public class CXDCurrentUser : AWSModel {
 	}
 	class func mainPaymentMethodJSONTransformer() -> ValueTransformer{
 	    return ValueTransformer.awsmtl_JSONDictionaryTransformer(withModelClass: CXDBilling.self);
+	}
+	class func photosJSONTransformer() -> ValueTransformer{
+		return  ValueTransformer.awsmtl_JSONArrayTransformer(withModelClass: CXDUserPhoto.self);
+	}
+	class func foodRestrictionsJSONTransformer() -> ValueTransformer{
+		return  ValueTransformer.awsmtl_JSONArrayTransformer(withModelClass: CXDFoodRestriction.self);
 	}
 }

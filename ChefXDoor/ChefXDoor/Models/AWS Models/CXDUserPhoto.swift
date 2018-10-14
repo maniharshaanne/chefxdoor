@@ -18,36 +18,24 @@ import Foundation
 import AWSCore
 
 @objcMembers
-public class CXDBilling : AWSModel {
+public class CXDUserPhoto : AWSModel {
     
     /** description */
     var id: NSNumber?
     /** description */
     var userId: NSNumber?
     /** description */
-    var isPrimary: NSNumber?
+    var isMainPhoto: NSNumber?
     /** description */
-    var firstName: String?
+    var imageUrl: String?
     /** description */
-    var lastName: String?
+    var width: NSNumber?
     /** description */
-    var street: String?
+    var height: NSNumber?
     /** description */
-    var city: String?
+    var size: NSNumber?
     /** description */
-    var state: String?
-    /** description */
-    var zip: NSNumber?
-    /** description */
-    var phone: String?
-    /** description */
-    var paymentMethod: String?
-    /** description */
-    var cardNumber: String?
-    /** description */
-    var expiration: String?
-    /** description */
-    var securityCode: String?
+    var primaryColor: String?
     /** description */
     var timeCreated: String?
     /** description */
@@ -57,18 +45,12 @@ public class CXDBilling : AWSModel {
 		var params:[AnyHashable : Any] = [:]
 		params["id"] = "id"
 		params["userId"] = "user_id"
-		params["isPrimary"] = "is_primary"
-		params["firstName"] = "first_name"
-		params["lastName"] = "last_name"
-		params["street"] = "street"
-		params["city"] = "city"
-		params["state"] = "state"
-		params["zip"] = "zip"
-		params["phone"] = "phone"
-		params["paymentMethod"] = "payment_method"
-		params["cardNumber"] = "card_number"
-		params["expiration"] = "expiration"
-		params["securityCode"] = "security_code"
+		params["isMainPhoto"] = "is_main_photo"
+		params["imageUrl"] = "image_url"
+		params["width"] = "width"
+		params["height"] = "height"
+		params["size"] = "size"
+		params["primaryColor"] = "primary_color"
 		params["timeCreated"] = "time_created"
 		params["timeModified"] = "time_modified"
 		

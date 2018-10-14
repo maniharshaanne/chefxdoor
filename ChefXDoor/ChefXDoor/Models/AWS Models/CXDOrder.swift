@@ -29,6 +29,7 @@ public class CXDOrder : AWSModel {
     var driverId: NSNumber?
     var deliveryAddressId: NSNumber?
     var tip: NSNumber?
+    var total: NSNumber?
     var taxes: NSNumber?
     var promotion: NSNumber?
     /** description */
@@ -41,12 +42,16 @@ public class CXDOrder : AWSModel {
     var orderStatusId: NSNumber?
     /** description */
     var status: String?
-    var deliveryAddress: CXDDeliveryAddress?
-    var orderItems: [CXDOrderItem]?
+    /** description */
+    var deliveryType: String?
     /** description */
     var timeCreated: String?
     /** description */
     var timeModified: String?
+    /** description */
+    var mainPhoto: String?
+    var deliveryAddress: CXDDeliveryAddress?
+    var orderItems: [CXDOrderItem]?
     
    	public override static func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]!{
 		var params:[AnyHashable : Any] = [:]
@@ -56,6 +61,7 @@ public class CXDOrder : AWSModel {
 		params["driverId"] = "driver_id"
 		params["deliveryAddressId"] = "delivery_address_id"
 		params["tip"] = "tip"
+		params["total"] = "total"
 		params["taxes"] = "taxes"
 		params["promotion"] = "promotion"
 		params["deliveryFee"] = "delivery_fee"
@@ -63,10 +69,12 @@ public class CXDOrder : AWSModel {
 		params["note"] = "note"
 		params["orderStatusId"] = "order_status_id"
 		params["status"] = "status"
-		params["deliveryAddress"] = "delivery_address"
-		params["orderItems"] = "order_items"
+		params["deliveryType"] = "delivery_type"
 		params["timeCreated"] = "time_created"
 		params["timeModified"] = "time_modified"
+		params["mainPhoto"] = "main_photo"
+		params["deliveryAddress"] = "delivery_address"
+		params["orderItems"] = "order_items"
 		
         return params
 	}

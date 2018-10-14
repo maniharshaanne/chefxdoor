@@ -191,9 +191,9 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      
      @param body 
      
-     return type: CXDTransactionResult
+     return type: CXDMeal
      */
-    public func mealsPost(body: CXDMeal) -> AWSTask<CXDTransactionResult> {
+    public func mealsPost(body: CXDMeal) -> AWSTask<CXDMeal> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
@@ -204,7 +204,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	    
 	    let pathParameters:[String:Any] = [:]
 	    
-	    return self.invokeHTTPRequest("POST", urlString: "/meals", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDTransactionResult.self) as! AWSTask<CXDTransactionResult>
+	    return self.invokeHTTPRequest("POST", urlString: "/meals", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDMeal.self) as! AWSTask<CXDMeal>
 	}
 
 	
@@ -418,9 +418,9 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      @param mealId 
      @param body 
      
-     return type: CXDTransactionResult
+     return type: CXDMeal
      */
-    public func mealsMealIdPut(mealId: String, body: CXDMeal) -> AWSTask<CXDTransactionResult> {
+    public func mealsMealIdPut(mealId: String, body: CXDMeal) -> AWSTask<CXDMeal> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
@@ -432,7 +432,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	    var pathParameters:[String:Any] = [:]
 	    pathParameters["meal_id"] = mealId
 	    
-	    return self.invokeHTTPRequest("PUT", urlString: "/meals/{mealId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDTransactionResult.self) as! AWSTask<CXDTransactionResult>
+	    return self.invokeHTTPRequest("PUT", urlString: "/meals/{mealId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDMeal.self) as! AWSTask<CXDMeal>
 	}
 
 	
@@ -488,9 +488,9 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      @param mealId 
      @param body 
      
-     return type: CXDTransactionResult
+     return type: CXDArrayOfMealPhoto
      */
-    public func mealsMealIdPhotosPost(mealId: String, body: CXDMealPhoto) -> AWSTask<CXDTransactionResult> {
+    public func mealsMealIdPhotosPost(mealId: String, body: CXDArrayOfMealPhoto) -> AWSTask<CXDArrayOfMealPhoto> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
@@ -502,7 +502,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	    var pathParameters:[String:Any] = [:]
 	    pathParameters["meal_id"] = mealId
 	    
-	    return self.invokeHTTPRequest("POST", urlString: "/meals/{mealId}/photos", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDTransactionResult.self) as! AWSTask<CXDTransactionResult>
+	    return self.invokeHTTPRequest("POST", urlString: "/meals/{mealId}/photos", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDArrayOfMealPhoto.self) as! AWSTask<CXDArrayOfMealPhoto>
 	}
 
 	
@@ -551,6 +551,32 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	    pathParameters["meal_id"] = mealId
 	    
 	    return self.invokeHTTPRequest("GET", urlString: "/meals/{mealId}/photos/{photoId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: CXDMealPhoto.self) as! AWSTask<CXDMealPhoto>
+	}
+
+	
+    /*
+     
+     
+     @param photoId 
+     @param mealId 
+     @param body 
+     
+     return type: CXDUserPhoto
+     */
+    public func mealsMealIdPhotosPhotoIdPut(photoId: String, mealId: String, body: CXDMealPhoto) -> AWSTask<CXDUserPhoto> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    var pathParameters:[String:Any] = [:]
+	    pathParameters["photo_id"] = photoId
+	    pathParameters["meal_id"] = mealId
+	    
+	    return self.invokeHTTPRequest("PUT", urlString: "/meals/{mealId}/photos/{photoId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDUserPhoto.self) as! AWSTask<CXDUserPhoto>
 	}
 
 	
@@ -635,9 +661,9 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      @param mealId 
      @param body 
      
-     return type: CXDTransactionResult
+     return type: CXDMealReview
      */
-    public func mealsMealIdReviewsPost(mealId: String, body: CXDMealReview) -> AWSTask<CXDTransactionResult> {
+    public func mealsMealIdReviewsPost(mealId: String, body: CXDMealReview) -> AWSTask<CXDMealReview> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
@@ -649,7 +675,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	    var pathParameters:[String:Any] = [:]
 	    pathParameters["meal_id"] = mealId
 	    
-	    return self.invokeHTTPRequest("POST", urlString: "/meals/{mealId}/reviews", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDTransactionResult.self) as! AWSTask<CXDTransactionResult>
+	    return self.invokeHTTPRequest("POST", urlString: "/meals/{mealId}/reviews", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDMealReview.self) as! AWSTask<CXDMealReview>
 	}
 
 	
@@ -708,9 +734,9 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      @param mealId 
      @param body 
      
-     return type: CXDTransactionResult
+     return type: CXDMealReview
      */
-    public func mealsMealIdReviewsReviewIdPut(reviewId: String, mealId: String, body: CXDMealReview) -> AWSTask<CXDTransactionResult> {
+    public func mealsMealIdReviewsReviewIdPut(reviewId: String, mealId: String, body: CXDMealReview) -> AWSTask<CXDMealReview> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
@@ -723,7 +749,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	    pathParameters["review_id"] = reviewId
 	    pathParameters["meal_id"] = mealId
 	    
-	    return self.invokeHTTPRequest("PUT", urlString: "/meals/{mealId}/reviews/{reviewId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDTransactionResult.self) as! AWSTask<CXDTransactionResult>
+	    return self.invokeHTTPRequest("PUT", urlString: "/meals/{mealId}/reviews/{reviewId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDMealReview.self) as! AWSTask<CXDMealReview>
 	}
 
 	
@@ -896,9 +922,9 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      
      @param body 
      
-     return type: CXDTransactionResult
+     return type: CXDUser
      */
-    public func usersPost(body: CXDUser) -> AWSTask<CXDTransactionResult> {
+    public func usersPost(body: CXDUser) -> AWSTask<CXDUser> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
@@ -909,7 +935,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	    
 	    let pathParameters:[String:Any] = [:]
 	    
-	    return self.invokeHTTPRequest("POST", urlString: "/users", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDTransactionResult.self) as! AWSTask<CXDTransactionResult>
+	    return self.invokeHTTPRequest("POST", urlString: "/users", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDUser.self) as! AWSTask<CXDUser>
 	}
 
 	
@@ -1012,9 +1038,9 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      
      @param body 
      
-     return type: CXDTransactionResult
+     return type: CXDCurrentUser
      */
-    public func usersCurrentuserPut(body: CXDUser) -> AWSTask<CXDTransactionResult> {
+    public func usersCurrentuserPut(body: CXDCurrentUser) -> AWSTask<CXDCurrentUser> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
@@ -1025,7 +1051,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	    
 	    let pathParameters:[String:Any] = [:]
 	    
-	    return self.invokeHTTPRequest("PUT", urlString: "/users/currentuser", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDTransactionResult.self) as! AWSTask<CXDTransactionResult>
+	    return self.invokeHTTPRequest("PUT", urlString: "/users/currentuser", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDCurrentUser.self) as! AWSTask<CXDCurrentUser>
 	}
 
 	
@@ -1047,6 +1073,163 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	    let pathParameters:[String:Any] = [:]
 	    
 	    return self.invokeHTTPRequest("OPTIONS", urlString: "/users/currentuser", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: nil)
+	}
+
+	
+    /*
+     
+     
+     
+     return type: CXDArrayOfUserPhoto
+     */
+    public func usersCurrentuserPhotosGet() -> AWSTask<CXDArrayOfUserPhoto> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    let pathParameters:[String:Any] = [:]
+	    
+	    return self.invokeHTTPRequest("GET", urlString: "/users/currentuser/photos", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: CXDArrayOfUserPhoto.self) as! AWSTask<CXDArrayOfUserPhoto>
+	}
+
+	
+    /*
+     
+     
+     @param body 
+     
+     return type: CXDArrayOfUserPhoto
+     */
+    public func usersCurrentuserPhotosPost(body: CXDArrayOfUserPhoto) -> AWSTask<CXDArrayOfUserPhoto> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    let pathParameters:[String:Any] = [:]
+	    
+	    return self.invokeHTTPRequest("POST", urlString: "/users/currentuser/photos", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDArrayOfUserPhoto.self) as! AWSTask<CXDArrayOfUserPhoto>
+	}
+
+	
+    /*
+     
+     
+     
+     return type: 
+     */
+    public func usersCurrentuserPhotosOptions() -> AWSTask<AnyObject> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    let pathParameters:[String:Any] = [:]
+	    
+	    return self.invokeHTTPRequest("OPTIONS", urlString: "/users/currentuser/photos", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: nil)
+	}
+
+	
+    /*
+     
+     
+     @param photoId 
+     
+     return type: CXDUserPhoto
+     */
+    public func usersCurrentuserPhotosPhotoIdGet(photoId: String) -> AWSTask<CXDUserPhoto> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    var pathParameters:[String:Any] = [:]
+	    pathParameters["photo_id"] = photoId
+	    
+	    return self.invokeHTTPRequest("GET", urlString: "/users/currentuser/photos/{photoId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: CXDUserPhoto.self) as! AWSTask<CXDUserPhoto>
+	}
+
+	
+    /*
+     
+     
+     @param photoId 
+     @param body 
+     
+     return type: CXDUserPhoto
+     */
+    public func usersCurrentuserPhotosPhotoIdPut(photoId: String, body: CXDUserPhoto) -> AWSTask<CXDUserPhoto> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    var pathParameters:[String:Any] = [:]
+	    pathParameters["photo_id"] = photoId
+	    
+	    return self.invokeHTTPRequest("PUT", urlString: "/users/currentuser/photos/{photoId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDUserPhoto.self) as! AWSTask<CXDUserPhoto>
+	}
+
+	
+    /*
+     
+     
+     @param photoId 
+     
+     return type: CXDTransactionResult
+     */
+    public func usersCurrentuserPhotosPhotoIdDelete(photoId: String) -> AWSTask<CXDTransactionResult> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    var pathParameters:[String:Any] = [:]
+	    pathParameters["photo_id"] = photoId
+	    
+	    return self.invokeHTTPRequest("DELETE", urlString: "/users/currentuser/photos/{photoId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: CXDTransactionResult.self) as! AWSTask<CXDTransactionResult>
+	}
+
+	
+    /*
+     
+     
+     @param photoId 
+     
+     return type: 
+     */
+    public func usersCurrentuserPhotosPhotoIdOptions(photoId: String) -> AWSTask<AnyObject> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    var pathParameters:[String:Any] = [:]
+	    pathParameters["photo_id"] = photoId
+	    
+	    return self.invokeHTTPRequest("OPTIONS", urlString: "/users/currentuser/photos/{photoId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: nil)
 	}
 
 	
@@ -1083,9 +1266,9 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      @param userId 
      @param body 
      
-     return type: CXDTransactionResult
+     return type: CXDUser
      */
-    public func usersUserIdPut(userId: String, body: CXDUser) -> AWSTask<CXDTransactionResult> {
+    public func usersUserIdPut(userId: String, body: CXDUser) -> AWSTask<CXDUser> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
@@ -1097,7 +1280,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	    var pathParameters:[String:Any] = [:]
 	    pathParameters["user_id"] = userId
 	    
-	    return self.invokeHTTPRequest("PUT", urlString: "/users/{userId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDTransactionResult.self) as! AWSTask<CXDTransactionResult>
+	    return self.invokeHTTPRequest("PUT", urlString: "/users/{userId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDUser.self) as! AWSTask<CXDUser>
 	}
 
 	
@@ -1153,9 +1336,9 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      @param userId 
      @param body 
      
-     return type: CXDTransactionResult
+     return type: CXDBilling
      */
-    public func usersUserIdBillingPost(userId: String, body: CXDBilling) -> AWSTask<CXDTransactionResult> {
+    public func usersUserIdBillingPost(userId: String, body: CXDBilling) -> AWSTask<CXDBilling> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
@@ -1167,7 +1350,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	    var pathParameters:[String:Any] = [:]
 	    pathParameters["user_id"] = userId
 	    
-	    return self.invokeHTTPRequest("POST", urlString: "/users/{userId}/billing", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDTransactionResult.self) as! AWSTask<CXDTransactionResult>
+	    return self.invokeHTTPRequest("POST", urlString: "/users/{userId}/billing", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDBilling.self) as! AWSTask<CXDBilling>
 	}
 
 	
@@ -1226,9 +1409,9 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      @param userId 
      @param body 
      
-     return type: CXDTransactionResult
+     return type: CXDBilling
      */
-    public func usersUserIdBillingBillingIdPut(billingId: String, userId: String, body: CXDBilling) -> AWSTask<CXDTransactionResult> {
+    public func usersUserIdBillingBillingIdPut(billingId: String, userId: String, body: CXDBilling) -> AWSTask<CXDBilling> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
@@ -1241,7 +1424,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	    pathParameters["billing_id"] = billingId
 	    pathParameters["user_id"] = userId
 	    
-	    return self.invokeHTTPRequest("PUT", urlString: "/users/{userId}/billing/{billingId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDTransactionResult.self) as! AWSTask<CXDTransactionResult>
+	    return self.invokeHTTPRequest("PUT", urlString: "/users/{userId}/billing/{billingId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDBilling.self) as! AWSTask<CXDBilling>
 	}
 
 	
@@ -1299,9 +1482,9 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      @param userId 
      @param body 
      
-     return type: CXDTransactionResult
+     return type: CXDCartItem
      */
-    public func usersUserIdCartPost(userId: String, body: CXDCartItem) -> AWSTask<CXDTransactionResult> {
+    public func usersUserIdCartPost(userId: String, body: CXDCartItem) -> AWSTask<CXDCartItem> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
@@ -1313,7 +1496,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	    var pathParameters:[String:Any] = [:]
 	    pathParameters["user_id"] = userId
 	    
-	    return self.invokeHTTPRequest("POST", urlString: "/users/{userId}/cart", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDTransactionResult.self) as! AWSTask<CXDTransactionResult>
+	    return self.invokeHTTPRequest("POST", urlString: "/users/{userId}/cart", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDCartItem.self) as! AWSTask<CXDCartItem>
 	}
 
 	
@@ -1372,9 +1555,9 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      @param cartItemId 
      @param body 
      
-     return type: CXDTransactionResult
+     return type: CXDCartItem
      */
-    public func usersUserIdCartCartItemIdPut(userId: String, cartItemId: String, body: CXDCartItem) -> AWSTask<CXDTransactionResult> {
+    public func usersUserIdCartCartItemIdPut(userId: String, cartItemId: String, body: CXDCartItem) -> AWSTask<CXDCartItem> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
@@ -1387,7 +1570,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	    pathParameters["user_id"] = userId
 	    pathParameters["cart_item_id"] = cartItemId
 	    
-	    return self.invokeHTTPRequest("PUT", urlString: "/users/{userId}/cart/{cartItemId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDTransactionResult.self) as! AWSTask<CXDTransactionResult>
+	    return self.invokeHTTPRequest("PUT", urlString: "/users/{userId}/cart/{cartItemId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDCartItem.self) as! AWSTask<CXDCartItem>
 	}
 
 	
@@ -1474,9 +1657,9 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      @param userId 
      @param body 
      
-     return type: CXDTransactionResult
+     return type: CXDDeliveryAddress
      */
-    public func usersUserIdDeliveryAddressPost(userId: String, body: CXDDeliveryAddress) -> AWSTask<CXDTransactionResult> {
+    public func usersUserIdDeliveryAddressPost(userId: String, body: CXDDeliveryAddress) -> AWSTask<CXDDeliveryAddress> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
@@ -1488,7 +1671,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	    var pathParameters:[String:Any] = [:]
 	    pathParameters["user_id"] = userId
 	    
-	    return self.invokeHTTPRequest("POST", urlString: "/users/{userId}/delivery_address", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDTransactionResult.self) as! AWSTask<CXDTransactionResult>
+	    return self.invokeHTTPRequest("POST", urlString: "/users/{userId}/delivery_address", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDDeliveryAddress.self) as! AWSTask<CXDDeliveryAddress>
 	}
 
 	
@@ -1547,9 +1730,9 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      @param userId 
      @param body 
      
-     return type: CXDTransactionResult
+     return type: CXDDeliveryAddress
      */
-    public func usersUserIdDeliveryAddressDeliveryAddressIdPut(deliveryAddressId: String, userId: String, body: CXDDeliveryAddress) -> AWSTask<CXDTransactionResult> {
+    public func usersUserIdDeliveryAddressDeliveryAddressIdPut(deliveryAddressId: String, userId: String, body: CXDDeliveryAddress) -> AWSTask<CXDDeliveryAddress> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
@@ -1562,7 +1745,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	    pathParameters["delivery_address_id"] = deliveryAddressId
 	    pathParameters["user_id"] = userId
 	    
-	    return self.invokeHTTPRequest("PUT", urlString: "/users/{userId}/delivery_address/{deliveryAddressId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDTransactionResult.self) as! AWSTask<CXDTransactionResult>
+	    return self.invokeHTTPRequest("PUT", urlString: "/users/{userId}/delivery_address/{deliveryAddressId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDDeliveryAddress.self) as! AWSTask<CXDDeliveryAddress>
 	}
 
 	
@@ -1649,9 +1832,9 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      @param userId 
      @param body 
      
-     return type: CXDTransactionResult
+     return type: CXDFavoriteMeal
      */
-    public func usersUserIdFavoritemealsPost(userId: String, body: CXDUser) -> AWSTask<CXDTransactionResult> {
+    public func usersUserIdFavoritemealsPost(userId: String, body: CXDUser) -> AWSTask<CXDFavoriteMeal> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
@@ -1663,7 +1846,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	    var pathParameters:[String:Any] = [:]
 	    pathParameters["user_id"] = userId
 	    
-	    return self.invokeHTTPRequest("POST", urlString: "/users/{userId}/favoritemeals", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDTransactionResult.self) as! AWSTask<CXDTransactionResult>
+	    return self.invokeHTTPRequest("POST", urlString: "/users/{userId}/favoritemeals", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDFavoriteMeal.self) as! AWSTask<CXDFavoriteMeal>
 	}
 
 	
@@ -1772,9 +1955,9 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      
      @param userId 
      
-     return type: CXDTransactionResult
+     return type: CXDMenu
      */
-    public func usersUserIdMenuPost(userId: String) -> AWSTask<CXDTransactionResult> {
+    public func usersUserIdMenuPost(userId: String) -> AWSTask<CXDMenu> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
@@ -1786,7 +1969,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	    var pathParameters:[String:Any] = [:]
 	    pathParameters["user_id"] = userId
 	    
-	    return self.invokeHTTPRequest("POST", urlString: "/users/{userId}/menu", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: CXDTransactionResult.self) as! AWSTask<CXDTransactionResult>
+	    return self.invokeHTTPRequest("POST", urlString: "/users/{userId}/menu", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: CXDMenu.self) as! AWSTask<CXDMenu>
 	}
 
 	
@@ -1846,9 +2029,9 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      @param userId 
      @param body 
      
-     return type: CXDTransactionResult
+     return type: CXDOrder
      */
-    public func usersUserIdOrdersPost(userId: String, body: CXDOrder) -> AWSTask<CXDTransactionResult> {
+    public func usersUserIdOrdersPost(userId: String, body: CXDOrder) -> AWSTask<CXDOrder> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
@@ -1860,7 +2043,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	    var pathParameters:[String:Any] = [:]
 	    pathParameters["user_id"] = userId
 	    
-	    return self.invokeHTTPRequest("POST", urlString: "/users/{userId}/orders", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDTransactionResult.self) as! AWSTask<CXDTransactionResult>
+	    return self.invokeHTTPRequest("POST", urlString: "/users/{userId}/orders", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDOrder.self) as! AWSTask<CXDOrder>
 	}
 
 	
@@ -1919,9 +2102,9 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      @param orderId 
      @param body 
      
-     return type: CXDTransactionResult
+     return type: CXDOrder
      */
-    public func usersUserIdOrdersOrderIdPut(userId: String, orderId: String, body: CXDBilling) -> AWSTask<CXDTransactionResult> {
+    public func usersUserIdOrdersOrderIdPut(userId: String, orderId: String, body: CXDOrder) -> AWSTask<CXDOrder> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
@@ -1934,7 +2117,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	    pathParameters["user_id"] = userId
 	    pathParameters["order_id"] = orderId
 	    
-	    return self.invokeHTTPRequest("PUT", urlString: "/users/{userId}/orders/{orderId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDTransactionResult.self) as! AWSTask<CXDTransactionResult>
+	    return self.invokeHTTPRequest("PUT", urlString: "/users/{userId}/orders/{orderId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDOrder.self) as! AWSTask<CXDOrder>
 	}
 
 	
@@ -1994,9 +2177,9 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      @param userId 
      @param body 
      
-     return type: CXDTransactionResult
+     return type: CXDUserReview
      */
-    public func usersUserIdReviewsPost(userId: String, body: CXDUserReview) -> AWSTask<CXDTransactionResult> {
+    public func usersUserIdReviewsPost(userId: String, body: CXDUserReview) -> AWSTask<CXDUserReview> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
@@ -2008,7 +2191,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	    var pathParameters:[String:Any] = [:]
 	    pathParameters["user_id"] = userId
 	    
-	    return self.invokeHTTPRequest("POST", urlString: "/users/{userId}/reviews", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDTransactionResult.self) as! AWSTask<CXDTransactionResult>
+	    return self.invokeHTTPRequest("POST", urlString: "/users/{userId}/reviews", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDUserReview.self) as! AWSTask<CXDUserReview>
 	}
 
 	
@@ -2067,9 +2250,9 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      @param userId 
      @param body 
      
-     return type: CXDTransactionResult
+     return type: CXDUserReview
      */
-    public func usersUserIdReviewsReviewIdPut(reviewId: String, userId: String, body: CXDUserReview) -> AWSTask<CXDTransactionResult> {
+    public func usersUserIdReviewsReviewIdPut(reviewId: String, userId: String, body: CXDUserReview) -> AWSTask<CXDUserReview> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
@@ -2082,7 +2265,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	    pathParameters["review_id"] = reviewId
 	    pathParameters["user_id"] = userId
 	    
-	    return self.invokeHTTPRequest("PUT", urlString: "/users/{userId}/reviews/{reviewId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDTransactionResult.self) as! AWSTask<CXDTransactionResult>
+	    return self.invokeHTTPRequest("PUT", urlString: "/users/{userId}/reviews/{reviewId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDUserReview.self) as! AWSTask<CXDUserReview>
 	}
 
 	

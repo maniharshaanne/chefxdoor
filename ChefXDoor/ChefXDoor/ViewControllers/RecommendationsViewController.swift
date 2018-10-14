@@ -21,17 +21,26 @@ class RecommendationsViewController : UIViewController,UITableViewDelegate,UITab
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.navigationController?.navigationBar.isHidden = true
+
         recommendedMealsTableView.rowHeight = UITableViewAutomaticDimension
         recommendedMealsTableView.estimatedRowHeight = 90
         recommendedMealsTableView.register(UINib.init(nibName: "CXDMealTableViewCell", bundle: Bundle.init(for: CXDMealTableViewCell.self)), forCellReuseIdentifier: "CXDMealTableViewCell")
         recommendedMealsTableView.reloadData()
         recommendedMealsTableView.layoutIfNeeded()
         tableViewHeightConstraint.constant = recommendedMealsTableView.contentSize.height
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
         self.navigationItem.rightBarButtonItems = customRightBarButtonItems()
+        self.navigationItem.leftBarButtonItem = menuLeftBarButton()
+        
+        var titleView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+        var titleImageView = UIImageView(image: UIImage(named: "cxd-logo"))
+        titleImageView.frame = CGRect(x: 0, y: 0, width: titleView.frame.width, height: titleView.frame.height)
+        titleView.addSubview(titleImageView)
+        navigationItem.titleView = titleView
+        
         categoriesView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(RecommendationsViewController.categoriesViewTapped)))
         
-        self.navigationItem.leftBarButtonItem = self.menuLeftBarButton()
         //searchController.searchResultsUpdater = self as! UISearchResultsUpdating
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search Candies"
@@ -47,6 +56,7 @@ class RecommendationsViewController : UIViewController,UITableViewDelegate,UITab
         super.viewWillAppear(animated)
  
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
         return recommendedMeals?.count ?? 0

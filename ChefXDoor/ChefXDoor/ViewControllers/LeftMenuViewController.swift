@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FAPanels
 
 /**
  Menu controller is responsible for creating its content and showing/hiding menu using 'menuContainerViewController' property.
@@ -42,14 +43,14 @@ class LeftMenuViewController: UIViewController {
     
     func prepareMenuItems() -> Array<CXDAppMenuItem>
     {
-        var exploreFoodMenuItem = CXDAppMenuItem(title: "EXPLORE FOOD", imageName: "ExploreFood", menuType: .ExploreFood)
-        var myFavouritesMenuItem = CXDAppMenuItem(title: "MY FAVORITES", imageName: "MyFavorites", menuType: .MyFavourites)
-        var orderHistoryMenuItem = CXDAppMenuItem(title: "ORDER HISTORY", imageName: "OrderHistory", menuType: .OrderHistory)
-        var paymentMethodsMenuItem = CXDAppMenuItem(title: "PAYMENT METHODS", imageName: "PaymentMethods", menuType: .PaymentMethods)
-        var searchMenuItem = CXDAppMenuItem(title: "SEARCH CHEFXDOOR", imageName: "SearchChefxdoor", menuType: .Search)
-        var helpMenuItem = CXDAppMenuItem(title: "HELP", imageName: "Help", menuType: .Help)
+        let exploreFoodMenuItem = CXDAppMenuItem(title: "EXPLORE FOOD", imageName: "ExploreFood", menuType: .ExploreFood)
+        let myFavouritesMenuItem = CXDAppMenuItem(title: "MY FAVORITES", imageName: "MyFavorites", menuType: .MyFavourites)
+        let orderHistoryMenuItem = CXDAppMenuItem(title: "ORDER HISTORY", imageName: "OrderHistory", menuType: .OrderHistory)
+        let paymentMethodsMenuItem = CXDAppMenuItem(title: "PAYMENT METHODS", imageName: "PaymentMethods", menuType: .PaymentMethods)
+        let searchMenuItem = CXDAppMenuItem(title: "SEARCH CHEFXDOOR", imageName: "SearchChefxdoor", menuType: .Search)
+        let helpMenuItem = CXDAppMenuItem(title: "HELP", imageName: "Help", menuType: .Help)
         
-        var menuItemsArray = [exploreFoodMenuItem, myFavouritesMenuItem, orderHistoryMenuItem, paymentMethodsMenuItem, searchMenuItem, helpMenuItem]
+        let menuItemsArray = [exploreFoodMenuItem, myFavouritesMenuItem, orderHistoryMenuItem, paymentMethodsMenuItem, searchMenuItem, helpMenuItem]
         
         return menuItemsArray
     }
@@ -75,14 +76,46 @@ extension LeftMenuViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        guard let menuContainerViewController = self.menuContainerViewController else {
-//            return
-//        }
-//
-//        menuContainerViewController.selectContentViewController(menuContainerViewController.contentViewControllers[indexPath.row])
-//        menuContainerViewController.hideSideMenu()
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let menuItem:CXDAppMenuItem = menuItems![indexPath.row]
+        
+        switch menuItem.menuType
+        {
+            case .ExploreFood?:
+                CXDApiServiceController.awsGetFromEndPoint(urlString: "/meals/recommended", queryParametersDict: ["lat" : 38.994373, "long" : -77.029778, "distance" : 10, "page" : 0, "sort":"price"], pathParametersDict: nil, classType: CXDMeal.self).continueWith { (task) -> Any? in
+                    
+                    DispatchQueue.main.async {
+                        if let error = task.error {
+                            print("Error: \(error)")
+                        } else if let result = task.result{
+                            let res = result as! Array<CXDMeal>
+                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                            let recommendationsViewController = storyboard.instantiateViewController(withIdentifier: "RecommendationsViewController") as! RecommendationsViewController
+                            recommendationsViewController.recommendedMeals = res
+                            let recommendationsNavVC = UINavigationController(rootViewController: recommendationsViewController)
+                            
+                            self.panel?.center(recommendationsNavVC)
+                        }
+                    }
+                }
+
+            break
+            
+            case .OrderHistory? :
+               
+                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let pastOrderVC: PastOrdersViewController = mainStoryboard.instantiateViewController(withIdentifier: "PastOrdersViewController") as! PastOrdersViewController
+                let pastOrderNavVC = UINavigationController(rootViewController: pastOrderVC)
+                
+                panel?.center(pastOrderNavVC)
+                
+            break
+            
+            default:
+            break
+        }
+    }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let v = UIView()

@@ -21,7 +21,9 @@ class CXDMealTableViewCell: UITableViewCell,FaveButtonDelegate  {
     @IBOutlet public weak var pribeLabel:UILabel!
     @IBOutlet public weak var ratingImageView:UIImageView!
     @IBOutlet public weak var favButtonView:UIView!
-    
+    @IBOutlet public weak var profileImageViewWidthConstraint:NSLayoutConstraint!
+    @IBOutlet public weak var ratingImageViewHeightConstraint:NSLayoutConstraint!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         let faveButton = FaveButton(
@@ -31,10 +33,41 @@ class CXDMealTableViewCell: UITableViewCell,FaveButtonDelegate  {
         faveButton.delegate = self
         backgroundImageView.isUserInteractionEnabled = true
         backgroundImageView.addSubview(faveButton)
+        transparentView.backgroundColor = UIColor(red: 98/256, green: 98/256, blue: 98/256, alpha: 0.5)
+    }
+    
+    public func updateInfo(order:CXDOrder)
+    {
+        backgroundImageView.kf.cancelDownloadTask()
+        backgroundImageView.image = UIImage(named: "Food_bg_placeholder.png")
+        
+        profileImageViewWidthConstraint.priority = UILayoutPriority(rawValue: 999)
+        
+        mealNameLabel.text = "Order # " + (order.orderNumber?.stringValue)!
+        
+        if let imageUrl = order.mainPhoto
+        {
+            let resource = ImageResource(downloadURL: URL.init(string: imageUrl)!)
+            backgroundImageView.kf.setImage(with: resource)
+        }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        let createdDate = dateFormatter.date(from: order.timeCreated!)
+        dateFormatter.dateFormat = "MMM dd, yyyy, h:mm aa"
+        let createdDateString = dateFormatter.string(from: createdDate!)
+        
+        chefNameLabel.text = createdDateString
+        pribeLabel.text = "$" + (order.deliveryFee?.stringValue)!
+        profileImageViewWidthConstraint.constant = 0
+        ratingImageViewHeightConstraint.constant = 0
     }
     
     public func updateInfo(meal:CXDMeal)
     {
+        profileImageViewWidthConstraint.constant = 40
+        ratingImageViewHeightConstraint.constant = 10
+        
         backgroundImageView.kf.cancelDownloadTask()
         backgroundImageView.image = UIImage(named: "Food_bg_placeholder.png")
         

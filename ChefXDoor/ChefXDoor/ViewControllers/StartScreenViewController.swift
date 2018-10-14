@@ -43,7 +43,53 @@ class StartScreenViewController: UIViewController {
         self.navigationItem.rightBarButtonItems = self.customRightBarButtonItems()
         
        self.navigationController?.hidesBottomBarWhenPushed = true
-        self.refresh()
+        //self.refresh()
+    }
+    
+    override func viewDidAppear(_ animated: Bool)
+    {
+
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let user = appDelegate.currentUser
+
+        if (user != nil)
+        {
+            user?.getDetails().continueOnSuccessWith(block: { (userRes) -> Any? in
+                user?.getSession().continueOnSuccessWith(block: { (userSession) -> Any? in
+
+                    DispatchQueue.main.async {
+                        let getSessionResult = userSession.result
+                        appDelegate.idToken = getSessionResult?.idToken
+                        appDelegate.accessToken = getSessionResult?.accessToken
+
+                        // Initialize the Amazon Cognito credentials provider
+                        let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "us-east-1:d82c05b6-d3fd-4490-86c4-e3d3d39bcfb5", identityProviderManager: appDelegate)
+                        let serviceConfiguration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)
+
+                        AWSServiceManager.default().defaultServiceConfiguration = serviceConfiguration
+
+                        CXDAWSApiClient.registerClient(withConfiguration: serviceConfiguration!, forKey: "USEast1CXDDEVAPIClient")
+
+                        // create pool configuration
+                        let poolConfiguration = AWSCognitoIdentityUserPoolConfiguration(clientId: CognitoIdentityUserPoolAppClientId,
+                                                                                        clientSecret: CognitoIdentityUserPoolAppClientSecret,
+                                                                                        poolId: CognitoIdentityUserPoolId)
+
+                        // initialize user pool client
+                        AWSCognitoIdentityUserPool.register(with: serviceConfiguration, userPoolConfiguration: poolConfiguration, forKey: AWSCognitoUserPoolsSignInProviderKey)
+
+                        // fetch the user pool client we initialized in above step
+                        appDelegate.cxdIdentityUserPool = AWSCognitoIdentityUserPool(forKey: AWSCognitoUserPoolsSignInProviderKey)
+                        appDelegate.cxdIdentityUserPool?.delegate = appDelegate
+                        appDelegate.currentUser = appDelegate.cxdIdentityUserPool?.currentUser()
+                    }
+                    return nil
+
+                })
+                return nil
+
+            })
+        }
     }
     
     override func prefersHomeIndicatorAutoHidden() -> Bool

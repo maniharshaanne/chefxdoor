@@ -15,6 +15,7 @@ class SignInViewController: UIViewController, AWSCognitoIdentityPasswordAuthenti
     
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var curveView:UIView!
     var passwordAuthenticationCompletion: AWSTaskCompletionSource< AWSCognitoIdentityPasswordAuthenticationDetails>?
     var usernameText: String?
 
@@ -23,6 +24,29 @@ class SignInViewController: UIViewController, AWSCognitoIdentityPasswordAuthenti
         self.password.text = nil
         self.username.text = usernameText
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        var curveLayer = CALayer()
+        curveView.layer.insertSublayer(curveLayer, at: 0)
+        
+        let layer = curveView.layer
+        layer.cornerRadius = 70
+        
+        layer.shadowOffset = CGSize(width: 4, height: 4)
+        layer.shadowOpacity = 0.3
+        layer.shadowRadius = 5.0
+        
+        curveLayer.frame = layer.bounds
+        curveLayer.masksToBounds = true
+        curveLayer.cornerRadius = layer.cornerRadius
+        curveLayer.borderColor = UIColor.white.cgColor
+        curveLayer.borderWidth = 3.0
+        curveLayer.backgroundColor = UIColor(red: 51/256, green: 51/256, blue: 51/256, alpha: 0.7).cgColor
+        
+        if #available(iOS 11.0, *) {
+            curveLayer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMaxYCorner]
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     @IBAction func signInPressed(_ sender: AnyObject) {

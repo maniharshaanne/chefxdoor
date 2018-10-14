@@ -18,13 +18,23 @@ import Foundation
 import AWSCore
 
 @objcMembers
-public class CXDError : AWSModel {
+public class CXDFoodRestriction : AWSModel {
     
-    var error: String?
+    /** description */
+    var id: NSNumber?
+    /** description */
+    var foodClassificationId: NSNumber?
+    /** description */
+    var timeCreated: String?
+    /** description */
+    var timeModified: String?
     
    	public override static func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]!{
 		var params:[AnyHashable : Any] = [:]
-		params["error"] = "error"
+		params["id"] = "id"
+		params["foodClassificationId"] = "food_classification_id"
+		params["timeCreated"] = "time_created"
+		params["timeModified"] = "time_modified"
 		
         return params
 	}

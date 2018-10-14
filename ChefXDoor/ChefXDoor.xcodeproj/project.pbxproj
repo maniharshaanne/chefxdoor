@@ -10,6 +10,111 @@
 		2B63081E3250BAD33757C38B /* Pods_ChefXDoor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18C255FDC7F15848B68E9E8 /* Pods_ChefXDoor.framework */; };
 		9CC2B4F923592F8119DD4FC4 /* Pods_ChefXDoorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133FFFC0AA8EE90B5A6773DF /* Pods_ChefXDoorTests.framework */; };
 		D3E030BC7DF5A1783D82DC78 /* Pods_ChefXDoorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E899C2495E837AFC507C52 /* Pods_ChefXDoorUITests.framework */; };
+		FE07F5632172209300EFA59D /* CXDArrayOfMealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5402172208B00EFA59D /* CXDArrayOfMealCategory.swift */; };
+		FE07F5642172209300EFA59D /* CXDArrayOfMealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5402172208B00EFA59D /* CXDArrayOfMealCategory.swift */; };
+		FE07F5652172209300EFA59D /* CXDArrayOfMealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5402172208B00EFA59D /* CXDArrayOfMealCategory.swift */; };
+		FE07F5662172209300EFA59D /* CXDMealPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5412172208C00EFA59D /* CXDMealPhoto.swift */; };
+		FE07F5672172209300EFA59D /* CXDMealPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5412172208C00EFA59D /* CXDMealPhoto.swift */; };
+		FE07F5682172209300EFA59D /* CXDMealPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5412172208C00EFA59D /* CXDMealPhoto.swift */; };
+		FE07F5692172209300EFA59D /* CXDFoodRestriction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5422172208D00EFA59D /* CXDFoodRestriction.swift */; };
+		FE07F56A2172209300EFA59D /* CXDFoodRestriction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5422172208D00EFA59D /* CXDFoodRestriction.swift */; };
+		FE07F56B2172209300EFA59D /* CXDFoodRestriction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5422172208D00EFA59D /* CXDFoodRestriction.swift */; };
+		FE07F56C2172209300EFA59D /* CXDUserReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5432172208D00EFA59D /* CXDUserReview.swift */; };
+		FE07F56D2172209300EFA59D /* CXDUserReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5432172208D00EFA59D /* CXDUserReview.swift */; };
+		FE07F56E2172209300EFA59D /* CXDUserReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5432172208D00EFA59D /* CXDUserReview.swift */; };
+		FE07F56F2172209300EFA59D /* CXDMealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5442172208D00EFA59D /* CXDMealCategory.swift */; };
+		FE07F5702172209300EFA59D /* CXDMealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5442172208D00EFA59D /* CXDMealCategory.swift */; };
+		FE07F5712172209300EFA59D /* CXDMealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5442172208D00EFA59D /* CXDMealCategory.swift */; };
+		FE07F5722172209300EFA59D /* CXDTransactionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5452172208D00EFA59D /* CXDTransactionResult.swift */; };
+		FE07F5732172209300EFA59D /* CXDTransactionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5452172208D00EFA59D /* CXDTransactionResult.swift */; };
+		FE07F5742172209300EFA59D /* CXDTransactionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5452172208D00EFA59D /* CXDTransactionResult.swift */; };
+		FE07F5752172209300EFA59D /* CXDMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5462172208D00EFA59D /* CXDMenuItem.swift */; };
+		FE07F5762172209300EFA59D /* CXDMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5462172208D00EFA59D /* CXDMenuItem.swift */; };
+		FE07F5772172209300EFA59D /* CXDMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5462172208D00EFA59D /* CXDMenuItem.swift */; };
+		FE07F5782172209300EFA59D /* CXDOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5472172208D00EFA59D /* CXDOrder.swift */; };
+		FE07F5792172209300EFA59D /* CXDOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5472172208D00EFA59D /* CXDOrder.swift */; };
+		FE07F57A2172209300EFA59D /* CXDOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5472172208D00EFA59D /* CXDOrder.swift */; };
+		FE07F57B2172209300EFA59D /* CXDUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5482172208D00EFA59D /* CXDUser.swift */; };
+		FE07F57C2172209300EFA59D /* CXDUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5482172208D00EFA59D /* CXDUser.swift */; };
+		FE07F57D2172209300EFA59D /* CXDUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5482172208D00EFA59D /* CXDUser.swift */; };
+		FE07F57E2172209300EFA59D /* CXDFoodClassification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5492172208E00EFA59D /* CXDFoodClassification.swift */; };
+		FE07F57F2172209300EFA59D /* CXDFoodClassification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5492172208E00EFA59D /* CXDFoodClassification.swift */; };
+		FE07F5802172209300EFA59D /* CXDFoodClassification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5492172208E00EFA59D /* CXDFoodClassification.swift */; };
+		FE07F5812172209300EFA59D /* CXDCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F54A2172208E00EFA59D /* CXDCart.swift */; };
+		FE07F5822172209300EFA59D /* CXDCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F54A2172208E00EFA59D /* CXDCart.swift */; };
+		FE07F5832172209300EFA59D /* CXDCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F54A2172208E00EFA59D /* CXDCart.swift */; };
+		FE07F5842172209300EFA59D /* CXDCurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F54B2172208E00EFA59D /* CXDCurrentUser.swift */; };
+		FE07F5852172209300EFA59D /* CXDCurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F54B2172208E00EFA59D /* CXDCurrentUser.swift */; };
+		FE07F5862172209300EFA59D /* CXDCurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F54B2172208E00EFA59D /* CXDCurrentUser.swift */; };
+		FE07F5872172209300EFA59D /* CXDArrayOfMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F54C2172208E00EFA59D /* CXDArrayOfMeal.swift */; };
+		FE07F5882172209300EFA59D /* CXDArrayOfMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F54C2172208E00EFA59D /* CXDArrayOfMeal.swift */; };
+		FE07F5892172209300EFA59D /* CXDArrayOfMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F54C2172208E00EFA59D /* CXDArrayOfMeal.swift */; };
+		FE07F58A2172209300EFA59D /* CXDArrayOfChef.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F54D2172208E00EFA59D /* CXDArrayOfChef.swift */; };
+		FE07F58B2172209300EFA59D /* CXDArrayOfChef.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F54D2172208E00EFA59D /* CXDArrayOfChef.swift */; };
+		FE07F58C2172209300EFA59D /* CXDArrayOfChef.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F54D2172208E00EFA59D /* CXDArrayOfChef.swift */; };
+		FE07F58D2172209300EFA59D /* CXDArrayOfDeliveryAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F54E2172208E00EFA59D /* CXDArrayOfDeliveryAddress.swift */; };
+		FE07F58E2172209300EFA59D /* CXDArrayOfDeliveryAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F54E2172208E00EFA59D /* CXDArrayOfDeliveryAddress.swift */; };
+		FE07F58F2172209300EFA59D /* CXDArrayOfDeliveryAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F54E2172208E00EFA59D /* CXDArrayOfDeliveryAddress.swift */; };
+		FE07F5902172209300EFA59D /* CXDArrayOfMealPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F54F2172208F00EFA59D /* CXDArrayOfMealPhoto.swift */; };
+		FE07F5912172209300EFA59D /* CXDArrayOfMealPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F54F2172208F00EFA59D /* CXDArrayOfMealPhoto.swift */; };
+		FE07F5922172209300EFA59D /* CXDArrayOfMealPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F54F2172208F00EFA59D /* CXDArrayOfMealPhoto.swift */; };
+		FE07F5932172209300EFA59D /* CXDDeliveryAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5502172208F00EFA59D /* CXDDeliveryAddress.swift */; };
+		FE07F5942172209300EFA59D /* CXDDeliveryAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5502172208F00EFA59D /* CXDDeliveryAddress.swift */; };
+		FE07F5952172209300EFA59D /* CXDDeliveryAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5502172208F00EFA59D /* CXDDeliveryAddress.swift */; };
+		FE07F5962172209300EFA59D /* CXDArrayOfUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5512172208F00EFA59D /* CXDArrayOfUser.swift */; };
+		FE07F5972172209300EFA59D /* CXDArrayOfUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5512172208F00EFA59D /* CXDArrayOfUser.swift */; };
+		FE07F5982172209300EFA59D /* CXDArrayOfUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5512172208F00EFA59D /* CXDArrayOfUser.swift */; };
+		FE07F5992172209300EFA59D /* CXDUserPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5522172208F00EFA59D /* CXDUserPhoto.swift */; };
+		FE07F59A2172209300EFA59D /* CXDUserPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5522172208F00EFA59D /* CXDUserPhoto.swift */; };
+		FE07F59B2172209300EFA59D /* CXDUserPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5522172208F00EFA59D /* CXDUserPhoto.swift */; };
+		FE07F59C2172209300EFA59D /* CXDBilling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5532172208F00EFA59D /* CXDBilling.swift */; };
+		FE07F59D2172209300EFA59D /* CXDBilling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5532172208F00EFA59D /* CXDBilling.swift */; };
+		FE07F59E2172209300EFA59D /* CXDBilling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5532172208F00EFA59D /* CXDBilling.swift */; };
+		FE07F59F2172209300EFA59D /* CXDMealReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5542172208F00EFA59D /* CXDMealReview.swift */; };
+		FE07F5A02172209300EFA59D /* CXDMealReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5542172208F00EFA59D /* CXDMealReview.swift */; };
+		FE07F5A12172209300EFA59D /* CXDMealReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5542172208F00EFA59D /* CXDMealReview.swift */; };
+		FE07F5A22172209300EFA59D /* CXDArrayOfMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5552172209000EFA59D /* CXDArrayOfMenu.swift */; };
+		FE07F5A32172209300EFA59D /* CXDArrayOfMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5552172209000EFA59D /* CXDArrayOfMenu.swift */; };
+		FE07F5A42172209300EFA59D /* CXDArrayOfMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5552172209000EFA59D /* CXDArrayOfMenu.swift */; };
+		FE07F5A52172209300EFA59D /* CXDMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5562172209000EFA59D /* CXDMenu.swift */; };
+		FE07F5A62172209300EFA59D /* CXDMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5562172209000EFA59D /* CXDMenu.swift */; };
+		FE07F5A72172209300EFA59D /* CXDMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5562172209000EFA59D /* CXDMenu.swift */; };
+		FE07F5A82172209300EFA59D /* CXDFavoriteMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5572172209000EFA59D /* CXDFavoriteMeal.swift */; };
+		FE07F5A92172209300EFA59D /* CXDFavoriteMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5572172209000EFA59D /* CXDFavoriteMeal.swift */; };
+		FE07F5AA2172209300EFA59D /* CXDFavoriteMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5572172209000EFA59D /* CXDFavoriteMeal.swift */; };
+		FE07F5AB2172209300EFA59D /* CXDOrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5582172209000EFA59D /* CXDOrderItem.swift */; };
+		FE07F5AC2172209300EFA59D /* CXDOrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5582172209000EFA59D /* CXDOrderItem.swift */; };
+		FE07F5AD2172209300EFA59D /* CXDOrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5582172209000EFA59D /* CXDOrderItem.swift */; };
+		FE07F5AE2172209300EFA59D /* CXDArrayOfOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5592172209000EFA59D /* CXDArrayOfOrder.swift */; };
+		FE07F5AF2172209300EFA59D /* CXDArrayOfOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5592172209000EFA59D /* CXDArrayOfOrder.swift */; };
+		FE07F5B02172209300EFA59D /* CXDArrayOfOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5592172209000EFA59D /* CXDArrayOfOrder.swift */; };
+		FE07F5B12172209300EFA59D /* CXDDEVAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F55A2172209100EFA59D /* CXDDEVAPIClient.swift */; };
+		FE07F5B22172209300EFA59D /* CXDDEVAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F55A2172209100EFA59D /* CXDDEVAPIClient.swift */; };
+		FE07F5B32172209300EFA59D /* CXDDEVAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F55A2172209100EFA59D /* CXDDEVAPIClient.swift */; };
+		FE07F5B42172209300EFA59D /* CXDArrayOfUserPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F55B2172209100EFA59D /* CXDArrayOfUserPhoto.swift */; };
+		FE07F5B52172209300EFA59D /* CXDArrayOfUserPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F55B2172209100EFA59D /* CXDArrayOfUserPhoto.swift */; };
+		FE07F5B62172209300EFA59D /* CXDArrayOfUserPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F55B2172209100EFA59D /* CXDArrayOfUserPhoto.swift */; };
+		FE07F5B72172209300EFA59D /* CXDArrayOfBilling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F55C2172209100EFA59D /* CXDArrayOfBilling.swift */; };
+		FE07F5B82172209300EFA59D /* CXDArrayOfBilling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F55C2172209100EFA59D /* CXDArrayOfBilling.swift */; };
+		FE07F5B92172209300EFA59D /* CXDArrayOfBilling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F55C2172209100EFA59D /* CXDArrayOfBilling.swift */; };
+		FE07F5BA2172209300EFA59D /* CXDError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F55D2172209100EFA59D /* CXDError.swift */; };
+		FE07F5BB2172209300EFA59D /* CXDError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F55D2172209100EFA59D /* CXDError.swift */; };
+		FE07F5BC2172209300EFA59D /* CXDError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F55D2172209100EFA59D /* CXDError.swift */; };
+		FE07F5BD2172209300EFA59D /* CXDArrayOfUserReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F55E2172209100EFA59D /* CXDArrayOfUserReview.swift */; };
+		FE07F5BE2172209300EFA59D /* CXDArrayOfUserReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F55E2172209100EFA59D /* CXDArrayOfUserReview.swift */; };
+		FE07F5BF2172209300EFA59D /* CXDArrayOfUserReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F55E2172209100EFA59D /* CXDArrayOfUserReview.swift */; };
+		FE07F5C02172209300EFA59D /* CXDArrayOfMealReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F55F2172209200EFA59D /* CXDArrayOfMealReview.swift */; };
+		FE07F5C12172209300EFA59D /* CXDArrayOfMealReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F55F2172209200EFA59D /* CXDArrayOfMealReview.swift */; };
+		FE07F5C22172209300EFA59D /* CXDArrayOfMealReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F55F2172209200EFA59D /* CXDArrayOfMealReview.swift */; };
+		FE07F5C32172209300EFA59D /* CXDMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5602172209200EFA59D /* CXDMeal.swift */; };
+		FE07F5C42172209300EFA59D /* CXDMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5602172209200EFA59D /* CXDMeal.swift */; };
+		FE07F5C52172209300EFA59D /* CXDMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5602172209200EFA59D /* CXDMeal.swift */; };
+		FE07F5C62172209300EFA59D /* CXDCartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5612172209200EFA59D /* CXDCartItem.swift */; };
+		FE07F5C72172209300EFA59D /* CXDCartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5612172209200EFA59D /* CXDCartItem.swift */; };
+		FE07F5C82172209300EFA59D /* CXDCartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5612172209200EFA59D /* CXDCartItem.swift */; };
+		FE07F5C92172209300EFA59D /* CXDChef.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5622172209200EFA59D /* CXDChef.swift */; };
+		FE07F5CA2172209300EFA59D /* CXDChef.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5622172209200EFA59D /* CXDChef.swift */; };
+		FE07F5CB2172209300EFA59D /* CXDChef.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5622172209200EFA59D /* CXDChef.swift */; };
 		FE38CFB3215BDD4B00D3EC31 /* CartItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE38CFB2215BDD4B00D3EC31 /* CartItemTableViewCell.swift */; };
 		FE38CFB4215BDD4B00D3EC31 /* CartItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE38CFB2215BDD4B00D3EC31 /* CartItemTableViewCell.swift */; };
 		FE38CFB5215BDD4B00D3EC31 /* CartItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE38CFB2215BDD4B00D3EC31 /* CartItemTableViewCell.swift */; };
@@ -58,102 +163,6 @@
 		FE7B04FE213F6AEC0090E85B /* CXDAWSApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B04FD213F6AEC0090E85B /* CXDAWSApiClient.swift */; };
 		FE7B04FF213F6AEC0090E85B /* CXDAWSApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B04FD213F6AEC0090E85B /* CXDAWSApiClient.swift */; };
 		FE7B0500213F6AEC0090E85B /* CXDAWSApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B04FD213F6AEC0090E85B /* CXDAWSApiClient.swift */; };
-		FE7D402821600AA7002131D4 /* CXDUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D400821600A9D002131D4 /* CXDUser.swift */; };
-		FE7D402921600AA7002131D4 /* CXDUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D400821600A9D002131D4 /* CXDUser.swift */; };
-		FE7D402A21600AA7002131D4 /* CXDUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D400821600A9D002131D4 /* CXDUser.swift */; };
-		FE7D402B21600AA7002131D4 /* CXDOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D400921600A9D002131D4 /* CXDOrder.swift */; };
-		FE7D402C21600AA7002131D4 /* CXDOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D400921600A9D002131D4 /* CXDOrder.swift */; };
-		FE7D402D21600AA7002131D4 /* CXDOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D400921600A9D002131D4 /* CXDOrder.swift */; };
-		FE7D402E21600AA7002131D4 /* CXDArrayOfMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D400A21600A9D002131D4 /* CXDArrayOfMeal.swift */; };
-		FE7D402F21600AA7002131D4 /* CXDArrayOfMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D400A21600A9D002131D4 /* CXDArrayOfMeal.swift */; };
-		FE7D403021600AA7002131D4 /* CXDArrayOfMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D400A21600A9D002131D4 /* CXDArrayOfMeal.swift */; };
-		FE7D403121600AA7002131D4 /* CXDArrayOfOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D400B21600A9E002131D4 /* CXDArrayOfOrder.swift */; };
-		FE7D403221600AA7002131D4 /* CXDArrayOfOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D400B21600A9E002131D4 /* CXDArrayOfOrder.swift */; };
-		FE7D403321600AA7002131D4 /* CXDArrayOfOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D400B21600A9E002131D4 /* CXDArrayOfOrder.swift */; };
-		FE7D403421600AA7002131D4 /* CXDArrayOfUserReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D400C21600A9E002131D4 /* CXDArrayOfUserReview.swift */; };
-		FE7D403521600AA7002131D4 /* CXDArrayOfUserReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D400C21600A9E002131D4 /* CXDArrayOfUserReview.swift */; };
-		FE7D403621600AA7002131D4 /* CXDArrayOfUserReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D400C21600A9E002131D4 /* CXDArrayOfUserReview.swift */; };
-		FE7D403721600AA7002131D4 /* CXDCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D400D21600A9E002131D4 /* CXDCart.swift */; };
-		FE7D403821600AA7002131D4 /* CXDCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D400D21600A9E002131D4 /* CXDCart.swift */; };
-		FE7D403921600AA7002131D4 /* CXDCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D400D21600A9E002131D4 /* CXDCart.swift */; };
-		FE7D403A21600AA7002131D4 /* CXDMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D400E21600A9E002131D4 /* CXDMenuItem.swift */; };
-		FE7D403B21600AA7002131D4 /* CXDMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D400E21600A9E002131D4 /* CXDMenuItem.swift */; };
-		FE7D403C21600AA7002131D4 /* CXDMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D400E21600A9E002131D4 /* CXDMenuItem.swift */; };
-		FE7D403D21600AA7002131D4 /* CXDArrayOfMealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D400F21600A9F002131D4 /* CXDArrayOfMealCategory.swift */; };
-		FE7D403E21600AA7002131D4 /* CXDArrayOfMealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D400F21600A9F002131D4 /* CXDArrayOfMealCategory.swift */; };
-		FE7D403F21600AA7002131D4 /* CXDArrayOfMealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D400F21600A9F002131D4 /* CXDArrayOfMealCategory.swift */; };
-		FE7D404021600AA7002131D4 /* CXDArrayOfMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401021600A9F002131D4 /* CXDArrayOfMenu.swift */; };
-		FE7D404121600AA7002131D4 /* CXDArrayOfMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401021600A9F002131D4 /* CXDArrayOfMenu.swift */; };
-		FE7D404221600AA7002131D4 /* CXDArrayOfMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401021600A9F002131D4 /* CXDArrayOfMenu.swift */; };
-		FE7D404321600AA7002131D4 /* CXDOrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401121600AA0002131D4 /* CXDOrderItem.swift */; };
-		FE7D404421600AA7002131D4 /* CXDOrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401121600AA0002131D4 /* CXDOrderItem.swift */; };
-		FE7D404521600AA7002131D4 /* CXDOrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401121600AA0002131D4 /* CXDOrderItem.swift */; };
-		FE7D404621600AA7002131D4 /* CXDMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401221600AA0002131D4 /* CXDMenu.swift */; };
-		FE7D404721600AA7002131D4 /* CXDMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401221600AA0002131D4 /* CXDMenu.swift */; };
-		FE7D404821600AA7002131D4 /* CXDMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401221600AA0002131D4 /* CXDMenu.swift */; };
-		FE7D404921600AA7002131D4 /* CXDCartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401321600AA0002131D4 /* CXDCartItem.swift */; };
-		FE7D404A21600AA7002131D4 /* CXDCartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401321600AA0002131D4 /* CXDCartItem.swift */; };
-		FE7D404B21600AA7002131D4 /* CXDCartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401321600AA0002131D4 /* CXDCartItem.swift */; };
-		FE7D404C21600AA7002131D4 /* CXDArrayOfMealPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401421600AA1002131D4 /* CXDArrayOfMealPhoto.swift */; };
-		FE7D404D21600AA7002131D4 /* CXDArrayOfMealPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401421600AA1002131D4 /* CXDArrayOfMealPhoto.swift */; };
-		FE7D404E21600AA7002131D4 /* CXDArrayOfMealPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401421600AA1002131D4 /* CXDArrayOfMealPhoto.swift */; };
-		FE7D404F21600AA7002131D4 /* CXDArrayOfDeliveryAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401521600AA1002131D4 /* CXDArrayOfDeliveryAddress.swift */; };
-		FE7D405021600AA7002131D4 /* CXDArrayOfDeliveryAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401521600AA1002131D4 /* CXDArrayOfDeliveryAddress.swift */; };
-		FE7D405121600AA7002131D4 /* CXDArrayOfDeliveryAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401521600AA1002131D4 /* CXDArrayOfDeliveryAddress.swift */; };
-		FE7D405221600AA7002131D4 /* CXDError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401621600AA1002131D4 /* CXDError.swift */; };
-		FE7D405321600AA7002131D4 /* CXDError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401621600AA1002131D4 /* CXDError.swift */; };
-		FE7D405421600AA7002131D4 /* CXDError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401621600AA1002131D4 /* CXDError.swift */; };
-		FE7D405521600AA7002131D4 /* CXDArrayOfUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401721600AA2002131D4 /* CXDArrayOfUser.swift */; };
-		FE7D405621600AA7002131D4 /* CXDArrayOfUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401721600AA2002131D4 /* CXDArrayOfUser.swift */; };
-		FE7D405721600AA7002131D4 /* CXDArrayOfUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401721600AA2002131D4 /* CXDArrayOfUser.swift */; };
-		FE7D405821600AA7002131D4 /* CXDDEVAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401821600AA2002131D4 /* CXDDEVAPIClient.swift */; };
-		FE7D405921600AA7002131D4 /* CXDDEVAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401821600AA2002131D4 /* CXDDEVAPIClient.swift */; };
-		FE7D405A21600AA7002131D4 /* CXDDEVAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401821600AA2002131D4 /* CXDDEVAPIClient.swift */; };
-		FE7D405B21600AA7002131D4 /* CXDMealReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401921600AA2002131D4 /* CXDMealReview.swift */; };
-		FE7D405C21600AA7002131D4 /* CXDMealReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401921600AA2002131D4 /* CXDMealReview.swift */; };
-		FE7D405D21600AA7002131D4 /* CXDMealReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401921600AA2002131D4 /* CXDMealReview.swift */; };
-		FE7D405E21600AA7002131D4 /* CXDDeliveryAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401A21600AA3002131D4 /* CXDDeliveryAddress.swift */; };
-		FE7D405F21600AA7002131D4 /* CXDDeliveryAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401A21600AA3002131D4 /* CXDDeliveryAddress.swift */; };
-		FE7D406021600AA7002131D4 /* CXDDeliveryAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401A21600AA3002131D4 /* CXDDeliveryAddress.swift */; };
-		FE7D406121600AA7002131D4 /* CXDCurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401B21600AA3002131D4 /* CXDCurrentUser.swift */; };
-		FE7D406221600AA7002131D4 /* CXDCurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401B21600AA3002131D4 /* CXDCurrentUser.swift */; };
-		FE7D406321600AA7002131D4 /* CXDCurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401B21600AA3002131D4 /* CXDCurrentUser.swift */; };
-		FE7D406421600AA7002131D4 /* CXDChef.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401C21600AA3002131D4 /* CXDChef.swift */; };
-		FE7D406521600AA7002131D4 /* CXDChef.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401C21600AA3002131D4 /* CXDChef.swift */; };
-		FE7D406621600AA7002131D4 /* CXDChef.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401C21600AA3002131D4 /* CXDChef.swift */; };
-		FE7D406721600AA7002131D4 /* CXDError_Error_value.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401D21600AA4002131D4 /* CXDError_Error_value.swift */; };
-		FE7D406821600AA7002131D4 /* CXDError_Error_value.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401D21600AA4002131D4 /* CXDError_Error_value.swift */; };
-		FE7D406921600AA7002131D4 /* CXDError_Error_value.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401D21600AA4002131D4 /* CXDError_Error_value.swift */; };
-		FE7D406A21600AA7002131D4 /* CXDFoodClassification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401E21600AA4002131D4 /* CXDFoodClassification.swift */; };
-		FE7D406B21600AA7002131D4 /* CXDFoodClassification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401E21600AA4002131D4 /* CXDFoodClassification.swift */; };
-		FE7D406C21600AA7002131D4 /* CXDFoodClassification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401E21600AA4002131D4 /* CXDFoodClassification.swift */; };
-		FE7D406D21600AA7002131D4 /* CXDArrayOfChef.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401F21600AA4002131D4 /* CXDArrayOfChef.swift */; };
-		FE7D406E21600AA7002131D4 /* CXDArrayOfChef.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401F21600AA4002131D4 /* CXDArrayOfChef.swift */; };
-		FE7D406F21600AA7002131D4 /* CXDArrayOfChef.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D401F21600AA4002131D4 /* CXDArrayOfChef.swift */; };
-		FE7D407021600AA7002131D4 /* CXDMealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D402021600AA5002131D4 /* CXDMealCategory.swift */; };
-		FE7D407121600AA7002131D4 /* CXDMealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D402021600AA5002131D4 /* CXDMealCategory.swift */; };
-		FE7D407221600AA7002131D4 /* CXDMealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D402021600AA5002131D4 /* CXDMealCategory.swift */; };
-		FE7D407321600AA7002131D4 /* CXDMealPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D402121600AA5002131D4 /* CXDMealPhoto.swift */; };
-		FE7D407421600AA7002131D4 /* CXDMealPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D402121600AA5002131D4 /* CXDMealPhoto.swift */; };
-		FE7D407521600AA7002131D4 /* CXDMealPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D402121600AA5002131D4 /* CXDMealPhoto.swift */; };
-		FE7D407621600AA7002131D4 /* CXDMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D402221600AA5002131D4 /* CXDMeal.swift */; };
-		FE7D407721600AA7002131D4 /* CXDMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D402221600AA5002131D4 /* CXDMeal.swift */; };
-		FE7D407821600AA7002131D4 /* CXDMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D402221600AA5002131D4 /* CXDMeal.swift */; };
-		FE7D407921600AA7002131D4 /* CXDArrayOfBilling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D402321600AA6002131D4 /* CXDArrayOfBilling.swift */; };
-		FE7D407A21600AA7002131D4 /* CXDArrayOfBilling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D402321600AA6002131D4 /* CXDArrayOfBilling.swift */; };
-		FE7D407B21600AA7002131D4 /* CXDArrayOfBilling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D402321600AA6002131D4 /* CXDArrayOfBilling.swift */; };
-		FE7D407C21600AA7002131D4 /* CXDBilling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D402421600AA6002131D4 /* CXDBilling.swift */; };
-		FE7D407D21600AA7002131D4 /* CXDBilling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D402421600AA6002131D4 /* CXDBilling.swift */; };
-		FE7D407E21600AA7002131D4 /* CXDBilling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D402421600AA6002131D4 /* CXDBilling.swift */; };
-		FE7D407F21600AA7002131D4 /* CXDUserReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D402521600AA6002131D4 /* CXDUserReview.swift */; };
-		FE7D408021600AA7002131D4 /* CXDUserReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D402521600AA6002131D4 /* CXDUserReview.swift */; };
-		FE7D408121600AA7002131D4 /* CXDUserReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D402521600AA6002131D4 /* CXDUserReview.swift */; };
-		FE7D408221600AA7002131D4 /* CXDArrayOfMealReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D402621600AA6002131D4 /* CXDArrayOfMealReview.swift */; };
-		FE7D408321600AA7002131D4 /* CXDArrayOfMealReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D402621600AA6002131D4 /* CXDArrayOfMealReview.swift */; };
-		FE7D408421600AA7002131D4 /* CXDArrayOfMealReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D402621600AA6002131D4 /* CXDArrayOfMealReview.swift */; };
-		FE7D408521600AA7002131D4 /* CXDTransactionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D402721600AA7002131D4 /* CXDTransactionResult.swift */; };
-		FE7D408621600AA7002131D4 /* CXDTransactionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D402721600AA7002131D4 /* CXDTransactionResult.swift */; };
-		FE7D408721600AA7002131D4 /* CXDTransactionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D402721600AA7002131D4 /* CXDTransactionResult.swift */; };
 		FE7D40892160125F002131D4 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D40882160125F002131D4 /* CartViewController.swift */; };
 		FE7D408A2160125F002131D4 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D40882160125F002131D4 /* CartViewController.swift */; };
 		FE7D408B2160125F002131D4 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D40882160125F002131D4 /* CartViewController.swift */; };
@@ -196,6 +205,12 @@
 		FE862BB2214F3E8E00902478 /* MealsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE862BB1214F3E8E00902478 /* MealsTableViewController.swift */; };
 		FE862BB3214F3E8E00902478 /* MealsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE862BB1214F3E8E00902478 /* MealsTableViewController.swift */; };
 		FE862BB4214F3E8E00902478 /* MealsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE862BB1214F3E8E00902478 /* MealsTableViewController.swift */; };
+		FEA703822165B37600A9DEF7 /* cookies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FEA703812165B37600A9DEF7 /* cookies.jpg */; };
+		FEA703832165B37600A9DEF7 /* cookies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FEA703812165B37600A9DEF7 /* cookies.jpg */; };
+		FEA703842165B37600A9DEF7 /* cookies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FEA703812165B37600A9DEF7 /* cookies.jpg */; };
+		FEA703862165B3C000A9DEF7 /* minicookies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FEA703852165B3C000A9DEF7 /* minicookies.jpg */; };
+		FEA703872165B3C000A9DEF7 /* minicookies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FEA703852165B3C000A9DEF7 /* minicookies.jpg */; };
+		FEA703882165B3C000A9DEF7 /* minicookies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FEA703852165B3C000A9DEF7 /* minicookies.jpg */; };
 		FEA95C57215722BB0085368D /* CXDMealDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEA95C56215722BB0085368D /* CXDMealDetailTableViewCell.xib */; };
 		FEA95C58215722BB0085368D /* CXDMealDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEA95C56215722BB0085368D /* CXDMealDetailTableViewCell.xib */; };
 		FEA95C59215722BB0085368D /* CXDMealDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEA95C56215722BB0085368D /* CXDMealDetailTableViewCell.xib */; };
@@ -211,6 +226,19 @@
 		FEA95C672157BE520085368D /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA95C662157BE520085368D /* MealDetailViewController.swift */; };
 		FEA95C682157BE520085368D /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA95C662157BE520085368D /* MealDetailViewController.swift */; };
 		FEA95C692157BE520085368D /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA95C662157BE520085368D /* MealDetailViewController.swift */; };
+		FEB3A9FE21724CAA00A258C6 /* PastOrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3A9FD21724CAA00A258C6 /* PastOrderDetailViewController.swift */; };
+		FEB3A9FF21724CAA00A258C6 /* PastOrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3A9FD21724CAA00A258C6 /* PastOrderDetailViewController.swift */; };
+		FEB3AA0021724CAA00A258C6 /* PastOrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3A9FD21724CAA00A258C6 /* PastOrderDetailViewController.swift */; };
+		FEB3AA022172A55300A258C6 /* CXDPastOrderItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEB3AA012172A55300A258C6 /* CXDPastOrderItemTableViewCell.xib */; };
+		FEB3AA032172A55300A258C6 /* CXDPastOrderItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEB3AA012172A55300A258C6 /* CXDPastOrderItemTableViewCell.xib */; };
+		FEB3AA042172A55300A258C6 /* CXDPastOrderItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEB3AA012172A55300A258C6 /* CXDPastOrderItemTableViewCell.xib */; };
+		FEB3AA062172A73200A258C6 /* CXDPastOrderItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3AA052172A73200A258C6 /* CXDPastOrderItemTableViewCell.swift */; };
+		FEB3AA072172A73200A258C6 /* CXDPastOrderItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3AA052172A73200A258C6 /* CXDPastOrderItemTableViewCell.swift */; };
+		FEB3AA082172A73200A258C6 /* CXDPastOrderItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3AA052172A73200A258C6 /* CXDPastOrderItemTableViewCell.swift */; };
+		FEB3AA0A2172AF4800A258C6 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3AA092172AF4800A258C6 /* CosmosDistrib.swift */; };
+		FEB3AA0C2172DBBE00A258C6 /* cxd-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB3AA0B2172DBBD00A258C6 /* cxd-logo.png */; };
+		FEB3AA0D2172DBBE00A258C6 /* cxd-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB3AA0B2172DBBD00A258C6 /* cxd-logo.png */; };
+		FEB3AA0E2172DBBE00A258C6 /* cxd-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FEB3AA0B2172DBBD00A258C6 /* cxd-logo.png */; };
 		FEB8B34220D346DD00DDDD2D /* MFAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B34120D346DD00DDDD2D /* MFAViewController.swift */; };
 		FEB8B34320D346DD00DDDD2D /* MFAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B34120D346DD00DDDD2D /* MFAViewController.swift */; };
 		FEB8B34420D346DD00DDDD2D /* MFAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8B34120D346DD00DDDD2D /* MFAViewController.swift */; };
@@ -249,6 +277,9 @@
 		FEBC70C8215FEF0B008785A9 /* UIViewController+NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC70C5215FEF0B008785A9 /* UIViewController+NavBar.swift */; };
 		FEC4A44521372A4F00864655 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF502BA20CC06C900F2B8EF /* AppDelegate.swift */; };
 		FEC4A44621372A5000864655 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF502BA20CC06C900F2B8EF /* AppDelegate.swift */; };
+		FEC79AB4216D8FD000A28B6D /* PastOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC79AB3216D8FD000A28B6D /* PastOrdersViewController.swift */; };
+		FEC79AB5216D8FD000A28B6D /* PastOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC79AB3216D8FD000A28B6D /* PastOrdersViewController.swift */; };
+		FEC79AB6216D8FD000A28B6D /* PastOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC79AB3216D8FD000A28B6D /* PastOrdersViewController.swift */; };
 		FEC98610215AFCF1009E81E1 /* ReceipeAddedToCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC9860F215AFCF1009E81E1 /* ReceipeAddedToCartViewController.swift */; };
 		FEC98611215AFCF1009E81E1 /* ReceipeAddedToCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC9860F215AFCF1009E81E1 /* ReceipeAddedToCartViewController.swift */; };
 		FEC98612215AFCF1009E81E1 /* ReceipeAddedToCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC9860F215AFCF1009E81E1 /* ReceipeAddedToCartViewController.swift */; };
@@ -326,6 +357,41 @@
 		B18C255FDC7F15848B68E9E8 /* Pods_ChefXDoor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChefXDoor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB1DF9155D1EB9DFE28942D /* Pods-ChefXDoorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChefXDoorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChefXDoorTests/Pods-ChefXDoorTests.release.xcconfig"; sourceTree = "<group>"; };
 		EF92DF086284B1A64022B88E /* Pods-ChefXDoorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChefXDoorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChefXDoorTests/Pods-ChefXDoorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FE07F5402172208B00EFA59D /* CXDArrayOfMealCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfMealCategory.swift; sourceTree = "<group>"; };
+		FE07F5412172208C00EFA59D /* CXDMealPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDMealPhoto.swift; sourceTree = "<group>"; };
+		FE07F5422172208D00EFA59D /* CXDFoodRestriction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDFoodRestriction.swift; sourceTree = "<group>"; };
+		FE07F5432172208D00EFA59D /* CXDUserReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDUserReview.swift; sourceTree = "<group>"; };
+		FE07F5442172208D00EFA59D /* CXDMealCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDMealCategory.swift; sourceTree = "<group>"; };
+		FE07F5452172208D00EFA59D /* CXDTransactionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDTransactionResult.swift; sourceTree = "<group>"; };
+		FE07F5462172208D00EFA59D /* CXDMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDMenuItem.swift; sourceTree = "<group>"; };
+		FE07F5472172208D00EFA59D /* CXDOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDOrder.swift; sourceTree = "<group>"; };
+		FE07F5482172208D00EFA59D /* CXDUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDUser.swift; sourceTree = "<group>"; };
+		FE07F5492172208E00EFA59D /* CXDFoodClassification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDFoodClassification.swift; sourceTree = "<group>"; };
+		FE07F54A2172208E00EFA59D /* CXDCart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDCart.swift; sourceTree = "<group>"; };
+		FE07F54B2172208E00EFA59D /* CXDCurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDCurrentUser.swift; sourceTree = "<group>"; };
+		FE07F54C2172208E00EFA59D /* CXDArrayOfMeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfMeal.swift; sourceTree = "<group>"; };
+		FE07F54D2172208E00EFA59D /* CXDArrayOfChef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfChef.swift; sourceTree = "<group>"; };
+		FE07F54E2172208E00EFA59D /* CXDArrayOfDeliveryAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfDeliveryAddress.swift; sourceTree = "<group>"; };
+		FE07F54F2172208F00EFA59D /* CXDArrayOfMealPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfMealPhoto.swift; sourceTree = "<group>"; };
+		FE07F5502172208F00EFA59D /* CXDDeliveryAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDDeliveryAddress.swift; sourceTree = "<group>"; };
+		FE07F5512172208F00EFA59D /* CXDArrayOfUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfUser.swift; sourceTree = "<group>"; };
+		FE07F5522172208F00EFA59D /* CXDUserPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDUserPhoto.swift; sourceTree = "<group>"; };
+		FE07F5532172208F00EFA59D /* CXDBilling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDBilling.swift; sourceTree = "<group>"; };
+		FE07F5542172208F00EFA59D /* CXDMealReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDMealReview.swift; sourceTree = "<group>"; };
+		FE07F5552172209000EFA59D /* CXDArrayOfMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfMenu.swift; sourceTree = "<group>"; };
+		FE07F5562172209000EFA59D /* CXDMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDMenu.swift; sourceTree = "<group>"; };
+		FE07F5572172209000EFA59D /* CXDFavoriteMeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDFavoriteMeal.swift; sourceTree = "<group>"; };
+		FE07F5582172209000EFA59D /* CXDOrderItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDOrderItem.swift; sourceTree = "<group>"; };
+		FE07F5592172209000EFA59D /* CXDArrayOfOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfOrder.swift; sourceTree = "<group>"; };
+		FE07F55A2172209100EFA59D /* CXDDEVAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDDEVAPIClient.swift; sourceTree = "<group>"; };
+		FE07F55B2172209100EFA59D /* CXDArrayOfUserPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfUserPhoto.swift; sourceTree = "<group>"; };
+		FE07F55C2172209100EFA59D /* CXDArrayOfBilling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfBilling.swift; sourceTree = "<group>"; };
+		FE07F55D2172209100EFA59D /* CXDError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDError.swift; sourceTree = "<group>"; };
+		FE07F55E2172209100EFA59D /* CXDArrayOfUserReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfUserReview.swift; sourceTree = "<group>"; };
+		FE07F55F2172209200EFA59D /* CXDArrayOfMealReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfMealReview.swift; sourceTree = "<group>"; };
+		FE07F5602172209200EFA59D /* CXDMeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDMeal.swift; sourceTree = "<group>"; };
+		FE07F5612172209200EFA59D /* CXDCartItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDCartItem.swift; sourceTree = "<group>"; };
+		FE07F5622172209200EFA59D /* CXDChef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDChef.swift; sourceTree = "<group>"; };
 		FE38CFB2215BDD4B00D3EC31 /* CartItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemTableViewCell.swift; sourceTree = "<group>"; };
 		FE38CFB6215BE1DD00D3EC31 /* CartItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartItemTableViewCell.xib; sourceTree = "<group>"; };
 		FE38CFBA215C42E400D3EC31 /* AddNewPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPaymentViewController.swift; sourceTree = "<group>"; };
@@ -344,38 +410,6 @@
 		FE730F90213DFC1200574C26 /* RecommendationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationsViewController.swift; sourceTree = "<group>"; };
 		FE7A09F22135923800AE45AD /* SignInViewController+FacebookLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInViewController+FacebookLogin.swift"; sourceTree = "<group>"; };
 		FE7B04FD213F6AEC0090E85B /* CXDAWSApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDAWSApiClient.swift; sourceTree = "<group>"; };
-		FE7D400821600A9D002131D4 /* CXDUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDUser.swift; sourceTree = "<group>"; };
-		FE7D400921600A9D002131D4 /* CXDOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDOrder.swift; sourceTree = "<group>"; };
-		FE7D400A21600A9D002131D4 /* CXDArrayOfMeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfMeal.swift; sourceTree = "<group>"; };
-		FE7D400B21600A9E002131D4 /* CXDArrayOfOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfOrder.swift; sourceTree = "<group>"; };
-		FE7D400C21600A9E002131D4 /* CXDArrayOfUserReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfUserReview.swift; sourceTree = "<group>"; };
-		FE7D400D21600A9E002131D4 /* CXDCart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDCart.swift; sourceTree = "<group>"; };
-		FE7D400E21600A9E002131D4 /* CXDMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDMenuItem.swift; sourceTree = "<group>"; };
-		FE7D400F21600A9F002131D4 /* CXDArrayOfMealCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfMealCategory.swift; sourceTree = "<group>"; };
-		FE7D401021600A9F002131D4 /* CXDArrayOfMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfMenu.swift; sourceTree = "<group>"; };
-		FE7D401121600AA0002131D4 /* CXDOrderItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDOrderItem.swift; sourceTree = "<group>"; };
-		FE7D401221600AA0002131D4 /* CXDMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDMenu.swift; sourceTree = "<group>"; };
-		FE7D401321600AA0002131D4 /* CXDCartItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDCartItem.swift; sourceTree = "<group>"; };
-		FE7D401421600AA1002131D4 /* CXDArrayOfMealPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfMealPhoto.swift; sourceTree = "<group>"; };
-		FE7D401521600AA1002131D4 /* CXDArrayOfDeliveryAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfDeliveryAddress.swift; sourceTree = "<group>"; };
-		FE7D401621600AA1002131D4 /* CXDError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDError.swift; sourceTree = "<group>"; };
-		FE7D401721600AA2002131D4 /* CXDArrayOfUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfUser.swift; sourceTree = "<group>"; };
-		FE7D401821600AA2002131D4 /* CXDDEVAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDDEVAPIClient.swift; sourceTree = "<group>"; };
-		FE7D401921600AA2002131D4 /* CXDMealReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDMealReview.swift; sourceTree = "<group>"; };
-		FE7D401A21600AA3002131D4 /* CXDDeliveryAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDDeliveryAddress.swift; sourceTree = "<group>"; };
-		FE7D401B21600AA3002131D4 /* CXDCurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDCurrentUser.swift; sourceTree = "<group>"; };
-		FE7D401C21600AA3002131D4 /* CXDChef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDChef.swift; sourceTree = "<group>"; };
-		FE7D401D21600AA4002131D4 /* CXDError_Error_value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDError_Error_value.swift; sourceTree = "<group>"; };
-		FE7D401E21600AA4002131D4 /* CXDFoodClassification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDFoodClassification.swift; sourceTree = "<group>"; };
-		FE7D401F21600AA4002131D4 /* CXDArrayOfChef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfChef.swift; sourceTree = "<group>"; };
-		FE7D402021600AA5002131D4 /* CXDMealCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDMealCategory.swift; sourceTree = "<group>"; };
-		FE7D402121600AA5002131D4 /* CXDMealPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDMealPhoto.swift; sourceTree = "<group>"; };
-		FE7D402221600AA5002131D4 /* CXDMeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDMeal.swift; sourceTree = "<group>"; };
-		FE7D402321600AA6002131D4 /* CXDArrayOfBilling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfBilling.swift; sourceTree = "<group>"; };
-		FE7D402421600AA6002131D4 /* CXDBilling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDBilling.swift; sourceTree = "<group>"; };
-		FE7D402521600AA6002131D4 /* CXDUserReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDUserReview.swift; sourceTree = "<group>"; };
-		FE7D402621600AA6002131D4 /* CXDArrayOfMealReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfMealReview.swift; sourceTree = "<group>"; };
-		FE7D402721600AA7002131D4 /* CXDTransactionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDTransactionResult.swift; sourceTree = "<group>"; };
 		FE7D40882160125F002131D4 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		FE7E429D210D27AE004773F6 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
 		FE7E42A2210D2DDC004773F6 /* CXDLeftMenuTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDLeftMenuTableCell.swift; sourceTree = "<group>"; };
@@ -390,11 +424,18 @@
 		FE862BA9214E815400902478 /* CategoryPH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CategoryPH.png; sourceTree = "<group>"; };
 		FE862BAD214E834700902478 /* MealCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategoriesViewController.swift; sourceTree = "<group>"; };
 		FE862BB1214F3E8E00902478 /* MealsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsTableViewController.swift; sourceTree = "<group>"; };
+		FEA703812165B37600A9DEF7 /* cookies.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cookies.jpg; sourceTree = "<group>"; };
+		FEA703852165B3C000A9DEF7 /* minicookies.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = minicookies.jpg; sourceTree = "<group>"; };
 		FEA95C56215722BB0085368D /* CXDMealDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CXDMealDetailTableViewCell.xib; sourceTree = "<group>"; };
 		FEA95C5A2157254A0085368D /* CXDMealDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDMealDetailTableViewCell.swift; sourceTree = "<group>"; };
 		FEA95C5E21572A750085368D /* CXDMealDetailHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDMealDetailHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		FEA95C6221572AAC0085368D /* CXDMealDetailHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CXDMealDetailHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		FEA95C662157BE520085368D /* MealDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
+		FEB3A9FD21724CAA00A258C6 /* PastOrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastOrderDetailViewController.swift; sourceTree = "<group>"; };
+		FEB3AA012172A55300A258C6 /* CXDPastOrderItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CXDPastOrderItemTableViewCell.xib; sourceTree = "<group>"; };
+		FEB3AA052172A73200A258C6 /* CXDPastOrderItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDPastOrderItemTableViewCell.swift; sourceTree = "<group>"; };
+		FEB3AA092172AF4800A258C6 /* CosmosDistrib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
+		FEB3AA0B2172DBBD00A258C6 /* cxd-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cxd-logo.png"; sourceTree = "<group>"; };
 		FEB8B34120D346DD00DDDD2D /* MFAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFAViewController.swift; sourceTree = "<group>"; };
 		FEB8B34520D3471000DDDD2D /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		FEB8B34920D3477000DDDD2D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -407,6 +448,7 @@
 		FEBC70BA215D6555008785A9 /* CXDChefTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDChefTableViewCell.swift; sourceTree = "<group>"; };
 		FEBC70C1215E9F91008785A9 /* CXDAppMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDAppMenuItem.swift; sourceTree = "<group>"; };
 		FEBC70C5215FEF0B008785A9 /* UIViewController+NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavBar.swift"; sourceTree = "<group>"; };
+		FEC79AB3216D8FD000A28B6D /* PastOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastOrdersViewController.swift; sourceTree = "<group>"; };
 		FEC9860F215AFCF1009E81E1 /* ReceipeAddedToCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceipeAddedToCartViewController.swift; sourceTree = "<group>"; };
 		FEDF59B22160D189005415F8 /* Ingredients.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ingredients.png; sourceTree = "<group>"; };
 		FEDF59B62160DA2D005415F8 /* CXDUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDUtility.swift; sourceTree = "<group>"; };
@@ -492,6 +534,7 @@
 				FE660792215B255F001029C3 /* SHPopup.swift */,
 				FE66078A215B0490001029C3 /* JSButton.swift */,
 				FE537DC7215863AF00971289 /* FSPagerView */,
+				FEB3AA092172AF4800A258C6 /* CosmosDistrib.swift */,
 			);
 			path = "Thirdparty Libraries";
 			sourceTree = "<group>";
@@ -560,11 +603,13 @@
 				FEA95C5E21572A750085368D /* CXDMealDetailHeaderTableViewCell.swift */,
 				FE38CFB2215BDD4B00D3EC31 /* CartItemTableViewCell.swift */,
 				FEBC70BA215D6555008785A9 /* CXDChefTableViewCell.swift */,
+				FEB3AA052172A73200A258C6 /* CXDPastOrderItemTableViewCell.swift */,
 				FEBC70B6215D61B8008785A9 /* CXDChefTableViewCell.xib */,
 				FE862B8B214AE09500902478 /* CXDMealTableViewCell.xib */,
 				FEA95C56215722BB0085368D /* CXDMealDetailTableViewCell.xib */,
 				FEA95C6221572AAC0085368D /* CXDMealDetailHeaderTableViewCell.xib */,
 				FE38CFB6215BE1DD00D3EC31 /* CartItemTableViewCell.xib */,
+				FEB3AA012172A55300A258C6 /* CXDPastOrderItemTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -585,12 +630,14 @@
 				FE7E429D210D27AE004773F6 /* LeftMenuViewController.swift */,
 				FEDF59DF21610F8B005415F8 /* PaymentViewController.swift */,
 				FE730F90213DFC1200574C26 /* RecommendationsViewController.swift */,
+				FEC79AB3216D8FD000A28B6D /* PastOrdersViewController.swift */,
 				FE862BAD214E834700902478 /* MealCategoriesViewController.swift */,
 				FE862BB1214F3E8E00902478 /* MealsTableViewController.swift */,
 				FEA95C662157BE520085368D /* MealDetailViewController.swift */,
 				FEC9860F215AFCF1009E81E1 /* ReceipeAddedToCartViewController.swift */,
 				FE38CFBA215C42E400D3EC31 /* AddNewPaymentViewController.swift */,
 				FE7D40882160125F002131D4 /* CartViewController.swift */,
+				FEB3A9FD21724CAA00A258C6 /* PastOrderDetailViewController.swift */,
 				FEBC70C5215FEF0B008785A9 /* UIViewController+NavBar.swift */,
 			);
 			path = ViewControllers;
@@ -601,12 +648,15 @@
 			children = (
 				FEDF59BA2160DB4F005415F8 /* Star Image */,
 				FE862B93214D70DE00902478 /* Food_bg_placeholder.png */,
+				FEB3AA0B2172DBBD00A258C6 /* cxd-logo.png */,
 				FE862B8F214D70CC00902478 /* avatar.png */,
 				FE862B97214DE5F000902478 /* onlinechef.jpg */,
 				FE862B9F214DEA6800902478 /* ExploreReceipes.png */,
 				FEDF59B22160D189005415F8 /* Ingredients.png */,
 				FE862BA9214E815400902478 /* CategoryPH.png */,
 				FE862B9B214DEA6000902478 /* Favouritefood.jpeg */,
+				FEA703812165B37600A9DEF7 /* cookies.jpg */,
+				FEA703852165B3C000A9DEF7 /* minicookies.jpg */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -623,38 +673,41 @@
 		FEBC70C0215E9D71008785A9 /* AWS Models */ = {
 			isa = PBXGroup;
 			children = (
-				FE7D402321600AA6002131D4 /* CXDArrayOfBilling.swift */,
-				FE7D401F21600AA4002131D4 /* CXDArrayOfChef.swift */,
-				FE7D401521600AA1002131D4 /* CXDArrayOfDeliveryAddress.swift */,
-				FE7D400A21600A9D002131D4 /* CXDArrayOfMeal.swift */,
-				FE7D400F21600A9F002131D4 /* CXDArrayOfMealCategory.swift */,
-				FE7D401421600AA1002131D4 /* CXDArrayOfMealPhoto.swift */,
-				FE7D402621600AA6002131D4 /* CXDArrayOfMealReview.swift */,
-				FE7D401021600A9F002131D4 /* CXDArrayOfMenu.swift */,
-				FE7D400B21600A9E002131D4 /* CXDArrayOfOrder.swift */,
-				FE7D401721600AA2002131D4 /* CXDArrayOfUser.swift */,
-				FE7D400C21600A9E002131D4 /* CXDArrayOfUserReview.swift */,
-				FE7D402421600AA6002131D4 /* CXDBilling.swift */,
-				FE7D400D21600A9E002131D4 /* CXDCart.swift */,
-				FE7D401321600AA0002131D4 /* CXDCartItem.swift */,
-				FE7D401C21600AA3002131D4 /* CXDChef.swift */,
-				FE7D401B21600AA3002131D4 /* CXDCurrentUser.swift */,
-				FE7D401A21600AA3002131D4 /* CXDDeliveryAddress.swift */,
-				FE7D401821600AA2002131D4 /* CXDDEVAPIClient.swift */,
-				FE7D401D21600AA4002131D4 /* CXDError_Error_value.swift */,
-				FE7D401621600AA1002131D4 /* CXDError.swift */,
-				FE7D401E21600AA4002131D4 /* CXDFoodClassification.swift */,
-				FE7D402221600AA5002131D4 /* CXDMeal.swift */,
-				FE7D402021600AA5002131D4 /* CXDMealCategory.swift */,
-				FE7D402121600AA5002131D4 /* CXDMealPhoto.swift */,
-				FE7D401921600AA2002131D4 /* CXDMealReview.swift */,
-				FE7D401221600AA0002131D4 /* CXDMenu.swift */,
-				FE7D400E21600A9E002131D4 /* CXDMenuItem.swift */,
-				FE7D400921600A9D002131D4 /* CXDOrder.swift */,
-				FE7D401121600AA0002131D4 /* CXDOrderItem.swift */,
-				FE7D402721600AA7002131D4 /* CXDTransactionResult.swift */,
-				FE7D400821600A9D002131D4 /* CXDUser.swift */,
-				FE7D402521600AA6002131D4 /* CXDUserReview.swift */,
+				FE07F55C2172209100EFA59D /* CXDArrayOfBilling.swift */,
+				FE07F54D2172208E00EFA59D /* CXDArrayOfChef.swift */,
+				FE07F54E2172208E00EFA59D /* CXDArrayOfDeliveryAddress.swift */,
+				FE07F54C2172208E00EFA59D /* CXDArrayOfMeal.swift */,
+				FE07F5402172208B00EFA59D /* CXDArrayOfMealCategory.swift */,
+				FE07F54F2172208F00EFA59D /* CXDArrayOfMealPhoto.swift */,
+				FE07F55F2172209200EFA59D /* CXDArrayOfMealReview.swift */,
+				FE07F5552172209000EFA59D /* CXDArrayOfMenu.swift */,
+				FE07F5592172209000EFA59D /* CXDArrayOfOrder.swift */,
+				FE07F5512172208F00EFA59D /* CXDArrayOfUser.swift */,
+				FE07F55B2172209100EFA59D /* CXDArrayOfUserPhoto.swift */,
+				FE07F55E2172209100EFA59D /* CXDArrayOfUserReview.swift */,
+				FE07F5532172208F00EFA59D /* CXDBilling.swift */,
+				FE07F54A2172208E00EFA59D /* CXDCart.swift */,
+				FE07F5612172209200EFA59D /* CXDCartItem.swift */,
+				FE07F5622172209200EFA59D /* CXDChef.swift */,
+				FE07F54B2172208E00EFA59D /* CXDCurrentUser.swift */,
+				FE07F5502172208F00EFA59D /* CXDDeliveryAddress.swift */,
+				FE07F55A2172209100EFA59D /* CXDDEVAPIClient.swift */,
+				FE07F55D2172209100EFA59D /* CXDError.swift */,
+				FE07F5572172209000EFA59D /* CXDFavoriteMeal.swift */,
+				FE07F5492172208E00EFA59D /* CXDFoodClassification.swift */,
+				FE07F5422172208D00EFA59D /* CXDFoodRestriction.swift */,
+				FE07F5602172209200EFA59D /* CXDMeal.swift */,
+				FE07F5442172208D00EFA59D /* CXDMealCategory.swift */,
+				FE07F5412172208C00EFA59D /* CXDMealPhoto.swift */,
+				FE07F5542172208F00EFA59D /* CXDMealReview.swift */,
+				FE07F5562172209000EFA59D /* CXDMenu.swift */,
+				FE07F5462172208D00EFA59D /* CXDMenuItem.swift */,
+				FE07F5472172208D00EFA59D /* CXDOrder.swift */,
+				FE07F5582172209000EFA59D /* CXDOrderItem.swift */,
+				FE07F5452172208D00EFA59D /* CXDTransactionResult.swift */,
+				FE07F5482172208D00EFA59D /* CXDUser.swift */,
+				FE07F5522172208F00EFA59D /* CXDUserPhoto.swift */,
+				FE07F5432172208D00EFA59D /* CXDUserReview.swift */,
 			);
 			path = "AWS Models";
 			sourceTree = "<group>";
@@ -864,12 +917,16 @@
 				FEDF59CD2160DB63005415F8 /* ic_1stars.png in Resources */,
 				FEF502C520CC06C900F2B8EF /* LaunchScreen.storyboard in Resources */,
 				FE862BA0214DEA6A00902478 /* ExploreReceipes.png in Resources */,
+				FEA703862165B3C000A9DEF7 /* minicookies.jpg in Resources */,
+				FEB3AA022172A55300A258C6 /* CXDPastOrderItemTableViewCell.xib in Resources */,
 				FEA95C6321572AAC0085368D /* CXDMealDetailHeaderTableViewCell.xib in Resources */,
 				FE862B94214D70DF00902478 /* Food_bg_placeholder.png in Resources */,
+				FEA703822165B37600A9DEF7 /* cookies.jpg in Resources */,
 				FEDF59DC2160DB63005415F8 /* ic_4p5stars.png in Resources */,
 				FEDF59CA2160DB63005415F8 /* ic_4stars.png in Resources */,
 				FEF502C220CC06C900F2B8EF /* Assets.xcassets in Resources */,
 				FEF502C020CC06C900F2B8EF /* Login.storyboard in Resources */,
+				FEB3AA0C2172DBBE00A258C6 /* cxd-logo.png in Resources */,
 				FEF8B8CD21079BC000BDD272 /* Main.storyboard in Resources */,
 				FEDF59B32160D18A005415F8 /* Ingredients.png in Resources */,
 				FEA95C57215722BB0085368D /* CXDMealDetailTableViewCell.xib in Resources */,
@@ -893,14 +950,18 @@
 				FE862B99214DE5F100902478 /* onlinechef.jpg in Resources */,
 				FEF8B8CE21079BC000BDD272 /* Main.storyboard in Resources */,
 				FE862BAB214E815700902478 /* CategoryPH.png in Resources */,
+				FEB3AA032172A55300A258C6 /* CXDPastOrderItemTableViewCell.xib in Resources */,
 				FEDF59C52160DB63005415F8 /* ic_3p5stars.png in Resources */,
 				FEBC70B8215D61B8008785A9 /* CXDChefTableViewCell.xib in Resources */,
 				FEDF59D72160DB63005415F8 /* ic_2stars.png in Resources */,
+				FEA703872165B3C000A9DEF7 /* minicookies.jpg in Resources */,
 				FEDF59CB2160DB63005415F8 /* ic_4stars.png in Resources */,
 				FEA95C6421572AAC0085368D /* CXDMealDetailHeaderTableViewCell.xib in Resources */,
 				FEA95C58215722BB0085368D /* CXDMealDetailTableViewCell.xib in Resources */,
+				FEA703832165B37600A9DEF7 /* cookies.jpg in Resources */,
 				FEDF59C82160DB63005415F8 /* ic_3stars.png in Resources */,
 				FEDF59CE2160DB63005415F8 /* ic_1stars.png in Resources */,
+				FEB3AA0D2172DBBE00A258C6 /* cxd-logo.png in Resources */,
 				FEDF59DA2160DB63005415F8 /* ic_5stars.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -922,14 +983,18 @@
 				FE862B9A214DE5F100902478 /* onlinechef.jpg in Resources */,
 				FEF8B8CF21079BC000BDD272 /* Main.storyboard in Resources */,
 				FE862BAC214E815700902478 /* CategoryPH.png in Resources */,
+				FEB3AA042172A55300A258C6 /* CXDPastOrderItemTableViewCell.xib in Resources */,
 				FEDF59C62160DB63005415F8 /* ic_3p5stars.png in Resources */,
 				FEBC70B9215D61B8008785A9 /* CXDChefTableViewCell.xib in Resources */,
 				FEDF59D82160DB63005415F8 /* ic_2stars.png in Resources */,
+				FEA703882165B3C000A9DEF7 /* minicookies.jpg in Resources */,
 				FEDF59CC2160DB63005415F8 /* ic_4stars.png in Resources */,
 				FEA95C6521572AAC0085368D /* CXDMealDetailHeaderTableViewCell.xib in Resources */,
 				FEA95C59215722BB0085368D /* CXDMealDetailTableViewCell.xib in Resources */,
+				FEA703842165B37600A9DEF7 /* cookies.jpg in Resources */,
 				FEDF59C92160DB63005415F8 /* ic_3stars.png in Resources */,
 				FEDF59CF2160DB63005415F8 /* ic_1stars.png in Resources */,
+				FEB3AA0E2172DBBE00A258C6 /* cxd-logo.png in Resources */,
 				FEDF59DB2160DB63005415F8 /* ic_5stars.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1047,75 +1112,82 @@
 				FEF502BB20CC06C900F2B8EF /* AppDelegate.swift in Sources */,
 				FE862BA6214E7F5700902478 /* CXDMealCategoryCollectionViewCell.swift in Sources */,
 				FE7D40892160125F002131D4 /* CartViewController.swift in Sources */,
-				FE7D402821600AA7002131D4 /* CXDUser.swift in Sources */,
-				FE7D405B21600AA7002131D4 /* CXDMealReview.swift in Sources */,
-				FE7D404321600AA7002131D4 /* CXDOrderItem.swift in Sources */,
 				FE537DDB215863C400971289 /* FSPagerCollectionView.swift in Sources */,
-				FE7D407621600AA7002131D4 /* CXDMeal.swift in Sources */,
-				FE7D407C21600AA7002131D4 /* CXDBilling.swift in Sources */,
-				FE7D407021600AA7002131D4 /* CXDMealCategory.swift in Sources */,
+				FE07F5782172209300EFA59D /* CXDOrder.swift in Sources */,
+				FE07F5992172209300EFA59D /* CXDUserPhoto.swift in Sources */,
+				FE07F5C62172209300EFA59D /* CXDCartItem.swift in Sources */,
+				FE07F59F2172209300EFA59D /* CXDMealReview.swift in Sources */,
+				FE07F5A82172209300EFA59D /* CXDFavoriteMeal.swift in Sources */,
+				FE07F5722172209300EFA59D /* CXDTransactionResult.swift in Sources */,
+				FE07F5BD2172209300EFA59D /* CXDArrayOfUserReview.swift in Sources */,
 				FEBC70C2215E9F91008785A9 /* CXDAppMenuItem.swift in Sources */,
-				FE7D403D21600AA7002131D4 /* CXDArrayOfMealCategory.swift in Sources */,
+				FE07F5872172209300EFA59D /* CXDArrayOfMeal.swift in Sources */,
+				FE07F5932172209300EFA59D /* CXDDeliveryAddress.swift in Sources */,
 				FE660793215B255F001029C3 /* SHPopup.swift in Sources */,
+				FE07F5AB2172209300EFA59D /* CXDOrderItem.swift in Sources */,
+				FE07F56F2172209300EFA59D /* CXDMealCategory.swift in Sources */,
 				FE730F91213DFC1200574C26 /* RecommendationsViewController.swift in Sources */,
 				FE7E429E210D27AE004773F6 /* LeftMenuViewController.swift in Sources */,
-				FE7D405221600AA7002131D4 /* CXDError.swift in Sources */,
-				FE7D407F21600AA7002131D4 /* CXDUserReview.swift in Sources */,
-				FE7D403121600AA7002131D4 /* CXDArrayOfOrder.swift in Sources */,
-				FE7D406D21600AA7002131D4 /* CXDArrayOfChef.swift in Sources */,
+				FE07F5BA2172209300EFA59D /* CXDError.swift in Sources */,
 				FE38CFBB215C42E400D3EC31 /* AddNewPaymentViewController.swift in Sources */,
-				FE7D404621600AA7002131D4 /* CXDMenu.swift in Sources */,
+				FEB3AA062172A73200A258C6 /* CXDPastOrderItemTableViewCell.swift in Sources */,
 				FE862B88214AE05800902478 /* CXDMealTableViewCell.swift in Sources */,
-				FE7D408221600AA7002131D4 /* CXDArrayOfMealReview.swift in Sources */,
 				FE7E42A3210D2DDC004773F6 /* CXDLeftMenuTableCell.swift in Sources */,
 				FEB8B35620D347F200DDDD2D /* ForgotPasswordViewController.swift in Sources */,
 				FEBC70C6215FEF0B008785A9 /* UIViewController+NavBar.swift in Sources */,
+				FE07F58A2172209300EFA59D /* CXDArrayOfChef.swift in Sources */,
 				FE862BB2214F3E8E00902478 /* MealsTableViewController.swift in Sources */,
-				FE7D407321600AA7002131D4 /* CXDMealPhoto.swift in Sources */,
-				FE7D403A21600AA7002131D4 /* CXDMenuItem.swift in Sources */,
-				FE7D406A21600AA7002131D4 /* CXDFoodClassification.swift in Sources */,
 				FE38CFB3215BDD4B00D3EC31 /* CartItemTableViewCell.swift in Sources */,
-				FE7D405821600AA7002131D4 /* CXDDEVAPIClient.swift in Sources */,
-				FE7D404921600AA7002131D4 /* CXDCartItem.swift in Sources */,
-				FE7D402B21600AA7002131D4 /* CXDOrder.swift in Sources */,
+				FE07F57E2172209300EFA59D /* CXDFoodClassification.swift in Sources */,
 				FE537DD5215863C400971289 /* FSPagerViewCell.swift in Sources */,
+				FE07F5692172209300EFA59D /* CXDFoodRestriction.swift in Sources */,
+				FE07F58D2172209300EFA59D /* CXDArrayOfDeliveryAddress.swift in Sources */,
+				FE07F5962172209300EFA59D /* CXDArrayOfUser.swift in Sources */,
+				FE07F5A52172209300EFA59D /* CXDMenu.swift in Sources */,
+				FE07F5B12172209300EFA59D /* CXDDEVAPIClient.swift in Sources */,
 				FE537DE1215863C400971289 /* FSPageControl.swift in Sources */,
 				FEB8B35220D347BF00DDDD2D /* ConfirmSignUpViewController.swift in Sources */,
 				FEB8B34220D346DD00DDDD2D /* MFAViewController.swift in Sources */,
-				FE7D407921600AA7002131D4 /* CXDArrayOfBilling.swift in Sources */,
 				FE537DD8215863C400971289 /* FSPageViewLayout.swift in Sources */,
+				FEB3AA0A2172AF4800A258C6 /* CosmosDistrib.swift in Sources */,
 				FEA95C672157BE520085368D /* MealDetailViewController.swift in Sources */,
-				FE7D406421600AA7002131D4 /* CXDChef.swift in Sources */,
+				FE07F5AE2172209300EFA59D /* CXDArrayOfOrder.swift in Sources */,
+				FE07F5C92172209300EFA59D /* CXDChef.swift in Sources */,
 				FEB8B34620D3471000DDDD2D /* SignInViewController.swift in Sources */,
 				FEDF59E021610F8B005415F8 /* PaymentViewController.swift in Sources */,
+				FE07F5C02172209300EFA59D /* CXDArrayOfMealReview.swift in Sources */,
+				FE07F56C2172209300EFA59D /* CXDUserReview.swift in Sources */,
 				FE537DD2215863C400971289 /* FSPageViewTransformer.swift in Sources */,
 				FEB8B35A20D3481900DDDD2D /* ConfirmForgotPasswordViewController.swift in Sources */,
 				FEDF59B72160DA2D005415F8 /* CXDUtility.swift in Sources */,
-				FE7D402E21600AA7002131D4 /* CXDArrayOfMeal.swift in Sources */,
 				FE862BAE214E834700902478 /* MealCategoriesViewController.swift in Sources */,
 				FE66078B215B0490001029C3 /* JSButton.swift in Sources */,
 				FE7B04FE213F6AEC0090E85B /* CXDAWSApiClient.swift in Sources */,
 				FE7A09F32135923800AE45AD /* SignInViewController+FacebookLogin.swift in Sources */,
-				FE7D406721600AA7002131D4 /* CXDError_Error_value.swift in Sources */,
-				FE7D406121600AA7002131D4 /* CXDCurrentUser.swift in Sources */,
+				FEC79AB4216D8FD000A28B6D /* PastOrdersViewController.swift in Sources */,
+				FE07F5842172209300EFA59D /* CXDCurrentUser.swift in Sources */,
+				FEB3A9FE21724CAA00A258C6 /* PastOrderDetailViewController.swift in Sources */,
+				FE07F5812172209300EFA59D /* CXDCart.swift in Sources */,
 				FE67D71221307DEA00C84C07 /* CXDApiServiceController.swift in Sources */,
 				FE537DDE215863C400971289 /* FSPagerView.swift in Sources */,
-				FE7D404021600AA7002131D4 /* CXDArrayOfMenu.swift in Sources */,
+				FE07F5902172209300EFA59D /* CXDArrayOfMealPhoto.swift in Sources */,
+				FE07F5A22172209300EFA59D /* CXDArrayOfMenu.swift in Sources */,
+				FE07F57B2172209300EFA59D /* CXDUser.swift in Sources */,
+				FE07F5662172209300EFA59D /* CXDMealPhoto.swift in Sources */,
 				FEC98610215AFCF1009E81E1 /* ReceipeAddedToCartViewController.swift in Sources */,
+				FE07F59C2172209300EFA59D /* CXDBilling.swift in Sources */,
 				FEBC70BB215D6555008785A9 /* CXDChefTableViewCell.swift in Sources */,
-				FE7D405E21600AA7002131D4 /* CXDDeliveryAddress.swift in Sources */,
+				FE07F5632172209300EFA59D /* CXDArrayOfMealCategory.swift in Sources */,
 				FEB8B35E20D3483F00DDDD2D /* StartScreenViewController.swift in Sources */,
 				FEA95C5F21572A750085368D /* CXDMealDetailHeaderTableViewCell.swift in Sources */,
-				FE7D408521600AA7002131D4 /* CXDTransactionResult.swift in Sources */,
 				FEB8B34A20D3477000DDDD2D /* Constants.swift in Sources */,
+				FE07F5B72172209300EFA59D /* CXDArrayOfBilling.swift in Sources */,
+				FE07F5C32172209300EFA59D /* CXDMeal.swift in Sources */,
 				FEB8B34E20D3479700DDDD2D /* SignUpViewController.swift in Sources */,
-				FE7D403421600AA7002131D4 /* CXDArrayOfUserReview.swift in Sources */,
-				FE7D403721600AA7002131D4 /* CXDCart.swift in Sources */,
 				FEA95C5B2157254A0085368D /* CXDMealDetailTableViewCell.swift in Sources */,
-				FE7D405521600AA7002131D4 /* CXDArrayOfUser.swift in Sources */,
-				FE7D404C21600AA7002131D4 /* CXDArrayOfMealPhoto.swift in Sources */,
 				FE537DCF215863C400971289 /* FSPagerViewLayoutAttributes.swift in Sources */,
-				FE7D404F21600AA7002131D4 /* CXDArrayOfDeliveryAddress.swift in Sources */,
+				FE07F5B42172209300EFA59D /* CXDArrayOfUserPhoto.swift in Sources */,
+				FE07F5752172209300EFA59D /* CXDMenuItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1124,75 +1196,81 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE862BA7214E7F5700902478 /* CXDMealCategoryCollectionViewCell.swift in Sources */,
+				FE07F57F2172209300EFA59D /* CXDFoodClassification.swift in Sources */,
 				FE537DD6215863C400971289 /* FSPagerViewCell.swift in Sources */,
-				FE7D402F21600AA7002131D4 /* CXDArrayOfMeal.swift in Sources */,
-				FE7D405021600AA7002131D4 /* CXDArrayOfDeliveryAddress.swift in Sources */,
 				FEBC70C7215FEF0B008785A9 /* UIViewController+NavBar.swift in Sources */,
-				FE7D408621600AA7002131D4 /* CXDTransactionResult.swift in Sources */,
-				FE7D408321600AA7002131D4 /* CXDArrayOfMealReview.swift in Sources */,
+				FE07F5CA2172209300EFA59D /* CXDChef.swift in Sources */,
 				FE38CFB4215BDD4B00D3EC31 /* CartItemTableViewCell.swift in Sources */,
-				FE7D405C21600AA7002131D4 /* CXDMealReview.swift in Sources */,
-				FE7D407121600AA7002131D4 /* CXDMealCategory.swift in Sources */,
-				FE7D403B21600AA7002131D4 /* CXDMenuItem.swift in Sources */,
-				FE7D404A21600AA7002131D4 /* CXDCartItem.swift in Sources */,
+				FE07F5762172209300EFA59D /* CXDMenuItem.swift in Sources */,
 				FEF502D020CC06C900F2B8EF /* ChefXDoorTests.swift in Sources */,
-				FE7D404421600AA7002131D4 /* CXDOrderItem.swift in Sources */,
-				FE7D405921600AA7002131D4 /* CXDDEVAPIClient.swift in Sources */,
 				FE537DDF215863C400971289 /* FSPagerView.swift in Sources */,
 				FE537DE2215863C400971289 /* FSPageControl.swift in Sources */,
+				FE07F5942172209300EFA59D /* CXDDeliveryAddress.swift in Sources */,
 				FEDF59E121610F8B005415F8 /* PaymentViewController.swift in Sources */,
-				FE7D405F21600AA7002131D4 /* CXDDeliveryAddress.swift in Sources */,
 				FE7E429F210D27AE004773F6 /* LeftMenuViewController.swift in Sources */,
+				FE07F5B52172209300EFA59D /* CXDArrayOfUserPhoto.swift in Sources */,
+				FE07F5672172209300EFA59D /* CXDMealPhoto.swift in Sources */,
+				FE07F5AC2172209300EFA59D /* CXDOrderItem.swift in Sources */,
+				FE07F5A02172209300EFA59D /* CXDMealReview.swift in Sources */,
+				FE07F5C72172209300EFA59D /* CXDCartItem.swift in Sources */,
+				FE07F5972172209300EFA59D /* CXDArrayOfUser.swift in Sources */,
 				FE7E42A4210D2DDC004773F6 /* CXDLeftMenuTableCell.swift in Sources */,
-				FE7D407A21600AA7002131D4 /* CXDArrayOfBilling.swift in Sources */,
+				FE07F57C2172209300EFA59D /* CXDUser.swift in Sources */,
+				FE07F56A2172209300EFA59D /* CXDFoodRestriction.swift in Sources */,
 				FEB8B35720D347F200DDDD2D /* ForgotPasswordViewController.swift in Sources */,
 				FEA95C6021572A750085368D /* CXDMealDetailHeaderTableViewCell.swift in Sources */,
 				FEB8B35320D347BF00DDDD2D /* ConfirmSignUpViewController.swift in Sources */,
-				FE7D407D21600AA7002131D4 /* CXDBilling.swift in Sources */,
-				FE7D407421600AA7002131D4 /* CXDMealPhoto.swift in Sources */,
 				FE38CFBC215C42E400D3EC31 /* AddNewPaymentViewController.swift in Sources */,
 				FE660794215B255F001029C3 /* SHPopup.swift in Sources */,
+				FE07F5A32172209300EFA59D /* CXDArrayOfMenu.swift in Sources */,
 				FE537DD9215863C400971289 /* FSPageViewLayout.swift in Sources */,
-				FE7D403E21600AA7002131D4 /* CXDArrayOfMealCategory.swift in Sources */,
 				FEB8B34320D346DD00DDDD2D /* MFAViewController.swift in Sources */,
-				FE7D405321600AA7002131D4 /* CXDError.swift in Sources */,
+				FE07F5B82172209300EFA59D /* CXDArrayOfBilling.swift in Sources */,
+				FE07F5C12172209300EFA59D /* CXDArrayOfMealReview.swift in Sources */,
 				FE537DD0215863C400971289 /* FSPagerViewLayoutAttributes.swift in Sources */,
 				FEB8B34720D3471000DDDD2D /* SignInViewController.swift in Sources */,
-				FE7D406B21600AA7002131D4 /* CXDFoodClassification.swift in Sources */,
-				FE7D406221600AA7002131D4 /* CXDCurrentUser.swift in Sources */,
-				FE7D404121600AA7002131D4 /* CXDArrayOfMenu.swift in Sources */,
+				FE07F58B2172209300EFA59D /* CXDArrayOfChef.swift in Sources */,
+				FE07F5642172209300EFA59D /* CXDArrayOfMealCategory.swift in Sources */,
 				FE66078C215B0490001029C3 /* JSButton.swift in Sources */,
-				FE7D406E21600AA7002131D4 /* CXDArrayOfChef.swift in Sources */,
+				FE07F59D2172209300EFA59D /* CXDBilling.swift in Sources */,
+				FE07F5822172209300EFA59D /* CXDCart.swift in Sources */,
+				FE07F5912172209300EFA59D /* CXDArrayOfMealPhoto.swift in Sources */,
 				FE862B89214AE05800902478 /* CXDMealTableViewCell.swift in Sources */,
 				FE862BB3214F3E8E00902478 /* MealsTableViewController.swift in Sources */,
 				FEC4A44521372A4F00864655 /* AppDelegate.swift in Sources */,
-				FE7D403221600AA7002131D4 /* CXDArrayOfOrder.swift in Sources */,
-				FE7D406821600AA7002131D4 /* CXDError_Error_value.swift in Sources */,
-				FE7D408021600AA7002131D4 /* CXDUserReview.swift in Sources */,
-				FE7D403521600AA7002131D4 /* CXDArrayOfUserReview.swift in Sources */,
+				FEC79AB5216D8FD000A28B6D /* PastOrdersViewController.swift in Sources */,
+				FE07F58E2172209300EFA59D /* CXDArrayOfDeliveryAddress.swift in Sources */,
+				FE07F5BB2172209300EFA59D /* CXDError.swift in Sources */,
 				FE7D408A2160125F002131D4 /* CartViewController.swift in Sources */,
+				FE07F5BE2172209300EFA59D /* CXDArrayOfUserReview.swift in Sources */,
 				FEB8B35B20D3481900DDDD2D /* ConfirmForgotPasswordViewController.swift in Sources */,
 				FE7A09F42135923800AE45AD /* SignInViewController+FacebookLogin.swift in Sources */,
-				FE7D407721600AA7002131D4 /* CXDMeal.swift in Sources */,
+				FEB3AA072172A73200A258C6 /* CXDPastOrderItemTableViewCell.swift in Sources */,
 				FE67D71321307DEA00C84C07 /* CXDApiServiceController.swift in Sources */,
 				FEBC70BC215D6555008785A9 /* CXDChefTableViewCell.swift in Sources */,
+				FE07F56D2172209300EFA59D /* CXDUserReview.swift in Sources */,
+				FE07F59A2172209300EFA59D /* CXDUserPhoto.swift in Sources */,
+				FE07F5AF2172209300EFA59D /* CXDArrayOfOrder.swift in Sources */,
+				FE07F5A62172209300EFA59D /* CXDMenu.swift in Sources */,
 				FEB8B35F20D3483F00DDDD2D /* StartScreenViewController.swift in Sources */,
-				FE7D402921600AA7002131D4 /* CXDUser.swift in Sources */,
-				FE7D402C21600AA7002131D4 /* CXDOrder.swift in Sources */,
 				FE730F92213DFC1200574C26 /* RecommendationsViewController.swift in Sources */,
+				FE07F5B22172209300EFA59D /* CXDDEVAPIClient.swift in Sources */,
 				FEB8B34B20D3477000DDDD2D /* Constants.swift in Sources */,
+				FE07F5C42172209300EFA59D /* CXDMeal.swift in Sources */,
+				FE07F5882172209300EFA59D /* CXDArrayOfMeal.swift in Sources */,
+				FE07F5702172209300EFA59D /* CXDMealCategory.swift in Sources */,
+				FE07F5A92172209300EFA59D /* CXDFavoriteMeal.swift in Sources */,
+				FEB3A9FF21724CAA00A258C6 /* PastOrderDetailViewController.swift in Sources */,
+				FE07F5792172209300EFA59D /* CXDOrder.swift in Sources */,
+				FE07F5852172209300EFA59D /* CXDCurrentUser.swift in Sources */,
 				FEA95C5C2157254A0085368D /* CXDMealDetailTableViewCell.swift in Sources */,
-				FE7D404721600AA7002131D4 /* CXDMenu.swift in Sources */,
-				FE7D405621600AA7002131D4 /* CXDArrayOfUser.swift in Sources */,
 				FE862BAF214E834700902478 /* MealCategoriesViewController.swift in Sources */,
 				FE537DDC215863C400971289 /* FSPagerCollectionView.swift in Sources */,
 				FE537DD3215863C400971289 /* FSPageViewTransformer.swift in Sources */,
-				FE7D404D21600AA7002131D4 /* CXDArrayOfMealPhoto.swift in Sources */,
+				FE07F5732172209300EFA59D /* CXDTransactionResult.swift in Sources */,
 				FEC98611215AFCF1009E81E1 /* ReceipeAddedToCartViewController.swift in Sources */,
 				FE7B04FF213F6AEC0090E85B /* CXDAWSApiClient.swift in Sources */,
 				FEA95C682157BE520085368D /* MealDetailViewController.swift in Sources */,
-				FE7D406521600AA7002131D4 /* CXDChef.swift in Sources */,
-				FE7D403821600AA7002131D4 /* CXDCart.swift in Sources */,
 				FEB8B34F20D3479700DDDD2D /* SignUpViewController.swift in Sources */,
 				FEDF59B82160DA2D005415F8 /* CXDUtility.swift in Sources */,
 				FEBC70C3215E9F91008785A9 /* CXDAppMenuItem.swift in Sources */,
@@ -1204,75 +1282,81 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE862BA8214E7F5700902478 /* CXDMealCategoryCollectionViewCell.swift in Sources */,
+				FE07F5802172209300EFA59D /* CXDFoodClassification.swift in Sources */,
 				FE537DD7215863C400971289 /* FSPagerViewCell.swift in Sources */,
-				FE7D403021600AA7002131D4 /* CXDArrayOfMeal.swift in Sources */,
-				FE7D405121600AA7002131D4 /* CXDArrayOfDeliveryAddress.swift in Sources */,
 				FEBC70C8215FEF0B008785A9 /* UIViewController+NavBar.swift in Sources */,
-				FE7D408721600AA7002131D4 /* CXDTransactionResult.swift in Sources */,
-				FE7D408421600AA7002131D4 /* CXDArrayOfMealReview.swift in Sources */,
+				FE07F5CB2172209300EFA59D /* CXDChef.swift in Sources */,
 				FE38CFB5215BDD4B00D3EC31 /* CartItemTableViewCell.swift in Sources */,
-				FE7D405D21600AA7002131D4 /* CXDMealReview.swift in Sources */,
-				FE7D407221600AA7002131D4 /* CXDMealCategory.swift in Sources */,
-				FE7D403C21600AA7002131D4 /* CXDMenuItem.swift in Sources */,
-				FE7D404B21600AA7002131D4 /* CXDCartItem.swift in Sources */,
+				FE07F5772172209300EFA59D /* CXDMenuItem.swift in Sources */,
 				FEF502DB20CC06C900F2B8EF /* ChefXDoorUITests.swift in Sources */,
-				FE7D404521600AA7002131D4 /* CXDOrderItem.swift in Sources */,
-				FE7D405A21600AA7002131D4 /* CXDDEVAPIClient.swift in Sources */,
 				FE537DE0215863C400971289 /* FSPagerView.swift in Sources */,
 				FE537DE3215863C400971289 /* FSPageControl.swift in Sources */,
+				FE07F5952172209300EFA59D /* CXDDeliveryAddress.swift in Sources */,
 				FEDF59E221610F8B005415F8 /* PaymentViewController.swift in Sources */,
-				FE7D406021600AA7002131D4 /* CXDDeliveryAddress.swift in Sources */,
 				FE7E42A0210D27AE004773F6 /* LeftMenuViewController.swift in Sources */,
+				FE07F5B62172209300EFA59D /* CXDArrayOfUserPhoto.swift in Sources */,
+				FE07F5682172209300EFA59D /* CXDMealPhoto.swift in Sources */,
+				FE07F5AD2172209300EFA59D /* CXDOrderItem.swift in Sources */,
+				FE07F5A12172209300EFA59D /* CXDMealReview.swift in Sources */,
+				FE07F5C82172209300EFA59D /* CXDCartItem.swift in Sources */,
+				FE07F5982172209300EFA59D /* CXDArrayOfUser.swift in Sources */,
 				FE7E42A5210D2DDC004773F6 /* CXDLeftMenuTableCell.swift in Sources */,
-				FE7D407B21600AA7002131D4 /* CXDArrayOfBilling.swift in Sources */,
+				FE07F57D2172209300EFA59D /* CXDUser.swift in Sources */,
+				FE07F56B2172209300EFA59D /* CXDFoodRestriction.swift in Sources */,
 				FEB8B35820D347F200DDDD2D /* ForgotPasswordViewController.swift in Sources */,
 				FEA95C6121572A750085368D /* CXDMealDetailHeaderTableViewCell.swift in Sources */,
 				FEB8B35420D347BF00DDDD2D /* ConfirmSignUpViewController.swift in Sources */,
-				FE7D407E21600AA7002131D4 /* CXDBilling.swift in Sources */,
-				FE7D407521600AA7002131D4 /* CXDMealPhoto.swift in Sources */,
 				FE38CFBD215C42E400D3EC31 /* AddNewPaymentViewController.swift in Sources */,
 				FE660795215B255F001029C3 /* SHPopup.swift in Sources */,
+				FE07F5A42172209300EFA59D /* CXDArrayOfMenu.swift in Sources */,
 				FE537DDA215863C400971289 /* FSPageViewLayout.swift in Sources */,
-				FE7D403F21600AA7002131D4 /* CXDArrayOfMealCategory.swift in Sources */,
 				FEB8B34420D346DD00DDDD2D /* MFAViewController.swift in Sources */,
-				FE7D405421600AA7002131D4 /* CXDError.swift in Sources */,
+				FE07F5B92172209300EFA59D /* CXDArrayOfBilling.swift in Sources */,
+				FE07F5C22172209300EFA59D /* CXDArrayOfMealReview.swift in Sources */,
 				FE537DD1215863C400971289 /* FSPagerViewLayoutAttributes.swift in Sources */,
 				FEB8B34820D3471000DDDD2D /* SignInViewController.swift in Sources */,
-				FE7D406C21600AA7002131D4 /* CXDFoodClassification.swift in Sources */,
-				FE7D406321600AA7002131D4 /* CXDCurrentUser.swift in Sources */,
-				FE7D404221600AA7002131D4 /* CXDArrayOfMenu.swift in Sources */,
+				FE07F58C2172209300EFA59D /* CXDArrayOfChef.swift in Sources */,
+				FE07F5652172209300EFA59D /* CXDArrayOfMealCategory.swift in Sources */,
 				FE66078D215B0490001029C3 /* JSButton.swift in Sources */,
-				FE7D406F21600AA7002131D4 /* CXDArrayOfChef.swift in Sources */,
+				FE07F59E2172209300EFA59D /* CXDBilling.swift in Sources */,
+				FE07F5832172209300EFA59D /* CXDCart.swift in Sources */,
+				FE07F5922172209300EFA59D /* CXDArrayOfMealPhoto.swift in Sources */,
 				FE862B8A214AE05800902478 /* CXDMealTableViewCell.swift in Sources */,
 				FE862BB4214F3E8E00902478 /* MealsTableViewController.swift in Sources */,
 				FEC4A44621372A5000864655 /* AppDelegate.swift in Sources */,
-				FE7D403321600AA7002131D4 /* CXDArrayOfOrder.swift in Sources */,
-				FE7D406921600AA7002131D4 /* CXDError_Error_value.swift in Sources */,
-				FE7D408121600AA7002131D4 /* CXDUserReview.swift in Sources */,
-				FE7D403621600AA7002131D4 /* CXDArrayOfUserReview.swift in Sources */,
+				FEC79AB6216D8FD000A28B6D /* PastOrdersViewController.swift in Sources */,
+				FE07F58F2172209300EFA59D /* CXDArrayOfDeliveryAddress.swift in Sources */,
+				FE07F5BC2172209300EFA59D /* CXDError.swift in Sources */,
 				FE7D408B2160125F002131D4 /* CartViewController.swift in Sources */,
+				FE07F5BF2172209300EFA59D /* CXDArrayOfUserReview.swift in Sources */,
 				FEB8B35C20D3481900DDDD2D /* ConfirmForgotPasswordViewController.swift in Sources */,
 				FE7A09F52135923800AE45AD /* SignInViewController+FacebookLogin.swift in Sources */,
-				FE7D407821600AA7002131D4 /* CXDMeal.swift in Sources */,
+				FEB3AA082172A73200A258C6 /* CXDPastOrderItemTableViewCell.swift in Sources */,
 				FE67D71421307DEA00C84C07 /* CXDApiServiceController.swift in Sources */,
 				FEBC70BD215D6555008785A9 /* CXDChefTableViewCell.swift in Sources */,
+				FE07F56E2172209300EFA59D /* CXDUserReview.swift in Sources */,
+				FE07F59B2172209300EFA59D /* CXDUserPhoto.swift in Sources */,
+				FE07F5B02172209300EFA59D /* CXDArrayOfOrder.swift in Sources */,
+				FE07F5A72172209300EFA59D /* CXDMenu.swift in Sources */,
 				FEB8B36020D3483F00DDDD2D /* StartScreenViewController.swift in Sources */,
-				FE7D402A21600AA7002131D4 /* CXDUser.swift in Sources */,
-				FE7D402D21600AA7002131D4 /* CXDOrder.swift in Sources */,
 				FE730F93213DFC1200574C26 /* RecommendationsViewController.swift in Sources */,
+				FE07F5B32172209300EFA59D /* CXDDEVAPIClient.swift in Sources */,
 				FEB8B34C20D3477000DDDD2D /* Constants.swift in Sources */,
+				FE07F5C52172209300EFA59D /* CXDMeal.swift in Sources */,
+				FE07F5892172209300EFA59D /* CXDArrayOfMeal.swift in Sources */,
+				FE07F5712172209300EFA59D /* CXDMealCategory.swift in Sources */,
+				FE07F5AA2172209300EFA59D /* CXDFavoriteMeal.swift in Sources */,
+				FEB3AA0021724CAA00A258C6 /* PastOrderDetailViewController.swift in Sources */,
+				FE07F57A2172209300EFA59D /* CXDOrder.swift in Sources */,
+				FE07F5862172209300EFA59D /* CXDCurrentUser.swift in Sources */,
 				FEA95C5D2157254A0085368D /* CXDMealDetailTableViewCell.swift in Sources */,
-				FE7D404821600AA7002131D4 /* CXDMenu.swift in Sources */,
-				FE7D405721600AA7002131D4 /* CXDArrayOfUser.swift in Sources */,
 				FE862BB0214E834700902478 /* MealCategoriesViewController.swift in Sources */,
 				FE537DDD215863C400971289 /* FSPagerCollectionView.swift in Sources */,
 				FE537DD4215863C400971289 /* FSPageViewTransformer.swift in Sources */,
-				FE7D404E21600AA7002131D4 /* CXDArrayOfMealPhoto.swift in Sources */,
+				FE07F5742172209300EFA59D /* CXDTransactionResult.swift in Sources */,
 				FEC98612215AFCF1009E81E1 /* ReceipeAddedToCartViewController.swift in Sources */,
 				FE7B0500213F6AEC0090E85B /* CXDAWSApiClient.swift in Sources */,
 				FEA95C692157BE520085368D /* MealDetailViewController.swift in Sources */,
-				FE7D406621600AA7002131D4 /* CXDChef.swift in Sources */,
-				FE7D403921600AA7002131D4 /* CXDCart.swift in Sources */,
 				FEB8B35020D3479700DDDD2D /* SignUpViewController.swift in Sources */,
 				FEDF59B92160DA2D005415F8 /* CXDUtility.swift in Sources */,
 				FEBC70C4215E9F91008785A9 /* CXDAppMenuItem.swift in Sources */,

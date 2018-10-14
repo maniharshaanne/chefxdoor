@@ -10,7 +10,7 @@ import Foundation
 
 class CXDAppMenuItem {
     
-    enum MenuType {
+  public enum MenuType {
         case ExploreFood
         case MyFavourites
         case OrderHistory

@@ -49,13 +49,13 @@ class CartViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         tableViewHeightConstraint.constant = cartItemsTableView.contentSize.height
         
         addressView.layer.borderWidth = 2
-        addressView.layer.borderColor = UIColor.orange.cgColor
+        addressView.layer.borderColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1).cgColor
         
         addNoteView.layer.borderWidth = 2
-        addNoteView.layer.borderColor = UIColor.orange.cgColor
+        addNoteView.layer.borderColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1).cgColor
         
         totalCostView.layer.borderWidth = 2
-        totalCostView.layer.borderColor = UIColor.orange.cgColor
+        totalCostView.layer.borderColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1).cgColor
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -65,7 +65,7 @@ class CartViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = cartItemsTableView.dequeueReusableCell(withIdentifier: "CartItemTableViewCell") as! CartItemTableViewCell
         cell.updateInfo(cartItem: cartItems![indexPath.row])
-        cell.mainView.layer.borderColor = UIColor.orange.cgColor
+        cell.mainView.layer.borderColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1).cgColor
         cell.mainView.layer.borderWidth = 2.0
         //cell.backgroundColor = UIColor(red: 91/256, green: 91/256, blue: 91/256, alpha: 1)
         

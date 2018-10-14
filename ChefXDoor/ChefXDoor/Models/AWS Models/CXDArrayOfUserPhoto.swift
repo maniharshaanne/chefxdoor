@@ -18,14 +18,7 @@ import Foundation
 import AWSCore
 
 @objcMembers
-public class CXDError : AWSModel {
+public class CXDArrayOfUserPhoto : AWSModel {
     
-    var error: String?
     
-   	public override static func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]!{
-		var params:[AnyHashable : Any] = [:]
-		params["error"] = "error"
-		
-        return params
-	}
 }
