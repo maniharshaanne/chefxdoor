@@ -37,7 +37,6 @@ class MealCategoriesViewController: UIViewController, UICollectionViewDelegate, 
                 self.showResult(task: task )
             }
         }
-        
     }
     
     func showResult(task: AWSTask<AnyObject>) {

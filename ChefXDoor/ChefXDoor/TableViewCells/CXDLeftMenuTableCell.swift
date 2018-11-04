@@ -22,6 +22,8 @@ class CXDLeftMenuTableCell: UITableViewCell {
     func updateInfo(menuItem : CXDAppMenuItem)
     {
         menuImageView.image = UIImage(named: menuItem.imageName!)
+        menuImageView.image = menuImageView.image!.withRenderingMode(.alwaysTemplate)
+        menuImageView.tintColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1)
         menuItemLabel.text = menuItem.title
     }
 }

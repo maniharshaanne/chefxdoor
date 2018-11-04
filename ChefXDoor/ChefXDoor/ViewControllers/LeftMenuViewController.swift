@@ -8,6 +8,7 @@
 
 import UIKit
 import FAPanels
+import PKHUD
 
 /**
  Menu controller is responsible for creating its content and showing/hiding menu using 'menuContainerViewController' property.
@@ -33,7 +34,7 @@ class LeftMenuViewController: UIViewController {
         menuItems = prepareMenuItems()
         // Select the initial row
         //tableView.selectRow(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: UITableViewScrollPosition.none)
-        tableView.rowHeight = 60
+        tableView.rowHeight = 50
         avatarImageView.layer.cornerRadius = avatarImageView.frame.size.width/2
     }
     
@@ -44,7 +45,7 @@ class LeftMenuViewController: UIViewController {
     func prepareMenuItems() -> Array<CXDAppMenuItem>
     {
         let exploreFoodMenuItem = CXDAppMenuItem(title: "EXPLORE FOOD", imageName: "ExploreFood", menuType: .ExploreFood)
-        let myFavouritesMenuItem = CXDAppMenuItem(title: "MY FAVORITES", imageName: "MyFavorites", menuType: .MyFavourites)
+        let myFavouritesMenuItem = CXDAppMenuItem(title: "MY FAVORITES", imageName: "Heart", menuType: .MyFavourites)
         let orderHistoryMenuItem = CXDAppMenuItem(title: "ORDER HISTORY", imageName: "OrderHistory", menuType: .OrderHistory)
         let paymentMethodsMenuItem = CXDAppMenuItem(title: "PAYMENT METHODS", imageName: "PaymentMethods", menuType: .PaymentMethods)
         let searchMenuItem = CXDAppMenuItem(title: "SEARCH CHEFXDOOR", imageName: "SearchChefxdoor", menuType: .Search)
@@ -53,6 +54,25 @@ class LeftMenuViewController: UIViewController {
         let menuItemsArray = [exploreFoodMenuItem, myFavouritesMenuItem, orderHistoryMenuItem, paymentMethodsMenuItem, searchMenuItem, helpMenuItem]
         
         return menuItemsArray
+    }
+    
+    @IBAction func settingsButtonPressed(_ sender: Any) {
+        HUD.show(.progress, onView: self.view)
+        CXDApiServiceController.awsGetFromEndPoint(urlString: "/users/currentuser", queryParametersDict: nil, pathParametersDict: nil, classType: CXDCurrentUser.self).continueWith { (task) -> Any? in
+            
+            DispatchQueue.main.async {
+                if let error = task.error {
+                    print("error : \(error)")
+                } else if let result = task.result {
+                    let currentUser = result as! CXDCurrentUser
+                    let storyBoard = UIStoryboard (name: "Main", bundle: nil)
+                    let userProfileViewController = storyBoard.instantiateViewController(withIdentifier: "CXDUserProfileViewController") as! CXDUserProfileViewController
+                    userProfileViewController.currentUser = currentUser
+                    let userProfileNavigationController = UINavigationController(rootViewController: userProfileViewController)
+                    self.panel?.center(userProfileNavigationController)
+                }
+            }
+        }
     }
 }
 
@@ -126,5 +146,7 @@ extension LeftMenuViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.5
     }
+    
+    
 }
 

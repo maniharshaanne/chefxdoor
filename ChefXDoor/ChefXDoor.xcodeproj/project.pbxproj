@@ -115,6 +115,15 @@
 		FE07F5C92172209300EFA59D /* CXDChef.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5622172209200EFA59D /* CXDChef.swift */; };
 		FE07F5CA2172209300EFA59D /* CXDChef.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5622172209200EFA59D /* CXDChef.swift */; };
 		FE07F5CB2172209300EFA59D /* CXDChef.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5622172209200EFA59D /* CXDChef.swift */; };
+		FE22773E21737DDC009B3ADD /* cxd-logo-plain.png in Resources */ = {isa = PBXBuildFile; fileRef = FE22773D21737DDA009B3ADD /* cxd-logo-plain.png */; };
+		FE22773F21737DDC009B3ADD /* cxd-logo-plain.png in Resources */ = {isa = PBXBuildFile; fileRef = FE22773D21737DDA009B3ADD /* cxd-logo-plain.png */; };
+		FE22774021737DDC009B3ADD /* cxd-logo-plain.png in Resources */ = {isa = PBXBuildFile; fileRef = FE22773D21737DDA009B3ADD /* cxd-logo-plain.png */; };
+		FE2277462173BFEF009B3ADD /* CXDChefsOnlineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2277452173BFEF009B3ADD /* CXDChefsOnlineTableViewController.swift */; };
+		FE2277472173BFEF009B3ADD /* CXDChefsOnlineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2277452173BFEF009B3ADD /* CXDChefsOnlineTableViewController.swift */; };
+		FE2277482173BFEF009B3ADD /* CXDChefsOnlineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2277452173BFEF009B3ADD /* CXDChefsOnlineTableViewController.swift */; };
+		FE363C8B2177FD5E00C4AEA5 /* ChefDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE363C8A2177FD5E00C4AEA5 /* ChefDetailViewController.swift */; };
+		FE363C8C2177FD5E00C4AEA5 /* ChefDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE363C8A2177FD5E00C4AEA5 /* ChefDetailViewController.swift */; };
+		FE363C8D2177FD5E00C4AEA5 /* ChefDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE363C8A2177FD5E00C4AEA5 /* ChefDetailViewController.swift */; };
 		FE38CFB3215BDD4B00D3EC31 /* CartItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE38CFB2215BDD4B00D3EC31 /* CartItemTableViewCell.swift */; };
 		FE38CFB4215BDD4B00D3EC31 /* CartItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE38CFB2215BDD4B00D3EC31 /* CartItemTableViewCell.swift */; };
 		FE38CFB5215BDD4B00D3EC31 /* CartItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE38CFB2215BDD4B00D3EC31 /* CartItemTableViewCell.swift */; };
@@ -205,6 +214,24 @@
 		FE862BB2214F3E8E00902478 /* MealsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE862BB1214F3E8E00902478 /* MealsTableViewController.swift */; };
 		FE862BB3214F3E8E00902478 /* MealsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE862BB1214F3E8E00902478 /* MealsTableViewController.swift */; };
 		FE862BB4214F3E8E00902478 /* MealsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE862BB1214F3E8E00902478 /* MealsTableViewController.swift */; };
+		FE98AC1C218BE76D00DB6401 /* CXDAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE98AC1B218BE76D00DB6401 /* CXDAddressTableViewCell.xib */; };
+		FE98AC1D218BE76D00DB6401 /* CXDAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE98AC1B218BE76D00DB6401 /* CXDAddressTableViewCell.xib */; };
+		FE98AC1E218BE76D00DB6401 /* CXDAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE98AC1B218BE76D00DB6401 /* CXDAddressTableViewCell.xib */; };
+		FE98AC20218C905200DB6401 /* CXDUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98AC1F218C905200DB6401 /* CXDUserProfileViewController.swift */; };
+		FE98AC21218C905200DB6401 /* CXDUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98AC1F218C905200DB6401 /* CXDUserProfileViewController.swift */; };
+		FE98AC22218C905200DB6401 /* CXDUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98AC1F218C905200DB6401 /* CXDUserProfileViewController.swift */; };
+		FE98AC24218DF40100DB6401 /* CXDItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98AC23218DF40100DB6401 /* CXDItemsTableViewController.swift */; };
+		FE98AC25218DF40100DB6401 /* CXDItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98AC23218DF40100DB6401 /* CXDItemsTableViewController.swift */; };
+		FE98AC26218DF40100DB6401 /* CXDItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98AC23218DF40100DB6401 /* CXDItemsTableViewController.swift */; };
+		FE98AC28218DF50400DB6401 /* CXDCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98AC27218DF50400DB6401 /* CXDCardTableViewCell.swift */; };
+		FE98AC29218DF50400DB6401 /* CXDCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98AC27218DF50400DB6401 /* CXDCardTableViewCell.swift */; };
+		FE98AC2A218DF50400DB6401 /* CXDCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98AC27218DF50400DB6401 /* CXDCardTableViewCell.swift */; };
+		FE98AC2C218DF51E00DB6401 /* CXDCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE98AC2B218DF51E00DB6401 /* CXDCardTableViewCell.xib */; };
+		FE98AC2D218DF51E00DB6401 /* CXDCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE98AC2B218DF51E00DB6401 /* CXDCardTableViewCell.xib */; };
+		FE98AC2E218DF51E00DB6401 /* CXDCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE98AC2B218DF51E00DB6401 /* CXDCardTableViewCell.xib */; };
+		FE98AC30218E2C7300DB6401 /* CXDAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98AC2F218E2C7300DB6401 /* CXDAddressTableViewCell.swift */; };
+		FE98AC31218E2C7300DB6401 /* CXDAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98AC2F218E2C7300DB6401 /* CXDAddressTableViewCell.swift */; };
+		FE98AC32218E2C7300DB6401 /* CXDAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98AC2F218E2C7300DB6401 /* CXDAddressTableViewCell.swift */; };
 		FEA703822165B37600A9DEF7 /* cookies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FEA703812165B37600A9DEF7 /* cookies.jpg */; };
 		FEA703832165B37600A9DEF7 /* cookies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FEA703812165B37600A9DEF7 /* cookies.jpg */; };
 		FEA703842165B37600A9DEF7 /* cookies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FEA703812165B37600A9DEF7 /* cookies.jpg */; };
@@ -392,6 +419,9 @@
 		FE07F5602172209200EFA59D /* CXDMeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDMeal.swift; sourceTree = "<group>"; };
 		FE07F5612172209200EFA59D /* CXDCartItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDCartItem.swift; sourceTree = "<group>"; };
 		FE07F5622172209200EFA59D /* CXDChef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDChef.swift; sourceTree = "<group>"; };
+		FE22773D21737DDA009B3ADD /* cxd-logo-plain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cxd-logo-plain.png"; sourceTree = "<group>"; };
+		FE2277452173BFEF009B3ADD /* CXDChefsOnlineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDChefsOnlineTableViewController.swift; sourceTree = "<group>"; };
+		FE363C8A2177FD5E00C4AEA5 /* ChefDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefDetailViewController.swift; sourceTree = "<group>"; };
 		FE38CFB2215BDD4B00D3EC31 /* CartItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemTableViewCell.swift; sourceTree = "<group>"; };
 		FE38CFB6215BE1DD00D3EC31 /* CartItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartItemTableViewCell.xib; sourceTree = "<group>"; };
 		FE38CFBA215C42E400D3EC31 /* AddNewPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPaymentViewController.swift; sourceTree = "<group>"; };
@@ -424,6 +454,12 @@
 		FE862BA9214E815400902478 /* CategoryPH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CategoryPH.png; sourceTree = "<group>"; };
 		FE862BAD214E834700902478 /* MealCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategoriesViewController.swift; sourceTree = "<group>"; };
 		FE862BB1214F3E8E00902478 /* MealsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsTableViewController.swift; sourceTree = "<group>"; };
+		FE98AC1B218BE76D00DB6401 /* CXDAddressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CXDAddressTableViewCell.xib; sourceTree = "<group>"; };
+		FE98AC1F218C905200DB6401 /* CXDUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDUserProfileViewController.swift; sourceTree = "<group>"; };
+		FE98AC23218DF40100DB6401 /* CXDItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDItemsTableViewController.swift; sourceTree = "<group>"; };
+		FE98AC27218DF50400DB6401 /* CXDCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDCardTableViewCell.swift; sourceTree = "<group>"; };
+		FE98AC2B218DF51E00DB6401 /* CXDCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CXDCardTableViewCell.xib; sourceTree = "<group>"; };
+		FE98AC2F218E2C7300DB6401 /* CXDAddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDAddressTableViewCell.swift; sourceTree = "<group>"; };
 		FEA703812165B37600A9DEF7 /* cookies.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cookies.jpg; sourceTree = "<group>"; };
 		FEA703852165B3C000A9DEF7 /* minicookies.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = minicookies.jpg; sourceTree = "<group>"; };
 		FEA95C56215722BB0085368D /* CXDMealDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CXDMealDetailTableViewCell.xib; sourceTree = "<group>"; };
@@ -604,12 +640,16 @@
 				FE38CFB2215BDD4B00D3EC31 /* CartItemTableViewCell.swift */,
 				FEBC70BA215D6555008785A9 /* CXDChefTableViewCell.swift */,
 				FEB3AA052172A73200A258C6 /* CXDPastOrderItemTableViewCell.swift */,
+				FE98AC27218DF50400DB6401 /* CXDCardTableViewCell.swift */,
+				FE98AC2F218E2C7300DB6401 /* CXDAddressTableViewCell.swift */,
 				FEBC70B6215D61B8008785A9 /* CXDChefTableViewCell.xib */,
 				FE862B8B214AE09500902478 /* CXDMealTableViewCell.xib */,
 				FEA95C56215722BB0085368D /* CXDMealDetailTableViewCell.xib */,
 				FEA95C6221572AAC0085368D /* CXDMealDetailHeaderTableViewCell.xib */,
 				FE38CFB6215BE1DD00D3EC31 /* CartItemTableViewCell.xib */,
 				FEB3AA012172A55300A258C6 /* CXDPastOrderItemTableViewCell.xib */,
+				FE98AC1B218BE76D00DB6401 /* CXDAddressTableViewCell.xib */,
+				FE98AC2B218DF51E00DB6401 /* CXDCardTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -638,7 +678,11 @@
 				FE38CFBA215C42E400D3EC31 /* AddNewPaymentViewController.swift */,
 				FE7D40882160125F002131D4 /* CartViewController.swift */,
 				FEB3A9FD21724CAA00A258C6 /* PastOrderDetailViewController.swift */,
+				FE363C8A2177FD5E00C4AEA5 /* ChefDetailViewController.swift */,
 				FEBC70C5215FEF0B008785A9 /* UIViewController+NavBar.swift */,
+				FE2277452173BFEF009B3ADD /* CXDChefsOnlineTableViewController.swift */,
+				FE98AC1F218C905200DB6401 /* CXDUserProfileViewController.swift */,
+				FE98AC23218DF40100DB6401 /* CXDItemsTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -715,6 +759,7 @@
 		FEDF59BA2160DB4F005415F8 /* Star Image */ = {
 			isa = PBXGroup;
 			children = (
+				FE22773D21737DDA009B3ADD /* cxd-logo-plain.png */,
 				FEDF59C02160DB62005415F8 /* ic_1p5stars.png */,
 				FEDF59BE2160DB61005415F8 /* ic_1stars.png */,
 				FEDF59BF2160DB62005415F8 /* ic_2p5stars.png */,
@@ -904,13 +949,16 @@
 				FEDF59D32160DB63005415F8 /* ic_1p5stars.png in Resources */,
 				FEBC70B7215D61B8008785A9 /* CXDChefTableViewCell.xib in Resources */,
 				FEDF59D02160DB63005415F8 /* ic_2p5stars.png in Resources */,
+				FE22773E21737DDC009B3ADD /* cxd-logo-plain.png in Resources */,
 				FE862B98214DE5F100902478 /* onlinechef.jpg in Resources */,
+				FE98AC2C218DF51E00DB6401 /* CXDCardTableViewCell.xib in Resources */,
 				FE862B9C214DEA6200902478 /* Favouritefood.jpeg in Resources */,
 				FEDF59D92160DB63005415F8 /* ic_5stars.png in Resources */,
 				FE862BAA214E815700902478 /* CategoryPH.png in Resources */,
 				FE862B90214D70CC00902478 /* avatar.png in Resources */,
 				FEDF59C72160DB63005415F8 /* ic_3stars.png in Resources */,
 				FE38CFB7215BE1DD00D3EC31 /* CartItemTableViewCell.xib in Resources */,
+				FE98AC1C218BE76D00DB6401 /* CXDAddressTableViewCell.xib in Resources */,
 				FEDF59C42160DB63005415F8 /* ic_3p5stars.png in Resources */,
 				FE862B8C214AE09500902478 /* CXDMealTableViewCell.xib in Resources */,
 				FEDF59D62160DB63005415F8 /* ic_2stars.png in Resources */,
@@ -937,6 +985,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE98AC1D218BE76D00DB6401 /* CXDAddressTableViewCell.xib in Resources */,
 				FE862B95214D70DF00902478 /* Food_bg_placeholder.png in Resources */,
 				FEDF59DD2160DB63005415F8 /* ic_4p5stars.png in Resources */,
 				FEDF59B42160D18A005415F8 /* Ingredients.png in Resources */,
@@ -946,8 +995,10 @@
 				FEDF59D42160DB63005415F8 /* ic_1p5stars.png in Resources */,
 				FE862B91214D70CC00902478 /* avatar.png in Resources */,
 				FE862B8D214AE09500902478 /* CXDMealTableViewCell.xib in Resources */,
+				FE22773F21737DDC009B3ADD /* cxd-logo-plain.png in Resources */,
 				FEDF59D12160DB63005415F8 /* ic_2p5stars.png in Resources */,
 				FE862B99214DE5F100902478 /* onlinechef.jpg in Resources */,
+				FE98AC2D218DF51E00DB6401 /* CXDCardTableViewCell.xib in Resources */,
 				FEF8B8CE21079BC000BDD272 /* Main.storyboard in Resources */,
 				FE862BAB214E815700902478 /* CategoryPH.png in Resources */,
 				FEB3AA032172A55300A258C6 /* CXDPastOrderItemTableViewCell.xib in Resources */,
@@ -970,6 +1021,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE98AC1E218BE76D00DB6401 /* CXDAddressTableViewCell.xib in Resources */,
 				FE862B96214D70DF00902478 /* Food_bg_placeholder.png in Resources */,
 				FEDF59DE2160DB63005415F8 /* ic_4p5stars.png in Resources */,
 				FEDF59B52160D18A005415F8 /* Ingredients.png in Resources */,
@@ -979,8 +1031,10 @@
 				FEDF59D52160DB63005415F8 /* ic_1p5stars.png in Resources */,
 				FE862B92214D70CC00902478 /* avatar.png in Resources */,
 				FE862B8E214AE09500902478 /* CXDMealTableViewCell.xib in Resources */,
+				FE22774021737DDC009B3ADD /* cxd-logo-plain.png in Resources */,
 				FEDF59D22160DB63005415F8 /* ic_2p5stars.png in Resources */,
 				FE862B9A214DE5F100902478 /* onlinechef.jpg in Resources */,
+				FE98AC2E218DF51E00DB6401 /* CXDCardTableViewCell.xib in Resources */,
 				FEF8B8CF21079BC000BDD272 /* Main.storyboard in Resources */,
 				FE862BAC214E815700902478 /* CategoryPH.png in Resources */,
 				FEB3AA042172A55300A258C6 /* CXDPastOrderItemTableViewCell.xib in Resources */,
@@ -1122,6 +1176,7 @@
 				FE07F5BD2172209300EFA59D /* CXDArrayOfUserReview.swift in Sources */,
 				FEBC70C2215E9F91008785A9 /* CXDAppMenuItem.swift in Sources */,
 				FE07F5872172209300EFA59D /* CXDArrayOfMeal.swift in Sources */,
+				FE98AC28218DF50400DB6401 /* CXDCardTableViewCell.swift in Sources */,
 				FE07F5932172209300EFA59D /* CXDDeliveryAddress.swift in Sources */,
 				FE660793215B255F001029C3 /* SHPopup.swift in Sources */,
 				FE07F5AB2172209300EFA59D /* CXDOrderItem.swift in Sources */,
@@ -1138,6 +1193,8 @@
 				FE07F58A2172209300EFA59D /* CXDArrayOfChef.swift in Sources */,
 				FE862BB2214F3E8E00902478 /* MealsTableViewController.swift in Sources */,
 				FE38CFB3215BDD4B00D3EC31 /* CartItemTableViewCell.swift in Sources */,
+				FE98AC24218DF40100DB6401 /* CXDItemsTableViewController.swift in Sources */,
+				FE98AC20218C905200DB6401 /* CXDUserProfileViewController.swift in Sources */,
 				FE07F57E2172209300EFA59D /* CXDFoodClassification.swift in Sources */,
 				FE537DD5215863C400971289 /* FSPagerViewCell.swift in Sources */,
 				FE07F5692172209300EFA59D /* CXDFoodRestriction.swift in Sources */,
@@ -1146,6 +1203,7 @@
 				FE07F5A52172209300EFA59D /* CXDMenu.swift in Sources */,
 				FE07F5B12172209300EFA59D /* CXDDEVAPIClient.swift in Sources */,
 				FE537DE1215863C400971289 /* FSPageControl.swift in Sources */,
+				FE363C8B2177FD5E00C4AEA5 /* ChefDetailViewController.swift in Sources */,
 				FEB8B35220D347BF00DDDD2D /* ConfirmSignUpViewController.swift in Sources */,
 				FEB8B34220D346DD00DDDD2D /* MFAViewController.swift in Sources */,
 				FE537DD8215863C400971289 /* FSPageViewLayout.swift in Sources */,
@@ -1155,6 +1213,7 @@
 				FE07F5C92172209300EFA59D /* CXDChef.swift in Sources */,
 				FEB8B34620D3471000DDDD2D /* SignInViewController.swift in Sources */,
 				FEDF59E021610F8B005415F8 /* PaymentViewController.swift in Sources */,
+				FE98AC30218E2C7300DB6401 /* CXDAddressTableViewCell.swift in Sources */,
 				FE07F5C02172209300EFA59D /* CXDArrayOfMealReview.swift in Sources */,
 				FE07F56C2172209300EFA59D /* CXDUserReview.swift in Sources */,
 				FE537DD2215863C400971289 /* FSPageViewTransformer.swift in Sources */,
@@ -1163,6 +1222,7 @@
 				FE862BAE214E834700902478 /* MealCategoriesViewController.swift in Sources */,
 				FE66078B215B0490001029C3 /* JSButton.swift in Sources */,
 				FE7B04FE213F6AEC0090E85B /* CXDAWSApiClient.swift in Sources */,
+				FE2277462173BFEF009B3ADD /* CXDChefsOnlineTableViewController.swift in Sources */,
 				FE7A09F32135923800AE45AD /* SignInViewController+FacebookLogin.swift in Sources */,
 				FEC79AB4216D8FD000A28B6D /* PastOrdersViewController.swift in Sources */,
 				FE07F5842172209300EFA59D /* CXDCurrentUser.swift in Sources */,
@@ -1208,6 +1268,7 @@
 				FE07F5942172209300EFA59D /* CXDDeliveryAddress.swift in Sources */,
 				FEDF59E121610F8B005415F8 /* PaymentViewController.swift in Sources */,
 				FE7E429F210D27AE004773F6 /* LeftMenuViewController.swift in Sources */,
+				FE98AC29218DF50400DB6401 /* CXDCardTableViewCell.swift in Sources */,
 				FE07F5B52172209300EFA59D /* CXDArrayOfUserPhoto.swift in Sources */,
 				FE07F5672172209300EFA59D /* CXDMealPhoto.swift in Sources */,
 				FE07F5AC2172209300EFA59D /* CXDOrderItem.swift in Sources */,
@@ -1224,6 +1285,8 @@
 				FE660794215B255F001029C3 /* SHPopup.swift in Sources */,
 				FE07F5A32172209300EFA59D /* CXDArrayOfMenu.swift in Sources */,
 				FE537DD9215863C400971289 /* FSPageViewLayout.swift in Sources */,
+				FE98AC25218DF40100DB6401 /* CXDItemsTableViewController.swift in Sources */,
+				FE98AC21218C905200DB6401 /* CXDUserProfileViewController.swift in Sources */,
 				FEB8B34320D346DD00DDDD2D /* MFAViewController.swift in Sources */,
 				FE07F5B82172209300EFA59D /* CXDArrayOfBilling.swift in Sources */,
 				FE07F5C12172209300EFA59D /* CXDArrayOfMealReview.swift in Sources */,
@@ -1232,6 +1295,7 @@
 				FE07F58B2172209300EFA59D /* CXDArrayOfChef.swift in Sources */,
 				FE07F5642172209300EFA59D /* CXDArrayOfMealCategory.swift in Sources */,
 				FE66078C215B0490001029C3 /* JSButton.swift in Sources */,
+				FE363C8C2177FD5E00C4AEA5 /* ChefDetailViewController.swift in Sources */,
 				FE07F59D2172209300EFA59D /* CXDBilling.swift in Sources */,
 				FE07F5822172209300EFA59D /* CXDCart.swift in Sources */,
 				FE07F5912172209300EFA59D /* CXDArrayOfMealPhoto.swift in Sources */,
@@ -1241,6 +1305,7 @@
 				FEC79AB5216D8FD000A28B6D /* PastOrdersViewController.swift in Sources */,
 				FE07F58E2172209300EFA59D /* CXDArrayOfDeliveryAddress.swift in Sources */,
 				FE07F5BB2172209300EFA59D /* CXDError.swift in Sources */,
+				FE98AC31218E2C7300DB6401 /* CXDAddressTableViewCell.swift in Sources */,
 				FE7D408A2160125F002131D4 /* CartViewController.swift in Sources */,
 				FE07F5BE2172209300EFA59D /* CXDArrayOfUserReview.swift in Sources */,
 				FEB8B35B20D3481900DDDD2D /* ConfirmForgotPasswordViewController.swift in Sources */,
@@ -1249,6 +1314,7 @@
 				FE67D71321307DEA00C84C07 /* CXDApiServiceController.swift in Sources */,
 				FEBC70BC215D6555008785A9 /* CXDChefTableViewCell.swift in Sources */,
 				FE07F56D2172209300EFA59D /* CXDUserReview.swift in Sources */,
+				FE2277472173BFEF009B3ADD /* CXDChefsOnlineTableViewController.swift in Sources */,
 				FE07F59A2172209300EFA59D /* CXDUserPhoto.swift in Sources */,
 				FE07F5AF2172209300EFA59D /* CXDArrayOfOrder.swift in Sources */,
 				FE07F5A62172209300EFA59D /* CXDMenu.swift in Sources */,
@@ -1294,6 +1360,7 @@
 				FE07F5952172209300EFA59D /* CXDDeliveryAddress.swift in Sources */,
 				FEDF59E221610F8B005415F8 /* PaymentViewController.swift in Sources */,
 				FE7E42A0210D27AE004773F6 /* LeftMenuViewController.swift in Sources */,
+				FE98AC2A218DF50400DB6401 /* CXDCardTableViewCell.swift in Sources */,
 				FE07F5B62172209300EFA59D /* CXDArrayOfUserPhoto.swift in Sources */,
 				FE07F5682172209300EFA59D /* CXDMealPhoto.swift in Sources */,
 				FE07F5AD2172209300EFA59D /* CXDOrderItem.swift in Sources */,
@@ -1310,6 +1377,8 @@
 				FE660795215B255F001029C3 /* SHPopup.swift in Sources */,
 				FE07F5A42172209300EFA59D /* CXDArrayOfMenu.swift in Sources */,
 				FE537DDA215863C400971289 /* FSPageViewLayout.swift in Sources */,
+				FE98AC26218DF40100DB6401 /* CXDItemsTableViewController.swift in Sources */,
+				FE98AC22218C905200DB6401 /* CXDUserProfileViewController.swift in Sources */,
 				FEB8B34420D346DD00DDDD2D /* MFAViewController.swift in Sources */,
 				FE07F5B92172209300EFA59D /* CXDArrayOfBilling.swift in Sources */,
 				FE07F5C22172209300EFA59D /* CXDArrayOfMealReview.swift in Sources */,
@@ -1318,6 +1387,7 @@
 				FE07F58C2172209300EFA59D /* CXDArrayOfChef.swift in Sources */,
 				FE07F5652172209300EFA59D /* CXDArrayOfMealCategory.swift in Sources */,
 				FE66078D215B0490001029C3 /* JSButton.swift in Sources */,
+				FE363C8D2177FD5E00C4AEA5 /* ChefDetailViewController.swift in Sources */,
 				FE07F59E2172209300EFA59D /* CXDBilling.swift in Sources */,
 				FE07F5832172209300EFA59D /* CXDCart.swift in Sources */,
 				FE07F5922172209300EFA59D /* CXDArrayOfMealPhoto.swift in Sources */,
@@ -1327,6 +1397,7 @@
 				FEC79AB6216D8FD000A28B6D /* PastOrdersViewController.swift in Sources */,
 				FE07F58F2172209300EFA59D /* CXDArrayOfDeliveryAddress.swift in Sources */,
 				FE07F5BC2172209300EFA59D /* CXDError.swift in Sources */,
+				FE98AC32218E2C7300DB6401 /* CXDAddressTableViewCell.swift in Sources */,
 				FE7D408B2160125F002131D4 /* CartViewController.swift in Sources */,
 				FE07F5BF2172209300EFA59D /* CXDArrayOfUserReview.swift in Sources */,
 				FEB8B35C20D3481900DDDD2D /* ConfirmForgotPasswordViewController.swift in Sources */,
@@ -1335,6 +1406,7 @@
 				FE67D71421307DEA00C84C07 /* CXDApiServiceController.swift in Sources */,
 				FEBC70BD215D6555008785A9 /* CXDChefTableViewCell.swift in Sources */,
 				FE07F56E2172209300EFA59D /* CXDUserReview.swift in Sources */,
+				FE2277482173BFEF009B3ADD /* CXDChefsOnlineTableViewController.swift in Sources */,
 				FE07F59B2172209300EFA59D /* CXDUserPhoto.swift in Sources */,
 				FE07F5B02172209300EFA59D /* CXDArrayOfOrder.swift in Sources */,
 				FE07F5A72172209300EFA59D /* CXDMenu.swift in Sources */,

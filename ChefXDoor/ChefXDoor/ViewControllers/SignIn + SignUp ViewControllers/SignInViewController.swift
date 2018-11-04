@@ -16,6 +16,8 @@ class SignInViewController: UIViewController, AWSCognitoIdentityPasswordAuthenti
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var curveView:UIView!
+    @IBOutlet weak var loginButtonView: UIView!
+    
     var passwordAuthenticationCompletion: AWSTaskCompletionSource< AWSCognitoIdentityPasswordAuthenticationDetails>?
     var usernameText: String?
 
@@ -47,6 +49,9 @@ class SignInViewController: UIViewController, AWSCognitoIdentityPasswordAuthenti
         } else {
             // Fallback on earlier versions
         }
+        
+        loginButtonView.layer.cornerRadius = 25
+        loginButtonView.layer.masksToBounds = true
     }
     
     @IBAction func signInPressed(_ sender: AnyObject) {

@@ -15,6 +15,7 @@ class RecommendationsViewController : UIViewController,UITableViewDelegate,UITab
     
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var categoriesView: UIView!
+    @IBOutlet weak var onlineChefsView:UIView!
     @IBOutlet public var recommendedMealsTableView:UITableView!
     public var recommendedMeals:Array<CXDMeal>?
     let searchController = UISearchController(searchResultsController: nil)
@@ -40,6 +41,7 @@ class RecommendationsViewController : UIViewController,UITableViewDelegate,UITab
         navigationItem.titleView = titleView
         
         categoriesView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(RecommendationsViewController.categoriesViewTapped)))
+        onlineChefsView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(RecommendationsViewController.onlineChefsViewTapped)))
         
         //searchController.searchResultsUpdater = self as! UISearchResultsUpdating
         searchController.obscuresBackgroundDuringPresentation = false
@@ -77,11 +79,6 @@ class RecommendationsViewController : UIViewController,UITableViewDelegate,UITab
                 self.showResult(task: task )
             }
         }
-        
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let mealCategoriesViewController = storyboard.instantiateViewController(withIdentifier: "MealCategoriesViewController") as! MealCategoriesViewController
-//        mealCategoriesViewController.categoryArray = nil
-//        self.navigationController!.pushViewController(mealCategoriesViewController, animated: true)
     }
     
     func showResult(task: AWSTask<AnyObject>) {
@@ -97,4 +94,25 @@ class RecommendationsViewController : UIViewController,UITableViewDelegate,UITab
             //self.present(mealCategoriesViewController, animated: true, completion: nil)
         }
     }
+    
+    @objc func onlineChefsViewTapped()
+    {
+        CXDApiServiceController.awsGetFromEndPoint(urlString: "/users/chefs", queryParametersDict: ["lat" : 38.99437, "long" : -77.02977, "distance" : 10 ,"page" : 0, "sort" : "rating"], pathParametersDict: nil, classType: CXDChef.self).continueWith { (task) -> Any? in
+            
+            DispatchQueue.main.async {
+                if let error = task.error {
+                    print("Error: \(error)")
+                } else if let result = task.result{
+                    
+                    let res = result as! Array<CXDChef>
+                    let storyboard = UIStoryboard(name: "Main", bundle: Bundle.init(for: CXDChefsOnlineTableViewController.self))
+                    let onlineChefsViewController = storyboard.instantiateViewController(withIdentifier: "CXDChefsOnlineTableViewController") as! CXDChefsOnlineTableViewController
+                    onlineChefsViewController.onlineChefs = res
+                    self.navigationController!.pushViewController(onlineChefsViewController, animated: true)
+                }
+                
+            }
+        }
+    }
+    
 }

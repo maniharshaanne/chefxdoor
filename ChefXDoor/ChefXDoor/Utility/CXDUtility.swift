@@ -13,7 +13,7 @@ class CXDUtility{
     
     static var sharedUtility = CXDUtility()
     
-    public func imageFor(rating : Int) -> UIImage
+    public func imageFor(rating: Int) -> UIImage
     {
         switch rating
         {
