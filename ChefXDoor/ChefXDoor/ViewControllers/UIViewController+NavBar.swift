@@ -41,7 +41,11 @@ extension UIViewController{
     }
     
     @objc func searchRightBarButtonTapped(sender: UIBarButtonItem) {
-        panel?.openLeft(animated: true)
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let searchResultsViewController = storyBoard.instantiateViewController(withIdentifier: "CXDSearchResultsViewController") as! CXDSearchResultsViewController
+        let searchResultsNavigationViewController = UINavigationController(rootViewController: searchResultsViewController)
+        panel?.configs.changeCenterPanelAnimated = false
+        panel?.center(searchResultsNavigationViewController)
     }
     
     @objc func cartRightBarButtonTapped(sender: UIBarButtonItem){

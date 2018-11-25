@@ -232,6 +232,12 @@
 		FE98AC30218E2C7300DB6401 /* CXDAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98AC2F218E2C7300DB6401 /* CXDAddressTableViewCell.swift */; };
 		FE98AC31218E2C7300DB6401 /* CXDAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98AC2F218E2C7300DB6401 /* CXDAddressTableViewCell.swift */; };
 		FE98AC32218E2C7300DB6401 /* CXDAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98AC2F218E2C7300DB6401 /* CXDAddressTableViewCell.swift */; };
+		FE98AC34218F1D6300DB6401 /* CXDSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98AC33218F1D6300DB6401 /* CXDSearchResultsViewController.swift */; };
+		FE98AC35218F1D6300DB6401 /* CXDSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98AC33218F1D6300DB6401 /* CXDSearchResultsViewController.swift */; };
+		FE98AC36218F1D6300DB6401 /* CXDSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98AC33218F1D6300DB6401 /* CXDSearchResultsViewController.swift */; };
+		FE98AC38218F349700DB6401 /* visa.png in Resources */ = {isa = PBXBuildFile; fileRef = FE98AC37218F349700DB6401 /* visa.png */; };
+		FE98AC39218F349700DB6401 /* visa.png in Resources */ = {isa = PBXBuildFile; fileRef = FE98AC37218F349700DB6401 /* visa.png */; };
+		FE98AC3A218F349700DB6401 /* visa.png in Resources */ = {isa = PBXBuildFile; fileRef = FE98AC37218F349700DB6401 /* visa.png */; };
 		FEA703822165B37600A9DEF7 /* cookies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FEA703812165B37600A9DEF7 /* cookies.jpg */; };
 		FEA703832165B37600A9DEF7 /* cookies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FEA703812165B37600A9DEF7 /* cookies.jpg */; };
 		FEA703842165B37600A9DEF7 /* cookies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FEA703812165B37600A9DEF7 /* cookies.jpg */; };
@@ -460,6 +466,8 @@
 		FE98AC27218DF50400DB6401 /* CXDCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDCardTableViewCell.swift; sourceTree = "<group>"; };
 		FE98AC2B218DF51E00DB6401 /* CXDCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CXDCardTableViewCell.xib; sourceTree = "<group>"; };
 		FE98AC2F218E2C7300DB6401 /* CXDAddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDAddressTableViewCell.swift; sourceTree = "<group>"; };
+		FE98AC33218F1D6300DB6401 /* CXDSearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDSearchResultsViewController.swift; sourceTree = "<group>"; };
+		FE98AC37218F349700DB6401 /* visa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = visa.png; sourceTree = "<group>"; };
 		FEA703812165B37600A9DEF7 /* cookies.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cookies.jpg; sourceTree = "<group>"; };
 		FEA703852165B3C000A9DEF7 /* minicookies.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = minicookies.jpg; sourceTree = "<group>"; };
 		FEA95C56215722BB0085368D /* CXDMealDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CXDMealDetailTableViewCell.xib; sourceTree = "<group>"; };
@@ -683,6 +691,7 @@
 				FE2277452173BFEF009B3ADD /* CXDChefsOnlineTableViewController.swift */,
 				FE98AC1F218C905200DB6401 /* CXDUserProfileViewController.swift */,
 				FE98AC23218DF40100DB6401 /* CXDItemsTableViewController.swift */,
+				FE98AC33218F1D6300DB6401 /* CXDSearchResultsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -759,6 +768,7 @@
 		FEDF59BA2160DB4F005415F8 /* Star Image */ = {
 			isa = PBXGroup;
 			children = (
+				FE98AC37218F349700DB6401 /* visa.png */,
 				FE22773D21737DDA009B3ADD /* cxd-logo-plain.png */,
 				FEDF59C02160DB62005415F8 /* ic_1p5stars.png */,
 				FEDF59BE2160DB61005415F8 /* ic_1stars.png */,
@@ -957,6 +967,7 @@
 				FE862BAA214E815700902478 /* CategoryPH.png in Resources */,
 				FE862B90214D70CC00902478 /* avatar.png in Resources */,
 				FEDF59C72160DB63005415F8 /* ic_3stars.png in Resources */,
+				FE98AC38218F349700DB6401 /* visa.png in Resources */,
 				FE38CFB7215BE1DD00D3EC31 /* CartItemTableViewCell.xib in Resources */,
 				FE98AC1C218BE76D00DB6401 /* CXDAddressTableViewCell.xib in Resources */,
 				FEDF59C42160DB63005415F8 /* ic_3p5stars.png in Resources */,
@@ -1011,6 +1022,7 @@
 				FEA95C58215722BB0085368D /* CXDMealDetailTableViewCell.xib in Resources */,
 				FEA703832165B37600A9DEF7 /* cookies.jpg in Resources */,
 				FEDF59C82160DB63005415F8 /* ic_3stars.png in Resources */,
+				FE98AC39218F349700DB6401 /* visa.png in Resources */,
 				FEDF59CE2160DB63005415F8 /* ic_1stars.png in Resources */,
 				FEB3AA0D2172DBBE00A258C6 /* cxd-logo.png in Resources */,
 				FEDF59DA2160DB63005415F8 /* ic_5stars.png in Resources */,
@@ -1047,6 +1059,7 @@
 				FEA95C59215722BB0085368D /* CXDMealDetailTableViewCell.xib in Resources */,
 				FEA703842165B37600A9DEF7 /* cookies.jpg in Resources */,
 				FEDF59C92160DB63005415F8 /* ic_3stars.png in Resources */,
+				FE98AC3A218F349700DB6401 /* visa.png in Resources */,
 				FEDF59CF2160DB63005415F8 /* ic_1stars.png in Resources */,
 				FEB3AA0E2172DBBE00A258C6 /* cxd-logo.png in Resources */,
 				FEDF59DB2160DB63005415F8 /* ic_5stars.png in Resources */,
@@ -1111,7 +1124,9 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FaveButton/FaveButton.framework",
 				"${BUILT_PRODUCTS_DIR}/FormTextField/FormTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/Fusuma/Fusuma.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MBRadioCheckboxButton/MBRadioCheckboxButton.framework",
 				"${BUILT_PRODUCTS_DIR}/MIBlurPopup/MIBlurPopup.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 			);
@@ -1129,7 +1144,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FaveButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FormTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fusuma.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBRadioCheckboxButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MIBlurPopup.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 			);
@@ -1236,6 +1253,7 @@
 				FE07F5662172209300EFA59D /* CXDMealPhoto.swift in Sources */,
 				FEC98610215AFCF1009E81E1 /* ReceipeAddedToCartViewController.swift in Sources */,
 				FE07F59C2172209300EFA59D /* CXDBilling.swift in Sources */,
+				FE98AC34218F1D6300DB6401 /* CXDSearchResultsViewController.swift in Sources */,
 				FEBC70BB215D6555008785A9 /* CXDChefTableViewCell.swift in Sources */,
 				FE07F5632172209300EFA59D /* CXDArrayOfMealCategory.swift in Sources */,
 				FEB8B35E20D3483F00DDDD2D /* StartScreenViewController.swift in Sources */,
@@ -1328,6 +1346,7 @@
 				FE07F5A92172209300EFA59D /* CXDFavoriteMeal.swift in Sources */,
 				FEB3A9FF21724CAA00A258C6 /* PastOrderDetailViewController.swift in Sources */,
 				FE07F5792172209300EFA59D /* CXDOrder.swift in Sources */,
+				FE98AC35218F1D6300DB6401 /* CXDSearchResultsViewController.swift in Sources */,
 				FE07F5852172209300EFA59D /* CXDCurrentUser.swift in Sources */,
 				FEA95C5C2157254A0085368D /* CXDMealDetailTableViewCell.swift in Sources */,
 				FE862BAF214E834700902478 /* MealCategoriesViewController.swift in Sources */,
@@ -1420,6 +1439,7 @@
 				FE07F5AA2172209300EFA59D /* CXDFavoriteMeal.swift in Sources */,
 				FEB3AA0021724CAA00A258C6 /* PastOrderDetailViewController.swift in Sources */,
 				FE07F57A2172209300EFA59D /* CXDOrder.swift in Sources */,
+				FE98AC36218F1D6300DB6401 /* CXDSearchResultsViewController.swift in Sources */,
 				FE07F5862172209300EFA59D /* CXDCurrentUser.swift in Sources */,
 				FEA95C5D2157254A0085368D /* CXDMealDetailTableViewCell.swift in Sources */,
 				FE862BB0214E834700902478 /* MealCategoriesViewController.swift in Sources */,

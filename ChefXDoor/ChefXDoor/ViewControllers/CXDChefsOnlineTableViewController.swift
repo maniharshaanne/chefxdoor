@@ -36,24 +36,24 @@ class CXDChefsOnlineTableViewController: UIViewController, UITableViewDelegate, 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedChef = onlineChefs![indexPath.row]
-        CXDApiServiceController.awsGetFromEndPoint(urlString: "/meals", queryParametersDict: ["lat" : 38.994373, "long" : -77.029778, "distance" : 10, "page" : 0, "sort":"rating", "chef_id": 2], pathParametersDict: nil, classType: CXDMeal.self).continueWith { (task) -> Any? in
+        let chefId = selectedChef.id?.stringValue
+        let urlString = "/users/" + chefId!
+
+        CXDApiServiceController.awsGetFromEndPoint(urlString: urlString, queryParametersDict: ["lat" : 38.994373, "long" : -77.029778, "type": "chef"], pathParametersDict: nil, classType: CXDChef.self).continueWith { (task) -> Any? in
             
             DispatchQueue.main.async {
-                self.showResult(task: task, chef: selectedChef )
+                if let error = task.error {
+                    print("Error: \(error)")
+                } else if let result = task.result{
+                    let res = result as! CXDChef
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let chefDetailViewController = storyboard.instantiateViewController(withIdentifier: "ChefDetailViewController") as! ChefDetailViewController
+                    res.reviewCount = selectedChef.reviewCount
+                    res.categories = selectedChef.categories
+                    chefDetailViewController.chef = res
+                    self.navigationController?.pushViewController(chefDetailViewController, animated: true)
+                }
             }
-        }
-    }
-    
-    func showResult(task: AWSTask<AnyObject>, chef: CXDChef) {
-        if let error = task.error {
-            print("Error: \(error)")
-        } else if let result = task.result{
-            let res = result as! Array<CXDMeal>
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let chefDetailViewController = storyboard.instantiateViewController(withIdentifier: "ChefDetailViewController") as! ChefDetailViewController
-            chefDetailViewController.chef = chef
-            chefDetailViewController.chefMeals = res
-            navigationController?.pushViewController(chefDetailViewController, animated: true)
         }
     }
 }

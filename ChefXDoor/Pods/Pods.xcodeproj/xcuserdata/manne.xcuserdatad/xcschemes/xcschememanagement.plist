@@ -88,47 +88,61 @@
 			<key>orderHint</key>
 			<integer>11</integer>
 		</dict>
-		<key>Kingfisher.xcscheme</key>
+		<key>Fusuma.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>12</integer>
 		</dict>
-		<key>MIBlurPopup.xcscheme</key>
+		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>13</integer>
 		</dict>
-		<key>PKHUD.xcscheme</key>
+		<key>MBRadioCheckboxButton.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>14</integer>
 		</dict>
-		<key>Pods-ChefXDoor.xcscheme</key>
+		<key>MIBlurPopup.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>15</integer>
 		</dict>
-		<key>Pods-ChefXDoorTests.xcscheme</key>
+		<key>PKHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>16</integer>
 		</dict>
-		<key>Pods-ChefXDoorUITests.xcscheme</key>
+		<key>Pods-ChefXDoor.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>17</integer>
+		</dict>
+		<key>Pods-ChefXDoorTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>18</integer>
+		</dict>
+		<key>Pods-ChefXDoorUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>19</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>

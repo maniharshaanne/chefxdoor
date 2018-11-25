@@ -21,12 +21,14 @@ class CXDCardTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         let faveButton = FaveButton(
             frame: CGRect(x:backgroundContentView.frame.size.width - 44, y:0, width: 44, height: 44),
-            faveIconNormal: UIImage(named: "Heart")
+            faveIconNormal: UIImage(named: "starIcon")
         )
         faveButton.delegate = self
         backgroundContentView.isUserInteractionEnabled = true
         backgroundContentView.addSubview(faveButton)
-        backgroundContentView.layer.borderWidth = 5
+//        backgroundContentView.layer.borderWidth = 1
+//        backgroundContentView.layer.borderColor = UIColor(red: 246/256, green: 102/256, blue: 71/256, alpha: 1).cgColor
+        backgroundContentView.layer.cornerRadius = 5
     }
     
     func updateInfo(billingDetail: CXDBilling) {

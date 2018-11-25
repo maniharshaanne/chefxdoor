@@ -12,10 +12,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CXDAddressTableViewCell" rowHeight="135" id="kRc-fF-vOU" customClass="CXDAddressTableViewCell" customModule="ChefXDoor" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kRc-fF-vOU" id="1kF-wF-zoE">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="134.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="144.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k7g-7Z-cPR">
@@ -94,8 +94,9 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" red="0.33721464872360229" green="0.3372780978679657" blue="0.33721065521240234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="k7g-7Z-cPR" secondAttribute="bottom" id="GQg-ZS-vrY"/>
+                    <constraint firstAttribute="bottom" secondItem="k7g-7Z-cPR" secondAttribute="bottom" constant="10" id="GQg-ZS-vrY"/>
                     <constraint firstItem="k7g-7Z-cPR" firstAttribute="leading" secondItem="1kF-wF-zoE" secondAttribute="leading" id="fyW-lZ-dH6"/>
                     <constraint firstItem="k7g-7Z-cPR" firstAttribute="top" secondItem="1kF-wF-zoE" secondAttribute="top" id="q4K-f3-eUp"/>
                     <constraint firstAttribute="trailing" secondItem="k7g-7Z-cPR" secondAttribute="trailing" id="vl4-WA-e3M"/>
@@ -103,6 +104,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="cityLabel" destination="rQI-1f-SpK" id="q0t-rj-Kf2"/>
+                <outlet property="mainView" destination="k7g-7Z-cPR" id="PRv-GN-TQT"/>
                 <outlet property="stateZipLabel" destination="GLx-cn-bW8" id="mLv-QY-gfe"/>
                 <outlet property="streetAddress1Label" destination="EuK-4e-OM7" id="GZw-aP-mLw"/>
                 <outlet property="streetAddress2Label" destination="7HK-2I-WTA" id="BXi-6q-Irf"/>

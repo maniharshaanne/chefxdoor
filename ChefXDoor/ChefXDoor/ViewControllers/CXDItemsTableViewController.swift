@@ -29,6 +29,17 @@ class CXDItemsTableViewController: UIViewController, UITableViewDelegate, UITabl
         itemsTableView.rowHeight = UITableViewAutomaticDimension
         itemsTableView.estimatedRowHeight = 150
         
+        switch self.itemType {
+            case .addressType? :
+                addButton.setTitle("Add New Address", for: .normal)
+                break
+            case .cardType?:
+                addButton.setTitle("Add New Payment", for: .normal)
+                break
+            default:
+                addButton.setTitle("Add New", for: .normal)
+                break
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,6 +66,21 @@ class CXDItemsTableViewController: UIViewController, UITableViewDelegate, UITabl
             return cell
         default:
             return UITableViewCell()
+        }
+    }
+    
+    @IBAction func addButtonPressed(_ sender: Any) {
+        
+        switch itemType {
+        case .addressType?:
+            break
+        case .cardType?:
+            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.init(for: AddNewPaymentViewController.self))
+            let addNewPaymentViewController = storyboard.instantiateViewController(withIdentifier: "AddNewPaymentViewController") as! AddNewPaymentViewController
+            self.navigationController!.pushViewController(addNewPaymentViewController, animated: true)
+            break
+        default:
+            break
         }
     }
 }

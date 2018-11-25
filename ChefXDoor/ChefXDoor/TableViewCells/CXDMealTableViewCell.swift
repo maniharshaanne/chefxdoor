@@ -27,7 +27,7 @@ class CXDMealTableViewCell: UITableViewCell,FaveButtonDelegate  {
     override func awakeFromNib() {
         super.awakeFromNib()
         let faveButton = FaveButton(
-            frame: CGRect(x:backgroundImageView.frame.size.width - 44, y:0, width: 44, height: 44),
+            frame: CGRect(x:self.contentView.frame.size.width - 80, y:0, width: 44, height: 44),
             faveIconNormal: UIImage(named: "Heart")
         )
         faveButton.delegate = self

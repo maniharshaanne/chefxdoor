@@ -41,6 +41,8 @@ class MealDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var imagePagerView: FSPagerView!{
         didSet {
             self.imagePagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
+            self.imagePagerView.delegate = self
+            self.imagePagerView.dataSource = self
         }
     }
     
@@ -94,7 +96,6 @@ class MealDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         
         totalCostView.layer.borderWidth = 2
         totalCostView.layer.borderColor = UIColor(red: 246/256, green: 102/256, blue: 71/256, alpha: 1).cgColor
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -120,8 +121,7 @@ class MealDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.updateCell(mealReview: userReviews![indexPath.row])
         return cell
     }
-    
-    
+        
     //PagerView Delegate
     func numberOfItems(in pagerView: FSPagerView) -> Int {
         return meal?.photos?.count ?? 0

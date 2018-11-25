@@ -16,14 +16,16 @@ PODS:
   - Bolts/Tasks (1.9.0)
   - FAPanels (0.5.0)
   - FaveButton (3.0.0)
-  - FBSDKCoreKit (4.36.0):
-    - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.36.0):
+  - FBSDKCoreKit (4.38.1):
+    - Bolts (~> 1.9)
+  - FBSDKLoginKit (4.38.1):
     - FBSDKCoreKit
-  - FBSDKShareKit (4.36.0):
-    - FBSDKCoreKit (~> 4.36.0)
+  - FBSDKShareKit (4.38.1):
+    - FBSDKCoreKit
   - FormTextField (2.0.1)
+  - Fusuma (1.2.4)
   - Kingfisher (4.9.0)
+  - MBRadioCheckboxButton (1.3)
   - MIBlurPopup (0.1.3)
   - PKHUD (5.1.0)
 
@@ -38,7 +40,9 @@ DEPENDENCIES:
   - FBSDKLoginKit
   - FBSDKShareKit
   - FormTextField
+  - Fusuma
   - Kingfisher (~> 4.9.0)
+  - MBRadioCheckboxButton
   - MIBlurPopup
   - PKHUD (~> 5.0)
 
@@ -56,7 +60,9 @@ SPEC REPOS:
     - FBSDKLoginKit
     - FBSDKShareKit
     - FormTextField
+    - Fusuma
     - Kingfisher
+    - MBRadioCheckboxButton
     - MIBlurPopup
     - PKHUD
 
@@ -69,14 +75,16 @@ SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   FAPanels: def3b6e1e407ea1d1198d1acddc9d855d9e418ec
   FaveButton: 1fa9cd7b037d7164e229765401931271adbe3a23
-  FBSDKCoreKit: 3b8e6570eedb443f9fc4af196a7bf39f18e3a3d8
-  FBSDKLoginKit: 8bccb6064708ab2f4251a7fc4e3b6d8d00ad91ba
-  FBSDKShareKit: 7090fdd55c39b03941efddb64c83a64ff6b3949f
+  FBSDKCoreKit: 8d47857400e2f5bdea697a80daff882e91c84ef6
+  FBSDKLoginKit: 4621c690d9dd8628031a4791497062183ea34b0d
+  FBSDKShareKit: 6ffe22f0a0618eb7424d4104ab0ef3ce9643d42a
   FormTextField: 061cd39ee77d5fb3d87b2e5a00728e2c874b3904
+  Fusuma: e85c394878a2e1549c67140ba7c038aff8d7581c
   Kingfisher: 64539b51826b778206daa6ed815d12653caa69dd
+  MBRadioCheckboxButton: 864c86ddc38527075158e9a22887a0ad0eb9edff
   MIBlurPopup: e0834e469074cabf65a0ca6e6d900c84d48f8a4f
   PKHUD: 62ea46a1e88c4def1da784878d199bb54c841e3c
 
-PODFILE CHECKSUM: 4c9be49a865a497e082dfd3a7b7528bb6447586a
+PODFILE CHECKSUM: ae45d8aa36b30424f733d1656bafd444baaa05d8
 
 COCOAPODS: 1.5.3

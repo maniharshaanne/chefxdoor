@@ -17,8 +17,9 @@ class RecommendationsViewController : UIViewController,UITableViewDelegate,UITab
     @IBOutlet weak var categoriesView: UIView!
     @IBOutlet weak var onlineChefsView:UIView!
     @IBOutlet public var recommendedMealsTableView:UITableView!
+    @IBOutlet weak var searchView: UIView!
+    
     public var recommendedMeals:Array<CXDMeal>?
-    let searchController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +35,8 @@ class RecommendationsViewController : UIViewController,UITableViewDelegate,UITab
         self.navigationItem.rightBarButtonItems = customRightBarButtonItems()
         self.navigationItem.leftBarButtonItem = menuLeftBarButton()
         
-        var titleView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
-        var titleImageView = UIImageView(image: UIImage(named: "cxd-logo"))
+        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+        let titleImageView = UIImageView(image: UIImage(named: "cxd-logo"))
         titleImageView.frame = CGRect(x: 0, y: 0, width: titleView.frame.width, height: titleView.frame.height)
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView
@@ -43,15 +44,25 @@ class RecommendationsViewController : UIViewController,UITableViewDelegate,UITab
         categoriesView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(RecommendationsViewController.categoriesViewTapped)))
         onlineChefsView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(RecommendationsViewController.onlineChefsViewTapped)))
         
-        //searchController.searchResultsUpdater = self as! UISearchResultsUpdating
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Candies"
-        if #available(iOS 11.0, *) {
-            navigationItem.searchController = searchController
-        } else {
-            // Fallback on earlier versions
-        }
-        definesPresentationContext = true
+        searchView.layer.borderWidth = 1
+        searchView.layer.cornerRadius = 5
+        searchView.layer.borderColor = UIColor(red: 246/256, green: 102/256, blue: 71/256, alpha: 1).cgColor
+        searchView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(searchViewTapped)))
+        
+//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//        let searchResultsViewController = storyBoard.instantiateViewController(withIdentifier: "CXDSearchResultsViewController") as! CXDSearchResultsViewController
+//        let searchController = UISearchController(searchResultsController: searchResultsViewController)
+//        searchController.searchResultsUpdater = searchResultsViewController
+//        searchController.obscuresBackgroundDuringPresentation = true
+//        searchController.searchBar.placeholder = "Search meals/chefs"
+//        searchController.searchBar.scopeButtonTitles = ["Chefs", "Meals"]
+
+//        if #available(iOS 11.0, *) {
+//            navigationItem.searchController = searchController
+//        } else {
+//            // Fallback on earlier versions
+//        }
+//        definesPresentationContext = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -79,6 +90,14 @@ class RecommendationsViewController : UIViewController,UITableViewDelegate,UITab
                 self.showResult(task: task )
             }
         }
+    }
+    
+    @objc func searchViewTapped(sender: UIBarButtonItem) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let searchResultsViewController = storyBoard.instantiateViewController(withIdentifier: "CXDSearchResultsViewController") as! CXDSearchResultsViewController
+        let searchResultsNavigationViewController = UINavigationController(rootViewController: searchResultsViewController)
+        panel?.configs.changeCenterPanelAnimated = false
+        panel?.center(searchResultsNavigationViewController)
     }
     
     func showResult(task: AWSTask<AnyObject>) {

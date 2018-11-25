@@ -15,9 +15,14 @@ public class AddNewPaymentViewController: UIViewController {
     @IBOutlet weak var cardTextField:FormTextField!
     @IBOutlet weak var expiryTextField:FormTextField!
     @IBOutlet weak var cvvTextField:FormTextField!
+    @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var cardBackView: UIView!
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        
+        cardView.layer.cornerRadius = 5
+        cardBackView.layer.cornerRadius = 5
         
         //Card text Feild
         cardTextField.inputType = .integer

@@ -11,8 +11,9 @@ import UIKit
 import Kingfisher
 import PKHUD
 import AWSCognito
+import Fusuma
 
-class CXDUserProfileViewController: UIViewController {
+class CXDUserProfileViewController: UIViewController, FusumaDelegate{
     
     @IBOutlet weak var nameView: UIView!
     @IBOutlet weak var firstNameTextField: UITextField!
@@ -113,6 +114,119 @@ class CXDUserProfileViewController: UIViewController {
             let resource = ImageResource(downloadURL: URL(string: backGroundIMageUrl)!)
             backGroundImageView.kf.setImage(with: resource)
         }
+        
+        self.backGroundImageView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(photoTapped)))
+        backGroundImageView.isUserInteractionEnabled = true
+    }
+    
+    @objc func photoTapped() {
+        // Show Fusuma
+        let fusuma = FusumaViewController()
+        
+        fusuma.delegate = self
+        fusuma.cropHeightRatio = 1.0
+        fusuma.allowMultipleSelection = false
+        fusumaSavesImage = true
+        
+        self.present(fusuma, animated: true, completion: nil)
+    }
+    
+    // MARK: FusumaDelegate Protocol
+    func fusumaImageSelected(_ image: UIImage, source: FusumaMode) {
+        
+        switch source {
+            
+        case .camera:
+            
+            print("Image captured from Camera")
+            
+        case .library:
+            
+            print("Image selected from Camera Roll")
+            
+        default:
+            
+            print("Image selected")
+        }
+        
+        self.backGroundImageView.image = image
+    }
+    
+    func fusumaMultipleImageSelected(_ images: [UIImage], source: FusumaMode) {
+        
+    }
+    
+    func fusumaVideoCompleted(withFileURL fileURL: URL) {
+        
+    }
+    
+    func fusumaImageSelected(_ image: UIImage, source: FusumaMode, metaData: ImageMetadata) {
+        
+        print("Image mediatype: \(metaData.mediaType)")
+        print("Source image size: \(metaData.pixelWidth)x\(metaData.pixelHeight)")
+        print("Creation date: \(String(describing: metaData.creationDate))")
+        print("Modification date: \(String(describing: metaData.modificationDate))")
+        print("Video duration: \(metaData.duration)")
+        print("Is favourite: \(metaData.isFavourite)")
+        print("Is hidden: \(metaData.isHidden)")
+        print("Location: \(String(describing: metaData.location))")
+    }
+    
+    func fusumaDismissedWithImage(_ image: UIImage, source: FusumaMode) {
+        
+        switch source {
+            
+        case .camera:
+            
+            print("Called just after dismissed FusumaViewController using Camera")
+            
+        case .library:
+            
+            print("Called just after dismissed FusumaViewController using Camera Roll")
+            
+        default:
+            
+            print("Called just after dismissed FusumaViewController")
+        }
+    }
+    
+    func fusumaCameraRollUnauthorized() {
+        
+        print("Camera roll unauthorized")
+        
+        let alert = UIAlertController(title: "Access Requested",
+                                      message: "Saving image needs to access your photo album",
+                                      preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Settings", style: .default) { (action) -> Void in
+            
+            if let url = URL(string:UIApplicationOpenSettingsURLString) {
+                
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        })
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
+            
+        })
+        
+        guard let vc = UIApplication.shared.delegate?.window??.rootViewController,
+            let presented = vc.presentedViewController else {
+                
+                return
+        }
+        
+        presented.present(alert, animated: true, completion: nil)
+    }
+    
+    func fusumaClosed() {
+        
+        print("Called when the FusumaViewController disappeared")
+    }
+    
+    func fusumaWillClosed() {
+        
+        print("Called when the close button is pressed")
     }
     
     @objc func cardViewTapped() {

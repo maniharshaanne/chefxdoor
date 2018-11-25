@@ -19,6 +19,8 @@ target 'ChefXDoor' do
   pod 'MIBlurPopup'
   pod 'FaveButton'
   pod 'FormTextField'
+  pod 'MBRadioCheckboxButton'
+  pod 'Fusuma'
   
   target 'ChefXDoorTests' do
     inherit! :search_paths

@@ -12,11 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CXDChefTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CXDChefTableViewCell" rowHeight="120" id="WAb-Qh-g3l" customClass="CXDChefTableViewCell" customModule="ChefXDoor" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CXDChefTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CXDChefTableViewCell" rowHeight="138" id="WAb-Qh-g3l" customClass="CXDChefTableViewCell" customModule="ChefXDoor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="138"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WAb-Qh-g3l" id="Nda-8c-f3O">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="137.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dFU-ip-2pj">
@@ -80,25 +80,35 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBL-Lk-QC0">
+                        <rect key="frame" x="0.0" y="120" width="375" height="18"/>
+                        <color key="backgroundColor" red="0.35682046413421631" green="0.3568871021270752" blue="0.35681626200675964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="Moz-Nv-wNR"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="dFU-ip-2pj" firstAttribute="top" secondItem="Nda-8c-f3O" secondAttribute="top" id="AP5-5p-Uxa"/>
                     <constraint firstAttribute="trailing" secondItem="Peg-OM-wDR" secondAttribute="trailing" constant="5" id="Avv-TO-Kfk"/>
                     <constraint firstItem="Wqa-m1-Vyz" firstAttribute="leading" secondItem="dFU-ip-2pj" secondAttribute="trailing" constant="10" id="GrX-kO-fgE"/>
+                    <constraint firstAttribute="bottom" secondItem="nBL-Lk-QC0" secondAttribute="bottom" constant="-0.5" id="IdX-35-V29"/>
+                    <constraint firstItem="nBL-Lk-QC0" firstAttribute="top" secondItem="dFU-ip-2pj" secondAttribute="bottom" id="LFE-8V-xGI"/>
                     <constraint firstItem="6Kf-CO-I4d" firstAttribute="top" secondItem="Peg-OM-wDR" secondAttribute="bottom" constant="1" id="Q1K-e7-ORG"/>
+                    <constraint firstItem="nBL-Lk-QC0" firstAttribute="leading" secondItem="Nda-8c-f3O" secondAttribute="leading" id="TtN-dr-3hP"/>
                     <constraint firstItem="QaX-PO-RiH" firstAttribute="top" secondItem="Nda-8c-f3O" secondAttribute="topMargin" constant="5" id="WDu-Mr-5Pc"/>
                     <constraint firstItem="6Kf-CO-I4d" firstAttribute="leading" secondItem="Wqa-m1-Vyz" secondAttribute="trailing" constant="5" id="XE2-yX-aAx"/>
                     <constraint firstItem="dFU-ip-2pj" firstAttribute="leading" secondItem="Nda-8c-f3O" secondAttribute="leading" id="XJg-Km-gMS"/>
-                    <constraint firstItem="Wqa-m1-Vyz" firstAttribute="bottom" secondItem="Nda-8c-f3O" secondAttribute="bottomMargin" id="Xee-F2-ebx"/>
                     <constraint firstItem="GxU-RL-nAo" firstAttribute="top" secondItem="b6e-ew-DxV" secondAttribute="bottom" constant="5" id="d9g-bU-6UO"/>
-                    <constraint firstAttribute="bottom" secondItem="dFU-ip-2pj" secondAttribute="bottom" id="evx-ff-fj3"/>
                     <constraint firstItem="QaX-PO-RiH" firstAttribute="trailing" secondItem="Nda-8c-f3O" secondAttribute="trailingMargin" constant="10" id="n6j-iS-Y6Q"/>
                     <constraint firstItem="b6e-ew-DxV" firstAttribute="top" secondItem="Nda-8c-f3O" secondAttribute="topMargin" constant="5" id="nJt-yb-qFL"/>
+                    <constraint firstItem="nBL-Lk-QC0" firstAttribute="top" secondItem="Wqa-m1-Vyz" secondAttribute="bottom" constant="11" id="nYL-bT-JZO"/>
                     <constraint firstItem="GxU-RL-nAo" firstAttribute="leading" secondItem="dFU-ip-2pj" secondAttribute="trailing" constant="10" id="r9a-JJ-CGC"/>
                     <constraint firstItem="b6e-ew-DxV" firstAttribute="leading" secondItem="dFU-ip-2pj" secondAttribute="trailing" constant="10" id="sMt-dS-ulc"/>
                     <constraint firstAttribute="trailing" secondItem="GxU-RL-nAo" secondAttribute="trailing" constant="5" id="tjE-t1-lA9"/>
-                    <constraint firstAttribute="bottom" secondItem="6Kf-CO-I4d" secondAttribute="bottom" constant="5" id="uFA-XW-exg"/>
                     <constraint firstAttribute="trailing" secondItem="6Kf-CO-I4d" secondAttribute="trailing" constant="5" id="uvy-YS-DWm"/>
+                    <constraint firstItem="nBL-Lk-QC0" firstAttribute="top" secondItem="6Kf-CO-I4d" secondAttribute="bottom" constant="5.5" id="vQw-Ha-TJL"/>
+                    <constraint firstAttribute="trailing" secondItem="nBL-Lk-QC0" secondAttribute="trailing" id="vnb-s4-8l1"/>
                     <constraint firstItem="QaX-PO-RiH" firstAttribute="leading" secondItem="b6e-ew-DxV" secondAttribute="trailing" constant="5" id="xCg-ci-Vhb"/>
                 </constraints>
             </tableViewCellContentView>
@@ -112,7 +122,7 @@
                 <outlet property="reviewsLabel" destination="Peg-OM-wDR" id="63S-X5-XZ3"/>
                 <outlet property="timeEstimateLabel" destination="QaX-PO-RiH" id="4Ij-CK-31j"/>
             </connections>
-            <point key="canvasLocation" x="-41.5" y="-10"/>
+            <point key="canvasLocation" x="-41.5" y="-1"/>
         </tableViewCell>
     </objects>
 </document>

@@ -12,7 +12,6 @@ import FBSDKLoginKit
 extension SignInViewController{
     typealias LoginCompletionBlock = (Dictionary<String, AnyObject>?, NSError?) -> Void
 
-
     @IBAction func fbSignInPressed(_ sender: AnyObject)
     {
         basicInfoWithCompletionHandler(self) {
@@ -25,9 +24,7 @@ extension SignInViewController{
     
     //MARK:- Public functions
     func basicInfoWithCompletionHandler(_ fromViewController:AnyObject, onCompletion: @escaping LoginCompletionBlock) -> Void {
-        
         //Check internet connection if no internet connection then return
-        
         getBaicInfoWithCompletionHandler(fromViewController) { (dataDictionary:Dictionary<String, AnyObject>?, error: NSError?) -> Void in
             onCompletion(dataDictionary, error)
         }
@@ -73,6 +70,52 @@ extension SignInViewController{
                     let customError = NSError(domain: "Request cancelled!", code: 1001, userInfo: errorDetails)
                     onCompletion(nil, customError)
                 } else {
+//                    let loginResult: FBSDKLoginManagerLoginResult = result!
+//                    if loginResult.grantedPermissions != nil {
+//                        if loginResult.grantedPermissions.contains("email") {
+//                            if FBSDKAccessToken.current() != nil {
+//                                let tokenString = FBSDKAccessToken.current().tokenString
+//                                print("FBSDKAccessToken.current() \(FBSDKAccessToken.current()) string \(String(describing: tokenString)) )")
+//                                FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, email, gender, birthday "]).start(completionHandler: { (connection, result, error) -> Void in
+//                                    if error == nil {
+//                                        let json = result as! [String : Any]
+//                                        print("FBSDKGraphRequest \(json)")
+//                                        let email = json["email"] as! String
+//                                        let id = json["id"] as! String
+//                                        let name = json["name"] as! String
+//                                        let gender = json["gender"] as! String
+//                                        let birthdate = json["birthday"] as! String
+//                                        print("facebook login suceseeded email \(email)) id \(id) id \(name) gender \(gender) birthData \(birthdate)  ")
+//
+//                                        //// Sync Cognito UserPool for facebook login //////////////////
+//                                        let customcedentialProvider = CustomIdentityProvider(tokens: ["graph.facebook.com" : tokenString!])
+//                                        let credentialsProvider = AWSCognitoCredentialsProvider(regionType: CognitoIdentityUserPoolRegion,
+//                                                                                                identityPoolId: CognitoFederatedIdentityUserPoolID,
+//                                                                                                unauthRoleArn: CognitoFedratedIAMRoleUnauthARN,
+//                                                                                                authRoleArn: CognitoFedratedIAMRoleAuthARN,
+//                                                                                                identityProviderManager: customcedentialProvider)
+//                                        let configuration = AWSServiceConfiguration(region:CognitoIdentityUserPoolRegion, credentialsProvider:credentialsProvider)
+//                                        AWSServiceManager.default().defaultServiceConfiguration = configuration
+//                                        credentialsProvider.getIdentityId()
+//                                        print("credentialsProvider.getIdentityId() \(credentialsProvider.getIdentityId())")
+//
+//                                        self.navigationController?.popToRootViewController(animated: true)
+//                                        self.dismiss(animated: true, completion: nil)
+//                                        print("didCompleteFBLogin  ~~~~~ No Error ----- and dismiss")
+//
+//                                    }else{
+//                                        print("FBSDKGraphRequest error")
+//                                    }
+//                                })
+//                            }
+//                        }
+//                    }
+                    
+                    
+                    
+                    
+                    
+                    
                     let pictureRequest = FBSDKGraphRequest(graphPath: "me", parameters: permissionDictionary)
                     let _ = pictureRequest?.start(completionHandler: {
                         (connection, result, error) -> Void in

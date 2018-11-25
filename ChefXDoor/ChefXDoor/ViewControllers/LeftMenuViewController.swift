@@ -61,6 +61,7 @@ class LeftMenuViewController: UIViewController {
         CXDApiServiceController.awsGetFromEndPoint(urlString: "/users/currentuser", queryParametersDict: nil, pathParametersDict: nil, classType: CXDCurrentUser.self).continueWith { (task) -> Any? in
             
             DispatchQueue.main.async {
+                HUD.hide()
                 if let error = task.error {
                     print("error : \(error)")
                 } else if let result = task.result {

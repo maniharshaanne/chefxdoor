@@ -25,13 +25,14 @@ class AppDelegate: UIResponder,UIApplicationDelegate,AWSIdentityProviderManager 
     public var currentUser: AWSCognitoIdentityUser?
     public var idToken:AWSCognitoIdentityUserSessionToken?
     public var accessToken:AWSCognitoIdentityUserSessionToken?
+    public var isUpdateTokenRequired:Bool = false
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions:
                 launchOptions)
         
-        var navigationBarAppearace = UINavigationBar.appearance()
+        let navigationBarAppearace = UINavigationBar.appearance()
 
         navigationBarAppearace.tintColor = UIColor.gray
         navigationBarAppearace.barTintColor = UIColor.white
@@ -227,4 +228,3 @@ extension AppDelegate: AWSCognitoIdentityRememberDevice {
         }
     }
 }
-
