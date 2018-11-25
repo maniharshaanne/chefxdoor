@@ -17,17 +17,14 @@ class SignInViewController: UIViewController, AWSCognitoIdentityPasswordAuthenti
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var curveView:UIView!
     @IBOutlet weak var loginButtonView: UIView!
+    @IBOutlet weak var googleSignupButton: UIButton!
+    @IBOutlet weak var facebookSignupButton:UIButton!
     
     var passwordAuthenticationCompletion: AWSTaskCompletionSource< AWSCognitoIdentityPasswordAuthenticationDetails>?
     var usernameText: String?
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.password.text = nil
-        self.username.text = usernameText
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-        
-        var curveLayer = CALayer()
+    override func viewDidLoad() {
+        let curveLayer = CALayer()
         curveView.layer.insertSublayer(curveLayer, at: 0)
         
         let layer = curveView.layer
@@ -52,12 +49,20 @@ class SignInViewController: UIViewController, AWSCognitoIdentityPasswordAuthenti
         
         loginButtonView.layer.cornerRadius = 25
         loginButtonView.layer.masksToBounds = true
+        
+        googleSignupButton.layer.cornerRadius = 20
+        facebookSignupButton.layer.cornerRadius = 20
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.password.text = nil
+        self.username.text = usernameText
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     @IBAction func signInPressed(_ sender: AnyObject) {
         if (self.username.text != nil && self.password.text != nil) {
-            
-            
             let authDetails = AWSCognitoIdentityPasswordAuthenticationDetails(username: self.username.text!, password: self.password.text!)
             self.passwordAuthenticationCompletion?.set(result: authDetails)
         } else {
