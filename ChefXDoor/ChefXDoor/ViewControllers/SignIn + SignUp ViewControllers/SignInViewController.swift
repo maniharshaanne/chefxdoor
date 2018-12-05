@@ -82,7 +82,7 @@ class SignInViewController: UIViewController, AWSCognitoIdentityPasswordAuthenti
             }
         }
     }
-    
+
     public func didCompleteStepWithError(_ error: Error?) {
         DispatchQueue.main.async {
             if let error = error as NSError? {
@@ -94,60 +94,102 @@ class SignInViewController: UIViewController, AWSCognitoIdentityPasswordAuthenti
                 
                 self.present(alertController, animated: true, completion:  nil)
             } else {
-                
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                
-                let user = appDelegate.currentUser
-                
-                if (user != nil)
-                    {
-                        user?.getDetails().continueOnSuccessWith(block: { (userRes) -> Any? in
-                            user?.getSession().continueOnSuccessWith(block: { (userSession) -> Any? in
-                                
-                                DispatchQueue.main.async {
-                                    let getSessionResult = userSession.result
-                                    appDelegate.idToken = getSessionResult?.idToken
-                                    appDelegate.accessToken = getSessionResult?.accessToken
-                                    
-                                    // Initialize the Amazon Cognito credentials provider
-                                    let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: CognitoIdentityPoolId, identityProviderManager: appDelegate)
-                                    let serviceConfiguration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)
-                                    
-                                    AWSServiceManager.default().defaultServiceConfiguration = serviceConfiguration
-                                    
-                                    CXDAWSApiClient.registerClient(withConfiguration: serviceConfiguration!, forKey: "USEast1CXDDEVAPIClient")
-                                    
-                                    // create pool configuration
-                                    let poolConfiguration = AWSCognitoIdentityUserPoolConfiguration(clientId: CognitoIdentityUserPoolAppClientId,
-                                                                                                    clientSecret: CognitoIdentityUserPoolAppClientSecret,
-                                                                                                    poolId: CognitoIdentityUserPoolId)
-                                    
-                                    // initialize user pool client
-                                    AWSCognitoIdentityUserPool.register(with: serviceConfiguration, userPoolConfiguration: poolConfiguration, forKey: AWSCognitoUserPoolsSignInProviderKey)
-                                    
-                                    // fetch the user pool client we initialized in above step
-                                    appDelegate.cxdIdentityUserPool = AWSCognitoIdentityUserPool(forKey: AWSCognitoUserPoolsSignInProviderKey)
-                                    appDelegate.cxdIdentityUserPool?.delegate = appDelegate
-                                    
-                                    appDelegate.currentUser = appDelegate.cxdIdentityUserPool?.currentUser()
-                                    
-                                    self.username.text = nil
-                                    self.dismiss(animated: true, completion: nil)
-                                    
-                                }
-                                return nil
-                                
-                            })
-                            return nil
-
-                        })
-                }
-                
-
-
+                appDelegate.isUpdateTokenRequired = true
+                self.username.text = nil
+                self.dismiss(animated: true, completion: nil)
             }
         }
-    }
+//        if let error = error as NSError? {
+//            let alertController = UIAlertController(title: error.userInfo["__type"] as? String,
+//                                                    message: error.userInfo["message"] as? String,
+//                                                    preferredStyle: .alert)
+//            let retryAction = UIAlertAction(title: "Retry", style: .default, handler: nil)
+//            alertController.addAction(retryAction)
+//
+//            self.present(alertController, animated: true, completion:  nil)
+//        } else {
+//
+//            self.username.text = nil
+//            self.dismiss(animated: true, completion: nil)
+        
+//            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//            let user = appDelegate.currentUser
+//            
+//            if (user != nil)
+//            {
+//                user?.getSession().continueWith(block: { (userSession) -> Any? in
+//                    //Test
+//                    //TEst
+//                    DispatchQueue.main.async {
+//                        if let error = userSession.error
+//                        {
+//                            let alertController = UIAlertController(title: "Error",
+//                                                                    message: error.localizedDescription,
+//                                                                    preferredStyle: .alert)
+//                            let retryAction = UIAlertAction(title: "Retry", style: .default, handler: nil)
+//                            alertController.addAction(retryAction)
+//                            self.present(alertController, animated: true, completion:  nil)
+//                        } else {
+//                            let getSessionResult = userSession.result
+//                            appDelegate.idToken = getSessionResult?.idToken
+//                            appDelegate.accessToken = getSessionResult?.accessToken
+//                            
+//                            // Initialize the Amazon Cognito credentials provider
+//                            let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "us-east-1:d82c05b6-d3fd-4490-86c4-e3d3d39bcfb5", identityProviderManager: appDelegate)
+//                            let serviceConfiguration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)
+//                            
+//                            AWSServiceManager.default().defaultServiceConfiguration = serviceConfiguration
+//                            
+//                            CXDAWSApiClient.registerClient(withConfiguration: serviceConfiguration!, forKey: "USEast1CXDDEVAPIClient")
+//                            
+//                            // create pool configuration
+//                            let poolConfiguration = AWSCognitoIdentityUserPoolConfiguration(clientId: CognitoIdentityUserPoolAppClientId,
+//                                                                                            clientSecret: CognitoIdentityUserPoolAppClientSecret,
+//                                                                                            poolId: CognitoIdentityUserPoolId)
+//                            
+//                            // initialize user pool client
+//                            AWSCognitoIdentityUserPool.register(with: serviceConfiguration, userPoolConfiguration: poolConfiguration, forKey: AWSCognitoUserPoolsSignInProviderKey)
+//                            
+//                            // fetch the user pool client we initialized in above step
+//                            appDelegate.cxdIdentityUserPool = AWSCognitoIdentityUserPool(forKey: AWSCognitoUserPoolsSignInProviderKey)
+//                            appDelegate.cxdIdentityUserPool?.delegate = appDelegate
+//                            
+//                            appDelegate.currentUser = appDelegate.cxdIdentityUserPool?.currentUser()
+//                            
+//                            self.username.text = nil
+//                            self.dismiss(animated: true, completion: nil)
+//                        }
+//                    }
+//                })
+//                //                        user?.getDetails().continueWith(block: { (detailResponse) -> Any? in
+//                //                            //Hello
+//                //                            DispatchQueue.main.async {
+//                //                                if let error = detailResponse.error {
+//                //                                    let alertController = UIAlertController(title: "Error",
+//                //                                                                            message: error.localizedDescription,
+//                //                                                                            preferredStyle: .alert)
+//                //                                    let retryAction = UIAlertAction(title: "Retry", style: .default, handler: nil)
+//                //                                    alertController.addAction(retryAction)
+//                //                                } else {
+//                //
+//                //                                }
+//                //                            }
+//                //                            return nil
+//                //                        })
+//                //                        user?.getSession().continueOnSuccessWith(block: { (userSession) -> Any? in
+//                //
+//                //                            DispatchQueue.main.async {
+//                //
+//                //
+//                //
+//                //                            }
+//                //                        })
+//                
+//            }
+//        }
+//    }
 }
 
+}
 

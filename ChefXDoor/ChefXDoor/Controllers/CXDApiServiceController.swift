@@ -18,7 +18,7 @@ class CXDApiServiceController{
     
     private init() {
         client = CXDAWSApiClient.client(forKey: "USEast1CXDDEVAPIClient")
-        client.apiKey = "zbT9ToJQNC9GdoHvJjPPM4eAB6axiHBB7iAdXfle"
+        client.apiKey = CXDAWSApiKey
     }
     
     public class func awsGetFromEndPoint(urlString:String, queryParametersDict:[String:Any]?, pathParametersDict:[String:Any]?, classType:AnyClass) -> AWSTask<AnyObject>
