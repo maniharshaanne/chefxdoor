@@ -180,7 +180,7 @@
                   moduleName = "ChefXDoor"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/manne/chefxdoor/ChefXDoor/ChefXDoor/ViewControllers/ChefDetailViewController.swift"
-                  timestampString = "564852065.045085"
+                  timestampString = "564972121.038571"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "80"
@@ -195,7 +195,7 @@
                   moduleName = "ChefXDoor"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/manne/chefxdoor/ChefXDoor/ChefXDoor/ViewControllers/ChefDetailViewController.swift"
-                  timestampString = "564852065.050251"
+                  timestampString = "564972121.0415601"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "81"
@@ -228,7 +228,7 @@
                   moduleName = "ChefXDoor"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/manne/chefxdoor/ChefXDoor/ChefXDoor/ViewControllers/ChefDetailViewController.swift"
-                  timestampString = "564852065.058862"
+                  timestampString = "564972121.047134"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "81"
@@ -243,7 +243,7 @@
                   moduleName = "ChefXDoor"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/manne/chefxdoor/ChefXDoor/ChefXDoor/ViewControllers/ChefDetailViewController.swift"
-                  timestampString = "564852065.062448"
+                  timestampString = "564972121.049556"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "82"
@@ -308,12 +308,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChefXDoor/ViewControllers/StartScreenViewController.swift"
-            timestampString = "564852064.869344"
+            timestampString = "564972957.4649889"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "76"
             endingLineNumber = "76"
-            landmarkName = "testApi(_:)"
+            landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -324,45 +324,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChefXDoor/ViewControllers/StartScreenViewController.swift"
-            timestampString = "564852064.869755"
+            timestampString = "564972957.465534"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "88"
             endingLineNumber = "88"
-            landmarkName = "getMeals(token:)"
+            landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ChefXDoor.StartScreenViewController.getMeals(token: Swift.String) -&gt; ()"
-                  moduleName = "ChefXDoor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/manne/chefxdoor/ChefXDoor/ChefXDoor/ViewControllers/StartScreenViewController.swift"
-                  timestampString = "564852065.098768"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "29">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__ObjC.AWSTask&lt;Swift.AnyObject&gt;) -&gt; Swift.Optional&lt;Any&gt; in ChefXDoor.StartScreenViewController.getMeals(token: Swift.String) -&gt; ()"
-                  moduleName = "ChefXDoor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/manne/chefxdoor/ChefXDoor/ChefXDoor/ViewControllers/StartScreenViewController.swift"
-                  timestampString = "564852065.102785"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "21">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -372,12 +340,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChefXDoor/ViewControllers/StartScreenViewController.swift"
-            timestampString = "564852064.869868"
+            timestampString = "564972957.465885"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "91"
             endingLineNumber = "91"
-            landmarkName = "getMeals(token:)"
+            landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -388,45 +356,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChefXDoor/ViewControllers/StartScreenViewController.swift"
-            timestampString = "564852064.869975"
+            timestampString = "564972957.4662451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "89"
             endingLineNumber = "89"
-            landmarkName = "getMeals(token:)"
+            landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__ObjC.AWSTask&lt;Swift.AnyObject&gt;) -&gt; Swift.Optional&lt;Any&gt; in ChefXDoor.StartScreenViewController.getMeals(token: Swift.String) -&gt; ()"
-                  moduleName = "ChefXDoor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/manne/chefxdoor/ChefXDoor/ChefXDoor/ViewControllers/StartScreenViewController.swift"
-                  timestampString = "564852065.1191159"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "21">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 (__ObjC.AWSTask&lt;Swift.AnyObject&gt;) -&gt; Swift.Optional&lt;Any&gt; in ChefXDoor.StartScreenViewController.getMeals(token: Swift.String) -&gt; ()"
-                  moduleName = "ChefXDoor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/manne/chefxdoor/ChefXDoor/ChefXDoor/ViewControllers/StartScreenViewController.swift"
-                  timestampString = "564852065.12282"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "91"
-                  endingLineNumber = "91"
-                  offsetFromSymbolStart = "18">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -436,7 +372,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChefXDoor/AppDelegate.swift"
-            timestampString = "564852064.8700809"
+            timestampString = "565241543.9141001"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "107"
@@ -452,7 +388,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChefXDoor/AppDelegate.swift"
-            timestampString = "564852064.8703901"
+            timestampString = "565241543.914688"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "112"
@@ -468,7 +404,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChefXDoor/AppDelegate.swift"
-            timestampString = "564852064.870495"
+            timestampString = "565241543.9150929"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "131"
@@ -484,7 +420,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChefXDoor/ViewControllers/SignIn + SignUp ViewControllers/SignInViewController.swift"
-            timestampString = "564852064.870602"
+            timestampString = "565241543.915458"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "81"
@@ -500,7 +436,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChefXDoor/ViewControllers/SignIn + SignUp ViewControllers/SignInViewController.swift"
-            timestampString = "564852064.871353"
+            timestampString = "565241543.915548"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"
@@ -516,7 +452,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChefXDoor/ViewControllers/SignIn + SignUp ViewControllers/SignInViewController.swift"
-            timestampString = "564852064.872241"
+            timestampString = "565241543.915622"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "73"
@@ -532,7 +468,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChefXDoor/AppDelegate.swift"
-            timestampString = "564852064.872859"
+            timestampString = "565241543.915686"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "106"
@@ -548,13 +484,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChefXDoor/ViewControllers/StartScreenViewController.swift"
-            timestampString = "564852064.872945"
+            timestampString = "564972957.467113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
             endingLineNumber = "56"
-            landmarkName = "viewWillAppear(_:)"
+            landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ChefXDoor.StartScreenViewController.viewDidAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "ChefXDoor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/manne/chefxdoor/ChefXDoor/ChefXDoor/ViewControllers/StartScreenViewController.swift"
+                  timestampString = "564972121.113901"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "422">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__ObjC.AWSTask&lt;__ObjC.AWSCognitoIdentityUserGetDetailsResponse&gt;) -&gt; Swift.Optional&lt;Any&gt; in ChefXDoor.StartScreenViewController.viewDidAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "ChefXDoor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/manne/chefxdoor/ChefXDoor/ChefXDoor/ViewControllers/StartScreenViewController.swift"
+                  timestampString = "564972121.1161259"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "23">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -564,13 +532,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChefXDoor/ViewControllers/StartScreenViewController.swift"
-            timestampString = "564852064.8730249"
+            timestampString = "564972957.467513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "124"
             endingLineNumber = "124"
-            landmarkName = "refreshUserToken()"
+            landmarkName = "getMeals(token:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ChefXDoor.StartScreenViewController.getMeals(token: Swift.String) -&gt; ()"
+                  moduleName = "ChefXDoor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/manne/chefxdoor/ChefXDoor/ChefXDoor/ViewControllers/StartScreenViewController.swift"
+                  timestampString = "564972121.121546"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "29">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__ObjC.AWSTask&lt;Swift.AnyObject&gt;) -&gt; Swift.Optional&lt;Any&gt; in ChefXDoor.StartScreenViewController.getMeals(token: Swift.String) -&gt; ()"
+                  moduleName = "ChefXDoor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/manne/chefxdoor/ChefXDoor/ChefXDoor/ViewControllers/StartScreenViewController.swift"
+                  timestampString = "564972121.123947"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "21">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -580,13 +580,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChefXDoor/ViewControllers/StartScreenViewController.swift"
-            timestampString = "564852064.8730969"
+            timestampString = "564972957.467896"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "129"
             endingLineNumber = "129"
-            landmarkName = "refreshUserToken()"
+            landmarkName = "getMeals(token:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ChefXDoor.StartScreenViewController.getMeals(token: Swift.String) -&gt; ()"
+                  moduleName = "ChefXDoor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/manne/chefxdoor/ChefXDoor/ChefXDoor/ViewControllers/StartScreenViewController.swift"
+                  timestampString = "564972121.130208"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "934">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__ObjC.AWSTask&lt;Swift.AnyObject&gt;) -&gt; Swift.Optional&lt;Any&gt; in ChefXDoor.StartScreenViewController.getMeals(token: Swift.String) -&gt; ()"
+                  moduleName = "ChefXDoor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/manne/chefxdoor/ChefXDoor/ChefXDoor/ViewControllers/StartScreenViewController.swift"
+                  timestampString = "564972121.132355"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "318">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -596,7 +628,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChefXDoor/ViewControllers/StartScreenViewController.swift"
-            timestampString = "564852064.873168"
+            timestampString = "564972957.468222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
@@ -612,43 +644,107 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChefXDoor/ViewControllers/StartScreenViewController.swift"
-            timestampString = "564852064.8732359"
+            timestampString = "564972957.468653"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "122"
             endingLineNumber = "122"
-            landmarkName = "refreshUserToken()"
+            landmarkName = "getMeals(token:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ChefXDoor/ViewControllers/StartScreenViewController.swift"
+            timestampString = "564972957.468998"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "showResult(task:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ChefXDoor/ViewControllers/StartScreenViewController.swift"
+            timestampString = "564972957.4693"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "showResult(task:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ChefXDoor/ViewControllers/StartScreenViewController.swift"
+            timestampString = "564972957.469619"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "showResult(task:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ChefXDoor/ViewControllers/StartScreenViewController.swift"
+            timestampString = "564972957.46992"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "showResult(task:)"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "ChefXDoor.StartScreenViewController.refreshUserToken() -&gt; ()"
+                  symbolName = "ChefXDoor.StartScreenViewController.showResult(task: __ObjC.AWSTask&lt;Swift.AnyObject&gt;) -&gt; ()"
                   moduleName = "ChefXDoor"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/manne/chefxdoor/ChefXDoor/ChefXDoor/ViewControllers/StartScreenViewController.swift"
-                  timestampString = "564852065.204108"
+                  timestampString = "564972156.454597"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "122"
-                  endingLineNumber = "122"
-                  offsetFromSymbolStart = "245">
+                  startingLineNumber = "135"
+                  endingLineNumber = "135"
+                  offsetFromSymbolStart = "658">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__ObjC.AWSTask&lt;__ObjC.AWSCognitoIdentityUserSession&gt;) -&gt; Swift.Optional&lt;Any&gt; in ChefXDoor.StartScreenViewController.refreshUserToken() -&gt; ()"
+                  symbolName = "ChefXDoor.StartScreenViewController.showResult(task: __ObjC.AWSTask&lt;Swift.AnyObject&gt;) -&gt; ()"
                   moduleName = "ChefXDoor"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/manne/chefxdoor/ChefXDoor/ChefXDoor/ViewControllers/StartScreenViewController.swift"
-                  timestampString = "564852065.207875"
+                  timestampString = "564972156.459193"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "123"
-                  endingLineNumber = "123"
-                  offsetFromSymbolStart = "21">
+                  startingLineNumber = "135"
+                  endingLineNumber = "135"
+                  offsetFromSymbolStart = "675">
                </Location>
             </Locations>
          </BreakpointContent>

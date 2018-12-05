@@ -109,7 +109,7 @@ class AppDelegate: UIResponder,UIApplicationDelegate,AWSIdentityProviderManager 
         
         if let token = self.idToken?.tokenString
         {
-            return AWSTask(result: ["cognito-idp.us-east-1.amazonaws.com/us-east-1_8RENSlJ3A" : token])
+            return AWSTask(result: [CognitoUserPoolTokenString : token])
         }
         
 //        if (self.currentUser == nil) {

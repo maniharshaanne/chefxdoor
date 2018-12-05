@@ -110,7 +110,7 @@ class SignInViewController: UIViewController, AWSCognitoIdentityPasswordAuthenti
                                     appDelegate.accessToken = getSessionResult?.accessToken
                                     
                                     // Initialize the Amazon Cognito credentials provider
-                                    let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "us-east-1:d82c05b6-d3fd-4490-86c4-e3d3d39bcfb5", identityProviderManager: appDelegate)
+                                    let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: CognitoIdentityPoolId, identityProviderManager: appDelegate)
                                     let serviceConfiguration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)
                                     
                                     AWSServiceManager.default().defaultServiceConfiguration = serviceConfiguration
