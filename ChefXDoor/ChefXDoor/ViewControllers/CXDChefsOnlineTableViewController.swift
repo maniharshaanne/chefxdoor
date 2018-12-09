@@ -56,4 +56,5 @@ class CXDChefsOnlineTableViewController: UIViewController, UITableViewDelegate, 
             }
         }
     }
+    
 }

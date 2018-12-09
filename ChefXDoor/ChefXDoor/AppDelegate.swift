@@ -25,6 +25,7 @@ class AppDelegate: UIResponder,UIApplicationDelegate,AWSIdentityProviderManager 
     public var currentUser: AWSCognitoIdentityUser?
     public var idToken:AWSCognitoIdentityUserSessionToken?
     public var accessToken:AWSCognitoIdentityUserSessionToken?
+    public var refreshToken:AWSCognitoIdentityUserSessionToken?
     public var isUpdateTokenRequired:Bool = false
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -47,8 +48,8 @@ class AppDelegate: UIResponder,UIApplicationDelegate,AWSIdentityProviderManager 
         //Setup up rootViewController
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let leftMenuVC: LeftMenuViewController = mainStoryboard.instantiateViewController(withIdentifier: "MenuViewController") as! LeftMenuViewController
-        let userDetailVC: StartScreenViewController = mainStoryboard.instantiateViewController(withIdentifier: "StartScreenViewController") as! StartScreenViewController
-        let userDetailNavVC = UINavigationController(rootViewController: userDetailVC)
+        let recommendationsViewController: RecommendationsViewController = mainStoryboard.instantiateViewController(withIdentifier: "RecommendationsViewController") as! RecommendationsViewController
+        let recommendationsNavVC = UINavigationController(rootViewController: recommendationsViewController)
         
         let rootController: FAPanelController = self.window?.rootViewController as! FAPanelController
         
@@ -59,13 +60,14 @@ class AppDelegate: UIResponder,UIApplicationDelegate,AWSIdentityProviderManager 
         } else {
             // Fallback on earlier versions
         }
-        _ = rootController.center(userDetailNavVC).left(leftMenuVC)
+        _ = rootController.center(recommendationsNavVC).left(leftMenuVC)
         
         self.storyboard = UIStoryboard(name: "Login", bundle: nil)
     }
     
     func setupAWSConfiguration()
     {
+        isUpdateTokenRequired = true
         // Warn user if configuration not updated
         if (CognitoIdentityUserPoolId == "us-east-1_8RENSlJ3A") {
             let alertController = UIAlertController(title: "Invalid Configuration",
@@ -83,6 +85,10 @@ class AppDelegate: UIResponder,UIApplicationDelegate,AWSIdentityProviderManager 
         // setup service configuration
         let serviceConfiguration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:nil)
         
+        AWSServiceManager.default().defaultServiceConfiguration = serviceConfiguration
+
+        CXDAWSApiClient.registerClient(withConfiguration: serviceConfiguration!, forKey: "USEast1CXDDEVAPIClient")
+        
         // create pool configuration
         let poolConfiguration = AWSCognitoIdentityUserPoolConfiguration(clientId: CognitoIdentityUserPoolAppClientId,
                                                                         clientSecret: CognitoIdentityUserPoolAppClientSecret,
@@ -95,6 +101,35 @@ class AppDelegate: UIResponder,UIApplicationDelegate,AWSIdentityProviderManager 
         cxdIdentityUserPool = AWSCognitoIdentityUserPool(forKey: AWSCognitoUserPoolsSignInProviderKey)
         currentUser = cxdIdentityUserPool?.currentUser()
         cxdIdentityUserPool?.delegate = self
+    }
+    
+    func setupAWSConfiguration(userSession: AWSCognitoIdentityUserSession)
+    {
+        isUpdateTokenRequired = false
+        self.idToken = userSession.idToken
+        self.accessToken = userSession.accessToken
+        self.refreshToken = userSession.refreshToken
+        
+        // Initialize the Amazon Cognito credentials provider
+        let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: CognitoIdentityPoolId, identityProviderManager: self)
+        let serviceConfiguration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)
+        
+        AWSServiceManager.default().defaultServiceConfiguration = serviceConfiguration
+        
+        CXDAWSApiClient.registerClient(withConfiguration: serviceConfiguration!, forKey: "USEast1CXDDEVAPIClient")
+        
+        // create pool configuration
+        let poolConfiguration = AWSCognitoIdentityUserPoolConfiguration(clientId: CognitoIdentityUserPoolAppClientId,
+                                                                        clientSecret: CognitoIdentityUserPoolAppClientSecret,
+                                                                        poolId: CognitoIdentityUserPoolId)
+        
+        // initialize user pool client
+        AWSCognitoIdentityUserPool.register(with: serviceConfiguration, userPoolConfiguration: poolConfiguration, forKey: AWSCognitoUserPoolsSignInProviderKey)
+        
+        // fetch the user pool client we initialized in above step
+        self.cxdIdentityUserPool = AWSCognitoIdentityUserPool(forKey: AWSCognitoUserPoolsSignInProviderKey)
+        self.cxdIdentityUserPool?.delegate = self
+        self.currentUser = self.cxdIdentityUserPool?.currentUser()
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool{
@@ -112,22 +147,6 @@ class AppDelegate: UIResponder,UIApplicationDelegate,AWSIdentityProviderManager 
             return AWSTask(result: [CognitoUserPoolTokenString : token])
         }
         
-//        if (self.currentUser == nil) {
-//            self.currentUser = self.cxdIdentityUserPool?.currentUser()
-//        }
-//
-//        self.currentUser?.getSession().continueOnSuccessWith(block: { (getSessionTask) -> Any? in
-//
-//            let getSessionResult = getSessionTask.result
-//            self.idToken = getSessionResult?.idToken
-//            self.accessToken = getSessionResult?.accessToken
-//
-//            if let token = self.accessToken?.tokenString
-//            {
-//                return AWSTask(result: [AWSIdentityProviderAmazonCognitoIdentity : token])
-//            }
-//        })
-
         return AWSTask(error:NSError(domain: "Login", code: -1 , userInfo: ["NoToken" : "No current Facebook access token"]))
     }
 }

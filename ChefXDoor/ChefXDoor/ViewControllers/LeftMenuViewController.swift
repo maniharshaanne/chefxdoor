@@ -50,8 +50,9 @@ class LeftMenuViewController: UIViewController {
         let paymentMethodsMenuItem = CXDAppMenuItem(title: "PAYMENT METHODS", imageName: "PaymentMethods", menuType: .PaymentMethods)
         let searchMenuItem = CXDAppMenuItem(title: "SEARCH CHEFXDOOR", imageName: "SearchChefxdoor", menuType: .Search)
         let helpMenuItem = CXDAppMenuItem(title: "HELP", imageName: "Help", menuType: .Help)
-        
-        let menuItemsArray = [exploreFoodMenuItem, myFavouritesMenuItem, orderHistoryMenuItem, paymentMethodsMenuItem, searchMenuItem, helpMenuItem]
+        let logoutMenuItem = CXDAppMenuItem(title: "Logout", imageName: "Help", menuType: .Logout)
+
+        let menuItemsArray = [exploreFoodMenuItem, myFavouritesMenuItem, orderHistoryMenuItem, paymentMethodsMenuItem, searchMenuItem, helpMenuItem, logoutMenuItem]
         
         return menuItemsArray
     }
@@ -131,6 +132,13 @@ extension LeftMenuViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 panel?.center(pastOrderNavVC)
                 
+            break
+            
+        case .Logout? :
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let userPool = appDelegate.cxdIdentityUserPool
+            let user = userPool?.currentUser()
+            user?.signOut()
             break
             
             default:

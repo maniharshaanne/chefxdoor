@@ -20,7 +20,7 @@ class MealsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         self.navigationItem.rightBarButtonItems = customRightBarButtonItems()
         mealsTableView.rowHeight = UITableViewAutomaticDimension
-        mealsTableView.estimatedRowHeight = 90
+        mealsTableView.estimatedRowHeight = 200
         mealsTableView.register(UINib.init(nibName: "CXDMealTableViewCell", bundle: Bundle.init(for: CXDMealTableViewCell.self)), forCellReuseIdentifier: "CXDMealTableViewCell")
     }
     

@@ -23,13 +23,10 @@ class RecommendationsViewController : UIViewController,UITableViewDelegate,UITab
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         recommendedMealsTableView.rowHeight = UITableViewAutomaticDimension
-        recommendedMealsTableView.estimatedRowHeight = 90
+        recommendedMealsTableView.estimatedRowHeight = 200
         recommendedMealsTableView.register(UINib.init(nibName: "CXDMealTableViewCell", bundle: Bundle.init(for: CXDMealTableViewCell.self)), forCellReuseIdentifier: "CXDMealTableViewCell")
-        recommendedMealsTableView.reloadData()
-        recommendedMealsTableView.layoutIfNeeded()
-        tableViewHeightConstraint.constant = recommendedMealsTableView.contentSize.height
         
         self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
         self.navigationItem.rightBarButtonItems = customRightBarButtonItems()
@@ -49,37 +46,63 @@ class RecommendationsViewController : UIViewController,UITableViewDelegate,UITab
         searchView.layer.borderColor = UIColor(red: 246/256, green: 102/256, blue: 71/256, alpha: 1).cgColor
         searchView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(searchViewTapped)))
         
-//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//        let searchResultsViewController = storyBoard.instantiateViewController(withIdentifier: "CXDSearchResultsViewController") as! CXDSearchResultsViewController
-//        let searchController = UISearchController(searchResultsController: searchResultsViewController)
-//        searchController.searchResultsUpdater = searchResultsViewController
-//        searchController.obscuresBackgroundDuringPresentation = true
-//        searchController.searchBar.placeholder = "Search meals/chefs"
-//        searchController.searchBar.scopeButtonTitles = ["Chefs", "Meals"]
-
-//        if #available(iOS 11.0, *) {
-//            navigationItem.searchController = searchController
-//        } else {
-//            // Fallback on earlier versions
-//        }
-//        definesPresentationContext = true
+        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        if appdelegate.isUpdateTokenRequired
+        {
+            self.updateUserToken()
+        } else {
+            self.getMeals(token: "")
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
- 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
         return recommendedMeals?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = recommendedMealsTableView.dequeueReusableCell(withIdentifier: "CXDMealTableViewCell") as! CXDMealTableViewCell
         cell.updateInfo(meal: recommendedMeals![indexPath.row])
         return cell
+    }
+    
+    func updateUserToken()  {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        if let user = appDelegate.currentUser
+        {
+            user.getSession().continueWith(block: { (userSession) -> Any? in
+                DispatchQueue.main.async {
+                    if let getSessionResult = userSession.result
+                    {
+                        appDelegate.setupAWSConfiguration(userSession: getSessionResult)
+                        self.getMeals(token: "")
+                    }
+                }
+            })
+        } else {
+            //Load Login Screen
+        }
+    }
+
+    func getMeals(token:String)
+    {
+        CXDApiServiceController.awsGetFromEndPoint(urlString: "/meals/recommended", queryParametersDict: ["lat" : 38.994373, "long" : -77.029778, "distance" : 10, "page" : 0, "sort":"price"], pathParametersDict: nil, classType: CXDMeal.self).continueWith { (task) -> Any? in
+            
+            DispatchQueue.main.async {
+                if let error = task.error {
+                    print("Error: \(error)")
+                } else if let result = task.result {
+                    let res = result as! Array<CXDMeal>
+                    self.recommendedMeals = res
+                    self.recommendedMealsTableView.reloadData()
+                    self.recommendedMealsTableView.layoutIfNeeded()
+                    self.tableViewHeightConstraint.constant = self.recommendedMealsTableView.contentSize.height
+                }
+            }
+        }
     }
     
     @objc func categoriesViewTapped()
@@ -87,30 +110,18 @@ class RecommendationsViewController : UIViewController,UITableViewDelegate,UITab
         CXDApiServiceController.awsGetFromEndPoint(urlString: "/meals/categories", queryParametersDict: ["lat" : 38.99437, "long" : -77.02977, "distance" : 10], pathParametersDict: nil, classType: CXDMealCategory.self).continueWith { (task) -> Any? in
 
             DispatchQueue.main.async {
-                self.showResult(task: task )
+                if let error = task.error {
+                    print("Error: \(error)")
+                } else if let result = task.result{
+                    
+                    let res = result as! Array<CXDMealCategory>
+                    let storyboard = UIStoryboard(name: "Main", bundle: Bundle.init(for: MealCategoriesViewController.self))
+                    let mealCategoriesViewController = storyboard.instantiateViewController(withIdentifier: "MealCategoriesViewController") as! MealCategoriesViewController
+                    mealCategoriesViewController.categoryArray = res
+                    self.navigationController!.pushViewController(mealCategoriesViewController, animated: true)
+                    //self.present(mealCategoriesViewController, animated: true, completion: nil)
+                }
             }
-        }
-    }
-    
-    @objc func searchViewTapped(sender: UIBarButtonItem) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let searchResultsViewController = storyBoard.instantiateViewController(withIdentifier: "CXDSearchResultsViewController") as! CXDSearchResultsViewController
-        let searchResultsNavigationViewController = UINavigationController(rootViewController: searchResultsViewController)
-        panel?.configs.changeCenterPanelAnimated = false
-        panel?.center(searchResultsNavigationViewController)
-    }
-    
-    func showResult(task: AWSTask<AnyObject>) {
-        if let error = task.error {
-            print("Error: \(error)")
-        } else if let result = task.result{
-            
-            let res = result as! Array<CXDMealCategory>
-            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.init(for: MealCategoriesViewController.self))
-            let mealCategoriesViewController = storyboard.instantiateViewController(withIdentifier: "MealCategoriesViewController") as! MealCategoriesViewController
-            mealCategoriesViewController.categoryArray = res
-            self.navigationController!.pushViewController(mealCategoriesViewController, animated: true)
-            //self.present(mealCategoriesViewController, animated: true, completion: nil)
         }
     }
     
@@ -134,4 +145,15 @@ class RecommendationsViewController : UIViewController,UITableViewDelegate,UITab
         }
     }
     
+    @objc func searchViewTapped(sender: UIBarButtonItem) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let searchResultsViewController = storyBoard.instantiateViewController(withIdentifier: "CXDSearchResultsViewController") as! CXDSearchResultsViewController
+        let searchResultsNavigationViewController = UINavigationController(rootViewController: searchResultsViewController)
+        panel?.configs.changeCenterPanelAnimated = false
+        panel?.center(searchResultsNavigationViewController)
+    }
+}
+
+extension RecommendationsViewController {
+
 }

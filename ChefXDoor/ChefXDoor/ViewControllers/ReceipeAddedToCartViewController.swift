@@ -22,12 +22,10 @@ public class ReceipeAddedToCartViewController: UIViewController {
     }
     
     @IBAction func checkOutButtonTapped(_ sender: Any) {
-        
         if let callback = self.checkOutCompletionHandler {
             callback ()
         }
     }
-    
 }
 
 extension ReceipeAddedToCartViewController: MIBlurPopupDelegate {
@@ -47,9 +45,4 @@ extension ReceipeAddedToCartViewController: MIBlurPopupDelegate {
     public var animationDuration: TimeInterval {
         return 1.0
     }
-    
-    
-    
-
-    
 }

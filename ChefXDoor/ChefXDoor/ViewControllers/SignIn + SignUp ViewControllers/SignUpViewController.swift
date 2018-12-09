@@ -15,11 +15,10 @@ class SignUpViewController: UIViewController {
     var pool: AWSCognitoIdentityUserPool?
     var sentTo: String?
     
+    @IBOutlet weak var email: UITextField!
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
-    
-    @IBOutlet weak var phone: UITextField!
-    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var confirmPassword: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,32 +39,23 @@ class SignUpViewController: UIViewController {
     @IBAction func signUp(_ sender: AnyObject) {
         
         guard let userNameValue = self.username.text, !userNameValue.isEmpty,
-            let passwordValue = self.password.text, !passwordValue.isEmpty else {
+            let passwordValue = self.password.text, !passwordValue.isEmpty,
+            let emailValue = self.email.text, !emailValue.isEmpty else {
                 let alertController = UIAlertController(title: "Missing Required Fields",
                                                         message: "Username / Password are required for registration.",
                                                         preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
                 alertController.addAction(okAction)
-                
+
                 self.present(alertController, animated: true, completion:  nil)
                 return
         }
         
         var attributes = [AWSCognitoIdentityUserAttributeType]()
-        
-        if let phoneValue = self.phone.text, !phoneValue.isEmpty {
-            let phone = AWSCognitoIdentityUserAttributeType()
-            phone?.name = "phone_number"
-            phone?.value = phoneValue
-            attributes.append(phone!)
-        }
-        
-        if let emailValue = self.email.text, !emailValue.isEmpty {
-            let email = AWSCognitoIdentityUserAttributeType()
-            email?.name = "email"
-            email?.value = emailValue
-            attributes.append(email!)
-        }
+        let emailAttribte = AWSCognitoIdentityUserAttributeType()
+        emailAttribte?.name = "email"
+        emailAttribte?.value = emailValue
+        attributes.append(emailAttribte!)
         
         //sign up the user
         self.pool?.signUp(userNameValue, password: passwordValue, userAttributes: attributes, validationData: nil).continueWith {[weak self] (task) -> Any? in

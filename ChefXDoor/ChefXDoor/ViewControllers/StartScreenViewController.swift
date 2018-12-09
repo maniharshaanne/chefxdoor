@@ -33,7 +33,8 @@ class StartScreenViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         self.pool = appDelegate.cxdIdentityUserPool
         self.pool?.delegate = appDelegate
-        if (self.user == nil) {
+        if (self.user == nil)
+        {
             self.user = self.pool?.currentUser()
         }
 
@@ -48,13 +49,8 @@ class StartScreenViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        if(appDelegate.isUpdateTokenRequired)
-        {
-            self.user = appDelegate.currentUser
-            refreshUserToken()
-        }
+    override func viewWillAppear(_ animated: Bool)
+    {
         super.viewWillAppear(animated)
         self.navigationController?.setToolbarHidden(false, animated: true)
     }
@@ -85,20 +81,16 @@ class StartScreenViewController: UIViewController {
         CXDApiServiceController.awsGetFromEndPoint(urlString: "/meals/recommended", queryParametersDict: ["lat" : 38.994373, "long" : -77.029778, "distance" : 10, "page" : 0, "sort":"price"], pathParametersDict: nil, classType: CXDMeal.self).continueWith { (task) -> Any? in
             
             DispatchQueue.main.async {
-                self.showResult(task: task )
+                if let error = task.error {
+                    print("Error: \(error)")
+                } else if let result = task.result {
+                    let res = result as! Array<CXDMeal>
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let recommendationsViewController = storyboard.instantiateViewController(withIdentifier: "RecommendationsViewController") as! RecommendationsViewController
+                    recommendationsViewController.recommendedMeals = res
+                    self.navigationController?.pushViewController(recommendationsViewController, animated: true)
+                }
             }
-        }
-    }
-
-    func showResult(task: AWSTask<AnyObject>) {
-        if let error = task.error {
-            print("Error: \(error)")
-        } else if let result = task.result{
-            let res = result as! Array<CXDMeal>
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let recommendationsViewController = storyboard.instantiateViewController(withIdentifier: "RecommendationsViewController") as! RecommendationsViewController
-            recommendationsViewController.recommendedMeals = res
-            self.navigationController?.pushViewController(recommendationsViewController, animated: true)
         }
     }
     
@@ -115,36 +107,16 @@ class StartScreenViewController: UIViewController {
     
     func refreshUserToken()  {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
         
-        self.user?.getSession().continueOnSuccessWith(block: { (userSession) -> Any? in
+        self.user?.getSession().continueWith(block: { (userSession) -> Any? in
             DispatchQueue.main.async {
-                let getSessionResult = userSession.result
-                appDelegate.idToken = getSessionResult?.idToken
-                appDelegate.accessToken = getSessionResult?.accessToken
-                
-                // Initialize the Amazon Cognito credentials provider
-                let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: CognitoIdentityPoolId, identityProviderManager: appDelegate)
-                let serviceConfiguration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)
-                
-                AWSServiceManager.default().defaultServiceConfiguration = serviceConfiguration
-                
-                CXDAWSApiClient.registerClient(withConfiguration: serviceConfiguration!, forKey: "USEast1CXDDEVAPIClient")
-                
-                // create pool configuration
-                let poolConfiguration = AWSCognitoIdentityUserPoolConfiguration(clientId: CognitoIdentityUserPoolAppClientId,
-                                                                                clientSecret: CognitoIdentityUserPoolAppClientSecret,
-                                                                                poolId: CognitoIdentityUserPoolId)
-                
-                // initialize user pool client
-                AWSCognitoIdentityUserPool.register(with: serviceConfiguration, userPoolConfiguration: poolConfiguration, forKey: AWSCognitoUserPoolsSignInProviderKey)
-                
-                // fetch the user pool client we initialized in above step
-                appDelegate.cxdIdentityUserPool = AWSCognitoIdentityUserPool(forKey: AWSCognitoUserPoolsSignInProviderKey)
-                appDelegate.cxdIdentityUserPool?.delegate = appDelegate
-                appDelegate.currentUser = appDelegate.cxdIdentityUserPool?.currentUser()
-                self.getMeals(token: "")
+                if let getSessionResult = userSession.result
+                {
+                    appDelegate.setupAWSConfiguration(userSession: getSessionResult)
+                    self.getMeals(token: "")
+                }
             }
         })
     }
-    
 }

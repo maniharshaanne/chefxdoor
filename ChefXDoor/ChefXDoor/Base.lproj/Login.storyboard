@@ -390,7 +390,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.35819172859191895" green="0.35848766565322876" blue="0.35823759436607361" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="mtG-YK-n5r" firstAttribute="leading" secondItem="Sdz-qR-33f" secondAttribute="leading" id="9Ot-cE-BQW"/>
                             <constraint firstItem="Sdz-qR-33f" firstAttribute="leading" secondItem="JYs-vr-hYQ" secondAttribute="leading" id="Nl4-M4-n3c"/>
@@ -413,7 +413,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zUh-T5-Jd6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="313" y="919"/>
+            <point key="canvasLocation" x="406" y="859"/>
         </scene>
         <!--SignUp-->
         <scene sceneID="9Ca-89-kEE">
@@ -507,7 +507,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JIh-f0-ebO">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="45"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJg-BK-2kN">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USERNAME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJg-BK-2kN">
                                                         <rect key="frame" x="5" y="12" width="70" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="y5e-kP-OKs"/>
@@ -551,7 +551,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="shr-qh-42Y">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="45"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONFIRM PW" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ns-kh-4it">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ns-kh-4it">
                                                         <rect key="frame" x="5" y="12" width="70" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="Djy-5T-lTl"/>
@@ -595,12 +595,12 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QyH-uf-sr0">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="45"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PHONE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vos-sK-8si">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONFIRM PW" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vos-sK-8si">
                                                         <rect key="frame" x="5" y="12" width="70" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="12A-73-ijJ"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                         <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -710,9 +710,10 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="email" destination="zgP-HY-wCk" id="UTC-NK-xmR"/>
-                        <outlet property="password" destination="eU9-4L-nGC" id="9LN-um-Yw7"/>
-                        <outlet property="phone" destination="baJ-fk-V9f" id="qs9-np-Ssb"/>
+                        <outlet property="confirmPassword" destination="baJ-fk-V9f" id="EDF-bD-Smh"/>
+                        <outlet property="email" destination="zgP-HY-wCk" id="pXe-Ft-QhB"/>
+                        <outlet property="password" destination="xD0-9y-WGZ" id="1ia-RR-O7f"/>
+                        <outlet property="username" destination="eU9-4L-nGC" id="PkI-2h-QPY"/>
                         <segue destination="v9X-mb-3z2" kind="show" identifier="confirmSignUpSegue" id="jiZ-5g-4xK">
                             <nil key="action"/>
                         </segue>
@@ -788,7 +789,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.35819172859191895" green="0.35848766565322876" blue="0.35823759436607361" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3D2-6K-Eqj" firstAttribute="trailing" secondItem="tW1-xi-WY4" secondAttribute="trailing" id="0H0-ca-02c"/>
                             <constraint firstItem="ioD-m8-oCg" firstAttribute="leading" secondItem="02c-sP-UKj" secondAttribute="leading" id="3FJ-yS-vNX"/>
@@ -894,7 +895,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.35819172859191895" green="0.35848766565322876" blue="0.35823759436607361" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="n3X-Ui-iQw" firstAttribute="top" secondItem="CYa-KN-7T9" secondAttribute="bottom" constant="8" symbolic="YES" id="3IL-cr-YQ0"/>
                             <constraint firstItem="CYa-KN-7T9" firstAttribute="top" secondItem="mgg-uk-jgy" secondAttribute="bottom" constant="2" id="4eM-ss-caG"/>
@@ -920,7 +921,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ioq-OI-8nX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1163" y="919"/>
+            <point key="canvasLocation" x="1177" y="859"/>
         </scene>
     </scenes>
     <resources>
