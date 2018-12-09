@@ -115,6 +115,9 @@
 		FE07F5C92172209300EFA59D /* CXDChef.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5622172209200EFA59D /* CXDChef.swift */; };
 		FE07F5CA2172209300EFA59D /* CXDChef.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5622172209200EFA59D /* CXDChef.swift */; };
 		FE07F5CB2172209300EFA59D /* CXDChef.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07F5622172209200EFA59D /* CXDChef.swift */; };
+		FE0EE30C21BD63C3003C3FA5 /* CXDOrderStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0EE30B21BD63C3003C3FA5 /* CXDOrderStatusViewController.swift */; };
+		FE0EE30D21BD63C3003C3FA5 /* CXDOrderStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0EE30B21BD63C3003C3FA5 /* CXDOrderStatusViewController.swift */; };
+		FE0EE30E21BD63C3003C3FA5 /* CXDOrderStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0EE30B21BD63C3003C3FA5 /* CXDOrderStatusViewController.swift */; };
 		FE22773E21737DDC009B3ADD /* cxd-logo-plain.png in Resources */ = {isa = PBXBuildFile; fileRef = FE22773D21737DDA009B3ADD /* cxd-logo-plain.png */; };
 		FE22773F21737DDC009B3ADD /* cxd-logo-plain.png in Resources */ = {isa = PBXBuildFile; fileRef = FE22773D21737DDA009B3ADD /* cxd-logo-plain.png */; };
 		FE22774021737DDC009B3ADD /* cxd-logo-plain.png in Resources */ = {isa = PBXBuildFile; fileRef = FE22773D21737DDA009B3ADD /* cxd-logo-plain.png */; };
@@ -425,6 +428,7 @@
 		FE07F5602172209200EFA59D /* CXDMeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDMeal.swift; sourceTree = "<group>"; };
 		FE07F5612172209200EFA59D /* CXDCartItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDCartItem.swift; sourceTree = "<group>"; };
 		FE07F5622172209200EFA59D /* CXDChef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDChef.swift; sourceTree = "<group>"; };
+		FE0EE30B21BD63C3003C3FA5 /* CXDOrderStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDOrderStatusViewController.swift; sourceTree = "<group>"; };
 		FE22773D21737DDA009B3ADD /* cxd-logo-plain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cxd-logo-plain.png"; sourceTree = "<group>"; };
 		FE2277452173BFEF009B3ADD /* CXDChefsOnlineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDChefsOnlineTableViewController.swift; sourceTree = "<group>"; };
 		FE363C8A2177FD5E00C4AEA5 /* ChefDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefDetailViewController.swift; sourceTree = "<group>"; };
@@ -692,6 +696,7 @@
 				FE98AC1F218C905200DB6401 /* CXDUserProfileViewController.swift */,
 				FE98AC23218DF40100DB6401 /* CXDItemsTableViewController.swift */,
 				FE98AC33218F1D6300DB6401 /* CXDSearchResultsViewController.swift */,
+				FE0EE30B21BD63C3003C3FA5 /* CXDOrderStatusViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1219,6 +1224,7 @@
 				FE07F5962172209300EFA59D /* CXDArrayOfUser.swift in Sources */,
 				FE07F5A52172209300EFA59D /* CXDMenu.swift in Sources */,
 				FE07F5B12172209300EFA59D /* CXDDEVAPIClient.swift in Sources */,
+				FE0EE30C21BD63C3003C3FA5 /* CXDOrderStatusViewController.swift in Sources */,
 				FE537DE1215863C400971289 /* FSPageControl.swift in Sources */,
 				FE363C8B2177FD5E00C4AEA5 /* ChefDetailViewController.swift in Sources */,
 				FEB8B35220D347BF00DDDD2D /* ConfirmSignUpViewController.swift in Sources */,
@@ -1312,6 +1318,7 @@
 				FEB8B34720D3471000DDDD2D /* SignInViewController.swift in Sources */,
 				FE07F58B2172209300EFA59D /* CXDArrayOfChef.swift in Sources */,
 				FE07F5642172209300EFA59D /* CXDArrayOfMealCategory.swift in Sources */,
+				FE0EE30D21BD63C3003C3FA5 /* CXDOrderStatusViewController.swift in Sources */,
 				FE66078C215B0490001029C3 /* JSButton.swift in Sources */,
 				FE363C8C2177FD5E00C4AEA5 /* ChefDetailViewController.swift in Sources */,
 				FE07F59D2172209300EFA59D /* CXDBilling.swift in Sources */,
@@ -1405,6 +1412,7 @@
 				FEB8B34820D3471000DDDD2D /* SignInViewController.swift in Sources */,
 				FE07F58C2172209300EFA59D /* CXDArrayOfChef.swift in Sources */,
 				FE07F5652172209300EFA59D /* CXDArrayOfMealCategory.swift in Sources */,
+				FE0EE30E21BD63C3003C3FA5 /* CXDOrderStatusViewController.swift in Sources */,
 				FE66078D215B0490001029C3 /* JSButton.swift in Sources */,
 				FE363C8D2177FD5E00C4AEA5 /* ChefDetailViewController.swift in Sources */,
 				FE07F59E2172209300EFA59D /* CXDBilling.swift in Sources */,

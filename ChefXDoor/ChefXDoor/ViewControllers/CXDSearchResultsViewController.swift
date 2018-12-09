@@ -17,11 +17,6 @@ class CXDSearchResultsViewController: UIViewController,UITableViewDelegate, UITa
     var chefs: [CXDChef]?
     var meals: [CXDMeal]?
     
-//    enum searchType {
-//        case chefType
-//        case mealType
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         searchResultsTableView.register(UINib.init(nibName: "CXDMealTableViewCell", bundle: nil), forCellReuseIdentifier: "CXDMealTableViewCell")
@@ -83,20 +78,6 @@ class CXDSearchResultsViewController: UIViewController,UITableViewDelegate, UITa
             }
         }
     }
-    
-//    func showResult(task: AWSTask<AnyObject>) {
-//        if let error = task.error {
-//            print("Error: \(error)")
-//        } else if let result = task.result{
-//            
-//            let res = result as! CXDMeal
-//            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.init(for: MealDetailViewController.self))
-//            let mealDetailViewController = storyboard.instantiateViewController(withIdentifier: "MealDetailViewController") as! MealDetailViewController
-//            mealDetailViewController.meal = res
-//            self.navigationController!.pushViewController(mealDetailViewController, animated: true)
-//        }
-//    }
-
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
