@@ -8,6 +8,7 @@ target 'ChefXDoor' do
   # Pods for ChefXDoor
   pod 'AWSCore'
   pod 'AWSCognito'
+  pod 'AWSS3'
   pod 'AWSCognitoIdentityProvider'
   pod 'FBSDKLoginKit'
   pod 'FBSDKShareKit'

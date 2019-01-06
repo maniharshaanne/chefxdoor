@@ -8,6 +8,8 @@ PODS:
     - AWSCore (= 2.6.30)
   - AWSCognitoIdentityProviderASF (1.0.1)
   - AWSCore (2.6.30)
+  - AWSS3 (2.6.30):
+    - AWSCore (= 2.6.30)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -34,6 +36,7 @@ DEPENDENCIES:
   - AWSCognito
   - AWSCognitoIdentityProvider
   - AWSCore
+  - AWSS3
   - FAPanels
   - FaveButton
   - FBSDKCoreKit
@@ -53,6 +56,7 @@ SPEC REPOS:
     - AWSCognitoIdentityProvider
     - AWSCognitoIdentityProviderASF
     - AWSCore
+    - AWSS3
     - Bolts
     - FAPanels
     - FaveButton
@@ -72,6 +76,7 @@ SPEC CHECKSUMS:
   AWSCognitoIdentityProvider: c887b1cfec7235c85cc90070defbb78354ec7065
   AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
   AWSCore: 11e8bb89d8d2e3bb6e31caa8b944ca7dae4c87cd
+  AWSS3: 63f401ca496ebedd05988f40c9f4108a72828121
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   FAPanels: def3b6e1e407ea1d1198d1acddc9d855d9e418ec
   FaveButton: 1fa9cd7b037d7164e229765401931271adbe3a23
@@ -85,6 +90,6 @@ SPEC CHECKSUMS:
   MIBlurPopup: e0834e469074cabf65a0ca6e6d900c84d48f8a4f
   PKHUD: 62ea46a1e88c4def1da784878d199bb54c841e3c
 
-PODFILE CHECKSUM: ae45d8aa36b30424f733d1656bafd444baaa05d8
+PODFILE CHECKSUM: d42e68a1ca64033b85408e81859583a2437d0f3a
 
 COCOAPODS: 1.5.3
