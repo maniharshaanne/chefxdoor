@@ -19,45 +19,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ChefXDoor/ViewControllers/RecommendationsViewController.swift"
-            timestampString = "566023463.307892"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "refreshUserToken()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ChefXDoor/ViewControllers/RecommendationsViewController.swift"
-            timestampString = "566023463.312335"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "getMeals(token:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ChefXDoor/ViewControllers/RecommendationsViewController.swift"
-            timestampString = "566023463.312467"
+            filePath = "ChefXDoor/ViewControllers/CXDUserProfileViewController.swift"
+            timestampString = "568427615.529904"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "98"
             endingLineNumber = "98"
-            landmarkName = "getMeals(token:)"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -67,13 +35,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ChefXDoor/ViewControllers/RecommendationsViewController.swift"
-            timestampString = "566023463.312591"
+            filePath = "ChefXDoor/ViewControllers/CXDUserProfileViewController.swift"
+            timestampString = "568427615.52997"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "getMeals(token:)"
+            startingLineNumber = "329"
+            endingLineNumber = "329"
+            landmarkName = "textFieldDidEndEditing(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -83,13 +51,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ChefXDoor/ViewControllers/RecommendationsViewController.swift"
-            timestampString = "566023463.312647"
+            filePath = "ChefXDoor/ViewControllers/CXDUserProfileViewController.swift"
+            timestampString = "568427668.273671"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "getMeals(token:)"
+            startingLineNumber = "341"
+            endingLineNumber = "341"
+            landmarkName = "saveButtonPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -99,13 +67,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ChefXDoor/ViewControllers/RecommendationsViewController.swift"
-            timestampString = "566023463.312696"
+            filePath = "ChefXDoor/ViewControllers/CXDUserProfileViewController.swift"
+            timestampString = "568427671.141993"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "getMeals(token:)"
+            startingLineNumber = "340"
+            endingLineNumber = "340"
+            landmarkName = "saveButtonPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

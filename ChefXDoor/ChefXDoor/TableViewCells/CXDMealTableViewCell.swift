@@ -24,15 +24,26 @@ class CXDMealTableViewCell: UITableViewCell,FaveButtonDelegate  {
     @IBOutlet public weak var profileImageViewWidthConstraint:NSLayoutConstraint!
     @IBOutlet public weak var ratingImageViewHeightConstraint:NSLayoutConstraint!
 
+    var favouriteMealSelected : (() -> Void)?
+    var favoriteMealUnSelected : (() -> Void)?
+    var faveButton:FaveButton?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        let faveButton = FaveButton(
-            frame: CGRect(x:self.contentView.frame.size.width - 80, y:0, width: 44, height: 44),
+        faveButton = FaveButton(
+            frame: CGRect(x:self.contentView.frame.size.width - 60, y:0, width: 44, height: 44),
             faveIconNormal: UIImage(named: "Heart")
         )
-        faveButton.delegate = self
+        
+        faveButton?.delegate = self
+        faveButton?.isSelected = false
+        faveButton?.selectedColor = UIColor(red: 246/256, green: 102/256, blue: 71/256, alpha: 1)
+        //faveButton?.normalColor = UIColor.white
+        faveButton?.tintColor = UIColor.white
+
         backgroundImageView.isUserInteractionEnabled = true
-        backgroundImageView.addSubview(faveButton)
+        backgroundImageView.addSubview(faveButton!)
+        
         transparentView.backgroundColor = UIColor(red: 98/256, green: 98/256, blue: 98/256, alpha: 0.5)
     }
     
@@ -92,8 +103,27 @@ class CXDMealTableViewCell: UITableViewCell,FaveButtonDelegate  {
             profileImageView.kf.setImage(with: resource)
         }
 
+        if let isLiked = meal.liked?.boolValue
+        {
+            faveButton?.setSelected(selected: isLiked , animated: false)
+        }
     }
     
-    func faveButton(_ faveButton: FaveButton, didSelected selected: Bool) {
+    func faveButton(_ faveButton: FaveButton, didSelected selected: Bool)
+    {
+        if selected
+        {
+           if  favouriteMealSelected != nil
+           {
+            favouriteMealSelected!()
+           }
+        }
+        else
+        {
+            if  favoriteMealUnSelected != nil
+            {
+                favoriteMealUnSelected!()
+            }
+        }
     }
 }

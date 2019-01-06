@@ -35,7 +35,7 @@ class AppDelegate: UIResponder,UIApplicationDelegate,AWSIdentityProviderManager 
         
         let navigationBarAppearace = UINavigationBar.appearance()
 
-        navigationBarAppearace.tintColor = UIColor.gray
+        navigationBarAppearace.tintColor = UIColor.white
         navigationBarAppearace.barTintColor = UIColor.white
         
         setupRootViewController()
@@ -247,3 +247,5 @@ extension AppDelegate: AWSCognitoIdentityRememberDevice {
         }
     }
 }
+
+

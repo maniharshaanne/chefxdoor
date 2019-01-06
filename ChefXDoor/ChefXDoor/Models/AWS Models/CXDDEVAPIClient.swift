@@ -1,5 +1,5 @@
 /*
- Copyright 2010-2016 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
  Licensed under the Apache License, Version 2.0 (the "License").
  You may not use this file except in compliance with the License.
@@ -12,12 +12,11 @@
  express or implied. See the License for the specific language governing
  permissions and limitations under the License.
  */
- 
+
 
 import AWSCore
 import AWSAPIGateway
 
-@objcMembers
 public class CXDDEVAPIClient: AWSAPIGatewayClient {
 
 	static let AWSInfoClientKey = "CXDDEVAPIClient"
@@ -158,6 +157,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
     /*
      
      
+     @param chefId 
      @param lat 
      @param sort 
      @param distance 
@@ -166,7 +166,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      
      return type: CXDArrayOfMeal
      */
-    public func mealsGet(lat: String?, sort: String?, distance: String?, page: String?, long: String?) -> AWSTask<CXDArrayOfMeal> {
+    public func mealsGet(chefId: String?, lat: String?, sort: String?, distance: String?, page: String?, long: String?) -> AWSTask<CXDArrayOfMeal> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
@@ -174,6 +174,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	            ]
 	    
 	    var queryParameters:[String:Any] = [:]
+	    queryParameters["chef_id"] = chefId
 	    queryParameters["lat"] = lat
 	    queryParameters["sort"] = sort
 	    queryParameters["distance"] = distance
@@ -889,6 +890,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
     /*
      
      
+     @param username 
      @param lat 
      @param sort 
      @param distance 
@@ -897,7 +899,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      
      return type: CXDArrayOfUser
      */
-    public func usersGet(lat: String?, sort: String?, distance: String?, page: String?, long: String?) -> AWSTask<CXDArrayOfUser> {
+    public func usersGet(username: String?, lat: String?, sort: String?, distance: String?, page: String?, long: String?) -> AWSTask<CXDArrayOfUser> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
@@ -905,6 +907,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	            ]
 	    
 	    var queryParameters:[String:Any] = [:]
+	    queryParameters["username"] = username
 	    queryParameters["lat"] = lat
 	    queryParameters["sort"] = sort
 	    queryParameters["distance"] = distance
@@ -1073,6 +1076,327 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 	    let pathParameters:[String:Any] = [:]
 	    
 	    return self.invokeHTTPRequest("OPTIONS", urlString: "/users/currentuser", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: nil)
+	}
+
+	
+    /*
+     
+     
+     @param userId 
+     
+     return type: CXDArrayOfBilling
+     */
+    public func usersCurrentuserBillingGet(userId: String) -> AWSTask<CXDArrayOfBilling> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    var pathParameters:[String:Any] = [:]
+	    pathParameters["user_id"] = userId
+	    
+	    return self.invokeHTTPRequest("GET", urlString: "/users/currentuser/billing", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: CXDArrayOfBilling.self) as! AWSTask<CXDArrayOfBilling>
+	}
+
+	
+    /*
+     
+     
+     @param userId 
+     @param body 
+     
+     return type: CXDBilling
+     */
+    public func usersCurrentuserBillingPost(userId: String, body: CXDBilling) -> AWSTask<CXDBilling> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    var pathParameters:[String:Any] = [:]
+	    pathParameters["user_id"] = userId
+	    
+	    return self.invokeHTTPRequest("POST", urlString: "/users/currentuser/billing", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDBilling.self) as! AWSTask<CXDBilling>
+	}
+
+	
+    /*
+     
+     
+     @param userId 
+     
+     return type: 
+     */
+    public func usersCurrentuserBillingOptions(userId: String) -> AWSTask<AnyObject> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    var pathParameters:[String:Any] = [:]
+	    pathParameters["user_id"] = userId
+	    
+	    return self.invokeHTTPRequest("OPTIONS", urlString: "/users/currentuser/billing", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: nil)
+	}
+
+	
+    /*
+     
+     
+     @param billingId 
+     @param userId 
+     
+     return type: CXDBilling
+     */
+    public func usersCurrentuserBillingBillingIdGet(billingId: String, userId: String) -> AWSTask<CXDBilling> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    var pathParameters:[String:Any] = [:]
+	    pathParameters["billing_id"] = billingId
+	    pathParameters["user_id"] = userId
+	    
+	    return self.invokeHTTPRequest("GET", urlString: "/users/currentuser/billing/{billingId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: CXDBilling.self) as! AWSTask<CXDBilling>
+	}
+
+	
+    /*
+     
+     
+     @param billingId 
+     @param userId 
+     @param body 
+     
+     return type: CXDBilling
+     */
+    public func usersCurrentuserBillingBillingIdPut(billingId: String, userId: String, body: CXDBilling) -> AWSTask<CXDBilling> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    var pathParameters:[String:Any] = [:]
+	    pathParameters["billing_id"] = billingId
+	    pathParameters["user_id"] = userId
+	    
+	    return self.invokeHTTPRequest("PUT", urlString: "/users/currentuser/billing/{billingId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDBilling.self) as! AWSTask<CXDBilling>
+	}
+
+	
+    /*
+     
+     
+     @param billingId 
+     @param userId 
+     
+     return type: 
+     */
+    public func usersCurrentuserBillingBillingIdOptions(billingId: String, userId: String) -> AWSTask<AnyObject> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    var pathParameters:[String:Any] = [:]
+	    pathParameters["billing_id"] = billingId
+	    pathParameters["user_id"] = userId
+	    
+	    return self.invokeHTTPRequest("OPTIONS", urlString: "/users/currentuser/billing/{billingId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: nil)
+	}
+
+	
+    /*
+     
+     
+     @param userId 
+     @param sort 
+     @param page 
+     
+     return type: CXDArrayOfDeliveryAddress
+     */
+    public func usersCurrentuserDeliveryAddressGet(userId: String, sort: String?, page: String?) -> AWSTask<CXDArrayOfDeliveryAddress> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   
+	            ]
+	    
+	    var queryParameters:[String:Any] = [:]
+	    queryParameters["sort"] = sort
+	    queryParameters["page"] = page
+	    
+	    var pathParameters:[String:Any] = [:]
+	    pathParameters["user_id"] = userId
+	    
+	    return self.invokeHTTPRequest("GET", urlString: "/users/currentuser/delivery_address", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: CXDArrayOfDeliveryAddress.self) as! AWSTask<CXDArrayOfDeliveryAddress>
+	}
+
+	
+    /*
+     
+     
+     @param userId 
+     @param body 
+     
+     return type: CXDDeliveryAddress
+     */
+    public func usersCurrentuserDeliveryAddressPost(userId: String, body: CXDDeliveryAddress) -> AWSTask<CXDDeliveryAddress> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    var pathParameters:[String:Any] = [:]
+	    pathParameters["user_id"] = userId
+	    
+	    return self.invokeHTTPRequest("POST", urlString: "/users/currentuser/delivery_address", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDDeliveryAddress.self) as! AWSTask<CXDDeliveryAddress>
+	}
+
+	
+    /*
+     
+     
+     @param userId 
+     
+     return type: 
+     */
+    public func usersCurrentuserDeliveryAddressOptions(userId: String) -> AWSTask<AnyObject> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    var pathParameters:[String:Any] = [:]
+	    pathParameters["user_id"] = userId
+	    
+	    return self.invokeHTTPRequest("OPTIONS", urlString: "/users/currentuser/delivery_address", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: nil)
+	}
+
+	
+    /*
+     
+     
+     @param deliveryAddressId 
+     @param userId 
+     
+     return type: CXDDeliveryAddress
+     */
+    public func usersCurrentuserDeliveryAddressDeliveryAddressIdGet(deliveryAddressId: String, userId: String) -> AWSTask<CXDDeliveryAddress> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    var pathParameters:[String:Any] = [:]
+	    pathParameters["delivery_address_id"] = deliveryAddressId
+	    pathParameters["user_id"] = userId
+	    
+	    return self.invokeHTTPRequest("GET", urlString: "/users/currentuser/delivery_address/{deliveryAddressId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: CXDDeliveryAddress.self) as! AWSTask<CXDDeliveryAddress>
+	}
+
+	
+    /*
+     
+     
+     @param deliveryAddressId 
+     @param userId 
+     @param body 
+     
+     return type: CXDDeliveryAddress
+     */
+    public func usersCurrentuserDeliveryAddressDeliveryAddressIdPut(deliveryAddressId: String, userId: String, body: CXDDeliveryAddress) -> AWSTask<CXDDeliveryAddress> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    var pathParameters:[String:Any] = [:]
+	    pathParameters["delivery_address_id"] = deliveryAddressId
+	    pathParameters["user_id"] = userId
+	    
+	    return self.invokeHTTPRequest("PUT", urlString: "/users/currentuser/delivery_address/{deliveryAddressId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDDeliveryAddress.self) as! AWSTask<CXDDeliveryAddress>
+	}
+
+	
+    /*
+     
+     
+     @param deliveryAddressId 
+     @param userId 
+     
+     return type: CXDTransactionResult
+     */
+    public func usersCurrentuserDeliveryAddressDeliveryAddressIdDelete(deliveryAddressId: String, userId: String) -> AWSTask<CXDTransactionResult> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    var pathParameters:[String:Any] = [:]
+	    pathParameters["delivery_address_id"] = deliveryAddressId
+	    pathParameters["user_id"] = userId
+	    
+	    return self.invokeHTTPRequest("DELETE", urlString: "/users/currentuser/delivery_address/{deliveryAddressId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: CXDTransactionResult.self) as! AWSTask<CXDTransactionResult>
+	}
+
+	
+    /*
+     
+     
+     @param deliveryAddressId 
+     @param userId 
+     
+     return type: 
+     */
+    public func usersCurrentuserDeliveryAddressDeliveryAddressIdOptions(deliveryAddressId: String, userId: String) -> AWSTask<AnyObject> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    var pathParameters:[String:Any] = [:]
+	    pathParameters["delivery_address_id"] = deliveryAddressId
+	    pathParameters["user_id"] = userId
+	    
+	    return self.invokeHTTPRequest("OPTIONS", urlString: "/users/currentuser/delivery_address/{deliveryAddressId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: nil)
 	}
 
 	
@@ -1312,152 +1636,6 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      
      @param userId 
      
-     return type: CXDArrayOfBilling
-     */
-    public func usersUserIdBillingGet(userId: String) -> AWSTask<CXDArrayOfBilling> {
-	    let headerParameters = [
-                   "Content-Type": "application/json",
-                   "Accept": "application/json",
-                   
-	            ]
-	    
-	    let queryParameters:[String:Any] = [:]
-	    
-	    var pathParameters:[String:Any] = [:]
-	    pathParameters["user_id"] = userId
-	    
-	    return self.invokeHTTPRequest("GET", urlString: "/users/{userId}/billing", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: CXDArrayOfBilling.self) as! AWSTask<CXDArrayOfBilling>
-	}
-
-	
-    /*
-     
-     
-     @param userId 
-     @param body 
-     
-     return type: CXDBilling
-     */
-    public func usersUserIdBillingPost(userId: String, body: CXDBilling) -> AWSTask<CXDBilling> {
-	    let headerParameters = [
-                   "Content-Type": "application/json",
-                   "Accept": "application/json",
-                   
-	            ]
-	    
-	    let queryParameters:[String:Any] = [:]
-	    
-	    var pathParameters:[String:Any] = [:]
-	    pathParameters["user_id"] = userId
-	    
-	    return self.invokeHTTPRequest("POST", urlString: "/users/{userId}/billing", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDBilling.self) as! AWSTask<CXDBilling>
-	}
-
-	
-    /*
-     
-     
-     @param userId 
-     
-     return type: 
-     */
-    public func usersUserIdBillingOptions(userId: String) -> AWSTask<AnyObject> {
-	    let headerParameters = [
-                   "Content-Type": "application/json",
-                   "Accept": "application/json",
-                   
-	            ]
-	    
-	    let queryParameters:[String:Any] = [:]
-	    
-	    var pathParameters:[String:Any] = [:]
-	    pathParameters["user_id"] = userId
-	    
-	    return self.invokeHTTPRequest("OPTIONS", urlString: "/users/{userId}/billing", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: nil)
-	}
-
-	
-    /*
-     
-     
-     @param billingId 
-     @param userId 
-     
-     return type: CXDBilling
-     */
-    public func usersUserIdBillingBillingIdGet(billingId: String, userId: String) -> AWSTask<CXDBilling> {
-	    let headerParameters = [
-                   "Content-Type": "application/json",
-                   "Accept": "application/json",
-                   
-	            ]
-	    
-	    let queryParameters:[String:Any] = [:]
-	    
-	    var pathParameters:[String:Any] = [:]
-	    pathParameters["billing_id"] = billingId
-	    pathParameters["user_id"] = userId
-	    
-	    return self.invokeHTTPRequest("GET", urlString: "/users/{userId}/billing/{billingId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: CXDBilling.self) as! AWSTask<CXDBilling>
-	}
-
-	
-    /*
-     
-     
-     @param billingId 
-     @param userId 
-     @param body 
-     
-     return type: CXDBilling
-     */
-    public func usersUserIdBillingBillingIdPut(billingId: String, userId: String, body: CXDBilling) -> AWSTask<CXDBilling> {
-	    let headerParameters = [
-                   "Content-Type": "application/json",
-                   "Accept": "application/json",
-                   
-	            ]
-	    
-	    let queryParameters:[String:Any] = [:]
-	    
-	    var pathParameters:[String:Any] = [:]
-	    pathParameters["billing_id"] = billingId
-	    pathParameters["user_id"] = userId
-	    
-	    return self.invokeHTTPRequest("PUT", urlString: "/users/{userId}/billing/{billingId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDBilling.self) as! AWSTask<CXDBilling>
-	}
-
-	
-    /*
-     
-     
-     @param billingId 
-     @param userId 
-     
-     return type: 
-     */
-    public func usersUserIdBillingBillingIdOptions(billingId: String, userId: String) -> AWSTask<AnyObject> {
-	    let headerParameters = [
-                   "Content-Type": "application/json",
-                   "Accept": "application/json",
-                   
-	            ]
-	    
-	    let queryParameters:[String:Any] = [:]
-	    
-	    var pathParameters:[String:Any] = [:]
-	    pathParameters["billing_id"] = billingId
-	    pathParameters["user_id"] = userId
-	    
-	    return self.invokeHTTPRequest("OPTIONS", urlString: "/users/{userId}/billing/{billingId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: nil)
-	}
-
-	
-    /*
-     
-     
-     @param userId 
-     
      return type: CXDCart
      */
     public func usersUserIdCartGet(userId: String) -> AWSTask<CXDCart> {
@@ -1631,181 +1809,6 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      @param sort 
      @param page 
      
-     return type: CXDArrayOfDeliveryAddress
-     */
-    public func usersUserIdDeliveryAddressGet(userId: String, sort: String?, page: String?) -> AWSTask<CXDArrayOfDeliveryAddress> {
-	    let headerParameters = [
-                   "Content-Type": "application/json",
-                   "Accept": "application/json",
-                   
-	            ]
-	    
-	    var queryParameters:[String:Any] = [:]
-	    queryParameters["sort"] = sort
-	    queryParameters["page"] = page
-	    
-	    var pathParameters:[String:Any] = [:]
-	    pathParameters["user_id"] = userId
-	    
-	    return self.invokeHTTPRequest("GET", urlString: "/users/{userId}/delivery_address", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: CXDArrayOfDeliveryAddress.self) as! AWSTask<CXDArrayOfDeliveryAddress>
-	}
-
-	
-    /*
-     
-     
-     @param userId 
-     @param body 
-     
-     return type: CXDDeliveryAddress
-     */
-    public func usersUserIdDeliveryAddressPost(userId: String, body: CXDDeliveryAddress) -> AWSTask<CXDDeliveryAddress> {
-	    let headerParameters = [
-                   "Content-Type": "application/json",
-                   "Accept": "application/json",
-                   
-	            ]
-	    
-	    let queryParameters:[String:Any] = [:]
-	    
-	    var pathParameters:[String:Any] = [:]
-	    pathParameters["user_id"] = userId
-	    
-	    return self.invokeHTTPRequest("POST", urlString: "/users/{userId}/delivery_address", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDDeliveryAddress.self) as! AWSTask<CXDDeliveryAddress>
-	}
-
-	
-    /*
-     
-     
-     @param userId 
-     
-     return type: 
-     */
-    public func usersUserIdDeliveryAddressOptions(userId: String) -> AWSTask<AnyObject> {
-	    let headerParameters = [
-                   "Content-Type": "application/json",
-                   "Accept": "application/json",
-                   
-	            ]
-	    
-	    let queryParameters:[String:Any] = [:]
-	    
-	    var pathParameters:[String:Any] = [:]
-	    pathParameters["user_id"] = userId
-	    
-	    return self.invokeHTTPRequest("OPTIONS", urlString: "/users/{userId}/delivery_address", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: nil)
-	}
-
-	
-    /*
-     
-     
-     @param deliveryAddressId 
-     @param userId 
-     
-     return type: CXDDeliveryAddress
-     */
-    public func usersUserIdDeliveryAddressDeliveryAddressIdGet(deliveryAddressId: String, userId: String) -> AWSTask<CXDDeliveryAddress> {
-	    let headerParameters = [
-                   "Content-Type": "application/json",
-                   "Accept": "application/json",
-                   
-	            ]
-	    
-	    let queryParameters:[String:Any] = [:]
-	    
-	    var pathParameters:[String:Any] = [:]
-	    pathParameters["delivery_address_id"] = deliveryAddressId
-	    pathParameters["user_id"] = userId
-	    
-	    return self.invokeHTTPRequest("GET", urlString: "/users/{userId}/delivery_address/{deliveryAddressId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: CXDDeliveryAddress.self) as! AWSTask<CXDDeliveryAddress>
-	}
-
-	
-    /*
-     
-     
-     @param deliveryAddressId 
-     @param userId 
-     @param body 
-     
-     return type: CXDDeliveryAddress
-     */
-    public func usersUserIdDeliveryAddressDeliveryAddressIdPut(deliveryAddressId: String, userId: String, body: CXDDeliveryAddress) -> AWSTask<CXDDeliveryAddress> {
-	    let headerParameters = [
-                   "Content-Type": "application/json",
-                   "Accept": "application/json",
-                   
-	            ]
-	    
-	    let queryParameters:[String:Any] = [:]
-	    
-	    var pathParameters:[String:Any] = [:]
-	    pathParameters["delivery_address_id"] = deliveryAddressId
-	    pathParameters["user_id"] = userId
-	    
-	    return self.invokeHTTPRequest("PUT", urlString: "/users/{userId}/delivery_address/{deliveryAddressId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: CXDDeliveryAddress.self) as! AWSTask<CXDDeliveryAddress>
-	}
-
-	
-    /*
-     
-     
-     @param deliveryAddressId 
-     @param userId 
-     
-     return type: CXDTransactionResult
-     */
-    public func usersUserIdDeliveryAddressDeliveryAddressIdDelete(deliveryAddressId: String, userId: String) -> AWSTask<CXDTransactionResult> {
-	    let headerParameters = [
-                   "Content-Type": "application/json",
-                   "Accept": "application/json",
-                   
-	            ]
-	    
-	    let queryParameters:[String:Any] = [:]
-	    
-	    var pathParameters:[String:Any] = [:]
-	    pathParameters["delivery_address_id"] = deliveryAddressId
-	    pathParameters["user_id"] = userId
-	    
-	    return self.invokeHTTPRequest("DELETE", urlString: "/users/{userId}/delivery_address/{deliveryAddressId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: CXDTransactionResult.self) as! AWSTask<CXDTransactionResult>
-	}
-
-	
-    /*
-     
-     
-     @param deliveryAddressId 
-     @param userId 
-     
-     return type: 
-     */
-    public func usersUserIdDeliveryAddressDeliveryAddressIdOptions(deliveryAddressId: String, userId: String) -> AWSTask<AnyObject> {
-	    let headerParameters = [
-                   "Content-Type": "application/json",
-                   "Accept": "application/json",
-                   
-	            ]
-	    
-	    let queryParameters:[String:Any] = [:]
-	    
-	    var pathParameters:[String:Any] = [:]
-	    pathParameters["delivery_address_id"] = deliveryAddressId
-	    pathParameters["user_id"] = userId
-	    
-	    return self.invokeHTTPRequest("OPTIONS", urlString: "/users/{userId}/delivery_address/{deliveryAddressId}", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: nil)
-	}
-
-	
-    /*
-     
-     
-     @param userId 
-     @param sort 
-     @param page 
-     
      return type: CXDArrayOfMeal
      */
     public func usersUserIdFavoritemealsGet(userId: String, sort: String?, page: String?) -> AWSTask<CXDArrayOfMeal> {
@@ -1834,7 +1837,7 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
      
      return type: CXDFavoriteMeal
      */
-    public func usersUserIdFavoritemealsPost(userId: String, body: CXDUser) -> AWSTask<CXDFavoriteMeal> {
+    public func usersUserIdFavoritemealsPost(userId: String, body: CXDMeal) -> AWSTask<CXDFavoriteMeal> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
@@ -1851,8 +1854,6 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 
 	
     /*
-     
-     
      @param userId 
      
      return type: 

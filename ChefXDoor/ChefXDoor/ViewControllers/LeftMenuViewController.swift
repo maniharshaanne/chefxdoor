@@ -105,9 +105,11 @@ extension LeftMenuViewController: UITableViewDelegate, UITableViewDataSource {
         switch menuItem.menuType
         {
             case .ExploreFood?:
+                HUD.show(.progress, onView: self.view)
                 CXDApiServiceController.awsGetFromEndPoint(urlString: "/meals/recommended", queryParametersDict: ["lat" : 38.994373, "long" : -77.029778, "distance" : 10, "page" : 0, "sort":"price"], pathParametersDict: nil, classType: CXDMeal.self).continueWith { (task) -> Any? in
                     
                     DispatchQueue.main.async {
+                        HUD.hide()
                         if let error = task.error {
                             print("Error: \(error)")
                         } else if let result = task.result{
@@ -133,12 +135,45 @@ extension LeftMenuViewController: UITableViewDelegate, UITableViewDataSource {
                 panel?.center(pastOrderNavVC)
                 
             break
+        
+        case .MyFavourites? :
+            
+            HUD.show(.progress, onView: self.view)
+            CXDApiServiceController.awsGetFromEndPoint(urlString: "/users/41/favoritemeals", queryParametersDict: nil, pathParametersDict: ["user_id" : 41], classType: CXDFavoriteMeal.self).continueWith(block: { (task) -> Any? in
+                
+                DispatchQueue.main.async {
+                    HUD.hide()
+                    if let error = task.error
+                    {
+                        let alert = UIAlertController(title: "Attention", message: "Error while retreiving favourite meals", preferredStyle: UIAlertControllerStyle.alert)
+                        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+                        alert.addAction(okAction)
+                    }
+                    else
+                    {
+                        if let result = task.result as? [CXDFavoriteMeal]
+                        {
+                            
+                        }
+                    }
+                }
+            })
+            break
+            
+        case .Search? :
+            
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let searchResultsViewController = storyBoard.instantiateViewController(withIdentifier: "CXDSearchResultsViewController") as! CXDSearchResultsViewController
+            let searchResultsNavigationViewController = UINavigationController(rootViewController: searchResultsViewController)
+            panel?.center(searchResultsNavigationViewController)
+            break
             
         case .Logout? :
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let userPool = appDelegate.cxdIdentityUserPool
             let user = userPool?.currentUser()
             user?.signOut()
+            user?.getSession()
             break
             
             default:

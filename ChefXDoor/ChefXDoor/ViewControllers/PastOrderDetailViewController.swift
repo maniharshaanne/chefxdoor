@@ -23,6 +23,7 @@ class PastOrderDetailViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var orderNumberLabel: UILabel!
     @IBOutlet weak var orderCreatedTimeLabel: UILabel!
     @IBOutlet weak var totalPriceLabel: UILabel!
+    @IBOutlet weak var transparentView: UIView!
     
     var orderItems:Array<CXDOrderItem>?
     var order:CXDOrder?
@@ -47,7 +48,7 @@ class PastOrderDetailViewController: UIViewController, UITableViewDelegate, UITa
         //TableViewHeight
         orderItemsTableView.reloadData()
         orderItemsTableView.layoutIfNeeded()
-        tableViewHeightConstraint.constant = orderItemsTableView.contentSize.height
+        tableViewHeightConstraint.constant = orderItemsTableView.contentSize.height + 10
         
         addressView.layer.borderWidth = 2
         addressView.layer.borderColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1).cgColor
@@ -75,6 +76,8 @@ class PastOrderDetailViewController: UIViewController, UITableViewDelegate, UITa
             let resource = ImageResource(downloadURL: URL.init(string: imageUrl)!)
             orderImageView.kf.setImage(with: resource)
         }
+        
+        transparentView.backgroundColor = UIColor(red: 98/256, green: 98/256, blue: 98/256, alpha: 0.5)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -60,6 +60,9 @@ class MealDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.rightBarButtonItems = self.customRightBarButtonItems()
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         mealNameLabel.text = meal?.name
         chefNameLabel.text = meal?.chefUsername
         reviewsLabel.text = (meal?.reviewCount?.stringValue)! + "reviews"
@@ -107,7 +110,7 @@ class MealDetailViewController: UIViewController, UITableViewDelegate, UITableVi
                 self.userReviews = task.result as! Array<CXDMealReview>
                 self.reviewsTableView.reloadData()
                 self.reviewsTableView.layoutIfNeeded()
-                self.tableViewHeightConstraint.constant = self.reviewsTableView.contentSize.height
+                self.tableViewHeightConstraint.constant = self.reviewsTableView.contentSize.height + 10
             }
         }
     }
@@ -142,35 +145,55 @@ class MealDetailViewController: UIViewController, UITableViewDelegate, UITableVi
 
     @IBAction func addToCartButtonPressed(_ sender: Any) {
         
-//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.init(for: ReceipeAddedToCartViewController.self))
-//        let receipeAddedToCartViewController = storyboard.instantiateViewController(withIdentifier: "ReceipeAddedToCartViewController") as! ReceipeAddedToCartViewController
-//        receipeAddedToCartViewController.checkOutCompletionHandler = {
-//            self.dismissPopup(completion: nil)
-//            CXDApiServiceController.awsGetFromEndPoint(urlString: "/users/41/cart", queryParametersDict:nil, pathParametersDict: nil, classType: CXDCart.self).continueWith { (task) -> Any? in
-//
-//                DispatchQueue.main.async {
-//                    self.showResult(task: task )
-//                }
-//            }
-//        }
+        var cxdCartItem = CXDCartItem()
+        cxdCartItem?.mealId = self.meal?.id
+        cxdCartItem?.quantity = 1
+        //cxdCartItem?.mealName = self.meal?.name
+        //cxdCartItem?.chefName = self.meal?.chefUsername
+        //cxdCartItem?.price = NSNumber(value: 10)
+        cxdCartItem?.size = "Large"
+        //cxdCartItem?.id = 41
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM-DD-YYYY hh.mm.ss"
+        cxdCartItem?.timeCreated = dateFormatter.string(from: Date())
         
-        let PopupVC = setPopupVC(storyboradID:"Main",viewControllerID:"ReceipeAddedToCartViewController") as? ReceipeAddedToCartViewController
-        PopupVC?.popupCustomAlign = CGPoint(x: 50, y: 25)
-        PopupVC?.popupAnimation = .normal
-        PopupVC?.popupSize = CGSize(width: 350, height: 450)
-//        let receipeAddedToCartViewController = PopupVC.childViewControllers.first as! ReceipeAddedToCartViewController
-        PopupVC?.checkOutCompletionHandler = {
-            self.dismissPopup(completion: nil)
-            CXDApiServiceController.awsGetFromEndPoint(urlString: "/users/41/cart", queryParametersDict:nil, pathParametersDict: nil, classType: CXDCart.self).continueWith { (task) -> Any? in
+        HUD.show(.progress, onView: self.navigationController?.view)
+        CXDApiServiceController.awsPostForEndPoint(urlString: "/users/41/cart", queryParametersDict: nil, pathParametersDict: ["user_id":41], body: cxdCartItem!, classType: CXDCartItem.self).continueWith { (result) -> Any? in
+            DispatchQueue.main.async {
+                HUD.hide()
+               if let cartButton = self.cartRightBarButton() as? BadgeBarButtonItem
+               {
+                    cartButton.badgeLabel.isHidden = false
+                    cartButton.badgeText = "1"
+                }
                 
-                DispatchQueue.main.async {
-                    self.showResult(task: task )
+                if let error = result.error {
+                    let alert = UIAlertController(title: "Attention", message: "Error occured while adding item to cart", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    alert.addAction(okAction)
+                    self.present(alert, animated: true, completion: nil)
+                } else {
+                    let PopupVC = self.setPopupVC(storyboradID:"Main",viewControllerID:"ReceipeAddedToCartViewController") as? ReceipeAddedToCartViewController
+                    PopupVC?.popupCustomAlign = CGPoint(x: 50, y: 25)
+                    PopupVC?.popupAnimation = .normal
+                    PopupVC?.popupSize = CGSize(width: 300, height: 450)
+                    PopupVC?.checkOutCompletionHandler = {
+                        self.dismissPopup(completion: nil)
+                        HUD.show(.progress, onView: self.navigationController?.view)
+                        CXDApiServiceController.awsGetFromEndPoint(urlString: "/users/41/cart", queryParametersDict:nil, pathParametersDict:nil, classType: CXDCart.self).continueWith { (task) -> Any? in
+                            
+                            DispatchQueue.main.async {
+                                HUD.hide()
+                                self.showResult(task: task )
+                            }
+                        }
+                    }
+                    
+                    self.presentPopup(controller: PopupVC!, completion: nil)
                 }
             }
         }
-
-        self.presentPopup(controller: PopupVC!, completion: nil)
     }
     
     @objc func checkOutButtonTapped()

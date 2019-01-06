@@ -69,6 +69,25 @@ class RecommendationsViewController : UIViewController,UITableViewDelegate,UITab
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        HUD.flash(.progress, onView: navigationController?.view)
+        CXDApiServiceController.awsGetFromEndPoint(urlString: "/meals/1", queryParametersDict: nil, pathParametersDict: nil, classType: CXDMeal.self).continueWith { (task) -> Any? in
+            DispatchQueue.main.async {
+                HUD.hide()
+                if let error = task.error {
+                    print("Error: \(error)")
+                } else if let result = task.result {
+                    
+                    let res = result as! CXDMeal
+                    let storyboard = UIStoryboard(name: "Main", bundle: Bundle.init(for: MealDetailViewController.self))
+                    let mealDetailViewController = storyboard.instantiateViewController(withIdentifier: "MealDetailViewController") as! MealDetailViewController
+                    mealDetailViewController.meal = res
+                    self.navigationController!.pushViewController(mealDetailViewController, animated: true)
+                }
+            }
+        }
+    }
+    
     func updateUserToken()  {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         if let user = appDelegate.currentUser
@@ -89,9 +108,12 @@ class RecommendationsViewController : UIViewController,UITableViewDelegate,UITab
 
     func getMeals(token:String)
     {
+        HUD.show(.progress, onView: self.navigationController?.view)
+
         CXDApiServiceController.awsGetFromEndPoint(urlString: "/meals/recommended", queryParametersDict: ["lat" : 38.994373, "long" : -77.029778, "distance" : 10, "page" : 0, "sort":"price"], pathParametersDict: nil, classType: CXDMeal.self).continueWith { (task) -> Any? in
             
             DispatchQueue.main.async {
+                HUD.hide()
                 if let error = task.error {
                     print("Error: \(error)")
                 } else if let result = task.result {
@@ -99,7 +121,7 @@ class RecommendationsViewController : UIViewController,UITableViewDelegate,UITab
                     self.recommendedMeals = res
                     self.recommendedMealsTableView.reloadData()
                     self.recommendedMealsTableView.layoutIfNeeded()
-                    self.tableViewHeightConstraint.constant = self.recommendedMealsTableView.contentSize.height
+                    self.tableViewHeightConstraint.constant = self.recommendedMealsTableView.contentSize.height + 10
                 }
             }
         }
@@ -107,9 +129,12 @@ class RecommendationsViewController : UIViewController,UITableViewDelegate,UITab
     
     @objc func categoriesViewTapped()
     {
+        HUD.show(.progress, onView: self.navigationController?.view)
+
         CXDApiServiceController.awsGetFromEndPoint(urlString: "/meals/categories", queryParametersDict: ["lat" : 38.99437, "long" : -77.02977, "distance" : 10], pathParametersDict: nil, classType: CXDMealCategory.self).continueWith { (task) -> Any? in
 
             DispatchQueue.main.async {
+                HUD.hide()
                 if let error = task.error {
                     print("Error: \(error)")
                 } else if let result = task.result{
@@ -127,9 +152,12 @@ class RecommendationsViewController : UIViewController,UITableViewDelegate,UITab
     
     @objc func onlineChefsViewTapped()
     {
+        HUD.show(.progress, onView: self.navigationController?.view)
+
         CXDApiServiceController.awsGetFromEndPoint(urlString: "/users/chefs", queryParametersDict: ["lat" : 38.99437, "long" : -77.02977, "distance" : 10 ,"page" : 0, "sort" : "rating"], pathParametersDict: nil, classType: CXDChef.self).continueWith { (task) -> Any? in
             
             DispatchQueue.main.async {
+                HUD.hide()
                 if let error = task.error {
                     print("Error: \(error)")
                 } else if let result = task.result{
@@ -140,7 +168,6 @@ class RecommendationsViewController : UIViewController,UITableViewDelegate,UITab
                     onlineChefsViewController.onlineChefs = res
                     self.navigationController!.pushViewController(onlineChefsViewController, animated: true)
                 }
-                
             }
         }
     }

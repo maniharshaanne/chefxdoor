@@ -1,5 +1,5 @@
 /*
- Copyright 2010-2016 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
  Licensed under the Apache License, Version 2.0 (the "License").
  You may not use this file except in compliance with the License.
@@ -12,10 +12,11 @@
  express or implied. See the License for the specific language governing
  permissions and limitations under the License.
  */
- 
+
 
 import Foundation
 import AWSCore
+
 
 @objcMembers
 public class CXDChef : AWSModel {
@@ -38,6 +39,8 @@ public class CXDChef : AWSModel {
     var rating: NSNumber?
     /** description */
     var distance: NSNumber?
+    /** boolean */
+    var allowsPickup: NSNumber?
     /** description */
     var timeModified: String?
     /** description */
@@ -54,6 +57,7 @@ public class CXDChef : AWSModel {
 		params["reviewCount"] = "review_count"
 		params["rating"] = "rating"
 		params["distance"] = "distance"
+		params["allowsPickup"] = "allows_pickup"
 		params["timeModified"] = "time_modified"
 		params["timeCreated"] = "time_created"
 		

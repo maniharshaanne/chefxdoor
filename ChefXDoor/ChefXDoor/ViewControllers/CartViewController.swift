@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import PKHUD
 
 class CartViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
@@ -29,25 +30,49 @@ class CartViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     @IBOutlet weak var totalCostView:UIView!
 
     override func viewDidLoad() {
-        cartItems = cart?.cartItems
-        deliveryAddress = cart?.deliveryAddress
         
-        //Address
-        streetAddressLabel.text = deliveryAddress?.street
-        let zipString = deliveryAddress?.zip?.stringValue
-        let cityString = deliveryAddress?.city
-        let stateString = deliveryAddress?.state
-        let stateCityZipString = cityString! + ", " + stateString! + ", " + zipString!
-        stateCityZipLabel.text = stateCityZipString
-        
+        //Navbar
+        self.navigationItem.leftBarButtonItem = self.menuLeftBarButton()
+        self.navigationItem.rightBarButtonItem = self.searchRightBarButton()
+        self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
+
         //Tableviewcell
         cartItemsTableView.register(UINib.init(nibName: "CartItemTableViewCell", bundle: Bundle.init(for: CartItemTableViewCell.self)), forCellReuseIdentifier: "CartItemTableViewCell")
         
-        //TableViewHeight
-        cartItemsTableView.reloadData()
-        cartItemsTableView.layoutIfNeeded()
-        tableViewHeightConstraint.constant = cartItemsTableView.contentSize.height
+        CXDApiServiceController.awsGetFromEndPoint(urlString: "/users/41/cart", queryParametersDict: nil, pathParametersDict: nil, classType: CXDCart.self).continueWith { (task) -> Any? in
+            
+            DispatchQueue.main.async {
+                if task.error != nil {
+                    let alertController = UIAlertController(title: "Error",
+                                                            message: "Error occured while retreiving the cart",
+                                                            preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                    alertController.addAction(okAction)
+                } else if let cart = task.result as? CXDCart {
+                    self.cart = cart
+                    
+                    self.cartItems = self.cart?.cartItems
+                    self.deliveryAddress = self.cart?.deliveryAddress
+                    
+                    //TableViewHeight
+                    self.cartItemsTableView.reloadData()
+                    self.cartItemsTableView.layoutIfNeeded()
+                    self.tableViewHeightConstraint.constant = self.cartItemsTableView.contentSize.height + 10
+                    
+                    //Address
+                    self.streetAddressLabel.text = self.deliveryAddress?.street
+                    let zipString = self.self.deliveryAddress?.zip?.stringValue
+                    let cityString = self.deliveryAddress?.city
+                    let stateString = self.deliveryAddress?.state
+                    let stateCityZipString = cityString! + ", " + stateString! + ", " + zipString!
+                    self.stateCityZipLabel.text = stateCityZipString
+                }
+            }
+        }
         
+        //cartItems = cart?.cartItems
+        //deliveryAddress = cart?.deliveryAddress
+    
         addressView.layer.borderWidth = 2
         addressView.layer.borderColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1).cgColor
         
@@ -59,7 +84,7 @@ class CartViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ((cartItems?.count)! - 1) 
+        return cartItems?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -67,9 +92,35 @@ class CartViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         cell.updateInfo(cartItem: cartItems![indexPath.row])
         cell.mainView.layer.borderColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1).cgColor
         cell.mainView.layer.borderWidth = 2.0
-        //cell.backgroundColor = UIColor(red: 91/256, green: 91/256, blue: 91/256, alpha: 1)
+        cell.deleteAction = {
+            
+            guard let selectedCartItem = self.cartItems?[indexPath.row] else {
+                return
+            }
+            
+            let userId = 41
+            HUD.show(.progress, onView: self.navigationController?.view)
+            if let carItemId = selectedCartItem.id?.intValue
+            {
+                let pathParameters = ["user_id": userId, "cart_item_id": carItemId]
+                let deleteUrlString = "/users/\(userId)/cart/\(carItemId)"
+                
+                CXDApiServiceController.awsDeleteForEndPoint(urlString: deleteUrlString, queryParametersDict: nil, pathParametersDict: pathParameters).continueWith { (task) -> Any? in
+                    DispatchQueue.main.async {
+                        HUD.hide()
+                        self.cartItems?.remove(at: indexPath.row)
+                        self.cartItemsTableView.reloadData()
+                    }
+                }
+            }
+        }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+
     }
     
     @IBAction func checkOutButtonPressed(_ sender: Any) {

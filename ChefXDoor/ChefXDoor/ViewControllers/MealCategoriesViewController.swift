@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import AWSCognito
+import PKHUD
 
 class MealCategoriesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     
@@ -31,9 +32,11 @@ class MealCategoriesViewController: UIViewController, UICollectionViewDelegate, 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        HUD.show(.progress, onView: self.navigationController?.view)
         CXDApiServiceController.awsGetFromEndPoint(urlString: "/meals/categories/1", queryParametersDict: ["lat" : 38.99437, "long" : -77.02977, "distance" : 10, "page" : 0, "sort" : "rating"], pathParametersDict: nil, classType: CXDMeal.self).continueWith { (task) -> Any? in
             
             DispatchQueue.main.async {
+                HUD.hide()
                 self.showResult(task: task )
             }
         }

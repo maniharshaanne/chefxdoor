@@ -78,9 +78,11 @@ class StartScreenViewController: UIViewController {
     
     func getMeals(token:String)
     {
+        HUD.show(.progress, onView: self.view)
         CXDApiServiceController.awsGetFromEndPoint(urlString: "/meals/recommended", queryParametersDict: ["lat" : 38.994373, "long" : -77.029778, "distance" : 10, "page" : 0, "sort":"price"], pathParametersDict: nil, classType: CXDMeal.self).continueWith { (task) -> Any? in
             
             DispatchQueue.main.async {
+                HUD.hide()
                 if let error = task.error {
                     print("Error: \(error)")
                 } else if let result = task.result {

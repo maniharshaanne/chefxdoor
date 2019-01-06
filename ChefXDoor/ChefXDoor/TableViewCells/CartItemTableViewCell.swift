@@ -21,6 +21,7 @@ class CartItemTableViewCell: UITableViewCell {
     @IBOutlet weak var mealCountLabel:UILabel!
     @IBOutlet weak var deleteButton:UIButton!
     @IBOutlet weak var mainView:UIView!
+    var deleteAction: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,6 +35,10 @@ class CartItemTableViewCell: UITableViewCell {
         chefNameLabel.text = "by " + cartItem.chefName!
         mealPriceLabel.text = "$" + (cartItem.price?.stringValue)!
         mealQuantityLabel.text = "Qty " + (cartItem.quantity?.stringValue)!
+    }
+    
+    @IBAction func deleteButtonTapped(_ sender: Any) {
+        deleteAction!()
     }
     
 }

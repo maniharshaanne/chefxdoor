@@ -30,18 +30,33 @@ class MealsTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = mealsTableView.dequeueReusableCell(withIdentifier: "CXDMealTableViewCell") as! CXDMealTableViewCell
-        cell.updateInfo(meal: mealsArray![indexPath.row])
+        let meal =  mealsArray![indexPath.row]
+        cell.updateInfo(meal: meal)
+        cell.favouriteMealSelected = {
+            CXDApiServiceController.awsPostForEndPoint(urlString: "/users/41/favoritemeals", queryParametersDict: nil, pathParametersDict: ["user_id" : 41], body: meal, classType: CXDFavoriteMeal.self)
+        }
+        cell.favoriteMealUnSelected = {
+            if let mealId = meal.id?.intValue
+            {
+                let pathParameters = ["user_id": 41, "meal_id": mealId]
+                let deleteUrlString = "/users/41/favoritemeals/\(mealId)"
+
+                CXDApiServiceController.awsDeleteForEndPoint(urlString: deleteUrlString, queryParametersDict: nil, pathParametersDict: pathParameters)
+            }
+
+        }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         HUD.flash(.progress, onView: navigationController?.view)
-        CXDApiServiceController.awsGetFromEndPoint(urlString: "/meals/1", queryParametersDict: nil, pathParametersDict: nil, classType: CXDMeal.self).continueWith { (task) -> Any? in
+        let meal = mealsArray![indexPath.row]
+        CXDApiServiceController.awsGetFromEndPoint(urlString: "/meals/\(meal.id?.intValue ?? 0)" , queryParametersDict: nil, pathParametersDict: nil, classType: CXDMeal.self).continueWith { (task) -> Any? in
             DispatchQueue.main.async {
                 HUD.hide()
                 self.showResult(task: task )
             }
-            
         }
     }
     
@@ -49,7 +64,6 @@ class MealsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         if let error = task.error {
             print("Error: \(error)")
         } else if let result = task.result{
-            
             let res = result as! CXDMeal
             let storyboard = UIStoryboard(name: "Main", bundle: Bundle.init(for: MealDetailViewController.self))
             let mealDetailViewController = storyboard.instantiateViewController(withIdentifier: "MealDetailViewController") as! MealDetailViewController

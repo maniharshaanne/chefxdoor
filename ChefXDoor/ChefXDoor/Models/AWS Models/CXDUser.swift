@@ -1,5 +1,5 @@
 /*
- Copyright 2010-2016 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ Copyright 2010-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 
  Licensed under the Apache License, Version 2.0 (the "License").
  You may not use this file except in compliance with the License.
@@ -12,10 +12,11 @@
  express or implied. See the License for the specific language governing
  permissions and limitations under the License.
  */
- 
+
 
 import Foundation
 import AWSCore
+
 
 @objcMembers
 public class CXDUser : AWSModel {
@@ -23,7 +24,11 @@ public class CXDUser : AWSModel {
     /** description */
     var id: NSNumber?
     /** description */
+    var providerName: String?
+    /** description */
     var username: String?
+    /** description */
+    var preferredUsername: String?
     /** description */
     var email: String?
     /** description */
@@ -74,13 +79,21 @@ public class CXDUser : AWSModel {
     var timeModified: String?
     /** description */
     var distance: NSNumber?
+    /** Url for user cover photo */
+    var coverPhotoUrl: String?
+    /** top three categories for user by aggregate rating */
+    var topCategories: String?
+    /** boolean */
+    var allowsPickup: NSNumber?
     var photos: [CXDUserPhoto]?
     var foodRestrictions: [CXDFoodRestriction]?
     
    	public override static func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]!{
 		var params:[AnyHashable : Any] = [:]
 		params["id"] = "id"
+		params["providerName"] = "provider_name"
 		params["username"] = "username"
+		params["preferredUsername"] = "preferred_username"
 		params["email"] = "email"
 		params["type"] = "type"
 		params["slogan"] = "slogan"
@@ -106,6 +119,9 @@ public class CXDUser : AWSModel {
 		params["timeCreated"] = "time_created"
 		params["timeModified"] = "time_modified"
 		params["distance"] = "distance"
+		params["coverPhotoUrl"] = "cover_photo_url"
+		params["topCategories"] = "top_categories"
+		params["allowsPickup"] = "allows_pickup"
 		params["photos"] = "photos"
 		params["foodRestrictions"] = "food_restrictions"
 		

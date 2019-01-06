@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import AWSCognito
+import PKHUD
 
 class CXDChefsOnlineTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
@@ -39,9 +40,11 @@ class CXDChefsOnlineTableViewController: UIViewController, UITableViewDelegate, 
         let chefId = selectedChef.id?.stringValue
         let urlString = "/users/" + chefId!
 
+        HUD.show(.progress, onView: self.navigationController?.view)
         CXDApiServiceController.awsGetFromEndPoint(urlString: urlString, queryParametersDict: ["lat" : 38.994373, "long" : -77.029778, "type": "chef"], pathParametersDict: nil, classType: CXDChef.self).continueWith { (task) -> Any? in
             
             DispatchQueue.main.async {
+                HUD.hide()
                 if let error = task.error {
                     print("Error: \(error)")
                 } else if let result = task.result{

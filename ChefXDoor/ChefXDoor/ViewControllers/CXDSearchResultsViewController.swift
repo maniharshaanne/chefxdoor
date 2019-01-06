@@ -85,9 +85,11 @@ class CXDSearchResultsViewController: UIViewController,UITableViewDelegate, UITa
         if let searchString = searchBar.text
         {
             if selectedIndex == 0 {
+                HUD.show(.progress, onView: self.navigationController?.view)
                 CXDApiServiceController.awsGetFromEndPoint(urlString: "/search/chefs", queryParametersDict: ["lat":38.994373, "long":-77.029778, "distance":10, "page":0, "sort":"rating", "keyword": searchString], pathParametersDict: nil, classType: CXDChef.self).continueWith(block: { (task) -> Any? in
                     
                     DispatchQueue.main.async {
+                        HUD.hide()
                         if let error = task.error {
                             
                         } else if let result = task.result as? [CXDChef] {
@@ -97,9 +99,11 @@ class CXDSearchResultsViewController: UIViewController,UITableViewDelegate, UITa
                     }
                 })
             } else {
+                HUD.show(.progress, onView: self.navigationController?.view)
                 CXDApiServiceController.awsGetFromEndPoint(urlString: "/search/meals", queryParametersDict: ["lat":38.994373, "long":-77.029778, "distance":10, "page":0, "sort":"rating", "keyword": searchString], pathParametersDict: nil, classType: CXDMeal.self).continueWith(block: { (task) -> Any? in
                     
                     DispatchQueue.main.async {
+                        HUD.hide()
                         if let error = task.error {
                             
                         } else if let result = task.result as? [CXDMeal] {

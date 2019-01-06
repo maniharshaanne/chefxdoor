@@ -25,10 +25,11 @@ extension UIViewController{
         return searchRightBarButton
     }
     
-    func cartRightBarButton() -> UIBarButtonItem {
-        let cartRightBarButton:UIBarButtonItem = UIBarButtonItem(image: UIImage(named:"Cart"), style: .plain, target: self, action:#selector(cartRightBarButtonTapped(sender:)))
-        cartRightBarButton.tintColor = UIColor.white
+    func cartRightBarButton() -> BadgeBarButtonItem {
         
+        let cartRightBarButton:BadgeBarButtonItem = BadgeBarButtonItem(image: "Cart", target: self, action: #selector(cartRightBarButtonTapped(sender:)))!
+        cartRightBarButton.tintColor = UIColor.white
+        cartRightBarButton.badgeBackgroundColor = UIColor.red
         return cartRightBarButton
     }
     
@@ -48,7 +49,12 @@ extension UIViewController{
         panel?.center(searchResultsNavigationViewController)
     }
     
-    @objc func cartRightBarButtonTapped(sender: UIBarButtonItem){
-        panel?.openLeft(animated: true)
+    @objc func cartRightBarButtonTapped(sender: UIBarButtonItem) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let cartViewController = storyBoard.instantiateViewController(withIdentifier: "CartViewController") as! CartViewController
+        let cartViewNavigationViewController = UINavigationController(rootViewController: cartViewController)
+        panel?.configs.changeCenterPanelAnimated = false
+        panel?.center(cartViewNavigationViewController)
     }
+
 }

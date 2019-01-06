@@ -30,8 +30,10 @@ class ChefDetailViewController: UIViewController, UITabBarDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        HUD.show(.progress, onView: self.navigationController?.view)
         CXDApiServiceController.awsGetFromEndPoint(urlString: "/meals", queryParametersDict: ["lat" : 38.994373, "long" : -77.029778, "distance" : 10, "page" : 0, "sort":"rating", "chef_id": 2], pathParametersDict: nil, classType: CXDMeal.self).continueWith { (task) -> Any? in
             DispatchQueue.main.async {
+                HUD.hide()
                 if let error = task.error {
                     print("Error: \(error)")
                 } else if let result = task.result{
@@ -39,7 +41,7 @@ class ChefDetailViewController: UIViewController, UITabBarDelegate, UITableViewD
                     self.chefMeals = res
                     self.mealsTableView.reloadData()
                     self.mealsTableView.layoutIfNeeded()
-                    self.mealsTableViewHeightConstraint.constant = self.mealsTableView.contentSize.height
+                    self.mealsTableViewHeightConstraint.constant = self.mealsTableView.contentSize.height + 10
                 }
             }
         }
@@ -48,8 +50,6 @@ class ChefDetailViewController: UIViewController, UITabBarDelegate, UITableViewD
         mealsTableView.estimatedRowHeight = 200
         
         mealsTableView.register(UINib.init(nibName: "CXDMealTableViewCell", bundle: Bundle.init(for: CXDMealTableViewCell.self)), forCellReuseIdentifier: "CXDMealTableViewCell")
-        
-
         
         chefNameLabel.text = chef?.username
         chefCategoriesLabel.text = chef?.categories
@@ -63,6 +63,7 @@ class ChefDetailViewController: UIViewController, UITabBarDelegate, UITableViewD
         chefIntroductionNotesLabel.layer.borderWidth = 2
         chefIntroductionNotesLabel.layer.borderColor = UIColor(red: 246/256, green: 102/256, blue: 71/256, alpha: 1).cgColor
         
+        backgroundImageView.image = UIImage(named: "Food_bg_placeholder.png")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
