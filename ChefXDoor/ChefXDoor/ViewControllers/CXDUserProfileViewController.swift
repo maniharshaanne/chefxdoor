@@ -12,6 +12,7 @@ import Kingfisher
 import PKHUD
 import AWSCognito
 import Fusuma
+import AWSS3
 
 class CXDUserProfileViewController: UIViewController, FusumaDelegate, UITextFieldDelegate {
     
@@ -202,7 +203,7 @@ class CXDUserProfileViewController: UIViewController, FusumaDelegate, UITextFiel
     }
     
     func fusumaDismissedWithImage(_ image: UIImage, source: FusumaMode) {
-        
+        uploadImage(image: image)
         switch source {
             
         case .camera:
@@ -342,5 +343,63 @@ class CXDUserProfileViewController: UIViewController, FusumaDelegate, UITextFiel
                 }
             }
         }
+    }
+    
+    //Save Image Temporarily
+    func storeImageToDocumentDirectory(image: UIImage, fileName: String) -> URL? {
+        guard let data = UIImageJPEGRepresentation(image, 0.5) else {
+            return nil
+        }
+        let fileURL = self.fileURLInDocumentDirectory(fileName)
+        do {
+            try data.write(to: fileURL)
+            return fileURL
+        } catch {
+            return nil
+        }
+    }
+    
+    var documentsDirectoryURL: URL {
+        return FileManager.default.urls(for:.documentDirectory, in: .userDomainMask)[0]
+    }
+    
+    func fileURLInDocumentDirectory(_ fileName: String) -> URL {
+        return self.documentsDirectoryURL.appendingPathComponent(fileName)
+    }
+    
+    //Uploading Pic
+    func uploadImage(image: UIImage) {
+        //Save image temp
+        //Get the loc
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMMdd_HHmmss"
+        let fileName = dateFormatter.string(from: Date())
+        let fileNameWithExtension = "\(fileName)" + ".jpg"
+        
+        if let localImageUrl = storeImageToDocumentDirectory(image: image, fileName: fileNameWithExtension)
+        {
+            let key = "user_images/img" + "\(fileNameWithExtension)"
+
+            let request = AWSS3TransferManagerUploadRequest()!
+            request.bucket = "cxd-media-bucket"
+            request.key = key
+            request.body = localImageUrl
+            request.acl = .publicRead
+            
+            let transferManager = AWSS3TransferManager.default()
+            transferManager.upload(request).continueWith(executor: AWSExecutor.mainThread()) { (task) -> Any? in
+                if let error = task.error {
+                    print(error)
+                }
+                if task.result != nil {
+                    print("Uploaded \(key)")
+                    //let contentUrl = self.s3Url.appendingPathComponent(self.bucketName).appendingPathComponent(key)
+                    //self.contentUrl = contentUrl
+                }
+                
+                return nil
+            }
+        }
+        
     }
 }
