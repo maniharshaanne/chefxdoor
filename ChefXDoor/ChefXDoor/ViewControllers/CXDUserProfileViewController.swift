@@ -41,8 +41,9 @@ class CXDUserProfileViewController: UIViewController, FusumaDelegate, UITextFiel
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var backGroundImageView: UIImageView!
     
-    var currentUser: CXDCurrentUser?
+    var currentLoggedUser: CXDCurrentUser?
     var foodRestrctions: [CXDFoodRestriction]?
+    var contentUrl: String?
     
     override func viewDidLoad() {
         
@@ -96,16 +97,16 @@ class CXDUserProfileViewController: UIViewController, FusumaDelegate, UITextFiel
         foodRestrictionsButton4.setTitle("Kosher", for: UIControlState.normal)
         
         //Assign Data
-        firstNameTextField.text = currentUser?.firstname
+        firstNameTextField.text = currentLoggedUser?.firstname
         firstNameTextField.delegate = self
         
-        lastNameTextField.text = currentUser?.lastname
+        lastNameTextField.text = currentLoggedUser?.lastname
         lastNameTextField.delegate = self
         
-        phoneNumberTextField.text = currentUser?.phone?.stringValue
+        phoneNumberTextField.text = currentLoggedUser?.phone?.stringValue
         phoneNumberTextField.delegate = self
         
-        if let deliveryAddress:CXDDeliveryAddress = currentUser?.mainDeliveryAddress
+        if let deliveryAddress:CXDDeliveryAddress = currentLoggedUser?.mainDeliveryAddress
         {
             streetAddress1Label.text = deliveryAddress.street
             streetAddress2Label.text = deliveryAddress.city
@@ -116,7 +117,7 @@ class CXDUserProfileViewController: UIViewController, FusumaDelegate, UITextFiel
             }
         }
        
-        if let payment = currentUser?.mainPaymentMethod
+        if let payment = currentLoggedUser?.mainPaymentMethod
         {
             if let firstName = payment.firstName, let lastName = payment.lastName, let cardNumber = payment.cardNumber
             {
@@ -127,7 +128,7 @@ class CXDUserProfileViewController: UIViewController, FusumaDelegate, UITextFiel
         }
         
         backGroundImageView.kf.cancelDownloadTask()
-        if let backGroundIMageUrl = currentUser?.imageUrl
+        if let backGroundIMageUrl = currentLoggedUser?.imageUrl
         {
             let resource = ImageResource(downloadURL: URL(string: backGroundIMageUrl)!)
             backGroundImageView.kf.setImage(with: resource)
@@ -136,9 +137,9 @@ class CXDUserProfileViewController: UIViewController, FusumaDelegate, UITextFiel
         self.backGroundImageView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(photoTapped)))
         backGroundImageView.isUserInteractionEnabled = true
         
-       if let foodRest = currentUser?.foodRestrictions
+       if let foodRest = currentLoggedUser?.foodRestrictions
        {
-         foodRestrctions = currentUser?.foodRestrictions
+         foodRestrctions = currentLoggedUser?.foodRestrictions
          for foodRestriction:CXDFoodRestriction in foodRest
          {
             if let name = foodRestriction.name
@@ -327,17 +328,17 @@ class CXDUserProfileViewController: UIViewController, FusumaDelegate, UITextFiel
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == firstNameTextField {
             if let firstName = textField.text, !firstName.isEmpty {
-                currentUser?.firstname = firstName
+                currentLoggedUser?.firstname = firstName
             }
         }
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
         HUD.show(.progress, onView: self.navigationController?.view)
-        CXDApiServiceController.awsPutForEndPoint(urlString: "/users/currentuser", body: currentUser!, classType: CXDCurrentUser.self).continueWith { (task) -> Any? in
+        CXDApiServiceController.awsPutForEndPoint(urlString: "/users/currentuser", queryParametersDict: nil, pathParametersDict: nil, body: currentLoggedUser!, classType: CXDCurrentUser.self).continueWith { (task) -> Any? in
             DispatchQueue.main.async {
                 HUD.hide()
-
+                
                 if let error = task.error {
                     print ("error: \(error)")
                 }
@@ -393,13 +394,40 @@ class CXDUserProfileViewController: UIViewController, FusumaDelegate, UITextFiel
                 }
                 if task.result != nil {
                     print("Uploaded \(key)")
-                    //let contentUrl = self.s3Url.appendingPathComponent(self.bucketName).appendingPathComponent(key)
-                    //self.contentUrl = contentUrl
+                    let imageUrl = "https://cxd-media-bucket" + ".s3.amazonaws.com/" + "\(key)"
+                    self.postImageUrl(imageUrl: imageUrl)
                 }
                 
                 return nil
             }
         }
         
+    }
+    
+    func postImageUrl(imageUrl: String) {
+        
+        let userPhoto:CXDUserPhoto = CXDUserPhoto()
+        userPhoto.imageUrl = imageUrl
+        userPhoto.isMainPhoto = NSNumber.init(booleanLiteral: true)
+        
+        if let photoId = currentLoggedUser?.imageId, photoId.intValue != 0 {
+            CXDApiServiceController.awsPutForEndPoint(urlString: "/users/currentuser/photos/\(photoId)", queryParametersDict: nil, pathParametersDict: ["photo_id" : photoId.stringValue], body: userPhoto, classType: CXDUserPhoto.self).continueWith(executor: AWSExecutor.mainThread()) { (task) -> Any? in
+                if let error = task.error {
+                    print(error)
+                }
+                if task.result != nil {
+                    print("Uploaded Successfully")
+                }
+                
+                return nil
+            }
+            
+        } else {
+            //POST
+//            var userPhotoArray:CXDArrayOfUserPhoto = CXDArrayOfUserPhoto()
+//            userPhotoArray = [userPhoto]
+//
+//            CXDApiServiceController.awsPostForEndPoint(urlString: "/users/currentuser/photos", queryParametersDict: nil, pathParametersDict: nil, body: userPhotoArray, classType: CXDArrayOfUserPhoto.self)
+        }
     }
 }

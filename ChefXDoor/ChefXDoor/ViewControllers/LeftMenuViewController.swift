@@ -69,7 +69,7 @@ class LeftMenuViewController: UIViewController {
                     let currentUser = result as! CXDCurrentUser
                     let storyBoard = UIStoryboard (name: "Main", bundle: nil)
                     let userProfileViewController = storyBoard.instantiateViewController(withIdentifier: "CXDUserProfileViewController") as! CXDUserProfileViewController
-                    userProfileViewController.currentUser = currentUser
+                    userProfileViewController.currentLoggedUser = currentUser
                     let userProfileNavigationController = UINavigationController(rootViewController: userProfileViewController)
                     self.panel?.center(userProfileNavigationController)
                 }

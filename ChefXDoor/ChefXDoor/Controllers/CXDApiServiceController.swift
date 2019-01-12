@@ -86,17 +86,25 @@ class CXDApiServiceController{
         return sharedController.client.invokeHTTPRequest("DELETE", urlString: urlString, pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: CXDTransactionResult.self) as! AWSTask<CXDTransactionResult>
     }
     
-    public class func awsPutForEndPoint(urlString: String, body: AnyObject, classType:AnyClass) -> AWSTask<AnyObject> {
+    public class func awsPutForEndPoint(urlString: String, queryParametersDict: [String:Any]?, pathParametersDict: [String:Any]?, body: AnyObject, classType:AnyClass) -> AWSTask<AnyObject> {
         let headerParameters = [
             "Content-Type": "application/json",
             "Accept": "application/json",
             
             ]
         
-        let queryParameters:[String:Any] = [:]
+        var queryParameters:[String:Any] = [:]
+        if var _ = queryParametersDict
+        {
+            queryParameters = queryParametersDict!
+        }
         
-        let pathParameters:[String:Any] = [:]
+        var pathParameters:[String:Any] = [:]
+        if var _ = pathParametersDict
+        {
+            pathParameters = pathParametersDict!
+        }
         
-        return sharedController.client.invokeHTTPRequest("PUT", urlString: urlString, pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: classType) as! AWSTask<AnyObject>
+        return sharedController.client.invokeHTTPRequest("PUT", urlString: urlString, pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: body, responseClass: classType)
     }
 }
