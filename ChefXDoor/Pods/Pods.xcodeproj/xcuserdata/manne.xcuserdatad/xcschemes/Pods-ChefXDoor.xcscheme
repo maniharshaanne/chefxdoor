@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "027F02CBD6E831E263E080BA9E258325"
+               BlueprintIdentifier = "041966703B5DF19719B10080F212E016"
                BuildableName = "Pods_ChefXDoor.framework"
                BlueprintName = "Pods-ChefXDoor"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,7 +26,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -37,7 +36,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -47,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "027F02CBD6E831E263E080BA9E258325"
+            BlueprintIdentifier = "041966703B5DF19719B10080F212E016"
             BuildableName = "Pods_ChefXDoor.framework"
             BlueprintName = "Pods-ChefXDoor"
             ReferencedContainer = "container:Pods.xcodeproj">

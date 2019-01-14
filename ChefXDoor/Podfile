@@ -22,6 +22,9 @@ target 'ChefXDoor' do
   pod 'FormTextField'
   pod 'MBRadioCheckboxButton'
   pod 'Fusuma'
+  pod 'GooglePlaces'
+  pod 'GooglePlacePicker'
+  pod 'GoogleMaps'
   
   target 'ChefXDoorTests' do
     inherit! :search_paths

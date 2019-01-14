@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "236132C1FFDB85F2AE048217BE59C557"
+               BlueprintIdentifier = "F6C1A1281E3806F43DB267FF001D7A83"
                BlueprintName = "FAPanels"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "FAPanels.framework">
