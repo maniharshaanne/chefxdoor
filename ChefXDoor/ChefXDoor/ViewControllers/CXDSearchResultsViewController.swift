@@ -22,7 +22,7 @@ class CXDSearchResultsViewController: UIViewController,UITableViewDelegate, UITa
         searchResultsTableView.register(UINib.init(nibName: "CXDMealTableViewCell", bundle: nil), forCellReuseIdentifier: "CXDMealTableViewCell")
         searchResultsTableView.register(UINib.init(nibName: "CXDChefTableViewCell", bundle: nil), forCellReuseIdentifier: "CXDChefTableViewCell")
         
-        self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
+        self.navigationController?.navigationBar.barTintColor = CXDAppearance.primaryBackgroundDarkColor()
         self.navigationItem.leftBarButtonItem = self.menuLeftBarButton()
         
         searchResultsTableView.keyboardDismissMode = .onDrag

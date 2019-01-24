@@ -1277,8 +1277,6 @@ public class CXDDEVAPIClient: AWSAPIGatewayClient {
 
 	
     /*
-     
-     
      @param userId 
      
      return type: 

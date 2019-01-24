@@ -38,7 +38,11 @@ class CXDMealDetailTableViewCell: UITableViewCell {
             var modifiedDateString = dateFormatter.string(from: modifiedSplitDate!)
             titleLabel.text = mealReview.username! + " . " + modifiedDateString
             
-            ratingImageView.image = CXDUtility.sharedUtility.imageFor(rating: (mealReview.rating?.intValue)!)
+            if let image = CXDUtility.sharedUtility.imageFor(rating: (mealReview.rating?.intValue)!) as? UIImage
+            {
+                ratingImageView.image = image.withRenderingMode(.alwaysTemplate)
+                ratingImageView.tintColor = CXDAppearance.primaryColor()
+            }
         }
 
         detailLabel.text = mealReview.message

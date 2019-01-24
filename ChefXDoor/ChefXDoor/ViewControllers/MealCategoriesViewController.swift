@@ -19,6 +19,8 @@ class MealCategoriesViewController: UIViewController, UICollectionViewDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.rightBarButtonItems = customRightBarButtonItems()
+        self.view.backgroundColor = CXDAppearance.primaryBackgroundColor()
+        self.categoryCollectionView.backgroundColor = CXDAppearance.primaryBackgroundColor()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

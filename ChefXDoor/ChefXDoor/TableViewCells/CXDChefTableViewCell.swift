@@ -34,7 +34,10 @@ class CXDChefTableViewCell:UITableViewCell {
         chefMenuItemsLabel.text = chefInfo.categories
         chefTagLineLabel.text = chefInfo.slogan
         
-        ratingImageView.image = CXDUtility.sharedUtility.imageFor(rating: chefInfo.rating?.intValue ?? 0)
+        let image = CXDUtility.sharedUtility.imageFor(rating: chefInfo.rating?.intValue ?? 0)
+        ratingImageView.image = image.withRenderingMode(.alwaysTemplate)
+        ratingImageView.tintColor = CXDAppearance.primaryColor()
+        
         reviewsLabel.text = (chefInfo.reviewCount?.stringValue ?? "0")  + " reviews"
         
         let formatter = NumberFormatter()

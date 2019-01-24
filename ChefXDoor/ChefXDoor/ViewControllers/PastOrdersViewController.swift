@@ -19,7 +19,7 @@ class PastOrdersViewController: UIViewController,UITableViewDelegate,UITableView
         super.viewDidLoad()
         self.navigationItem.rightBarButtonItems = customRightBarButtonItems()
         self.navigationItem.leftBarButtonItem = menuLeftBarButton()
-        self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
+        self.navigationController?.navigationBar.barTintColor = CXDAppearance.primaryBackgroundDarkColor()
         self.pastOrderTableView.register(UINib.init(nibName: "CXDMealTableViewCell", bundle: Bundle.init(for: CXDMealTableViewCell.self)), forCellReuseIdentifier: "CXDMealTableViewCell")
 
 

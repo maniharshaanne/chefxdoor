@@ -35,10 +35,11 @@ class CXDMealTableViewCell: UITableViewCell,FaveButtonDelegate  {
             faveIconNormal: UIImage(named: "Heart")
         )
         
+        self.backgroundColor = CXDAppearance.primaryBackgroundColor()
+        
         faveButton?.delegate = self
         faveButton?.isSelected = false
-        faveButton?.selectedColor = UIColor(red: 246/256, green: 102/256, blue: 71/256, alpha: 1)
-        //faveButton?.normalColor = UIColor.white
+        faveButton?.selectedColor = CXDAppearance.primaryColor()
         faveButton?.tintColor = UIColor.white
 
         backgroundImageView.isUserInteractionEnabled = true

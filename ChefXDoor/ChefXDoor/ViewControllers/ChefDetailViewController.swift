@@ -58,7 +58,10 @@ class ChefDetailViewController: UIViewController, UITabBarDelegate, UITableViewD
         profileImageView.kf.cancelDownloadTask()
         let resource = ImageResource(downloadURL: URL.init(string: (chef?.imageUrl!)!)!)
         profileImageView.kf.setImage(with: resource)
-        reviewsImageView.image = CXDUtility.sharedUtility.imageFor(rating : (chef?.rating?.intValue)!)
+        
+        let image = CXDUtility.sharedUtility.imageFor(rating : chef?.rating?.intValue ?? 0)
+        reviewsImageView.image = image.withRenderingMode(.alwaysTemplate)
+        reviewsImageView.tintColor = CXDAppearance.primaryColor()
         
         chefIntroductionNotesLabel.layer.borderWidth = 2
         chefIntroductionNotesLabel.layer.borderColor = UIColor(red: 246/256, green: 102/256, blue: 71/256, alpha: 1).cgColor

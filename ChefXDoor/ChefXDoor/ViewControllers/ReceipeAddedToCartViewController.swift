@@ -19,8 +19,10 @@ public class ReceipeAddedToCartViewController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.layer.borderColor = UIColor(red: 246/256, green: 102/256, blue: 71/256, alpha: 1).cgColor
+        self.view.layer.borderColor = CXDAppearance.primaryColor().cgColor
         self.view.layer.borderWidth = 2
+        self.imageView.image = self.imageView.image!.withRenderingMode(.alwaysTemplate)
+        self.imageView.tintColor = CXDAppearance.primaryColor()
     }
     
     @IBAction func checkOutButtonTapped(_ sender: Any) {

@@ -71,11 +71,15 @@ class CXDItemsTableViewController: UIViewController, UITableViewDelegate, UITabl
     
     @IBAction func addButtonPressed(_ sender: Any) {
         
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.init(for: AddNewPaymentViewController.self))
+
         switch itemType {
         case .addressType?:
+            
+            let addNewAddressViewController =  storyboard.instantiateViewController(withIdentifier: "CXDAddNewAddressViewController") as! CXDAddNewAddressViewController
+            self.navigationController!.pushViewController(addNewAddressViewController, animated: true)
             break
         case .cardType?:
-            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.init(for: AddNewPaymentViewController.self))
             let addNewPaymentViewController = storyboard.instantiateViewController(withIdentifier: "AddNewPaymentViewController") as! AddNewPaymentViewController
             self.navigationController!.pushViewController(addNewPaymentViewController, animated: true)
             break

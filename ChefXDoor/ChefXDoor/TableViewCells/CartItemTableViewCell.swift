@@ -11,7 +11,6 @@ import UIKit
 
 class CartItemTableViewCell: UITableViewCell {
  
-    @IBOutlet weak var dishCountLabel:UILabel!
     @IBOutlet weak var mealNameLabel:UILabel!
     @IBOutlet weak var chefNameLabel:UILabel!
     @IBOutlet weak var mealPriceLabel:UILabel!
@@ -26,11 +25,12 @@ class CartItemTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         deleteButton.layer.cornerRadius = deleteButton.frame.size.width/2
+        self.mainView.layer.borderColor = CXDAppearance.primaryColor().cgColor
+        self.mainView.layer.borderWidth = 2.0
     }
     
     public func updateInfo(cartItem: CXDCartItem)
     {
-        dishCountLabel.text = "Dish 0"
         mealNameLabel.text = cartItem.mealName
         chefNameLabel.text = "by " + cartItem.chefName!
         mealPriceLabel.text = "$" + (cartItem.price?.stringValue)!

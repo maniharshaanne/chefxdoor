@@ -24,11 +24,13 @@ class RecommendationsViewController : UIViewController,UITableViewDelegate,UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = CXDAppearance.primaryBackgroundColor()
+        recommendedMealsTableView.backgroundColor = CXDAppearance.primaryBackgroundColor()
         recommendedMealsTableView.rowHeight = UITableViewAutomaticDimension
         recommendedMealsTableView.estimatedRowHeight = 200
         recommendedMealsTableView.register(UINib.init(nibName: "CXDMealTableViewCell", bundle: Bundle.init(for: CXDMealTableViewCell.self)), forCellReuseIdentifier: "CXDMealTableViewCell")
         
-        self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
+        self.navigationController?.navigationBar.barTintColor = CXDAppearance.primaryBackgroundDarkColor()
         self.navigationItem.rightBarButtonItems = customRightBarButtonItems()
         self.navigationItem.leftBarButtonItem = menuLeftBarButton()
         
@@ -43,7 +45,7 @@ class RecommendationsViewController : UIViewController,UITableViewDelegate,UITab
         
         searchView.layer.borderWidth = 1
         searchView.layer.cornerRadius = 5
-        searchView.layer.borderColor = UIColor(red: 246/256, green: 102/256, blue: 71/256, alpha: 1).cgColor
+        searchView.layer.borderColor = CXDAppearance.primaryColor().cgColor
         searchView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(searchViewTapped)))
         
         let appdelegate = UIApplication.shared.delegate as! AppDelegate

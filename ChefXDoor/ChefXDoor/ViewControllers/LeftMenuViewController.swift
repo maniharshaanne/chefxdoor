@@ -58,23 +58,12 @@ class LeftMenuViewController: UIViewController {
     }
     
     @IBAction func settingsButtonPressed(_ sender: Any) {
-        HUD.show(.progress, onView: self.view)
-        CXDApiServiceController.awsGetFromEndPoint(urlString: "/users/currentuser", queryParametersDict: nil, pathParametersDict: nil, classType: CXDCurrentUser.self).continueWith { (task) -> Any? in
-            
-            DispatchQueue.main.async {
-                HUD.hide()
-                if let error = task.error {
-                    print("error : \(error)")
-                } else if let result = task.result {
-                    let currentUser = result as! CXDCurrentUser
-                    let storyBoard = UIStoryboard (name: "Main", bundle: nil)
-                    let userProfileViewController = storyBoard.instantiateViewController(withIdentifier: "CXDUserProfileViewController") as! CXDUserProfileViewController
-                    userProfileViewController.currentLoggedUser = currentUser
-                    let userProfileNavigationController = UINavigationController(rootViewController: userProfileViewController)
-                    self.panel?.center(userProfileNavigationController)
-                }
-            }
-        }
+        //let currentUser = result as! CXDCurrentUser
+        let storyBoard = UIStoryboard (name: "Main", bundle: nil)
+        let userProfileViewController = storyBoard.instantiateViewController(withIdentifier: "CXDUserProfileViewController") as! CXDUserProfileViewController
+        //userProfileViewController.currentLoggedUser = currentUser
+        let userProfileNavigationController = UINavigationController(rootViewController: userProfileViewController)
+        self.panel?.center(userProfileNavigationController)
     }
 }
 

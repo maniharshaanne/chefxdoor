@@ -91,14 +91,19 @@ class MealDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         ingredientsImage.clipsToBounds = true
         ingredientsImage.image = UIImage(named:"Ingredients")
         
-        totalReviewsImageView.image = CXDUtility.sharedUtility.imageFor(rating: (meal?.rating?.intValue)!)
+         let image = CXDUtility.sharedUtility.imageFor(rating: meal?.rating?.intValue ?? 0)
+         totalReviewsImageView.image = image.withRenderingMode(.alwaysTemplate)
+         totalReviewsImageView.tintColor = CXDAppearance.primaryColor()
+        
         totalReviewsLabel.text = (meal?.reviewCount?.stringValue)! + " reviews"
         
         preparationTimeView.layer.borderWidth = 2
-        preparationTimeView.layer.borderColor = UIColor(red: 246/256, green: 102/256, blue: 71/256, alpha: 1).cgColor
+        preparationTimeView.layer.borderColor = CXDAppearance.primaryColor().cgColor
         
         totalCostView.layer.borderWidth = 2
-        totalCostView.layer.borderColor = UIColor(red: 246/256, green: 102/256, blue: 71/256, alpha: 1).cgColor
+        totalCostView.layer.borderColor = CXDAppearance.primaryColor().cgColor
+        
+        addToCartButton.backgroundColor = CXDAppearance.primaryColor()
     }
     
     override func viewDidAppear(_ animated: Bool) {

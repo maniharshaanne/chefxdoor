@@ -26,8 +26,6 @@ class CXDCardTableViewCell: UITableViewCell {
         faveButton.delegate = self
         backgroundContentView.isUserInteractionEnabled = true
         backgroundContentView.addSubview(faveButton)
-//        backgroundContentView.layer.borderWidth = 1
-//        backgroundContentView.layer.borderColor = UIColor(red: 246/256, green: 102/256, blue: 71/256, alpha: 1).cgColor
         backgroundContentView.layer.cornerRadius = 5
     }
     

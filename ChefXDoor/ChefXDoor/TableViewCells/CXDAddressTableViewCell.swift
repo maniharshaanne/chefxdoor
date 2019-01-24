@@ -23,13 +23,14 @@ class CXDAddressTableViewCell: UITableViewCell, FaveButtonDelegate {
             faveIconNormal: UIImage(named: "starIcon")
         )
         faveButton.delegate = self
+        faveButton.selectedColor = CXDAppearance.primaryColor()
         mainView.isUserInteractionEnabled = true
         mainView.addSubview(faveButton)
     }
     
     func updateInfo(address: CXDDeliveryAddress) {
      
-        mainView.layer.borderColor = UIColor(red: 246/256, green: 102/256, blue: 71/256, alpha: 1).cgColor
+        mainView.layer.borderColor = CXDAppearance.primaryColor().cgColor
         mainView.layer.borderWidth = 2
         
         streetAddress1Label.text = address.street
@@ -46,5 +47,6 @@ class CXDAddressTableViewCell: UITableViewCell, FaveButtonDelegate {
     }
     
     func faveButton(_ faveButton: FaveButton, didSelected selected: Bool) {
+        
     }
 }

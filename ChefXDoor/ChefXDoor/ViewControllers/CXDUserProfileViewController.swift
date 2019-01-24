@@ -47,51 +47,51 @@ class CXDUserProfileViewController: UIViewController, FusumaDelegate, UITextFiel
     
     override func viewDidLoad() {
         
-        self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
+        self.navigationController?.navigationBar.barTintColor = CXDAppearance.primaryBackgroundDarkColor()
         self.navigationItem.rightBarButtonItems = customRightBarButtonItems()
         self.navigationItem.leftBarButtonItem = menuLeftBarButton()
         
         nameView.layer.borderWidth = 2
-        nameView.layer.borderColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1).cgColor
+        nameView.layer.borderColor = CXDAppearance.primaryColor().cgColor
         
         addressView.layer.borderWidth = 2
-        addressView.layer.borderColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1).cgColor
+        addressView.layer.borderColor = CXDAppearance.primaryColor().cgColor
         addressView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(addressViewTapped)))
         
         phoneView.layer.borderWidth = 2
-        phoneView.layer.borderColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1).cgColor
+        phoneView.layer.borderColor = CXDAppearance.primaryColor().cgColor
         
         cardView.layer.borderWidth = 2
-        cardView.layer.borderColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1).cgColor
+        cardView.layer.borderColor = CXDAppearance.primaryColor().cgColor
         cardView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(cardViewTapped)))
         
         foodRestrictionsView.layer.borderWidth = 2
-        foodRestrictionsView.layer.borderColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1).cgColor
+        foodRestrictionsView.layer.borderColor = CXDAppearance.primaryColor().cgColor
         
         //foodRestrictionsButton1.backgroundColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1)
         foodRestrictionsButton1.layer.cornerRadius = 5
-        foodRestrictionsButton1.layer.borderColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1).cgColor
+        foodRestrictionsButton1.layer.borderColor = CXDAppearance.primaryColor().cgColor
         foodRestrictionsButton1.layer.borderWidth = 2
         foodRestrictionsButton1.tag = 0001
         foodRestrictionsButton1.setTitle("Vegetarian", for: UIControlState.normal)
 
         //foodRestrictionsButton2.backgroundColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1)
         foodRestrictionsButton2.layer.cornerRadius = 5
-        foodRestrictionsButton2.layer.borderColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1).cgColor
+        foodRestrictionsButton2.layer.borderColor = CXDAppearance.primaryColor().cgColor
         foodRestrictionsButton2.layer.borderWidth = 2
         foodRestrictionsButton2.tag = 0002
         foodRestrictionsButton2.setTitle("Halal", for: UIControlState.normal)
 
         //foodRestrictionsButton3.backgroundColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1)
         foodRestrictionsButton3.layer.cornerRadius = 5
-        foodRestrictionsButton3.layer.borderColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1).cgColor
+        foodRestrictionsButton3.layer.borderColor = CXDAppearance.primaryColor().cgColor
         foodRestrictionsButton3.layer.borderWidth = 2
         foodRestrictionsButton3.tag = 0003
         foodRestrictionsButton2.setTitle("Vegan", for: UIControlState.normal)
 
         //foodRestrictionsButton4.backgroundColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1)
         foodRestrictionsButton4.layer.cornerRadius = 5
-        foodRestrictionsButton4.layer.borderColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1).cgColor
+        foodRestrictionsButton4.layer.borderColor = CXDAppearance.primaryColor().cgColor
         foodRestrictionsButton4.layer.borderWidth = 2
         foodRestrictionsButton4.tag = 0004
         foodRestrictionsButton4.setTitle("Kosher", for: UIControlState.normal)
@@ -104,6 +104,7 @@ class CXDUserProfileViewController: UIViewController, FusumaDelegate, UITextFiel
         lastNameTextField.delegate = self
         
         phoneNumberTextField.text = currentLoggedUser?.phone?.stringValue
+        //phoneNumberTextField.text = currentLoggedUser?.phone
         phoneNumberTextField.delegate = self
         
         if let deliveryAddress:CXDDeliveryAddress = currentLoggedUser?.mainDeliveryAddress
@@ -148,6 +149,83 @@ class CXDUserProfileViewController: UIViewController, FusumaDelegate, UITextFiel
             }
          }
        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        HUD.show(.progress, onView: self.view)
+        CXDApiServiceController.awsGetFromEndPoint(urlString: "/users/currentuser", queryParametersDict: nil, pathParametersDict: nil, classType: CXDCurrentUser.self).continueWith { (task) -> Any? in
+            
+            DispatchQueue.main.async {
+                HUD.hide()
+                if let error = task.error {
+                    print("error : \(error)")
+                } else if let result = task.result {
+                    self.currentLoggedUser = result as! CXDCurrentUser
+                    
+                    //Assign Data
+                    self.firstNameTextField.text = self.currentLoggedUser?.firstname
+                    self.firstNameTextField.delegate = self
+                    
+                    self.lastNameTextField.text = self.currentLoggedUser?.lastname
+                    self.lastNameTextField.delegate = self
+                    
+                    self.phoneNumberTextField.text = self.currentLoggedUser?.phone?.stringValue
+                    //phoneNumberTextField.text = currentLoggedUser?.phone
+                    self.phoneNumberTextField.delegate = self
+                    
+                    if let deliveryAddress:CXDDeliveryAddress = self.currentLoggedUser?.mainDeliveryAddress
+                    {
+                        self.streetAddress1Label.text = deliveryAddress.street
+                        self.streetAddress2Label.text = deliveryAddress.city
+                        
+                        if let state = deliveryAddress.state, let zipCode = deliveryAddress.zip?.stringValue
+                        {
+                            self.cityZipcodeLabel.text = state + " " + zipCode
+                        }
+                    }
+                    
+                    if let payment = self.currentLoggedUser?.mainPaymentMethod
+                    {
+                        if let firstName = payment.firstName, let lastName = payment.lastName, let cardNumber = payment.cardNumber
+                        {
+                            self.cardNameLabel.text = firstName + " " + lastName
+                            self.cardNumberLabel.text = cardNumber
+                        }
+                        
+                    }
+                    
+                    self.backGroundImageView.kf.cancelDownloadTask()
+                    if let backGroundIMageUrl = self.currentLoggedUser?.imageUrl
+                    {
+                        let resource = ImageResource(downloadURL: URL(string: backGroundIMageUrl)!)
+                        self.backGroundImageView.kf.setImage(with: resource)
+                    }
+                    
+                    self.backGroundImageView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(self.photoTapped)))
+                    self.backGroundImageView.isUserInteractionEnabled = true
+                    
+                    if let foodRest = self.currentLoggedUser?.foodRestrictions
+                    {
+                        self.foodRestrctions = self.currentLoggedUser?.foodRestrictions
+                        for foodRestriction:CXDFoodRestriction in foodRest
+                        {
+                            if let name = foodRestriction.name
+                            {
+                                self.updateFoodRestrictionButton(restriction: name)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("view did appear called")
+    }
+    
+    func refreshUserInfo() {
+        
     }
     
     @objc func photoTapped() {
@@ -308,16 +386,16 @@ class CXDUserProfileViewController: UIViewController, FusumaDelegate, UITextFiel
     {
         switch restriction {
         case "Vegetarian":
-                foodRestrictionsButton4.backgroundColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1)
+                foodRestrictionsButton4.backgroundColor = CXDAppearance.primaryColor()
             break
         case "Halal":
-            foodRestrictionsButton4.backgroundColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1)
+            foodRestrictionsButton4.backgroundColor = CXDAppearance.primaryColor()
             break
         case "Vegan":
-            foodRestrictionsButton4.backgroundColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1)
+            foodRestrictionsButton4.backgroundColor = CXDAppearance.primaryColor()
             break
         case "Kosher":
-            foodRestrictionsButton4.backgroundColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1)
+            foodRestrictionsButton4.backgroundColor = CXDAppearance.primaryColor()
             break
         default:
             break

@@ -34,7 +34,7 @@ class CartViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         //Navbar
         self.navigationItem.leftBarButtonItem = self.menuLeftBarButton()
         self.navigationItem.rightBarButtonItem = self.searchRightBarButton()
-        self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
+        self.navigationController?.navigationBar.barTintColor = CXDAppearance.primaryBackgroundDarkColor()
 
         //Tableviewcell
         cartItemsTableView.register(UINib.init(nibName: "CartItemTableViewCell", bundle: Bundle.init(for: CartItemTableViewCell.self)), forCellReuseIdentifier: "CartItemTableViewCell")
@@ -74,13 +74,13 @@ class CartViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         //deliveryAddress = cart?.deliveryAddress
     
         addressView.layer.borderWidth = 2
-        addressView.layer.borderColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1).cgColor
+        addressView.layer.borderColor = CXDAppearance.primaryColor().cgColor
         
         addNoteView.layer.borderWidth = 2
-        addNoteView.layer.borderColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1).cgColor
+        addNoteView.layer.borderColor = CXDAppearance.primaryColor().cgColor
         
         totalCostView.layer.borderWidth = 2
-        totalCostView.layer.borderColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1).cgColor
+        totalCostView.layer.borderColor = CXDAppearance.primaryColor().cgColor
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -90,8 +90,6 @@ class CartViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = cartItemsTableView.dequeueReusableCell(withIdentifier: "CartItemTableViewCell") as! CartItemTableViewCell
         cell.updateInfo(cartItem: cartItems![indexPath.row])
-        cell.mainView.layer.borderColor = UIColor(red: 248/256, green: 101/256, blue: 64/256, alpha: 1).cgColor
-        cell.mainView.layer.borderWidth = 2.0
         cell.deleteAction = {
             
             guard let selectedCartItem = self.cartItems?[indexPath.row] else {

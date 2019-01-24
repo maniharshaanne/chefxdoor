@@ -11,6 +11,7 @@ import AWSCognito
 import AWSCognitoIdentityProvider
 import FBSDKCoreKit
 import FAPanels
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder,UIApplicationDelegate,AWSIdentityProviderManager  {
@@ -34,13 +35,17 @@ class AppDelegate: UIResponder,UIApplicationDelegate,AWSIdentityProviderManager 
                 launchOptions)
         
         let navigationBarAppearace = UINavigationBar.appearance()
-
         navigationBarAppearace.tintColor = UIColor.white
-        navigationBarAppearace.barTintColor = UIColor.white
+        navigationBarAppearace.barTintColor = CXDAppearance.primaryBackgroundDarkColor()
         
+        let searchBarAppearance = UISearchBar.appearance()
+        searchBarAppearance.tintColor = UIColor.white
+
         setupRootViewController()
         setupAWSConfiguration()
         
+        GMSPlacesClient.provideAPIKey("AIzaSyDCw94KcJOSTK9gqhbFFhNyAy4eDxSGeE8")
+
         return true
     }
     
