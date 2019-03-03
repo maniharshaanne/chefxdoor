@@ -17,7 +17,11 @@ class CXDAppMenuItem {
         case PaymentMethods
         case Search
         case Help
+        case SwitchUser
         case Logout
+        case Menu
+        case Orders
+        case PaymentInfo
     }
     
     public var title:String?

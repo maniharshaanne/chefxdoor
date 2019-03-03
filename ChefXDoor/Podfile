@@ -25,7 +25,9 @@ target 'ChefXDoor' do
   pod 'GooglePlaces'
   pod 'GooglePlacePicker'
   pod 'GoogleMaps'
-  
+  pod 'TagListView'
+  pod 'ActionSheetPicker-3.0'
+
   target 'ChefXDoorTests' do
     inherit! :search_paths
     # Pods for testing

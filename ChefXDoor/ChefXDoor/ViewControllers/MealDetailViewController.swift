@@ -65,7 +65,7 @@ class MealDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         self.navigationController?.navigationBar.tintColor = UIColor.white
         mealNameLabel.text = meal?.name
         chefNameLabel.text = meal?.chefUsername
-        reviewsLabel.text = (meal?.reviewCount?.stringValue)! + "reviews"
+        reviewsLabel.text = (meal?.reviewCount?.stringValue)! + " reviews"
         reviewsTableView.estimatedRowHeight = 130
         reviewsTableView.rowHeight = UITableViewAutomaticDimension
         
@@ -78,6 +78,8 @@ class MealDetailViewController: UIViewController, UITableViewDelegate, UITableVi
             faveIconNormal: UIImage(named: "Heart"))
         faveButton.delegate = self
         favButtonView.addSubview(faveButton)
+        faveButton.selectedColor = CXDAppearance.primaryColor()
+        faveButton.setSelected(selected: meal?.liked?.boolValue ?? false, animated: false)
         
         let resource = ImageResource(downloadURL: URL.init(string: (meal?.chefImageUrl)!)!)
         chefDescriptionImage.layer.cornerRadius = chefDescriptionImage.frame.size.width/2
@@ -152,7 +154,7 @@ class MealDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         
         var cxdCartItem = CXDCartItem()
         cxdCartItem?.mealId = self.meal?.id
-        cxdCartItem?.quantity = 1
+        cxdCartItem?.quantity = NSNumber(value: Int(self.countLabel.text ?? "1") ?? 1)
         //cxdCartItem?.mealName = self.meal?.name
         //cxdCartItem?.chefName = self.meal?.chefUsername
         //cxdCartItem?.price = NSNumber(value: 10)
@@ -222,6 +224,27 @@ class MealDetailViewController: UIViewController, UITableViewDelegate, UITableVi
 
     
     func faveButton(_ faveButton: FaveButton, didSelected selected: Bool) {
-        
+        if selected {
+            CXDApiServiceController.awsPostForEndPoint(urlString: "/users/41/favoritemeals", queryParametersDict: nil, pathParametersDict: ["user_id" : 41], body: meal! , classType: CXDFavoriteMeal.self)
+        } else {
+            let pathParameters = ["user_id": 41, "meal_id": self.meal?.id?.intValue]
+            let deleteUrlString = "/users/41/favoritemeals/\(self.meal?.id?.intValue)"
+            
+            CXDApiServiceController.awsDeleteForEndPoint(urlString: deleteUrlString, queryParametersDict: nil, pathParametersDict: pathParameters)
+        }
+    }
+    
+    @IBAction func plusButtonTapped(_ sender: Any) {
+        if let count = Int(countLabel.text ?? "1")
+        {
+            countLabel.text = "\(count + 1)"
+        }
+    }
+    
+    @IBAction func minusButtonTapped(_ sender: Any) {
+        if let count = Int(countLabel.text ?? "1") , count > 1
+        {
+            countLabel.text = "\(count - 1)"
+        }
     }
 }

@@ -28,7 +28,7 @@ class CartViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     @IBOutlet weak var addressView:UIView!
     @IBOutlet weak var addNoteView:UIView!
     @IBOutlet weak var totalCostView:UIView!
-
+    
     override func viewDidLoad() {
         
         //Navbar
@@ -127,5 +127,22 @@ class CartViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let paymentViewController = storyboard.instantiateViewController(withIdentifier: "PaymentViewController") as! PaymentViewController
         self.navigationController!.pushViewController(paymentViewController, animated: true)
     }
-    
+   
+    @IBAction func editButtonPressed(_ sender: Any) {
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle(for: CartViewController.self))
+        let addNewAddressViewController = storyBoard.instantiateViewController(withIdentifier: "CXDAddNewAddressViewController") as! CXDAddNewAddressViewController
+        addNewAddressViewController.isForAddressEdit = true
+        addNewAddressViewController.saveCompletionBlock = { (deliveryAddress: CXDDeliveryAddress) -> Void in
+            //Address
+            self.deliveryAddress = deliveryAddress
+            self.streetAddressLabel.text = self.deliveryAddress?.street
+            let zipString = self.self.deliveryAddress?.zip?.stringValue
+            let cityString = self.deliveryAddress?.city
+            let stateString = self.deliveryAddress?.state
+            let stateCityZipString = cityString! + ", " + stateString! + ", " + zipString!
+            self.stateCityZipLabel.text = stateCityZipString
+        }
+        self.navigationController!.pushViewController(addNewAddressViewController, animated: true)
+    }
 }

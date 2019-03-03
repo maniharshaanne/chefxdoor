@@ -15,10 +15,15 @@ import PKHUD
  */
 class LeftMenuViewController: UIViewController {
     
+    enum userType {
+        case Foodie, Chef, Driver
+    }
+    
     @IBOutlet fileprivate weak var tableView: UITableView!
     @IBOutlet fileprivate weak var avatarImageView: UIImageView!
     @IBOutlet fileprivate weak var avatarImageViewCenterXConstraint: NSLayoutConstraint!
     var menuItems:Array<CXDAppMenuItem>?
+    var currentUserType: userType?
     
     override var prefersStatusBarHidden: Bool {
         return false
@@ -31,6 +36,7 @@ class LeftMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        currentUserType = .Foodie
         menuItems = prepareMenuItems()
         // Select the initial row
         //tableView.selectRow(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: UITableViewScrollPosition.none)
@@ -44,15 +50,46 @@ class LeftMenuViewController: UIViewController {
     
     func prepareMenuItems() -> Array<CXDAppMenuItem>
     {
-        let exploreFoodMenuItem = CXDAppMenuItem(title: "EXPLORE FOOD", imageName: "ExploreFood", menuType: .ExploreFood)
-        let myFavouritesMenuItem = CXDAppMenuItem(title: "MY FAVORITES", imageName: "Heart", menuType: .MyFavourites)
-        let orderHistoryMenuItem = CXDAppMenuItem(title: "ORDER HISTORY", imageName: "OrderHistory", menuType: .OrderHistory)
-        let paymentMethodsMenuItem = CXDAppMenuItem(title: "PAYMENT METHODS", imageName: "PaymentMethods", menuType: .PaymentMethods)
-        let searchMenuItem = CXDAppMenuItem(title: "SEARCH CHEFXDOOR", imageName: "SearchChefxdoor", menuType: .Search)
-        let helpMenuItem = CXDAppMenuItem(title: "HELP", imageName: "Help", menuType: .Help)
-        let logoutMenuItem = CXDAppMenuItem(title: "Logout", imageName: "Help", menuType: .Logout)
 
-        let menuItemsArray = [exploreFoodMenuItem, myFavouritesMenuItem, orderHistoryMenuItem, paymentMethodsMenuItem, searchMenuItem, helpMenuItem, logoutMenuItem]
+        var menuItems: Array<CXDAppMenuItem> = []
+        
+        switch currentUserType {
+        case .Foodie?:
+             menuItems = foodieMenuItems()
+            break
+        case .Chef?:
+            menuItems = chefMenuItems()
+            break
+        case .Driver?:
+            break
+        default:
+            break
+        }
+        
+        return menuItems
+    }
+    
+    func foodieMenuItems() -> [CXDAppMenuItem] {
+        let exploreFoodMenuItem = CXDAppMenuItem(title: "Explore Food", imageName: "ExploreFood", menuType: .ExploreFood)
+        let myFavouritesMenuItem = CXDAppMenuItem(title: "My Favourites", imageName: "Heart", menuType: .MyFavourites)
+        let orderHistoryMenuItem = CXDAppMenuItem(title: "Order History", imageName: "OrderHistory", menuType: .OrderHistory)
+        let paymentMethodsMenuItem = CXDAppMenuItem(title: "Payment Methods", imageName: "PaymentMethods", menuType: .PaymentMethods)
+        let searchMenuItem = CXDAppMenuItem(title: "Search ChefXDoor", imageName: "SearchChefxdoor", menuType: .Search)
+        let helpMenuItem = CXDAppMenuItem(title: "Help", imageName: "Help", menuType: .Help)
+        let switchUserMenuItem = CXDAppMenuItem(title: "Switch User", imageName: "Help", menuType: .SwitchUser)
+        let logoutMenuItem = CXDAppMenuItem(title: "Logout", imageName: "Help", menuType: .Logout)
+        
+        let menuItemsArray = [exploreFoodMenuItem, myFavouritesMenuItem, orderHistoryMenuItem, paymentMethodsMenuItem, searchMenuItem, helpMenuItem, switchUserMenuItem, logoutMenuItem]
+        
+        return menuItemsArray
+    }
+    
+    func chefMenuItems() -> Array<CXDAppMenuItem> {
+        let menuMenuItem = CXDAppMenuItem(title: "Menu", imageName: "ExploreFood", menuType: .Menu)
+        let ordersMenuItem = CXDAppMenuItem(title: "Orders", imageName: "ExploreFood", menuType: .Orders)
+        let paymentHistoryMenuItem = CXDAppMenuItem(title: "View Payment Info", imageName: "ExploreFood", menuType: .PaymentInfo)
+       
+        let menuItemsArray = [menuMenuItem, ordersMenuItem, paymentHistoryMenuItem]
         
         return menuItemsArray
     }
@@ -64,6 +101,11 @@ class LeftMenuViewController: UIViewController {
         //userProfileViewController.currentLoggedUser = currentUser
         let userProfileNavigationController = UINavigationController(rootViewController: userProfileViewController)
         self.panel?.center(userProfileNavigationController)
+    }
+    
+    func reloadData()  {
+        menuItems = prepareMenuItems()
+        self.tableView.reloadData()
     }
 }
 
@@ -155,6 +197,12 @@ extension LeftMenuViewController: UITableViewDelegate, UITableViewDataSource {
             let searchResultsViewController = storyBoard.instantiateViewController(withIdentifier: "CXDSearchResultsViewController") as! CXDSearchResultsViewController
             let searchResultsNavigationViewController = UINavigationController(rootViewController: searchResultsViewController)
             panel?.center(searchResultsNavigationViewController)
+            break
+       
+        case .SwitchUser? :
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let switchUserViewController = storyBoard.instantiateViewController(withIdentifier: "SwitchUserViewController") as! SwitchUserViewController
+            panel?.center(switchUserViewController)
             break
             
         case .Logout? :

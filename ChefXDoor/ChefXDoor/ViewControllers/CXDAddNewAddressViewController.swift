@@ -17,6 +17,8 @@ class CXDAddNewAddressViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var stateTextField: UITextField!
     @IBOutlet weak var zipcodeTextField: UITextField!
     @IBOutlet weak var unitNumberTextField: UITextField!
+    var saveCompletionBlock: ((CXDDeliveryAddress) -> Void) = {arg in}
+    var isForAddressEdit = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -134,8 +136,7 @@ class CXDAddNewAddressViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func saveAddress(_ sender: Any) {
-        HUD.show(.progress)
-        
+      
         let deliveryAddress = CXDDeliveryAddress()
         deliveryAddress?.street = addressTextField.text
         deliveryAddress?.city = cityTextField.text
@@ -145,19 +146,27 @@ class CXDAddNewAddressViewController: UIViewController, UITextFieldDelegate {
         
         if let deliveryAddress = deliveryAddress
         {
-            CXDApiServiceController.awsPostForEndPoint(urlString: "/users/currentuser/delivery_address", queryParametersDict: nil, pathParametersDict: ["user_id" : "41"], body: deliveryAddress, classType: CXDDeliveryAddress.self).continueWith { (task) -> Any? in
-                DispatchQueue.main.async {
-                    HUD.hide()
-                    
-                    if let error = task.error {
-                        print(error)
-                    }
-                    else
-                    {
-                        let controllers = self.navigationController?.viewControllers
-                        for vc in controllers! {
-                            if vc is CXDUserProfileViewController {
-                                _ = self.navigationController?.popToViewController(vc as! CXDUserProfileViewController, animated: true)
+            if isForAddressEdit {
+                deliveryAddress.isMainAddress = NSNumber(integerLiteral: 0)
+                saveCompletionBlock(deliveryAddress)
+                self.navigationController?.popViewController(animated: true)
+            } else {
+                HUD.show(.progress)
+                
+                CXDApiServiceController.awsPostForEndPoint(urlString: "/users/currentuser/delivery_address", queryParametersDict: nil, pathParametersDict: ["user_id" : "41"], body: deliveryAddress, classType: CXDDeliveryAddress.self).continueWith { (task) -> Any? in
+                    DispatchQueue.main.async {
+                        HUD.hide()
+                        
+                        if let error = task.error {
+                            print(error)
+                        }
+                        else
+                        {
+                            let controllers = self.navigationController?.viewControllers
+                            for vc in controllers! {
+                                if vc is CXDUserProfileViewController {
+                                    _ = self.navigationController?.popToViewController(vc as! CXDUserProfileViewController, animated: true)
+                                }
                             }
                         }
                     }
@@ -165,7 +174,6 @@ class CXDAddNewAddressViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-    
 }
 
 extension CXDAddNewAddressViewController: GMSAutocompleteViewControllerDelegate {
@@ -224,6 +232,4 @@ extension CXDAddNewAddressViewController: GMSAutocompleteViewControllerDelegate 
     func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
-    
-    
 }

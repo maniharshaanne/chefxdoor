@@ -10,6 +10,8 @@
 		2B63081E3250BAD33757C38B /* Pods_ChefXDoor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18C255FDC7F15848B68E9E8 /* Pods_ChefXDoor.framework */; };
 		9CC2B4F923592F8119DD4FC4 /* Pods_ChefXDoorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133FFFC0AA8EE90B5A6773DF /* Pods_ChefXDoorTests.framework */; };
 		D3E030BC7DF5A1783D82DC78 /* Pods_ChefXDoorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E899C2495E837AFC507C52 /* Pods_ChefXDoorUITests.framework */; };
+		FE0759A9221161DB00514738 /* CXDAddReceipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0759A8221161DB00514738 /* CXDAddReceipeViewController.swift */; };
+		FE0759AA221161DB00514738 /* CXDAddReceipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0759A8221161DB00514738 /* CXDAddReceipeViewController.swift */; };
 		FE0EE30C21BD63C3003C3FA5 /* CXDOrderStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0EE30B21BD63C3003C3FA5 /* CXDOrderStatusViewController.swift */; };
 		FE0EE30D21BD63C3003C3FA5 /* CXDOrderStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0EE30B21BD63C3003C3FA5 /* CXDOrderStatusViewController.swift */; };
 		FE0EE30E21BD63C3003C3FA5 /* CXDOrderStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0EE30B21BD63C3003C3FA5 /* CXDOrderStatusViewController.swift */; };
@@ -139,6 +141,9 @@
 		FE38CFBB215C42E400D3EC31 /* AddNewPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE38CFBA215C42E400D3EC31 /* AddNewPaymentViewController.swift */; };
 		FE38CFBC215C42E400D3EC31 /* AddNewPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE38CFBA215C42E400D3EC31 /* AddNewPaymentViewController.swift */; };
 		FE38CFBD215C42E400D3EC31 /* AddNewPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE38CFBA215C42E400D3EC31 /* AddNewPaymentViewController.swift */; };
+		FE3DD61722237580005FA47E /* CXDChefMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3DD61622237580005FA47E /* CXDChefMenuViewController.swift */; };
+		FE3DD61822237580005FA47E /* CXDChefMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3DD61622237580005FA47E /* CXDChefMenuViewController.swift */; };
+		FE3DD61922237580005FA47E /* CXDChefMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3DD61622237580005FA47E /* CXDChefMenuViewController.swift */; };
 		FE537DCF215863C400971289 /* FSPagerViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE537DC8215863C200971289 /* FSPagerViewLayoutAttributes.swift */; };
 		FE537DD0215863C400971289 /* FSPagerViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE537DC8215863C200971289 /* FSPagerViewLayoutAttributes.swift */; };
 		FE537DD1215863C400971289 /* FSPagerViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE537DC8215863C200971289 /* FSPagerViewLayoutAttributes.swift */; };
@@ -372,6 +377,14 @@
 		FEF8B8CD21079BC000BDD272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF8B8CC21079BC000BDD272 /* Main.storyboard */; };
 		FEF8B8CE21079BC000BDD272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF8B8CC21079BC000BDD272 /* Main.storyboard */; };
 		FEF8B8CF21079BC000BDD272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF8B8CC21079BC000BDD272 /* Main.storyboard */; };
+		FEFA838F220BC05C008227C6 /* Chef.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEFA838E220BC05C008227C6 /* Chef.storyboard */; };
+		FEFA8390220BC05C008227C6 /* Chef.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEFA838E220BC05C008227C6 /* Chef.storyboard */; };
+		FEFA8392220BC253008227C6 /* SwitchUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFA8391220BC253008227C6 /* SwitchUserViewController.swift */; };
+		FEFA8393220BC253008227C6 /* SwitchUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFA8391220BC253008227C6 /* SwitchUserViewController.swift */; };
+		FEFA8395220D5F4E008227C6 /* CXDChefMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFA8394220D5F4E008227C6 /* CXDChefMenuTableViewCell.swift */; };
+		FEFA8396220D5F4E008227C6 /* CXDChefMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFA8394220D5F4E008227C6 /* CXDChefMenuTableViewCell.swift */; };
+		FEFA8398220D5F97008227C6 /* CXDChefMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEFA8397220D5F97008227C6 /* CXDChefMenuTableViewCell.xib */; };
+		FEFA8399220D5F97008227C6 /* CXDChefMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEFA8397220D5F97008227C6 /* CXDChefMenuTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -401,6 +414,7 @@
 		B18C255FDC7F15848B68E9E8 /* Pods_ChefXDoor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChefXDoor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB1DF9155D1EB9DFE28942D /* Pods-ChefXDoorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChefXDoorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChefXDoorTests/Pods-ChefXDoorTests.release.xcconfig"; sourceTree = "<group>"; };
 		EF92DF086284B1A64022B88E /* Pods-ChefXDoorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChefXDoorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChefXDoorTests/Pods-ChefXDoorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FE0759A8221161DB00514738 /* CXDAddReceipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDAddReceipeViewController.swift; sourceTree = "<group>"; };
 		FE0EE30B21BD63C3003C3FA5 /* CXDOrderStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDOrderStatusViewController.swift; sourceTree = "<group>"; };
 		FE0EE30F21BD816A003C3FA5 /* CXDArrayOfMealCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDArrayOfMealCategory.swift; sourceTree = "<group>"; };
 		FE0EE31021BD816B003C3FA5 /* CXDMealPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXDMealPhoto.swift; sourceTree = "<group>"; };
@@ -444,6 +458,7 @@
 		FE38CFB2215BDD4B00D3EC31 /* CartItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemTableViewCell.swift; sourceTree = "<group>"; };
 		FE38CFB6215BE1DD00D3EC31 /* CartItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartItemTableViewCell.xib; sourceTree = "<group>"; };
 		FE38CFBA215C42E400D3EC31 /* AddNewPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPaymentViewController.swift; sourceTree = "<group>"; };
+		FE3DD61622237580005FA47E /* CXDChefMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDChefMenuViewController.swift; sourceTree = "<group>"; };
 		FE537DC8215863C200971289 /* FSPagerViewLayoutAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSPagerViewLayoutAttributes.swift; sourceTree = "<group>"; };
 		FE537DC9215863C300971289 /* FSPageViewTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSPageViewTransformer.swift; sourceTree = "<group>"; };
 		FE537DCA215863C300971289 /* FSPagerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSPagerViewCell.swift; sourceTree = "<group>"; };
@@ -534,6 +549,10 @@
 		FEF502DA20CC06C900F2B8EF /* ChefXDoorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefXDoorUITests.swift; sourceTree = "<group>"; };
 		FEF502DC20CC06C900F2B8EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEF8B8CC21079BC000BDD272 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FEFA838E220BC05C008227C6 /* Chef.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chef.storyboard; sourceTree = "<group>"; };
+		FEFA8391220BC253008227C6 /* SwitchUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchUserViewController.swift; sourceTree = "<group>"; };
+		FEFA8394220D5F4E008227C6 /* CXDChefMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXDChefMenuTableViewCell.swift; sourceTree = "<group>"; };
+		FEFA8397220D5F97008227C6 /* CXDChefMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CXDChefMenuTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -675,6 +694,8 @@
 				FEB3AA012172A55300A258C6 /* CXDPastOrderItemTableViewCell.xib */,
 				FE98AC1B218BE76D00DB6401 /* CXDAddressTableViewCell.xib */,
 				FE98AC2B218DF51E00DB6401 /* CXDCardTableViewCell.xib */,
+				FEFA8394220D5F4E008227C6 /* CXDChefMenuTableViewCell.swift */,
+				FEFA8397220D5F97008227C6 /* CXDChefMenuTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -711,6 +732,9 @@
 				FE98AC33218F1D6300DB6401 /* CXDSearchResultsViewController.swift */,
 				FE0EE30B21BD63C3003C3FA5 /* CXDOrderStatusViewController.swift */,
 				FE2FE86421EC0A6E0059D00E /* CXDAddNewAddressViewController.swift */,
+				FEFA8391220BC253008227C6 /* SwitchUserViewController.swift */,
+				FE0759A8221161DB00514738 /* CXDAddReceipeViewController.swift */,
+				FE3DD61622237580005FA47E /* CXDChefMenuViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -839,6 +863,7 @@
 				FEF502BA20CC06C900F2B8EF /* AppDelegate.swift */,
 				FEF502BE20CC06C900F2B8EF /* Login.storyboard */,
 				FEF8B8CC21079BC000BDD272 /* Main.storyboard */,
+				FEFA838E220BC05C008227C6 /* Chef.storyboard */,
 				FEF502C120CC06C900F2B8EF /* Assets.xcassets */,
 				FEF502C320CC06C900F2B8EF /* LaunchScreen.storyboard */,
 				FEF502C620CC06C900F2B8EF /* Info.plist */,
@@ -976,10 +1001,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEFA838F220BC05C008227C6 /* Chef.storyboard in Resources */,
 				FEDF59D32160DB63005415F8 /* ic_1p5stars.png in Resources */,
 				FEBC70B7215D61B8008785A9 /* CXDChefTableViewCell.xib in Resources */,
 				FEDF59D02160DB63005415F8 /* ic_2p5stars.png in Resources */,
 				FE22773E21737DDC009B3ADD /* cxd-logo-plain.png in Resources */,
+				FEFA8398220D5F97008227C6 /* CXDChefMenuTableViewCell.xib in Resources */,
 				FE862B98214DE5F100902478 /* onlinechef.jpg in Resources */,
 				FE98AC2C218DF51E00DB6401 /* CXDCardTableViewCell.xib in Resources */,
 				FE862B9C214DEA6200902478 /* Favouritefood.jpeg in Resources */,
@@ -1022,6 +1049,7 @@
 				FEDF59B42160D18A005415F8 /* Ingredients.png in Resources */,
 				FE862B9D214DEA6200902478 /* Favouritefood.jpeg in Resources */,
 				FE38CFB8215BE1DD00D3EC31 /* CartItemTableViewCell.xib in Resources */,
+				FEFA8390220BC05C008227C6 /* Chef.storyboard in Resources */,
 				FE862BA1214DEA6A00902478 /* ExploreReceipes.png in Resources */,
 				FEDF59D42160DB63005415F8 /* ic_1p5stars.png in Resources */,
 				FE862B91214D70CC00902478 /* avatar.png in Resources */,
@@ -1041,6 +1069,7 @@
 				FEA95C6421572AAC0085368D /* CXDMealDetailHeaderTableViewCell.xib in Resources */,
 				FEA95C58215722BB0085368D /* CXDMealDetailTableViewCell.xib in Resources */,
 				FEA703832165B37600A9DEF7 /* cookies.jpg in Resources */,
+				FEFA8399220D5F97008227C6 /* CXDChefMenuTableViewCell.xib in Resources */,
 				FEDF59C82160DB63005415F8 /* ic_3stars.png in Resources */,
 				FE98AC39218F349700DB6401 /* visa.png in Resources */,
 				FEDF59CE2160DB63005415F8 /* ic_1stars.png in Resources */,
@@ -1164,6 +1193,7 @@
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSS3/AWSS3.framework",
+				"${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FAPanels/FAPanels.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
@@ -1176,6 +1206,7 @@
 				"${BUILT_PRODUCTS_DIR}/MBRadioCheckboxButton/MBRadioCheckboxButton.framework",
 				"${BUILT_PRODUCTS_DIR}/MIBlurPopup/MIBlurPopup.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/TagListView/TagListView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -1185,6 +1216,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProviderASF.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSS3.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionSheetPicker_3_0.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FAPanels.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
@@ -1197,6 +1229,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBRadioCheckboxButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MIBlurPopup.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TagListView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1245,6 +1278,7 @@
 				FE7E429E210D27AE004773F6 /* LeftMenuViewController.swift in Sources */,
 				FE0EE37D21BD8172003C3FA5 /* CXDArrayOfOrder.swift in Sources */,
 				FE0EE37121BD8172003C3FA5 /* CXDArrayOfMenu.swift in Sources */,
+				FEFA8392220BC253008227C6 /* SwitchUserViewController.swift in Sources */,
 				FE38CFBB215C42E400D3EC31 /* AddNewPaymentViewController.swift in Sources */,
 				FE0EE38C21BD8172003C3FA5 /* CXDArrayOfUserReview.swift in Sources */,
 				FE0EE35621BD8172003C3FA5 /* CXDArrayOfMeal.swift in Sources */,
@@ -1261,6 +1295,7 @@
 				FE0EE38921BD8172003C3FA5 /* CXDError.swift in Sources */,
 				FE0EE34A21BD8172003C3FA5 /* CXDUser.swift in Sources */,
 				FE0EE39821BD8172003C3FA5 /* CXDChef.swift in Sources */,
+				FEFA8395220D5F4E008227C6 /* CXDChefMenuTableViewCell.swift in Sources */,
 				FE0EE36521BD8172003C3FA5 /* CXDArrayOfUser.swift in Sources */,
 				FE38CFB3215BDD4B00D3EC31 /* CartItemTableViewCell.swift in Sources */,
 				FE98AC24218DF40100DB6401 /* CXDItemsTableViewController.swift in Sources */,
@@ -1282,6 +1317,7 @@
 				FEB3AA0A2172AF4800A258C6 /* CosmosDistrib.swift in Sources */,
 				FEA95C672157BE520085368D /* MealDetailViewController.swift in Sources */,
 				FE0EE33B21BD8172003C3FA5 /* CXDUserReview.swift in Sources */,
+				FE0759A9221161DB00514738 /* CXDAddReceipeViewController.swift in Sources */,
 				FEB8B34620D3471000DDDD2D /* SignInViewController.swift in Sources */,
 				FEDF59E021610F8B005415F8 /* PaymentViewController.swift in Sources */,
 				FE0EE36B21BD8172003C3FA5 /* CXDBilling.swift in Sources */,
@@ -1300,6 +1336,7 @@
 				FE7B04FE213F6AEC0090E85B /* CXDAWSApiClient.swift in Sources */,
 				FE2277462173BFEF009B3ADD /* CXDChefsOnlineTableViewController.swift in Sources */,
 				FE0EE36E21BD8172003C3FA5 /* CXDMealReview.swift in Sources */,
+				FE3DD61722237580005FA47E /* CXDChefMenuViewController.swift in Sources */,
 				FE7A09F32135923800AE45AD /* SignInViewController+FacebookLogin.swift in Sources */,
 				FEC79AB4216D8FD000A28B6D /* PastOrdersViewController.swift in Sources */,
 				FEB3A9FE21724CAA00A258C6 /* PastOrderDetailViewController.swift in Sources */,
@@ -1342,6 +1379,7 @@
 				FE7E429F210D27AE004773F6 /* LeftMenuViewController.swift in Sources */,
 				FE0EE37E21BD8172003C3FA5 /* CXDArrayOfOrder.swift in Sources */,
 				FE0EE37221BD8172003C3FA5 /* CXDArrayOfMenu.swift in Sources */,
+				FEFA8393220BC253008227C6 /* SwitchUserViewController.swift in Sources */,
 				FE98AC29218DF50400DB6401 /* CXDCardTableViewCell.swift in Sources */,
 				FE0EE38D21BD8172003C3FA5 /* CXDArrayOfUserReview.swift in Sources */,
 				FE0EE35721BD8172003C3FA5 /* CXDArrayOfMeal.swift in Sources */,
@@ -1358,6 +1396,7 @@
 				FE0EE38A21BD8172003C3FA5 /* CXDError.swift in Sources */,
 				FE0EE34B21BD8172003C3FA5 /* CXDUser.swift in Sources */,
 				FE0EE39921BD8172003C3FA5 /* CXDChef.swift in Sources */,
+				FEFA8396220D5F4E008227C6 /* CXDChefMenuTableViewCell.swift in Sources */,
 				FE0EE36621BD8172003C3FA5 /* CXDArrayOfUser.swift in Sources */,
 				FE537DD9215863C400971289 /* FSPageViewLayout.swift in Sources */,
 				FE98AC25218DF40100DB6401 /* CXDItemsTableViewController.swift in Sources */,
@@ -1379,6 +1418,7 @@
 				FE862BB3214F3E8E00902478 /* MealsTableViewController.swift in Sources */,
 				FEC4A44521372A4F00864655 /* AppDelegate.swift in Sources */,
 				FE0EE33C21BD8172003C3FA5 /* CXDUserReview.swift in Sources */,
+				FE0759AA221161DB00514738 /* CXDAddReceipeViewController.swift in Sources */,
 				FEC79AB5216D8FD000A28B6D /* PastOrdersViewController.swift in Sources */,
 				FE98AC31218E2C7300DB6401 /* CXDAddressTableViewCell.swift in Sources */,
 				FE0EE36C21BD8172003C3FA5 /* CXDBilling.swift in Sources */,
@@ -1397,6 +1437,7 @@
 				FE2277472173BFEF009B3ADD /* CXDChefsOnlineTableViewController.swift in Sources */,
 				FEB8B35F20D3483F00DDDD2D /* StartScreenViewController.swift in Sources */,
 				FE0EE36F21BD8172003C3FA5 /* CXDMealReview.swift in Sources */,
+				FE3DD61822237580005FA47E /* CXDChefMenuViewController.swift in Sources */,
 				FE730F92213DFC1200574C26 /* RecommendationsViewController.swift in Sources */,
 				FEB8B34B20D3477000DDDD2D /* Constants.swift in Sources */,
 				FEB3A9FF21724CAA00A258C6 /* PastOrderDetailViewController.swift in Sources */,
@@ -1469,6 +1510,7 @@
 				FE66078D215B0490001029C3 /* JSButton.swift in Sources */,
 				FE363C8D2177FD5E00C4AEA5 /* ChefDetailViewController.swift in Sources */,
 				FE0EE34F21BD8172003C3FA5 /* CXDFoodClassification.swift in Sources */,
+				FE3DD61922237580005FA47E /* CXDChefMenuViewController.swift in Sources */,
 				FE862B8A214AE05800902478 /* CXDMealTableViewCell.swift in Sources */,
 				FE2FE86721EC0A6E0059D00E /* CXDAddNewAddressViewController.swift in Sources */,
 				FE0EE35221BD8172003C3FA5 /* CXDCart.swift in Sources */,
