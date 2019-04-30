@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Kingfisher
 
 class CXDChefMenuTableViewCell: UITableViewCell {
     
@@ -19,5 +20,22 @@ class CXDChefMenuTableViewCell: UITableViewCell {
     @IBOutlet weak var sellButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
     
+    public func updateInfo(meal:CXDMeal)
+    {
+        mealImageView.kf.cancelDownloadTask()
+        mealImageView.image = UIImage(named: "Food_bg_placeholder.png")
+        
+        titleLabel.text = meal.name
+        priceLabel.text = "$" + (meal.price?.stringValue)!
+        descriptionLabel.text = meal._description
+        countLabel.text = "qty: 5"
+        ratingImageView.image = CXDUtility.sharedUtility.imageFor(rating: meal.rating?.intValue ?? 0)
+        
+        if let imageUrl = meal.imageUrl
+        {
+            let resource = ImageResource(downloadURL: URL.init(string: imageUrl)!, cacheKey: (meal.id?.stringValue)!+"bg")
+            mealImageView.kf.setImage(with: resource)
+        }
+    }
     
 }

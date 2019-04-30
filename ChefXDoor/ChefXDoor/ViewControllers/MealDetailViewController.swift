@@ -88,7 +88,8 @@ class MealDetailViewController: UIViewController, UITableViewDelegate, UITableVi
 
         chefDescriptionTitleLabel.text = (meal?.chefUsername)! + "'s Description"
         chefDescriptionLabel.text = meal?._description
-        ingredientsLabel.text = meal?.ingredients
+        //ingredientsLabel.text = meal?.ingredients
+        ingredientsLabel.text = "Tomotoes, Onions, Chillies"
         ingredientsImage.layer.cornerRadius = ingredientsImage.frame.size.width/2
         ingredientsImage.clipsToBounds = true
         ingredientsImage.image = UIImage(named:"Ingredients")

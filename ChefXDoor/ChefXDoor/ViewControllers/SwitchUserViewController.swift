@@ -55,7 +55,7 @@ class SwitchUserViewController: UIViewController {
 //        }
         
         let storyboard = UIStoryboard(name: "Chef", bundle: nil)
-        let recommendationsViewController = storyboard.instantiateViewController(withIdentifier: "CXDAddReceipeViewController") as! CXDAddReceipeViewController
+        let recommendationsViewController = storyboard.instantiateViewController(withIdentifier: "CXDChefMenuViewController") as! CXDChefMenuViewController
         //recommendationsViewController.recommendedMeals = res
         let recommendationsNavVC = UINavigationController(rootViewController: recommendationsViewController)
         
